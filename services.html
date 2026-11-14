@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; script-src &#x27;sha256-LVAu9lCqQWwlLYbGlnZMBgSuzo3gGssQpBV4mMJSLzc=&#x27; &#x27;sha256-X8LH7g1FcNRqrcw7P8kXeAtsnkh6+f3KCIN8P4Fp6Is=&#x27; &#x27;sha256-YAljnj3iomHSqV+AdcmGd7nIEBdqgoEFCCuQ7MQ6CtI=&#x27;; style-src &#x27;unsafe-inline&#x27;; style-src-elem &#x27;sha256-tTw0vJw+VfcKQut07A6C6KQrs8o5m84+cu3/FX7WPOk=&#x27;; style-src-attr &#x27;unsafe-inline&#x27;; img-src &#x27;self&#x27; data:; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exit-risk review for Morpho markets - Underkeel</title>
+<meta name="description" content="A private exit-risk review of your Morpho Blue markets on Base: clearance at your position sizes, quote dependence, collateral near liquidation. The first review is free.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Underkeel">
+<meta property="og:title" content="Exit-risk review for Morpho markets - Underkeel">
+<meta property="og:description" content="A private exit-risk review of your Morpho Blue markets on Base: clearance at your position sizes, quote dependence, collateral near liquidation. The first review is free.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://underkeel.xyz/og-v2.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Underkeel: exit depth and liquidation clearance for Morpho on Base. A curve of exit cost rising through the line of the liquidation bonus.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Underkeel: exit depth and liquidation clearance for Morpho on Base. A curve of exit cost rising through the line of the liquidation bonus.">
+<link rel="canonical" href="https://underkeel.xyz/services.html">
+<meta property="og:url" content="https://underkeel.xyz/services.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2230%22%20height%3D%2230%22%20rx%3D%227%22%20fill%3D%22%230f141a%22%2F%3E%3Cpath%20d%3D%22M5%209h22l-2.8%205.5h-5.4l-1.3%205.5h-3l-1.3-5.5H7.8z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M6%2025h20%22%20stroke%3D%22%236cb0ff%22%20stroke-width%3D%222.6%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E" type="image/svg+xml">
+<script>(function(){var d=document.documentElement,t=null;try{t=new URLSearchParams(location.search).get('theme')}catch(e){}if(t!=='dark'&&t!=='light'){try{t=localStorage.getItem('theme')}catch(e){t=null}}if(t==='dark'||t==='light')d.setAttribute('data-theme',t)})();</script>
+<style>:root{--bg:#f5f7f9;--panel:#ffffff;--panel2:#eef1f5;--ink:#0f141a;--muted:#525c68;--line:#dfe4ea;--line2:#aeb8c3;--grid:#e8ecf1;--accent:#0b57b8;--accent-bg:#e6eefa;--on-accent:#ffffff;--ok:#17622f;--ok-bg:#e1f3e7;--ok-line:#6fb585;--warn:#8a5200;--warn-bg:#fff0c0;--warn-line:#c08400;--bad:#8a0c1e;--bad-bg:#fde2e0;--bad-line:#cc3a3f;--none-fg:#ffffff;--none-bg:#353b44;--venue:#0b57b8;--venue-soft:#cfe0f7;--on-venue:#ffffff;--field:#7b8794;--zone:#fcecea;--on-bad:#ffffff;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0a0d11;--panel:#10151b;--panel2:#161c24;--ink:#e6eaef;--muted:#9aa5b1;--line:#232b35;--line2:#3e4957;--grid:#121820;--accent:#6cb0ff;--accent-bg:#12243b;--on-accent:#0a0d11;--ok:#86d9a0;--ok-bg:#10301b;--ok-line:#3f9a5c;--warn:#ffd166;--warn-bg:#3a2b05;--warn-line:#c49a1c;--bad:#ffa09b;--bad-bg:#431418;--bad-line:#dc5a56;--none-fg:#0a0d11;--none-bg:#aab4bf;--venue:#6cb0ff;--venue-soft:#1f3a5c;--on-venue:#0a0d11;--field:#647182;--zone:#1f0f12;--on-bad:#0a0d11;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a0d11;--panel:#10151b;--panel2:#161c24;--ink:#e6eaef;--muted:#9aa5b1;--line:#232b35;--line2:#3e4957;--grid:#121820;--accent:#6cb0ff;--accent-bg:#12243b;--on-accent:#0a0d11;--ok:#86d9a0;--ok-bg:#10301b;--ok-line:#3f9a5c;--warn:#ffd166;--warn-bg:#3a2b05;--warn-line:#c49a1c;--bad:#ffa09b;--bad-bg:#431418;--bad-line:#dc5a56;--none-fg:#0a0d11;--none-bg:#aab4bf;--venue:#6cb0ff;--venue-soft:#1f3a5c;--on-venue:#0a0d11;--field:#647182;--zone:#1f0f12;--on-bad:#0a0d11;color-scheme:dark}
+:root{--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}a:hover{text-decoration-thickness:2px}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}abbr[title]{text-decoration:underline dotted;text-underline-offset:3px;cursor:help}.skip{position:absolute;left:-9999px;top:8px}.skip:focus{left:16px;z-index:9;background:var(--panel);padding:6px 10px}.wrap{max-width:1200px;margin:0 auto;padding:0 24px}code{font:.86em var(--mono);background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:.05em .35em;overflow-wrap:anywhere}pre{font:12.5px/1.6 var(--mono);background:var(--panel);border:1px solid var(--line);padding:12px 14px;margin:0 0 16px;overflow-x:auto;white-space:pre}pre code{font:inherit;background:none;border:0;padding:0;overflow-wrap:normal}p{margin:0 0 16px}ul,ol{padding-left:22px;margin:0 0 16px}li{margin:0 0 6px}.top{background:var(--panel);border-bottom:1px solid var(--line)}.top .wrap{display:flex;align-items:center;flex-wrap:wrap;gap:0 18px;min-height:56px}.brand{display:inline-flex;align-items:center;gap:9px;font:650 16px/1 var(--sans);letter-spacing:-.01em;color:var(--ink);text-decoration:none;padding:14px 0}.brand svg{width:24px;height:24px;flex:none}.lg-h{fill:var(--ink)}.lg-s{stroke:var(--accent)}nav.pages{display:flex;gap:2px;min-width:0;overflow-x:auto;scrollbar-width:none}nav.pages::-webkit-scrollbar{display:none}nav.pages a{font-size:14px;color:var(--muted);text-decoration:none;padding:17px 9px 15px;white-space:nowrap;border-bottom:2px solid transparent}nav.pages a:hover{color:var(--ink)}nav.pages a[aria-current]{color:var(--ink);border-bottom-color:var(--accent)}nav.pages a:focus-visible{outline-offset:-2px}.acts{display:flex;align-items:center;gap:14px;margin-left:auto}.cur{font-size:14px;font-weight:600;color:var(--accent);text-decoration:none;padding:6px 0}.cur:hover,.cur[aria-current]{text-decoration:underline}.theme{display:inline-flex;align-items:center;gap:6px;font:500 12px var(--mono);color:var(--muted);background:var(--panel);border:1px solid var(--field);border-radius:4px;padding:5px 9px;cursor:pointer}.theme:hover{color:var(--ink);border-color:var(--ink)}.theme svg{width:14px;height:14px}.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--field);background:var(--panel);color:var(--ink);padding:8px 15px;border-radius:4px;font:600 14px/1.3 var(--sans);text-decoration:none;white-space:nowrap}.btn:hover{border-color:var(--ink)}.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}.btn.primary:hover{opacity:.9}.hero{position:relative;border-bottom:1px solid var(--line);background:var(--bg)}.hero::before,.hero::after{content:"";position:absolute;left:0;right:0;pointer-events:none}.hero::before{top:0;bottom:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px;background-position:-1px -1px;-webkit-mask-image:radial-gradient(140% 100% at 0 0,#000 40%,transparent 85%);mask-image:radial-gradient(140% 100% at 0 0,#000 40%,transparent 85%)}.hero::after{bottom:0;height:9px;background:repeating-linear-gradient(90deg,var(--line2) 0 1px,transparent 1px 32px) -1px 100%/100% 9px no-repeat,repeating-linear-gradient(90deg,var(--line2) 0 1px,transparent 1px 8px) -1px 100%/100% 4px no-repeat}.hero .wrap{position:relative;padding-top:40px;padding-bottom:40px}.kicker{font:600 11.5px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}.kicker time,.kicker .ago{letter-spacing:.02em}.ago{color:var(--muted);text-transform:none}.ago.stale{color:var(--warn);font-weight:700}h1{font:650 clamp(28px,3.7vw,42px)/1.14 var(--sans);letter-spacing:-.022em;margin:0 0 16px;max-width:25em;text-wrap:balance}h2{font:650 clamp(20px,2.1vw,24px)/1.25 var(--sans);letter-spacing:-.012em;margin:0 0 10px;text-wrap:balance}h3{font:650 17px/1.35 var(--sans);margin:20px 0 4px}.dek{font-size:18px;line-height:1.6;color:var(--muted);max-width:36em;margin:0}.dek b{color:var(--ink);font-weight:600}.dek+.dek{margin-top:10px}main{display:block}main>.wrap{padding-bottom:24px}section{margin-top:56px}section.first{margin-top:28px}.read{max-width:38em}.cap{font-size:13.5px;line-height:1.55;color:var(--muted);margin:12px 0 0;max-width:44em}.cap b{color:var(--ink);font-weight:600}.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}@supports (grid-template-rows:subgrid){.kpi{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:0;align-content:start}}table{border-collapse:separate;border-spacing:0;width:100%;font:12.5px/1.35 var(--mono);font-variant-numeric:tabular-nums}caption{text-align:left;padding:0;height:0;overflow:hidden;color:transparent}th,td{padding:6px 9px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line);background:var(--panel);vertical-align:middle}thead th{background:var(--panel2);font:600 10.5px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1px solid var(--line2);vertical-align:bottom}th:first-child,td:first-child{text-align:left;position:sticky;left:0;z-index:1;box-shadow:inset -1px 0 0 var(--line)}tbody th{font-weight:400}tbody tr:last-child>*{border-bottom:0}tr[aria-current]>*{background:var(--panel2)}.ic{width:1.05em;height:1.05em;flex:none}figure{margin:0}.offer{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:8px 48px}.offer h2{margin-top:0}.offer h2+.read,.offer ol,.offer ul{margin-bottom:24px}.foot{border-top:1px solid var(--line);background:var(--panel);margin-top:72px}.foot .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:16px 32px;padding-top:24px;padding-bottom:32px;font-size:13px;line-height:1.6;color:var(--muted)}.foot b{color:var(--ink);font-weight:650}.foot .fb svg{width:16px;height:16px;vertical-align:-3px;margin-right:6px}.foot a{color:var(--muted)}.foot p{margin:0 0 6px}@media (max-width:900px){.offer{grid-template-columns:minmax(0,1fr)}.foot .wrap{grid-template-columns:minmax(0,1fr)}.top .wrap{gap:0 12px}nav.pages{order:3;flex-basis:100%;margin:0 -16px;padding:0 10px;border-top:1px solid var(--line)}nav.pages a{padding:10px 9px 9px}.brand{padding:12px 0}}@media (max-width:620px){.wrap{padding:0 16px}.hero .wrap{padding-top:28px;padding-bottom:32px}.kicker{min-height:4.8em}.dek{font-size:16.5px}section{margin-top:44px}nav.pages{flex-wrap:wrap;overflow:visible;margin:0 -8px;padding:0 2px}nav.pages a{padding:8px 7px;font-size:13px}.theme .tl{display:none}.cur{font-size:13px}}@media (prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}</style>
+<script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*.json"}}]},"eagerness":"moderate"}]}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-theme" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 2a6 6 0 0 1 0 12z" fill="currentColor"/></symbol>
+</defs></svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path class="lg-h" d="M2 8.5h28l-3.4 6.5H19l-1.6 6.5h-2.8L13 15H5.4z"/><path class="lg-s" d="M3 27h26" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg><span>Underkeel</span></a>
+<nav class="pages" aria-label="Pages"><a href="index.html">Overview</a><a href="exit-depth.html">Exit depth</a><a href="venues.html">Venues</a><a href="liquidations.html">Liquidations</a><a href="method.html">Method</a><a href="data.html">Data</a><a href="about.html">About</a></nav>
+<div class="acts"><a class="cur" href="services.html" aria-current=page>For curators</a>
+<button class="theme" id="theme-btn" type="button" title="Colour theme" hidden><svg class="ic" aria-hidden="true"><use href="#i-theme"/></svg><span class="tl">auto</span></button></div>
+</div></header>
+<main id="main">
+<div class="hero"><div class="wrap">
+<p class="kicker">Services · snapshot <time datetime="2026-11-14T21:23:00Z" data-ago>2026-11-14 21:23 UTC</time></p>
+<h1>Exit-risk review of your markets</h1>
+<p class="dek">For vault curators, risk teams and protocols with Morpho Blue markets on Base. You get the public measurements
+redone at the sizes of your own positions, with a price-move scenario, as a private report. The first review is free.</p>
+</div></div>
+<div class="wrap">
+<section class="first offer">
+<div>
+<h2>What you get</h2>
+<ul class="read">
+<li>A report of 4-6 pages (PDF) and the numbers as a CSV.</li>
+<li>Clearance of each of your markets at the sizes of your largest positions and at sizes you choose, not only at
+$25k, $200k and $1M.</li>
+<li>Quote dependence: how much of the exit rests on <abbr title="request for quote">RFQ</abbr> (request for quote) market makers, and what on-chain pools
+alone give.</li>
+<li>Collateral near liquidation by position size: how much sits in positions one liquidation can clear and how much has to
+be liquidated in parts.</li>
+<li>What a 10% and a 20% price move in the collateral do to the exit cost and to the positions close to liquidation.</li>
+<li>Change since the first snapshot (13 Nov 2026), once there is a history to show.</li>
+<li>A line in the report for each number: how it was measured, so your team can repeat it.</li>
+</ul>
+</div>
+<div>
+<h2>How it works</h2>
+<ol class="read">
+<li>Send your vault name or market ids on Telegram or by email (the buttons below open a message). Position sizes or limits
+you want used are optional.</li>
+<li>You get a reply within 2 days.</li>
+<li>You get the review within 5 business days.</li>
+</ol>
+<h2>Terms</h2>
+<ul class="read">
+<li>The first review is free, with no obligation. After that: a fixed fee or a regular note, agreed in writing before any
+work.</li>
+<li>Private: data you send us is not used by our bots and is not published. The review stays with you and never changes
+the public pages.</li>
+<li>Findings and numbers, not recommendations: what to do with them is your decision. Not investment advice.</li>
+<li>Conflict of interest: the operator also runs liquidation bots on Base. See <a href="about.html">About &amp;
+disclosure</a>.</li>
+</ul>
+</div>
+</section>
+<section>
+<div class="row"><a class="btn primary" href="https://t.me/dimanoshe?text=Hi%2C%20I%20would%20like%20the%20free%20exit-risk%20review%20from%20Underkeel.%0AMy%20role%20%28curator%2C%20risk%20team%2C%20protocol%2C%20other%29%3A%20%0AMy%20vault%20or%20market%20ids%3A%20" rel="noopener noreferrer">Ask for the free review</a><a class="btn" href="mailto:hello@underkeel.xyz?subject=Exit-risk%20review&amp;body=Hi%2C%20I%20would%20like%20the%20free%20exit-risk%20review%20from%20Underkeel.%0D%0AMy%20role%20%28curator%2C%20risk%20team%2C%20protocol%2C%20other%29%3A%20%0D%0AMy%20vault%20or%20market%20ids%3A%20">By email</a><a class="btn" href="exit-depth.html">Find your markets</a></div>
+<p class="cap">Opens Telegram with a message ready to send. Nothing is sent until you press send.</p>
+<p class="cap">Contact: Telegram <a href="https://t.me/dimanoshe" rel="noopener noreferrer">@dimanoshe</a> · email <a href="mailto:hello@underkeel.xyz?subject=Underkeel">hello@underkeel.xyz</a>.</p>
+</section>
+</div>
+</main>
+<footer class="foot"><div class="wrap">
+<div><p><b class="fb"><svg viewBox="0 0 32 32" aria-hidden="true"><path class="lg-h" d="M2 8.5h28l-3.4 6.5H19l-1.6 6.5h-2.8L13 15H5.4z"/><path class="lg-s" d="M3 27h26" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg>Underkeel</b> - exit depth and liquidations of Morpho Blue markets on Base.</p>
+<p>Snapshot <time datetime="2026-11-14T21:23:00Z">2026-11-14 21:23 UTC</time>, rebuilt every 6 hours.</p></div>
+<div><p>Quotes: KyberSwap Aggregator public API. Markets and positions: Morpho API.</p><p>Liquidations: Morpho Blue events on Base.</p></div>
+<div><p>Independent: not affiliated with Morpho, Base, KyberSwap or Chainlink. Informational only, not investment advice.</p>
+<p><a href="about.html">About &amp; disclosure</a> · <a href="method.html">Method</a> · <a href="data.html">Data</a> · <a href="services.html">Services</a></p>
+<p>Contact: Telegram <a href="https://t.me/dimanoshe" rel="noopener noreferrer">@dimanoshe</a> · email <a href="mailto:hello@underkeel.xyz?subject=Underkeel">hello@underkeel.xyz</a></p></div>
+</div></footer>
+<script>(function(){var d=document.documentElement,b=document.getElementById('theme-btn'),modes=['auto','light','dark'];
+function cur(){return d.getAttribute('data-theme')||'auto'}
+function show(){b.querySelector('.tl').textContent=cur();b.setAttribute('aria-label','Colour theme: '+cur()+'. Change')}
+if(b){b.hidden=false;show();b.addEventListener('click',function(){var m=modes[(modes.indexOf(cur())+1)%3];
+if(m==='auto')d.removeAttribute('data-theme');else d.setAttribute('data-theme',m);
+try{if(m==='auto')localStorage.removeItem('theme');else localStorage.setItem('theme',m)}catch(e){}show()})}
+var cur_link=document.querySelector('nav.pages a[aria-current]');if(cur_link)cur_link.parentNode.scrollLeft=cur_link.offsetLeft-16;
+var now=Date.now();document.querySelectorAll('time[data-ago]').forEach(function(t){
+var m=Math.floor((now-Date.parse(t.getAttribute('datetime')))/6e4);if(!(m>=0))return;
+var s=m<1?'just now':m<120?m+' min ago':m<2880?Math.floor(m/60)+' h ago':Math.floor(m/1440)+' days ago';
+var e=document.createElement('span');e.className='ago'+(m>=480?' stale':'');
+e.textContent=' (updated '+s+(m>=480?'; the update every 6 hours may be late':'')+')';t.after(e)})})();</script>
+</body>
+</html>
