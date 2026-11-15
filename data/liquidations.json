@@ -3,16 +3,16 @@
  "days": 30,
  "since": "2026-10-16",
  "until": "2026-11-15",
- "count": 13042,
- "bonus_usd": 6756778.629641457,
- "auction_bonus_usd": 6279720.523961216,
- "auction_bids_usd": 5046417.144353878,
+ "count": 13578,
+ "bonus_usd": 7304194.335338002,
+ "auction_bonus_usd": 6817095.90238274,
+ "auction_bids_usd": 5495718.13306483,
  "pairs": [
   {
    "pair": "cbBTC/USDC",
-   "count": 5733,
-   "bonus_usd": 4225376.078605251,
-   "auction_bonus_usd": 3994970.130317016
+   "count": 6031,
+   "bonus_usd": 4720048.214800099,
+   "auction_bonus_usd": 4489543.101800336
   },
   {
    "pair": "cbXRP/USDC",
@@ -22,39 +22,39 @@
   },
   {
    "pair": "WETH/USDC",
-   "count": 1469,
-   "bonus_usd": 524217.40364522435,
-   "auction_bonus_usd": 485897.2634781302
+   "count": 1537,
+   "bonus_usd": 538630.7212568169,
+   "auction_bonus_usd": 500291.8534571895
   },
   {
    "pair": "SOL/USDC",
-   "count": 535,
-   "bonus_usd": 122900.52296432514,
-   "auction_bonus_usd": 121766.22424074104
-  },
-  {
-   "pair": "cbETH/USDC",
-   "count": 1264,
-   "bonus_usd": 109988.0095261269,
-   "auction_bonus_usd": 969.9987950567665
+   "count": 585,
+   "bonus_usd": 133370.34714656282,
+   "auction_bonus_usd": 132214.58873723846
   },
   {
    "pair": "JitoSOL/USDC",
-   "count": 591,
-   "bonus_usd": 109273.72180305254,
-   "auction_bonus_usd": 108911.59858685435
+   "count": 663,
+   "bonus_usd": 126354.56672138894,
+   "auction_bonus_usd": 125962.09386536662
+  },
+  {
+   "pair": "cbETH/USDC",
+   "count": 1291,
+   "bonus_usd": 119165.61257371871,
+   "auction_bonus_usd": 969.9987950567665
   },
   {
    "pair": "cbDOGE/USDC",
-   "count": 340,
-   "bonus_usd": 52729.097462201855,
-   "auction_bonus_usd": 51082.55248349849
+   "count": 345,
+   "bonus_usd": 53279.2749942936,
+   "auction_bonus_usd": 51631.82370723836
   },
   {
    "pair": "cbADA/USDC",
-   "count": 163,
-   "bonus_usd": 40114.261057533426,
-   "auction_bonus_usd": 39401.56533158935
+   "count": 166,
+   "bonus_usd": 40279.09123116549,
+   "auction_bonus_usd": 39566.02522956274
   },
   {
    "pair": "cbZEC/USDC",
@@ -64,9 +64,9 @@
   },
   {
    "pair": "cbLTC/USDC",
-   "count": 132,
-   "bonus_usd": 25403.307147496842,
-   "auction_bonus_usd": 25339.995412416403
+   "count": 143,
+   "bonus_usd": 25607.869600135473,
+   "auction_bonus_usd": 25535.221474837617
   }
  ],
  "by_day": [
@@ -192,7 +192,7 @@
   },
   {
    "day": "2026-11-15",
-   "bonus_usd": 0.0
+   "bonus_usd": 547415.7056965545
   }
  ]
 }
