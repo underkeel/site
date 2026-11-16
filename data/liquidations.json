@@ -1,5 +1,5 @@
 {
- "schema": 1,
+ "schema": 2,
  "days": 30,
  "since": "2026-10-17",
  "until": "2026-11-16",
@@ -67,6 +67,114 @@
    "count": 143,
    "bonus_usd": 25607.869600135473,
    "auction_bonus_usd": 25535.221474837617
+  },
+  {
+   "pair": "cbHYPE/USDC",
+   "count": 58,
+   "bonus_usd": 7326.688919234902,
+   "auction_bonus_usd": 5545.622026484459
+  },
+  {
+   "pair": "wstETH/USDC",
+   "count": 10,
+   "bonus_usd": 4096.70016354944,
+   "auction_bonus_usd": 3936.3060639262694
+  },
+  {
+   "pair": "cbBTC/EURC",
+   "count": 11,
+   "bonus_usd": 1656.0477559915219,
+   "auction_bonus_usd": 818.4750651357027
+  },
+  {
+   "pair": "wstETH/EURC",
+   "count": 3,
+   "bonus_usd": 1224.7467274642447,
+   "auction_bonus_usd": 1137.267150236501
+  },
+  {
+   "pair": "superOETHb/USDC",
+   "count": 2,
+   "bonus_usd": 735.579798520774,
+   "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "weETH/USDC",
+   "count": 3,
+   "bonus_usd": 571.4955756334866,
+   "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "WETH/EURC",
+   "count": 4,
+   "bonus_usd": 326.8727049941615,
+   "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "uniBTC/USDC",
+   "count": 1,
+   "bonus_usd": 157.17284821557496,
+   "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "yoUSD/USDC",
+   "count": 5,
+   "bonus_usd": 116.65694284846609,
+   "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "mBASIS/USDC",
+   "count": 15,
+   "bonus_usd": 74.01704757071984,
+   "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "SPCXc/USDC",
+   "count": 1,
+   "bonus_usd": 68.75235432066995,
+   "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "deSPXA/USDC",
+   "count": 2,
+   "bonus_usd": 48.48135242986481,
+   "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "VVV/WETH",
+   "count": 3,
+   "bonus_usd": 34.57772536932899,
+   "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "weETH/WETH",
+   "count": 5,
+   "bonus_usd": 28.672912372610483,
+   "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "cbETH/EURC",
+   "count": 1,
+   "bonus_usd": 14.886122142674651,
+   "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "USDC/WETH",
+   "count": 4,
+   "bonus_usd": 13.229129870739195,
+   "auction_bonus_usd": 13.219240750672327
+  },
+  {
+   "pair": "NVDAc/USDC",
+   "count": 6,
+   "bonus_usd": 5.323884890854273,
+   "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "LBTC/USDC",
+   "count": 1,
+   "bonus_usd": 3.657028901658961,
+   "auction_bonus_usd": 0.0
   }
  ],
  "by_day": [

@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; script-src &#x27;sha256-LVAu9lCqQWwlLYbGlnZMBgSuzo3gGssQpBV4mMJSLzc=&#x27; &#x27;sha256-X8LH7g1FcNRqrcw7P8kXeAtsnkh6+f3KCIN8P4Fp6Is=&#x27; &#x27;sha256-YAljnj3iomHSqV+AdcmGd7nIEBdqgoEFCCuQ7MQ6CtI=&#x27;; style-src &#x27;unsafe-inline&#x27;; style-src-elem &#x27;sha256-M/MKh1G1L/W0W8AtsoG+IWjAREaP+Z/K1LChumBC64E=&#x27;; style-src-attr &#x27;unsafe-inline&#x27;; img-src &#x27;self&#x27; data:; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;">
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; script-src &#x27;sha256-LVAu9lCqQWwlLYbGlnZMBgSuzo3gGssQpBV4mMJSLzc=&#x27; &#x27;sha256-X8LH7g1FcNRqrcw7P8kXeAtsnkh6+f3KCIN8P4Fp6Is=&#x27; &#x27;sha256-YAljnj3iomHSqV+AdcmGd7nIEBdqgoEFCCuQ7MQ6CtI=&#x27;; style-src &#x27;unsafe-inline&#x27;; style-src-elem &#x27;sha256-BTiMREe8Uff3dhxg4caR/Bhn2aXzfQohN1ypG1CzaDA=&#x27;; style-src-attr &#x27;unsafe-inline&#x27;; img-src &#x27;self&#x27; data:; font-src &#x27;self&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Clearance v2: how the numbers are measured - Underkeel</title>
+<title>Clearance v3: how the numbers are measured - Underkeel</title>
 <meta name="description" content="How exit cost, clearance, clearing size and quote-dependent debt are measured for Morpho Blue markets on Base, how to repeat each number, and what is not measured.">
 <meta name="author" content="Dmitrii Luzin">
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Underkeel">
-<meta property="og:title" content="Clearance v2: how the numbers are measured - Underkeel">
+<meta property="og:title" content="Clearance v3: how the numbers are measured - Underkeel">
 <meta property="og:description" content="How exit cost, clearance, clearing size and quote-dependent debt are measured for Morpho Blue markets on Base, how to repeat each number, and what is not measured.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://underkeel.xyz/og-v2.png">
@@ -23,14 +23,19 @@
 <meta name="twitter:image:alt" content="Underkeel: exit depth and liquidation clearance for Morpho on Base. A curve of exit cost rising through the line of the liquidation bonus.">
 <link rel="canonical" href="https://underkeel.xyz/method.html">
 <meta property="og:url" content="https://underkeel.xyz/method.html">
-<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2230%22%20height%3D%2230%22%20rx%3D%227%22%20fill%3D%22%230f141a%22%2F%3E%3Cpath%20d%3D%22M5%209h22l-2.8%205.5h-5.4l-1.3%205.5h-3l-1.3-5.5H7.8z%22%20fill%3D%22%23ffffff%22%2F%3E%3Cpath%20d%3D%22M6%2025h20%22%20stroke%3D%22%236cb0ff%22%20stroke-width%3D%222.6%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E" type="image/svg+xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2230%22%20height%3D%2230%22%20fill%3D%22%23fbf8f0%22%20stroke%3D%22%231b1a17%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M6%209h20l-2.6%205.5h-4.6l-1.2%205h-3.2l-1.2-5H8.6z%22%20fill%3D%22%231b1a17%22%2F%3E%3Cpath%20d%3D%22M5%2026h5l3-1.6%204%201.6h10%22%20fill%3D%22none%22%20stroke%3D%22%231a5884%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E" type="image/svg+xml">
 <script>(function(){var d=document.documentElement,t=null;try{t=new URLSearchParams(location.search).get('theme')}catch(e){}if(t!=='dark'&&t!=='light'){try{t=localStorage.getItem('theme')}catch(e){t=null}}if(t==='dark'||t==='light')d.setAttribute('data-theme',t)})();</script>
-<style>:root{--bg:#f5f7f9;--panel:#ffffff;--panel2:#eef1f5;--ink:#0f141a;--muted:#525c68;--line:#dfe4ea;--line2:#aeb8c3;--grid:#e8ecf1;--accent:#0b57b8;--accent-bg:#e6eefa;--on-accent:#ffffff;--ok:#17622f;--ok-bg:#e1f3e7;--ok-line:#6fb585;--warn:#8a5200;--warn-bg:#fff0c0;--warn-line:#c08400;--bad:#8a0c1e;--bad-bg:#fde2e0;--bad-line:#cc3a3f;--none-fg:#ffffff;--none-bg:#353b44;--venue:#0b57b8;--venue-soft:#cfe0f7;--on-venue:#ffffff;--field:#7b8794;--zone:#fcecea;--on-bad:#ffffff;color-scheme:light}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0a0d11;--panel:#10151b;--panel2:#161c24;--ink:#e6eaef;--muted:#9aa5b1;--line:#232b35;--line2:#3e4957;--grid:#121820;--accent:#6cb0ff;--accent-bg:#12243b;--on-accent:#0a0d11;--ok:#86d9a0;--ok-bg:#10301b;--ok-line:#3f9a5c;--warn:#ffd166;--warn-bg:#3a2b05;--warn-line:#c49a1c;--bad:#ffa09b;--bad-bg:#431418;--bad-line:#dc5a56;--none-fg:#0a0d11;--none-bg:#aab4bf;--venue:#6cb0ff;--venue-soft:#1f3a5c;--on-venue:#0a0d11;--field:#647182;--zone:#1f0f12;--on-bad:#0a0d11;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0a0d11;--panel:#10151b;--panel2:#161c24;--ink:#e6eaef;--muted:#9aa5b1;--line:#232b35;--line2:#3e4957;--grid:#121820;--accent:#6cb0ff;--accent-bg:#12243b;--on-accent:#0a0d11;--ok:#86d9a0;--ok-bg:#10301b;--ok-line:#3f9a5c;--warn:#ffd166;--warn-bg:#3a2b05;--warn-line:#c49a1c;--bad:#ffa09b;--bad-bg:#431418;--bad-line:#dc5a56;--none-fg:#0a0d11;--none-bg:#aab4bf;--venue:#6cb0ff;--venue-soft:#1f3a5c;--on-venue:#0a0d11;--field:#647182;--zone:#1f0f12;--on-bad:#0a0d11;color-scheme:dark}
-:root{--sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+<style>:root{--paper:#f3eee1;--sheet:#fbf8f0;--ink:#1b1a17;--ink2:#57524a;--hair:#cfc7b2;--blue2:#d2e6ee;--blue1:#a6cee3;--land:#e9d59b;--contour:#4585ad;--hydro:#1a5884;--mag:#9c1c74;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#0a0e13;--sheet:#0f151c;--ink:#dcd8cb;--ink2:#a09c90;--hair:#2b343f;--blue2:#143246;--blue1:#1d4d6e;--land:#4a401f;--contour:#5d9cc4;--hydro:#8cc4e6;--mag:#e58bc8;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0a0e13;--sheet:#0f151c;--ink:#dcd8cb;--ink2:#a09c90;--hair:#2b343f;--blue2:#143246;--blue1:#1d4d6e;--land:#4a401f;--contour:#5d9cc4;--hydro:#8cc4e6;--mag:#e58bc8;color-scheme:dark}
+@font-face{font-family:"Sofia Sans";src:url(fonts/sofia-sans.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Sofia Sans";src:url(fonts/sofia-sans-italic.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Sofia Sans Condensed";src:url(fonts/sofia-sans-condensed.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Sofia Sans Condensed";src:url(fonts/sofia-sans-condensed-italic.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+:root{--sans:"Sofia Sans",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--cond:"Sofia Sans Condensed","Sofia Sans","Arial Narrow",system-ui,sans-serif;
 --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}a{color:var(--accent);text-underline-offset:3px;text-decoration-thickness:1px}a:hover{text-decoration-thickness:2px}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}abbr[title]{text-decoration:underline dotted;text-underline-offset:3px;cursor:help}.skip{position:absolute;left:-9999px;top:8px}.skip:focus{left:16px;z-index:9;background:var(--panel);padding:6px 10px}.wrap{max-width:1200px;margin:0 auto;padding:0 24px}code{font:.86em var(--mono);background:var(--panel2);border:1px solid var(--line);border-radius:3px;padding:.05em .35em;overflow-wrap:anywhere}pre{font:12.5px/1.6 var(--mono);background:var(--panel);border:1px solid var(--line);padding:12px 14px;margin:0 0 16px;overflow-x:auto;white-space:pre}pre code{font:inherit;background:none;border:0;padding:0;overflow-wrap:normal}p{margin:0 0 16px}ul,ol{padding-left:22px;margin:0 0 16px}li{margin:0 0 6px}.top{background:var(--panel);border-bottom:1px solid var(--line)}.top .wrap{display:flex;align-items:center;flex-wrap:wrap;gap:0 18px;min-height:56px}.brand{display:inline-flex;align-items:center;gap:9px;font:650 16px/1 var(--sans);letter-spacing:-.01em;color:var(--ink);text-decoration:none;padding:14px 0}.brand svg{width:24px;height:24px;flex:none}.lg-h{fill:var(--ink)}.lg-s{stroke:var(--accent)}nav.pages{display:flex;gap:2px;min-width:0;overflow-x:auto;scrollbar-width:none}nav.pages::-webkit-scrollbar{display:none}nav.pages a{font-size:14px;color:var(--muted);text-decoration:none;padding:17px 9px 15px;white-space:nowrap;border-bottom:2px solid transparent}nav.pages a:hover{color:var(--ink)}nav.pages a[aria-current]{color:var(--ink);border-bottom-color:var(--accent)}nav.pages a:focus-visible{outline-offset:-2px}.acts{display:flex;align-items:center;gap:14px;margin-left:auto}.cur{font-size:14px;font-weight:600;color:var(--accent);text-decoration:none;padding:6px 0}.cur:hover,.cur[aria-current]{text-decoration:underline}.theme{display:inline-flex;align-items:center;gap:6px;font:500 12px var(--mono);color:var(--muted);background:var(--panel);border:1px solid var(--field);border-radius:4px;padding:5px 9px;cursor:pointer}.theme:hover{color:var(--ink);border-color:var(--ink)}.theme svg{width:14px;height:14px}.hero{position:relative;border-bottom:1px solid var(--line);background:var(--bg)}.hero::before,.hero::after{content:"";position:absolute;left:0;right:0;pointer-events:none}.hero::before{top:0;bottom:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px;background-position:-1px -1px;-webkit-mask-image:radial-gradient(140% 100% at 0 0,#000 40%,transparent 85%);mask-image:radial-gradient(140% 100% at 0 0,#000 40%,transparent 85%)}.hero::after{bottom:0;height:9px;background:repeating-linear-gradient(90deg,var(--line2) 0 1px,transparent 1px 32px) -1px 100%/100% 9px no-repeat,repeating-linear-gradient(90deg,var(--line2) 0 1px,transparent 1px 8px) -1px 100%/100% 4px no-repeat}.hero .wrap{position:relative;padding-top:40px;padding-bottom:40px}.kicker{font:600 11.5px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}.kicker time,.kicker .ago{letter-spacing:.02em}.ago{color:var(--muted);text-transform:none}.ago.stale{color:var(--warn);font-weight:700}h1{font:650 clamp(28px,3.7vw,42px)/1.14 var(--sans);letter-spacing:-.022em;margin:0 0 16px;max-width:25em;text-wrap:balance}h2{font:650 clamp(20px,2.1vw,24px)/1.25 var(--sans);letter-spacing:-.012em;margin:0 0 10px;text-wrap:balance}h3{font:650 17px/1.35 var(--sans);margin:20px 0 4px}.dek{font-size:18px;line-height:1.6;color:var(--muted);max-width:36em;margin:0}.dek b{color:var(--ink);font-weight:600}.dek+.dek{margin-top:10px}.ver{font:12.5px var(--mono);color:var(--muted);margin:-6px 0 14px}main{display:block}main>.wrap{padding-bottom:24px}section{margin-top:56px}.read{max-width:38em}.cap{font-size:13.5px;line-height:1.55;color:var(--muted);margin:12px 0 0;max-width:44em}.cap b{color:var(--ink);font-weight:600}.note{border-left:3px solid var(--accent);background:var(--accent-bg);padding:10px 14px;font-size:14.5px;line-height:1.55;margin:16px 0;max-width:42em}.note b{font-weight:650}@supports (grid-template-rows:subgrid){.kpi{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:0;align-content:start}}table{border-collapse:separate;border-spacing:0;width:100%;font:12.5px/1.35 var(--mono);font-variant-numeric:tabular-nums}caption{text-align:left;padding:0;height:0;overflow:hidden;color:transparent}th,td{padding:6px 9px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line);background:var(--panel);vertical-align:middle}thead th{background:var(--panel2);font:600 10.5px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1px solid var(--line2);vertical-align:bottom}th:first-child,td:first-child{text-align:left;position:sticky;left:0;z-index:1;box-shadow:inset -1px 0 0 var(--line)}tbody th{font-weight:400}tbody tr:last-child>*{border-bottom:0}tr[aria-current]>*{background:var(--panel2)}.ic{width:1.05em;height:1.05em;flex:none}figure{margin:0}dl.defs{margin:0}dl.defs dt{font-weight:650;margin:16px 0 2px}dl.defs dd{margin:0;max-width:38em}.formula{font:13px/1.6 var(--mono);background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);padding:10px 14px;margin:10px 0 14px;max-width:46em;overflow-x:auto}.foot{border-top:1px solid var(--line);background:var(--panel);margin-top:72px}.foot .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:16px 32px;padding-top:24px;padding-bottom:32px;font-size:13px;line-height:1.6;color:var(--muted)}.foot b{color:var(--ink);font-weight:650}.foot .fb svg{width:16px;height:16px;vertical-align:-3px;margin-right:6px}.foot a{color:var(--muted)}.foot p{margin:0 0 6px}@media (max-width:900px){.foot .wrap{grid-template-columns:minmax(0,1fr)}.top .wrap{gap:0 12px}nav.pages{order:3;flex-basis:100%;margin:0 -16px;padding:0 10px;border-top:1px solid var(--line)}nav.pages a{padding:10px 9px 9px}.brand{padding:12px 0}}@media (max-width:620px){.wrap{padding:0 16px}.hero .wrap{padding-top:28px;padding-bottom:32px}.kicker{min-height:4.8em}.dek{font-size:16.5px}section{margin-top:44px}nav.pages{flex-wrap:wrap;overflow:visible;margin:0 -8px;padding:0 2px}nav.pages a{padding:8px 7px;font-size:13px}.theme .tl{display:none}.cur{font-size:13px}}@media (prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}</style>
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;background:var(--paper);color:var(--ink);font:16.5px/1.55 var(--sans);font-variant-numeric:lining-nums;-webkit-font-smoothing:antialiased}a{color:var(--hydro);text-underline-offset:.18em;text-decoration-thickness:1px}a:hover{text-decoration-thickness:2px}:focus-visible{outline:2px solid var(--mag);outline-offset:2px}abbr[title]{text-decoration:underline dotted;text-underline-offset:3px;cursor:help}.skip{position:absolute;left:-9999px;top:8px}.skip:focus{left:16px;z-index:9;background:var(--sheet);padding:6px 10px}.wrap{max-width:1180px;margin:0 auto;padding:0 20px}code{font:.84em var(--mono);border:1px solid var(--hair);padding:.05em .3em;overflow-wrap:anywhere}pre{font:12.5px/1.6 var(--mono);border:1px solid var(--ink2);padding:12px 14px;margin:0 0 16px;overflow-x:auto;white-space:pre}pre code{font:inherit;border:0;padding:0;overflow-wrap:normal}p{margin:0 0 14px}ul,ol{padding-left:22px;margin:0 0 16px}li{margin:0 0 6px}b,strong{font-weight:650}.top .wrap{display:flex;align-items:center;flex-wrap:wrap;gap:0 22px;padding-top:12px}.brand{display:inline-flex;align-items:center;gap:9px;font:700 15px/1 var(--cond);letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:6px 0}.brand svg{width:26px;height:26px;flex:none}.lg{fill:none;stroke:var(--ink);stroke-width:1.6;stroke-linejoin:round}nav.pages{display:flex;gap:18px;min-width:0;overflow-x:auto;scrollbar-width:none;font:500 15px/1 var(--cond);letter-spacing:.04em}nav.pages::-webkit-scrollbar{display:none}nav.pages a{color:var(--ink2);text-decoration:none;padding:9px 0 7px;white-space:nowrap;border-bottom:3px solid transparent}nav.pages a:hover{color:var(--ink)}nav.pages a[aria-current]{color:var(--ink);border-bottom-color:var(--ink)}nav.pages a:focus-visible{outline-offset:-2px}.acts{display:flex;align-items:center;gap:16px;margin-left:auto}.cur{font:600 15px var(--cond);letter-spacing:.04em;color:var(--hydro);text-decoration:none;padding:6px 0}.cur:hover,.cur[aria-current]{text-decoration:underline}.theme{display:inline-flex;align-items:center;gap:6px;font:500 13px/1 var(--cond);letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);background:none;border:1px solid var(--ink2);border-radius:0;padding:6px 9px;cursor:pointer}.theme:hover{color:var(--ink);border-color:var(--ink)}.theme svg{width:13px;height:13px}.marg{display:flex;justify-content:space-between;gap:16px;font:500 12.5px/1.3 var(--cond);letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding:14px 2px 7px}.marg b{color:var(--ink);font-weight:700}.marg a{color:inherit}.marg.low{padding:9px 2px 0;min-height:0}.ago{white-space:nowrap}.ago.stale{color:var(--mag);font-weight:700}.frame{background:var(--sheet);border:1px solid var(--ink);outline:2.5px solid var(--ink);outline-offset:4px;padding:34px 40px 42px}.kicker{font:italic 400 15px/1.3 var(--cond);letter-spacing:.14em;color:var(--hydro);margin:0 0 12px}h1{font:620 clamp(30px,4.2vw,46px)/1.07 var(--sans);letter-spacing:-.014em;margin:0 0 18px;max-width:22em;text-wrap:balance}h2{font:620 clamp(21px,2.3vw,26px)/1.17 var(--sans);letter-spacing:-.008em;margin:0 0 12px;text-wrap:balance}h3{font:650 17px/1.3 var(--sans);margin:22px 0 6px}.dek{font-size:19px;line-height:1.5;max-width:38em;margin:0}.dek+.dek{margin-top:12px;font-size:16.5px;line-height:1.55}.ver{font:500 13px var(--cond);letter-spacing:.06em;color:var(--ink2);margin:0 0 12px}.ver{margin:-8px 0 14px}main{display:block}section{margin-top:50px;padding-top:26px;border-top:1px solid var(--hair)}.read{max-width:40em}.cap{font-size:14.5px;line-height:1.5;color:var(--ink2);margin:10px 0 0;max-width:46em}.cap b{color:var(--ink)}.note{border-left:3px solid var(--ink);padding:2px 0 2px 13px;font-size:15px;line-height:1.5;margin:16px 0;max-width:44em}table{border-collapse:separate;border-spacing:0;width:100%;font-size:15px;line-height:1.3;font-variant-numeric:lining-nums tabular-nums}caption{text-align:left;padding:0;height:0;overflow:hidden;color:transparent}th,td{padding:7px 10px 6px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--hair);background:var(--sheet);vertical-align:middle}thead th{font:600 12px/1.25 var(--cond);text-transform:uppercase;letter-spacing:.11em;color:var(--ink2);border-bottom:1px solid var(--ink);vertical-align:bottom;padding-top:9px}th:first-child,td:first-child{text-align:left;padding-left:2px;position:sticky;left:0;z-index:1}tbody th{font-weight:600}tbody tr:last-child>*{border-bottom:0}tr[aria-current]>*{background:var(--blue2)}.ic{width:15px;height:15px;flex:none}a.lg{color:var(--ink);text-decoration:none}a.lg:hover{text-decoration:underline}svg text{font-family:var(--cond);fill:var(--ink)}figure{margin:0}dl.defs{margin:0}dl.defs dt{font-weight:650;margin:16px 0 2px}dl.defs dd{margin:0;max-width:40em}.formula{font:500 16.5px/1.45 var(--cond);letter-spacing:.03em;border-left:3px solid var(--ink);padding:3px 0 3px 13px;margin:10px 0 14px;max-width:46em;overflow-x:auto}.foot .wrap{padding-top:12px;padding-bottom:34px;font-size:14px;line-height:1.55;color:var(--ink2)}.foot .attr{color:var(--ink)}.foot b{color:var(--ink)}.foot a{color:var(--ink2)}.foot p{margin:0 0 5px}@media (max-width:900px){.top .wrap{gap:0 12px}nav.pages{order:3;flex-basis:100%;flex-wrap:wrap;overflow:visible;gap:0 16px}}@media (max-width:620px){body{font-size:16px}.wrap{padding:0 10px}.top .wrap{padding-top:9px}.marg{font-size:11px;letter-spacing:.06em;padding:10px 2px 8px;min-height:3.9em}.frame{padding:20px 13px 26px;outline-width:2px;outline-offset:3px}.dek{font-size:17.5px}section{margin-top:36px;padding-top:20px}.theme .tl{display:none}th,td{padding:7px 8px 6px}.foot .wrap{padding:8px 14px 26px}}@media (prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}</style>
 <script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*.json"}}]},"eagerness":"moderate"}]}</script>
 </head>
 <body>
@@ -39,45 +44,49 @@
 </defs></svg>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
-<a class="brand" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><path class="lg-h" d="M2 8.5h28l-3.4 6.5H19l-1.6 6.5h-2.8L13 15H5.4z"/><path class="lg-s" d="M3 27h26" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg><span>Underkeel</span></a>
+<a class="brand" href="index.html"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="lg" d="M3 6.5h20l-2.6 6H16l-1 4.5h-4l-1-4.5H5.6z"/><path class="lg" d="M2 22.5h4l3-1.5 4 1.5h11"/></svg><span>Underkeel</span></a>
 <nav class="pages" aria-label="Pages"><a href="index.html">Overview</a><a href="exit-depth.html">Exit depth</a><a href="venues.html">Venues</a><a href="liquidations.html">Liquidations</a><a href="method.html" aria-current=page>Method</a><a href="data.html">Data</a><a href="about.html">About</a></nav>
 <div class="acts"><a class="cur" href="services.html">For curators</a>
 <button class="theme" id="theme-btn" type="button" title="Colour theme" hidden><svg class="ic" aria-hidden="true"><use href="#i-theme"/></svg><span class="tl">auto</span></button></div>
 </div></header>
-<main id="main">
-<div class="hero"><div class="wrap">
-<p class="kicker">Method · snapshot <time datetime="2026-11-16T12:23:00Z" data-ago>2026-11-16 12:23 UTC</time></p>
+<main id="main"><div class="wrap">
+<div class="marg"><span>Underkeel - <b>Method</b></span><span>Snapshot <b><time datetime="2026-11-16T14:46:00Z" data-ago>2026-11-16 14:46 UTC</time></b></span></div>
+<div class="frame">
+<div class="hero">
+<p class="kicker">Method</p>
 <h1>Method</h1>
-<p class="ver">Clearance v2 · method of 14 Nov 2026 · by Dmitrii Luzin</p>
+<p class="ver">Clearance v3 · method of 16 Nov 2026 · by Dmitrii Luzin</p>
 <p class="dek">How each number on this site is measured, how to repeat it, and what it does not measure.</p>
-</div></div>
-<div class="wrap">
+</div>
 <section>
 <h2>Why exit cost against the bonus</h2>
 <p class="read">A flash-loan liquidator repays a borrower's debt, receives the collateral and sells it in the same
-transaction. The trade only pays while the sale costs less than the liquidation bonus. Where the exit costs more than the
-bonus at a size, a single liquidation of that size loses money: the position has to be liquidated in smaller parts across
+transaction. For 1 of debt it seizes 1 + bonus of collateral and keeps (1 + bonus) x (1 - exit cost), so the trade pays
+while the sale costs less than the break-even exit cost, 1 - 1/(1 + bonus): 11.25% at a 12.68% bonus, a little under the
+bonus itself. Where the exit costs more than that at a size, a single liquidation of that size loses money: the position has to be liquidated in smaller parts across
 blocks, and if prices fall faster than that, bad debt can build up. This follows the exit-capacity discussion in the Morpho
 forum RFC <a href="https://forum.morpho.org/t/2301" rel="noopener noreferrer">"Collateral Transparency"</a>.</p>
 </section>
 
 <section id="clearance">
 <h2>Clearance, clearing size, quote-dependent debt</h2>
-<div class="formula">clearance(size) = bonus - exit cost(size)   [percentage points]</div>
+<div class="formula">break-even exit cost = 1 - 1/(1 + bonus)<br>clearance(size) = break-even exit cost - exit cost(size)   [percentage points]</div>
 <dl class="defs">
 <dt>Clearance</dt>
-<dd>The liquidation bonus minus the exit cost at a size, in percentage points. Positive: room for a liquidator at that size.
+<dd>The break-even exit cost minus the exit cost at a size, in percentage points. Positive: room for a liquidator at that size.
 Negative: a single liquidation of that size loses money. It is an upper bound on the liquidator's margin: gas, competition and
 auction bids take part of it.</dd>
 <dt>Clearing size</dt>
 <dd>The largest measured size with positive clearance, every smaller measured size positive too. "Below $25k" means even the
-smallest measured sale costs the bonus or more. Measured sizes: $25k, $200k and $1M; between them nothing is measured.</dd>
+smallest measured sale costs the break-even or more. Measured sizes: $25k, $200k and $1M; between them nothing is
+measured. A market whose first break is a sale larger than everything borrowed in it is counted apart ("breaks only above
+its debt"): no single liquidation there can be that large.</dd>
 <dt>Quote-dependent debt</dt>
 <dd>Borrowed amount in markets that are liquidatable at some size only with RFQ quotes: with off-chain market-maker quotes the
-sale costs less than the bonus, through on-chain pools alone it costs the bonus or more, or has no route. Such a market
+sale costs less than the break-even, through on-chain pools alone it costs as much or more, or has no route. Such a market
 stays liquidatable at that size only while the market makers keep quoting.</dd>
 </dl>
-<p class="note">Example, snapshot 2026-11-16 12:23 UTC: <a href="markets/usde-usdc-91-5.html">USDe/USDC 91.5%</a>, bonus 2.62%. $25k: exit 0.1%, clearance +2.5 pp; $200k: exit 0.1%, clearance +2.5 pp; $1M: exit 37.7%, clearance -35.1 pp. Clearing size: $200k.</p>
+<p class="note">Example, snapshot 2026-11-16 14:46 UTC: <a href="markets/usde-usdc-91-5.html">USDe/USDC 91.5%</a>, bonus 2.62%, break-even exit cost 2.55%. $25k: exit 0.1%, clearance +2.5 pp; $200k: exit 0.1%, clearance +2.5 pp; $1M: exit 37.7%, clearance -35.2 pp. Clearing size: $200k.</p>
 </section>
 
 <section>
@@ -101,7 +110,8 @@ pools). Asked only when the best route uses RFQ; otherwise it is the same route.
 are given, and in a fast move a maker can widen or stop quoting; the no-RFQ cost is what the on-chain liquidity alone gives.</dd>
 <dt>No route and not measured</dt>
 <dd>No route: the aggregator answered that no source sells the token into the loan token at that size. Not measured: the
-quote failed in this snapshot or the token has no Morpho API price - shown as a dash, never as no route.</dd>
+quote failed or the token has no USD price to size the sale with - shown as a dash, never as no route. A size above one
+with no route is not asked again.</dd>
 <dt>Venues</dt>
 <dd>From the same route: the share of the collateral amount each source takes on the hops out of the collateral token. This
 is how the router splits this sale at this moment, not each venue's own capacity.</dd>
@@ -114,13 +124,13 @@ not the market, so positions near liquidation there are normal.</dd>
 
 <section id="glossary">
 <h2>Terms</h2>
-<dl class="defs"><dt id="g-lltv">LLTV - liquidation loan-to-value</dt><dd>The debt-to-collateral ratio at which a Morpho position can be liquidated. It fixes the bonus.</dd><dt id="g-hf">HF - health factor</dt><dd>Collateral value x LLTV / debt. Below 1 a position can be liquidated; HF &lt; 1.1 is within 10% of that.</dd><dt id="g-rfq">RFQ - request for quote</dt><dd>A firm price signed off chain by a market maker for one trade. It can be withdrawn in a fast market.</dd><dt id="g-pp">pp - percentage points</dt><dd>The unit of clearance: a 12.7% bonus minus a 15.1% exit cost is -2.4 pp.</dd><dt id="g-clearance">Clearance</dt><dd>The liquidation bonus minus the exit cost at a size, in percentage points.</dd><dt id="g-clearing-size">Clearing size</dt><dd>The largest measured size with positive clearance. &quot;$1M+&quot;: positive at the largest measured size; larger sizes are not measured.</dd><dt id="g-peg">peg - pegged pair</dt><dd>Two tokens that track each other (two dollar tokens, a staking token and its asset): the health factor follows the peg, not the market price, so positions near liquidation are normal.</dd><dt id="g-svr">SVR - Smart Value Recapture</dt><dd>Chainlink&#x27;s auction for the right to liquidate right after an oracle update; the winner pays back part of the bonus as a bid.</dd><dt id="g-mm-pool">MM pool - market-maker pool</dt><dd>An on-chain pool whose price a market maker sets (prop AMMs, WOOFi, DODO private pools).</dd><dt id="g-pmm">pmm-N - RFQ market maker N</dt><dd>An RFQ market maker that KyberSwap identifies only by number.</dd></dl>
+<dl class="defs"><dt id="g-lltv">LLTV - liquidation loan-to-value</dt><dd>The debt-to-collateral ratio at which a Morpho position can be liquidated. It fixes the bonus.</dd><dt id="g-break-even">Break-even exit cost</dt><dd>1 - 1/(1 + bonus): the exit cost at which a liquidation neither earns nor loses. A liquidator repays 1, seizes 1 + bonus and keeps (1 + bonus) x (1 - exit cost): 11.25% at a 12.68% bonus. On the charts it is the keel.</dd><dt id="g-hf">HF - health factor</dt><dd>Collateral value x LLTV / debt. Below 1 a position can be liquidated; HF &lt; 1.1 is within 10% of that.</dd><dt id="g-rfq">RFQ - request for quote</dt><dd>A firm price signed off chain by a market maker for one trade. It can be withdrawn in a fast market.</dd><dt id="g-pp">pp - percentage points</dt><dd>The unit of clearance: an 11.3% break-even minus a 13.2% exit cost is -1.9 pp.</dd><dt id="g-clearance">Clearance</dt><dd>The break-even exit cost minus the exit cost at a size, in percentage points.</dd><dt id="g-clearing-size">Clearing size</dt><dd>The largest measured size with positive clearance. &quot;$1M+&quot;: positive at the largest measured size; larger sizes are not measured.</dd><dt id="g-peg">peg - pegged pair</dt><dd>Two tokens that track each other (two dollar tokens, a staking token and its asset): the health factor follows the peg, not the market price, so positions near liquidation are normal.</dd><dt id="g-svr">SVR - Smart Value Recapture</dt><dd>Chainlink&#x27;s auction for the right to liquidate right after an oracle update; the winner pays back part of the bonus as a bid.</dd><dt id="g-mm-pool">MM pool - market-maker pool</dt><dd>An on-chain pool whose price a market maker sets (prop AMMs, WOOFi, DODO private pools).</dd><dt id="g-pmm">pmm-N - RFQ market maker N</dt><dd>An RFQ market maker that KyberSwap identifies only by number.</dd></dl>
 </section>
 
 <section>
 <h2>Liquidations</h2>
-<p class="read">Morpho Blue liquidation events on Base, read from the chain, in Morpho-listed markets only (the
-same list as exit depth: anyone can create a market with its own oracle). Bonus = collateral seized minus debt
+<p class="read">Morpho Blue liquidation events on Base, read from the chain, in pairs of Morpho-listed markets of any size (exit
+depth covers the listed markets with at least $100k borrowed: anyone can create a market with its own oracle). Bonus = collateral seized minus debt
 repaid, in USD at the protocol's oracle price in the liquidation block; a liquidation whose collateral is worth more than
 1.2 times the debt is left out (Morpho pays at most 15%, so the oracle there is broken or hostile). A liquidation counts as auctioned when its transaction
 went through the Chainlink SVR auction contract (Atlas); the bid is what the winner paid back from the bonus. Where an auction
@@ -142,38 +152,37 @@ exactly when liquidations are needed.</li>
 
 <section id="cite">
 <h2>How to cite</h2>
-<p class="read">In text: "Per Underkeel (Clearance v2, snapshot 2026-11-16 12:23 UTC), selling $1M of a token into USDC costs
-X% against a Y% liquidation bonus on Morpho, Base." Short: "(Underkeel, Clearance v2, 2026-11-16)". Always give
+<p class="read">In text: "Per Underkeel (Clearance v3, snapshot 2026-11-16 14:46 UTC), selling $1M of a token into USDC costs
+X% against a Y% liquidation bonus on Morpho, Base." Short: "(Underkeel, Clearance v3, 2026-11-16)". Always give
 the size and the bonus with a clearance figure: "clearance at $1M" alone does not say what it is measured against. Link to
 the market page, not to the home page: each market page has its own "Cite as" line.</p>
-<p class="cap">Cite as: Underkeel, Clearance v2, Morpho Blue markets on Base, snapshot 2026-11-16T12:23Z, data sha256 6c84b050. https://underkeel.xyz/method.html</p>
+<p class="cap">Cite as: Underkeel, Clearance v3, Morpho Blue markets on Base, snapshot 2026-11-16T14:46Z, data sha256 1f524b0e. https://underkeel.xyz/method.html</p>
 <p class="read"><b>What the number is not.</b> Clearance describes one liquidation of one size in one transaction. It is not a
 rating of a market, a vault or a curator, and it does not say whether any position will be liquidated.</p>
 </section>
 
 <section id="changelog">
 <h2>Changelog</h2>
-<dl class="defs"><dt>v1 - 13 Nov 2026</dt><dd>Sale sizes $25k, $200k and $1M. Exit cost from the KyberSwap Aggregator public API, with and without RFQ sources, against the Morpho API price. Bonus from the LLTV: min(15%, 1/(0.3 x LLTV + 0.7) - 1). Clearance = bonus - exit cost. Markets: listed by Morpho, at least $100k borrowed.</dd><dt>v2 - 14 Nov 2026</dt><dd>Exit cost = 1 - USD value out / USD value in, both valued by KyberSwap at the moment of the quote: the route&#x27;s own cost. In a fast market on 14 Nov the Morpho API price lagged ETH by 1.7%, and measured against it a $25k WETH sale showed 1.7% instead of 0.1%. Quotes without RFQ are asked after every market has its best route.</dd></dl>
+<dl class="defs"><dt>v1 - 13 Nov 2026</dt><dd>Sale sizes $25k, $200k and $1M. Exit cost from the KyberSwap Aggregator public API, with and without RFQ sources, against the Morpho API price. Bonus from the LLTV: min(15%, 1/(0.3 x LLTV + 0.7) - 1). Clearance = bonus - exit cost. Markets: listed by Morpho, at least $100k borrowed.</dd><dt>v2 - 14 Nov 2026</dt><dd>Exit cost = 1 - USD value out / USD value in, both valued by KyberSwap at the moment of the quote: the route&#x27;s own cost. In a fast market on 14 Nov the Morpho API price lagged ETH by 1.7%, and measured against it a $25k WETH sale showed 1.7% instead of 0.1%. Quotes without RFQ are asked after every market has its best route.</dd><dt>v3 - 16 Nov 2026</dt><dd>Clearance = break-even exit cost - exit cost, where the break-even is 1 - 1/(1 + bonus): a liquidator repays 1, seizes 1 + bonus and breaks even when the sale loses bonus/(1 + bonus), not the bonus itself (11.25% at a 12.68% bonus). Before, the exit cost was set against the bonus, which overstated every clearance by 0.01 pp (LLTV 96.5%) to 1.43 pp (LLTV 62.5%). On the snapshot of 16 Nov 12:23 UTC no market of 47 changed its status; in the 8 snapshots published before the change, 2 market readings of 376 did. A market whose first break is a sale larger than everything borrowed in it is now counted apart from the markets that break.</dd></dl>
 <p class="read">A change of a size, a source, a threshold or a formula gets a new version and a line here. Past numbers are
 not recalculated; the history stays in git.</p>
 </section>
 
 <section>
 <h2>Updates and history</h2>
-<p class="read">A new snapshot every 6 hours. A snapshot spoiled by a failing API (markets or quotes missing) is not published;
-the previous one stays. Every published snapshot is one commit in the site's public repository, so its history is the
-history of exit depth by market. Files and fields: <a href="data.html">Data</a>.
+<p class="read">A new snapshot every 6 hours. A snapshot spoiled by a failing API is not published when more than 10% of the
+quotes or 20% of the markets are missing; the previous one stays. Files and fields: <a href="data.html">Data</a>.
 Raw data: <a href="data/exit-depth.json">data/exit-depth.json</a>, <a href="data/liquidations.json">data/liquidations.json</a>.</p>
 </section>
 </div>
-</main>
+<div class="marg low"><span>Clearance v3 - 16 Nov 2026</span><span>Rebuilt every 6 hours</span></div>
+</div></main>
 <footer class="foot"><div class="wrap">
-<div><p><b class="fb"><svg viewBox="0 0 32 32" aria-hidden="true"><path class="lg-h" d="M2 8.5h28l-3.4 6.5H19l-1.6 6.5h-2.8L13 15H5.4z"/><path class="lg-s" d="M3 27h26" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg>Underkeel</b> - exit depth and liquidations of Morpho Blue markets on Base.</p>
-<p>Snapshot <time datetime="2026-11-16T12:23:00Z">2026-11-16 12:23 UTC</time>, rebuilt every 6 hours.</p></div>
-<div><p>Quotes: KyberSwap Aggregator public API. Markets and positions: Morpho API.</p><p>Liquidations: Morpho Blue events on Base.</p></div>
-<div><p>Independent: not affiliated with Morpho, Base, KyberSwap or Chainlink. Informational only, not investment advice.</p>
-<p><a href="about.html">About &amp; disclosure</a> · <a href="method.html">Method</a> · <a href="data.html">Data</a> · <a href="services.html">Services</a></p>
-<p>Contact: Telegram <a href="https://t.me/dimanoshe" rel="noopener noreferrer">@dimanoshe</a> · email <a href="mailto:hello@underkeel.xyz?subject=Underkeel">hello@underkeel.xyz</a></p></div>
+<p class="attr">Quotes: KyberSwap Aggregator public API. Markets and positions: Morpho API. Liquidations: Morpho Blue events on Base.</p>
+<p><b>Underkeel</b> - exit depth and liquidations of Morpho Blue markets on Base. Snapshot <time datetime="2026-11-16T14:46:00Z">2026-11-16 14:46 UTC</time>, rebuilt every 6 hours.</p>
+<p>Independent: not affiliated with Morpho, Base, KyberSwap or Chainlink. Informational only, not investment advice.
+<a href="about.html">About &amp; disclosure</a> - <a href="method.html">Method</a> - <a href="data.html">Data</a> - <a href="services.html">Services</a></p>
+<p>Contact: Telegram <a href="https://t.me/dimanoshe" rel="noopener noreferrer">@dimanoshe</a> · email <a href="mailto:hello@underkeel.xyz?subject=Underkeel">hello@underkeel.xyz</a></p>
 </div></footer>
 <script>(function(){var d=document.documentElement,b=document.getElementById('theme-btn'),modes=['auto','light','dark'];
 function cur(){return d.getAttribute('data-theme')||'auto'}
