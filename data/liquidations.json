@@ -3,10 +3,10 @@
  "days": 30,
  "since": "2026-10-18",
  "until": "2026-11-17",
- "count": 13491,
- "bonus_usd": 7285887.656269624,
- "auction_bonus_usd": 6799061.152363005,
- "auction_bids_usd": 5478293.994954034,
+ "count": 13493,
+ "bonus_usd": 7285947.825588152,
+ "auction_bonus_usd": 6799092.835450386,
+ "auction_bids_usd": 5478297.587020347,
  "pairs": [
   {
    "pair": "cbBTC/USDC",
@@ -16,9 +16,9 @@
   },
   {
    "pair": "cbXRP/USDC",
-   "count": 2508,
-   "bonus_usd": 1490486.2930887097,
-   "auction_bonus_usd": 1401640.1286831656
+   "count": 2510,
+   "bonus_usd": 1490546.4624072376,
+   "auction_bonus_usd": 1401671.8117705465
   },
   {
    "pair": "WETH/USDC",
@@ -294,7 +294,7 @@
   },
   {
    "day": "2026-11-17",
-   "bonus_usd": 0.42570102618321026
+   "bonus_usd": 60.59501955419249
   }
  ]
 }
