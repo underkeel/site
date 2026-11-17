@@ -1,12 +1,12 @@
 {
  "schema": 2,
  "days": 30,
- "since": "2026-10-17",
- "until": "2026-11-16",
- "count": 13555,
- "bonus_usd": 7304167.600958872,
- "auction_bonus_usd": 6817095.90238274,
- "auction_bids_usd": 5495718.13306483,
+ "since": "2026-10-18",
+ "until": "2026-11-17",
+ "count": 13489,
+ "bonus_usd": 7285887.489002906,
+ "auction_bonus_usd": 6799061.152363005,
+ "auction_bids_usd": 5478293.994954034,
  "pairs": [
   {
    "pair": "cbBTC/USDC",
@@ -16,9 +16,9 @@
   },
   {
    "pair": "cbXRP/USDC",
-   "count": 2566,
-   "bonus_usd": 1504316.5180933105,
-   "auction_bonus_usd": 1415224.7333172297
+   "count": 2508,
+   "bonus_usd": 1490486.2930887097,
+   "auction_bonus_usd": 1401640.1286831656
   },
   {
    "pair": "WETH/USDC",
@@ -46,15 +46,15 @@
   },
   {
    "pair": "cbDOGE/USDC",
-   "count": 345,
-   "bonus_usd": 53279.2749942936,
-   "auction_bonus_usd": 51631.82370723836
+   "count": 341,
+   "bonus_usd": 53257.56078915555,
+   "auction_bonus_usd": 51610.10950210031
   },
   {
    "pair": "cbADA/USDC",
-   "count": 166,
-   "bonus_usd": 40279.09123116549,
-   "auction_bonus_usd": 39566.02522956274
+   "count": 161,
+   "bonus_usd": 35850.6600506339,
+   "auction_bonus_usd": 35137.594049031155
   },
   {
    "pair": "cbZEC/USDC",
@@ -118,8 +118,8 @@
   },
   {
    "pair": "yoUSD/USDC",
-   "count": 6,
-   "bonus_usd": 116.94264554644609,
+   "count": 7,
+   "bonus_usd": 117.20107985440504,
    "auction_bonus_usd": 0.0
   },
   {
@@ -172,10 +172,6 @@
   }
  ],
  "by_day": [
-  {
-   "day": "2026-10-17",
-   "bonus_usd": 18280.37039027085
-  },
   {
    "day": "2026-10-18",
    "bonus_usd": 28031.604346965443
@@ -295,6 +291,10 @@
   {
    "day": "2026-11-16",
    "bonus_usd": 15.648402357279974
+  },
+  {
+   "day": "2026-11-17",
+   "bonus_usd": 0.25843430795895017
   }
  ]
 }
