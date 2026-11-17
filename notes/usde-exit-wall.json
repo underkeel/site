@@ -1,0 +1,352 @@
+{
+ "schema": 1,
+ "slug": "usde-exit-wall",
+ "url": "https://underkeel.xyz/notes/usde-exit-wall.html",
+ "title": "A $1M USDe sale on Base costs 37.7% against a 2.55% break-even",
+ "kind": "market",
+ "snapshot": "2026-11-17T06:23Z",
+ "data_sha256": "8c30bf86",
+ "commit": "5d65c89",
+ "method": "Clearance v3",
+ "published": "2026-11-17T19:05:18Z",
+ "numbers": [
+  {
+   "id": "snapshot",
+   "what": "The snapshot all figures are frozen at",
+   "text": [
+    "06:23",
+    "17 November",
+    "17 Nov 06:23"
+   ],
+   "value": "2026-11-17T06:23:40Z",
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): at_iso"
+  },
+  {
+   "id": "market",
+   "what": "The market: USDe collateral, USDC loan, LLTV 91.5%",
+   "text": [
+    "USDe/USDC 91.5%",
+    "91.5%"
+   ],
+   "value": 0.915,
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): lltv 0.915 of the USDe/USDC row"
+  },
+  {
+   "id": "bonus",
+   "what": "Liquidation bonus of the market",
+   "text": [
+    "2.62%"
+   ],
+   "value": 0.026167,
+   "unit": "share",
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): bonus"
+  },
+  {
+   "id": "breakeven",
+   "what": "Break-even exit cost: 1 - 1/(1 + bonus)",
+   "text": [
+    "2.55%"
+   ],
+   "value": 0.0255,
+   "unit": "share",
+   "at": "2026-11-17T06:23Z",
+   "source": "Computed from the bonus of data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): 1 - 1/(1 + 0.026167) = 0.0255"
+  },
+  {
+   "id": "sale_200k",
+   "what": "Exit cost of a $200k USDe sale into USDC, every source",
+   "text": [
+    "$200k",
+    "0.10%"
+   ],
+   "value": 0.001048,
+   "unit": "share",
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): exit 200000"
+  },
+  {
+   "id": "sale_1m",
+   "what": "Exit cost of a $1M USDe sale into USDC, every source",
+   "text": [
+    "$1M",
+    "37.7%",
+    "37.73%"
+   ],
+   "value": 0.37725,
+   "unit": "share",
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): exit 1000000"
+  },
+  {
+   "id": "sale_25k",
+   "what": "Exit cost of a $25k USDe sale into USDC, every source",
+   "text": [
+    "$25k",
+    "0.08%"
+   ],
+   "value": 0.000771,
+   "unit": "share",
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): exit 25000"
+  },
+  {
+   "id": "no_rfq_1m",
+   "what": "Exit cost of the $1M sale without RFQ makers and limit orders, on-chain pools only",
+   "text": [
+    "37.7%"
+   ],
+   "value": 0.377227,
+   "unit": "share",
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): exit_no_rfq 1000000"
+  },
+  {
+   "id": "borrowed",
+   "what": "Borrowed in USDe/USDC 91.5%, and its rank among the markets of the snapshot",
+   "text": [
+    "$329M",
+    "second largest"
+   ],
+   "value": {
+    "borrow_usd": 328914878,
+    "rank": 2,
+    "markets": 47
+   },
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): borrow_usd; the markets sorted by borrow_usd, cbBTC/USDC 86% first"
+  },
+  {
+   "id": "liquidation_1m",
+   "what": "One $1M liquidation: debt repaid, bonus, what the sale returns, the shortfall",
+   "text": [
+    "$974.5k",
+    "$25.5k",
+    "$623k",
+    "$352k"
+   ],
+   "value": {
+    "repaid": 974500,
+    "bonus": 25500,
+    "returned": 622750,
+    "short": 351750
+   },
+   "unit": "USD",
+   "at": "2026-11-17T06:23Z",
+   "source": "Computed from data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): repaid = $1M / (1 + bonus); bonus = $1M - repaid; returned = $1M x (1 - exit 1000000); short = repaid - returned"
+  },
+  {
+   "id": "liquidation_200k",
+   "what": "One $200k liquidation: what is left after the sale, before gas",
+   "text": [
+    "$4.9k"
+   ],
+   "value": 4890,
+   "unit": "USD",
+   "at": "2026-11-17T06:23Z",
+   "source": "Computed from data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): $200k x (1 - exit 200000) - $200k / (1 + bonus)"
+  },
+  {
+   "id": "near",
+   "what": "Collateral of positions with a health factor below 1.1 (and $110k more between 1.1 and 1.25)",
+   "text": [
+    "$367M",
+    "1.1"
+   ],
+   "value": {
+    "hf_below_1.1": 366848494,
+    "hf_below_1.25": 366958227,
+    "between": 109733
+   },
+   "unit": "USD",
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): near 1.1 and near 1.25 (Morpho API)"
+  },
+  {
+   "id": "liquidations_30d",
+   "what": "Morpho Blue liquidations on Base in the 30 days to 17 November: in USDe/USDC, in all pairs",
+   "text": [
+    "30 days",
+    "13,491"
+   ],
+   "value": {
+    "days": 30,
+    "usde_usdc": 0,
+    "all_pairs": 13491
+   },
+   "at": "2026-11-17T06:23Z",
+   "source": "data/liquidations.json of the same build (snapshot 2026-11-17T06:23Z, data sha256 abe3e222, commit 5d65c89 of github.com/underkeel/site): days, count; no USDe/USDC row in pairs"
+  },
+  {
+   "id": "route_1m",
+   "what": "Shares of the $1M sale by venue on the first hops out of USDe: Uniswap v3 62%, KyberSwap limit orders 33%, Uniswap v4 4%",
+   "text": [
+    "about a third",
+    "nearly all the rest"
+   ],
+   "value": {
+    "uniswapv3": 0.6244,
+    "kyberswap-limit-order-v2 (four entries)": 0.3332,
+    "uniswap-v4": 0.0421
+   },
+   "unit": "share",
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): venues 1000000"
+  },
+  {
+   "id": "history",
+   "what": "The history of snapshots of the market page",
+   "text": [
+    "12 snapshots",
+    "57 hours",
+    "14 Nov 21:23"
+   ],
+   "value": {
+    "snapshots": 12,
+    "first": "2026-11-14T21:23:11Z",
+    "last": "2026-11-17T06:23:40Z",
+    "hours": 57
+   },
+   "source": "data/exit-depth.json at the 12 snapshot commits of github.com/underkeel/site, from a772784 (2026-11-14T21:23Z) to 5d65c89 (2026-11-17T06:23Z)"
+  },
+  {
+   "id": "history_25k",
+   "what": "Exit cost of $25k over the 12 snapshots: lowest, highest",
+   "text": [
+    "0.00%",
+    "0.21%"
+   ],
+   "value": {
+    "lowest": 0.0,
+    "highest": 0.002065
+   },
+   "unit": "share",
+   "source": "data/exit-depth.json at the 12 snapshot commits of github.com/underkeel/site, from a772784 (2026-11-14T21:23Z) to 5d65c89 (2026-11-17T06:23Z): exit 25000 of USDe/USDC"
+  },
+  {
+   "id": "history_200k",
+   "what": "Exit cost of $200k over the 12 snapshots: lowest, highest",
+   "text": [
+    "0.05%",
+    "0.22%"
+   ],
+   "value": {
+    "lowest": 0.000485,
+    "highest": 0.002202
+   },
+   "unit": "share",
+   "source": "data/exit-depth.json at the 12 snapshot commits of github.com/underkeel/site, from a772784 (2026-11-14T21:23Z) to 5d65c89 (2026-11-17T06:23Z): exit 200000 of USDe/USDC"
+  },
+  {
+   "id": "history_1m",
+   "what": "Exit cost of $1M over the 12 snapshots: lowest, highest, the width of the band",
+   "text": [
+    "37.70%",
+    "37.79%",
+    "a tenth of a point"
+   ],
+   "value": {
+    "lowest": 0.376958,
+    "highest": 0.377899
+   },
+   "unit": "share",
+   "source": "data/exit-depth.json at the 12 snapshot commits of github.com/underkeel/site, from a772784 (2026-11-14T21:23Z) to 5d65c89 (2026-11-17T06:23Z): exit 1000000 of USDe/USDC"
+  },
+  {
+   "id": "loss_1m",
+   "what": "What the $1M sale lost in each of the 12 quotes",
+   "text": [
+    "$377k",
+    "12 quotes"
+   ],
+   "value": {
+    "lowest": 376958,
+    "highest": 377899
+   },
+   "unit": "USD",
+   "source": "Computed from data/exit-depth.json at the 12 snapshot commits of github.com/underkeel/site, from a772784 (2026-11-14T21:23Z) to 5d65c89 (2026-11-17T06:23Z): $1M x exit 1000000"
+  },
+  {
+   "id": "no_rfq_once",
+   "what": "The one snapshot where the $1M quote without limit orders differed from the full one, and the largest gap between the two in the other 11",
+   "text": [
+    "68.5%",
+    "16 November",
+    "a few hundredths of a point"
+   ],
+   "value": {
+    "at": "2026-11-16T00:23:34Z",
+    "no_rfq": 0.685389,
+    "all": 0.377899,
+    "largest_gap_elsewhere": 0.000564
+   },
+   "source": "data/exit-depth.json at the 12 snapshot commits of github.com/underkeel/site, from a772784 (2026-11-14T21:23Z) to 5d65c89 (2026-11-17T06:23Z): exit and exit_no_rfq 1000000 of USDe/USDC, commit dc0c4b1"
+  },
+  {
+   "id": "cbxrp_1m",
+   "what": "cbXRP into USDC: RFQ share of the latest $1M route (59%); lowest and highest $1M exit cost over the same 12 snapshots",
+   "text": [
+    "much of the route",
+    "12.0%",
+    "57.4%"
+   ],
+   "value": {
+    "rfq_share_now": 0.5884,
+    "lowest": 0.12027,
+    "highest": 0.574394
+   },
+   "source": "data/exit-depth.json at the 12 snapshot commits of github.com/underkeel/site, from a772784 (2026-11-14T21:23Z) to 5d65c89 (2026-11-17T06:23Z): exit 1000000 and venues of cbXRP/USDC 62.5%"
+  },
+  {
+   "id": "sizes",
+   "what": "The sale sizes the site measures: $25k, $200k and $1M",
+   "text": [
+    "three sizes"
+   ],
+   "value": [
+    "25000",
+    "200000",
+    "1000000"
+   ],
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): sizes"
+  },
+  {
+   "id": "cadence",
+   "what": "How often the site takes a snapshot",
+   "text": [
+    "six hours"
+   ],
+   "value": 6,
+   "unit": "hours",
+   "source": "method.html, Updates and history: a new snapshot every 6 hours"
+  },
+  {
+   "id": "largest",
+   "what": "The largest market of the snapshot: cbBTC/USDC 86%, borrowed",
+   "text": [
+    "$1.53B"
+   ],
+   "value": 1529796988,
+   "unit": "USD",
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): borrow_usd of cbBTC/USDC 86%"
+  },
+  {
+   "id": "loss_group",
+   "what": "Markets where a single liquidation of a measured size loses money: count, borrowed",
+   "text": [
+    "11 markets",
+    "$392M"
+   ],
+   "value": {
+    "markets": 11,
+    "borrow_usd": 391516097
+   },
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): the markets whose status on the site is a loss at a measured size no larger than their debt"
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Underkeel notes</title>
+<subtitle>Measurements of exit cost and liquidations in Morpho Blue markets on Base</subtitle>
+<id>https://underkeel.xyz/notes/</id>
+<link rel="self" type="application/atom+xml" href="https://underkeel.xyz/notes/feed.xml"/>
+<link rel="alternate" type="text/html" href="https://underkeel.xyz/notes/index.html"/>
+<updated>2026-11-17T19:05:18Z</updated>
+<author><name>Dmitrii Luzin</name></author>
+<entry><title>A $1M USDe sale on Base costs 37.7% against a 2.55% break-even</title><id>https://underkeel.xyz/notes/usde-exit-wall.html</id><link rel="alternate" type="text/html" href="https://underkeel.xyz/notes/usde-exit-wall.html"/><published>2026-11-17T19:05:18Z</published><updated>2026-11-17T19:05:18Z</updated><summary>USDe/USDC 91.5% is the second largest Morpho market on Base, with $329M borrowed. On 17 November a $200k sale of USDe cost 0.10%, and a $1M sale cost 37.7%.</summary><content type="text">Selling $200k of USDe into USDC on Base cost 0.10% at 06:23 UTC on 17 November. Selling $1M cost 37.7%. A liquidation in the USDe/USDC 91.5% market on Morpho pays only while the sale costs less than 2.55%.</content></entry>
+<entry><title>Two minutes when a 12.7% bonus was not enough</title><id>https://underkeel.xyz/notes/cbxrp-two-minutes-nov-2026.html</id><link rel="alternate" type="text/html" href="https://underkeel.xyz/notes/cbxrp-two-minutes-nov-2026.html"/><published>2026-11-17T19:05:18Z</published><updated>2026-11-17T19:05:18Z</updated><summary>On 8 November cbXRP traded 8-9% below Coinbase on Base. In the cbXRP/USDC 62.5% market on Morpho, 140 liquidations waited between 4.6 and 80 seconds for a taker.</summary><content type="text">On 8 November, in the minute after 21:56 UTC, cbXRP on Base exchanges traded 9.1% below XRP on Coinbase, and in the next minute 8.0% below. During those two minutes 140 positions in the cbXRP/USDC 62.5% market on Morpho stayed liquidatable for anything between 4.6 and 80 seconds before somebody took them.</content></entry>
+</feed>
