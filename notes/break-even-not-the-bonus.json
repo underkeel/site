@@ -1,0 +1,352 @@
+{
+ "schema": 1,
+ "slug": "break-even-not-the-bonus",
+ "url": "https://underkeel.xyz/notes/break-even-not-the-bonus.html",
+ "title": "A 12.68% bonus breaks even at an 11.25% exit cost",
+ "kind": "method",
+ "snapshot": "2026-11-17T06:23Z",
+ "data_sha256": "8c30bf86",
+ "commit": "5d65c89",
+ "method": "Clearance v3",
+ "published": "2026-11-18T00:24:05Z",
+ "numbers": [
+  {
+   "id": "snapshot",
+   "what": "The snapshot the figures of the note are frozen at",
+   "text": [
+    "06:23",
+    "17 November"
+   ],
+   "value": "2026-11-17T06:23:40Z",
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): at_iso"
+  },
+  {
+   "id": "cbxrp_sale",
+   "what": "cbXRP/USDC 62.5%: exit cost of a $1M cbXRP sale into USDC, every source",
+   "text": [
+    "$1M",
+    "12.03%",
+    "62.5%"
+   ],
+   "value": 0.12027,
+   "unit": "share",
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): exit 1000000 of cbXRP/USDC 62.5%"
+  },
+  {
+   "id": "cbxrp_bonus",
+   "what": "cbXRP/USDC 62.5%: bonus, its break-even, and what $100 of debt seizes",
+   "text": [
+    "12.68%",
+    "11.25%",
+    "$100",
+    "$112.68",
+    "1 - 100/112.68"
+   ],
+   "value": {
+    "bonus": 0.126761,
+    "break_even": 0.1125
+   },
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): bonus of cbXRP/USDC 62.5%; break-even = 1 - 1/(1 + bonus) = 1 - 100/112.68"
+  },
+  {
+   "id": "cbxrp_room",
+   "what": "cbXRP/USDC 62.5% at $1M: room under the old rule (bonus - exit cost), and how far past the break-even under the new one",
+   "text": [
+    "0.65 points",
+    "0.78 points"
+   ],
+   "value": {
+    "old": 0.00649,
+    "new": -0.00777
+   },
+   "unit": "share",
+   "at": "2026-11-17T06:23Z",
+   "source": "Computed from data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): bonus - exit 1000000; break-even - exit 1000000"
+  },
+  {
+   "id": "cbxrp_dollars",
+   "what": "The $1M cbXRP sale as one liquidation: debt repaid, what the sale returns, the shortfall",
+   "text": [
+    "$887.5k",
+    "$879.7k",
+    "$7.8k"
+   ],
+   "value": {
+    "repaid": 887500,
+    "returned": 879730,
+    "short": 7770
+   },
+   "unit": "USD",
+   "at": "2026-11-17T06:23Z",
+   "source": "Computed from data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): repaid = $1M / (1 + bonus); returned = $1M x (1 - exit 1000000)"
+  },
+  {
+   "id": "formula",
+   "what": "The break-even exit cost and its short form below the cap",
+   "text": [
+    "1 - 1/(1 + bonus)",
+    "0.3 x (1 - LLTV)",
+    "1 - c",
+    "0.3 x LLTV + 0.7",
+    "1 minus"
+   ],
+   "value": "0.3 x (1 - LLTV)",
+   "source": "Morpho Blue's liquidation incentive: bonus = min(15%, 1/(0.3 x LLTV + 0.7) - 1); break-even = 1 - 1/(1 + bonus); below the cap 1/(1 + bonus) = 0.3 x LLTV + 0.7"
+  },
+  {
+   "id": "cap",
+   "what": "Morpho's cap on the bonus, the LLTV below which it applies, and the break-even at the cap",
+   "text": [
+    "15%",
+    "56.5%",
+    "13.04%",
+    "no market on the site sits there"
+   ],
+   "value": {
+    "cap": 0.15,
+    "lltv_below": 0.565217,
+    "break_even": 0.130435
+   },
+   "source": "Morpho Blue's liquidation incentive: bonus = min(15%, 1/(0.3 x LLTV + 0.7) - 1); break-even = 1 - 1/(1 + bonus); the cap applies where 1/(0.3 x LLTV + 0.7) >= 1.15"
+  },
+  {
+   "id": "versions",
+   "what": "The method's versions: the first (exit cost against the bonus) and the change to Clearance v3",
+   "text": [
+    "13 November",
+    "16 November",
+    "14:46",
+    "12:23"
+   ],
+   "value": {
+    "v1": "2026-11-13",
+    "v3": "2026-11-16",
+    "first_v3_snapshot": "2026-11-16T14:46Z",
+    "last_v2_snapshot": "2026-11-16T12:23Z"
+   },
+   "source": "method.html, Changelog (v1 13 Nov 2026, v3 16 Nov 2026); github.com/underkeel/site: method.html of commit 502f23e (snapshot 2026-11-16 12:23 UTC) says Clearance v2, of commit 60f9fd1 (14:46 UTC) Clearance v3"
+  },
+  {
+   "id": "top_tier",
+   "what": "How much the old rule added at the 62.5% tier: the bonus times the break-even",
+   "text": [
+    "the bonus times the break-even",
+    "more than a point"
+   ],
+   "value": 0.014261,
+   "unit": "share",
+   "source": "Computed: bonus - (1 - 1/(1 + bonus)) = bonus x break-even; 0.1268 x 0.1125 = 0.0143"
+  },
+  {
+   "id": "tiers",
+   "what": "Table 1: bonus, break-even and how much the old rule added to clearance, by LLTV; the value also counts the markets of the snapshot",
+   "text": [
+    "62.5%",
+    "12.68%",
+    "11.25%",
+    "1.43 pp",
+    "77%",
+    "7.41%",
+    "6.90%",
+    "0.51 pp",
+    "86%",
+    "4.38%",
+    "4.20%",
+    "0.18 pp",
+    "91.5%",
+    "2.62%",
+    "2.55%",
+    "0.07 pp",
+    "94.5%",
+    "1.68%",
+    "1.65%",
+    "0.03 pp",
+    "96.5%",
+    "1.06%",
+    "1.05%",
+    "0.01 pp"
+   ],
+   "value": {
+    "62.5%": {
+     "bonus": 0.126761,
+     "break_even": 0.1125,
+     "difference": 0.014261,
+     "markets": 10
+    },
+    "77%": {
+     "bonus": 0.074114,
+     "break_even": 0.069,
+     "difference": 0.005114,
+     "markets": 7
+    },
+    "86%": {
+     "bonus": 0.043841,
+     "break_even": 0.042,
+     "difference": 0.001841,
+     "markets": 11
+    },
+    "91.5%": {
+     "bonus": 0.026167,
+     "break_even": 0.0255,
+     "difference": 0.000667,
+     "markets": 14
+    },
+    "94.5%": {
+     "bonus": 0.016777,
+     "break_even": 0.0165,
+     "difference": 0.000277,
+     "markets": 4
+    },
+    "96.5%": {
+     "bonus": 0.010611,
+     "break_even": 0.0105,
+     "difference": 0.000111,
+     "markets": 1
+    }
+   },
+   "at": "2026-11-17T06:23Z",
+   "source": "Morpho Blue's liquidation incentive: bonus = min(15%, 1/(0.3 x LLTV + 0.7) - 1); break-even = 1 - 1/(1 + bonus); markets per LLTV: data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site)"
+  },
+  {
+   "id": "top_tier_markets",
+   "what": "Markets of the snapshot at the 62.5% tier, of all markets",
+   "text": [
+    "Ten of the 47 markets",
+    "the only one"
+   ],
+   "value": {
+    "lltv_62.5%": 10,
+    "markets": 47
+   },
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): lltv of each market; Table 1 for the rest"
+  },
+  {
+   "id": "statuses_before",
+   "what": "Status changes the new rule makes in the snapshots published before it",
+   "text": [
+    "no market had such a cost",
+    "8 snapshots",
+    "2 readings of 376",
+    "$25k",
+    "both on 15 November"
+   ],
+   "value": {
+    "snapshot_2026-11-16T12:23Z": {
+     "markets": 47,
+     "changed": 0
+    },
+    "snapshots": 8,
+    "readings": 376,
+    "changed": [
+     {
+      "at": "2026-11-15T06:23:37Z",
+      "commit": "d408135",
+      "market": "cbADA/USDC 62.5%",
+      "old": [
+       "RFQ-only from $25k",
+       "loss from $200k"
+      ],
+      "new": [
+       "loss from $25k"
+      ]
+     },
+     {
+      "at": "2026-11-15T18:23:48Z",
+      "commit": "206a951",
+      "market": "cbXRP/USDC 62.5%",
+      "old": [
+       "RFQ-only from $1M"
+      ],
+      "new": [
+       "loss from $1M"
+      ]
+     }
+    ]
+   },
+   "source": "data/exit-depth.json at the snapshot commits of github.com/underkeel/site; status by the rule of the Method page with the exit cost set against the bonus (old) and against the break-even (new): the 8 commits a772784 (2026-11-14T21:23Z) to 502f23e (2026-11-16T12:23Z)"
+  },
+  {
+   "id": "statuses_after",
+   "what": "Status changes the new rule made in the snapshots after the change",
+   "text": [
+    "twice more",
+    "two latest snapshots"
+   ],
+   "value": [
+    {
+     "at": "2026-11-17T00:23:30Z",
+     "commit": "be350c6",
+     "market": "cbXRP/USDC 62.5%",
+     "old": [
+      "RFQ-only from $1M"
+     ],
+     "new": [
+      "loss from $1M"
+     ]
+    },
+    {
+     "at": "2026-11-17T06:23:40Z",
+     "commit": "5d65c89",
+     "market": "cbXRP/USDC 62.5%",
+     "old": [
+      "RFQ-only from $1M"
+     ],
+     "new": [
+      "loss from $1M"
+     ]
+    }
+   ],
+   "source": "data/exit-depth.json at the snapshot commits of github.com/underkeel/site; status by the rule of the Method page with the exit cost set against the bonus (old) and against the break-even (new): the 4 commits 60f9fd1 (2026-11-16T14:46Z) to 5d65c89 (2026-11-17T06:23Z)"
+  },
+  {
+   "id": "sol",
+   "what": "SOL/USDC 62.5% at $1M: exit cost, clearance (new rule), the old rule's figure",
+   "text": [
+    "11.17%",
+    "0.08 points",
+    "1.51",
+    "by more than that between the last two snapshots"
+   ],
+   "value": {
+    "exit": 0.111694,
+    "new": 0.000806,
+    "old": 0.015067,
+    "exit_previous_snapshot": 0.110821,
+    "move": 0.000872
+   },
+   "unit": "share",
+   "at": "2026-11-17T06:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89 of github.com/underkeel/site): exit 1000000 and bonus of SOL/USDC 62.5%, the smallest positive clearance of the snapshot; the previous quote: commit be350c6 (2026-11-17T00:23Z)"
+  },
+  {
+   "id": "cadence",
+   "what": "How often the site takes a snapshot",
+   "text": [
+    "six hours"
+   ],
+   "value": 6,
+   "unit": "hours",
+   "source": "method.html, Updates and history: a new snapshot every 6 hours"
+  },
+  {
+   "id": "auctions",
+   "what": "Morpho liquidations on Base in the 30 days to 17 November: share of the bonus through Chainlink SVR auctions, share of that paid back as bids",
+   "text": [
+    "30 days",
+    "93%",
+    "81%"
+   ],
+   "value": {
+    "auction_share": 0.9332,
+    "bids_share": 0.8057
+   },
+   "unit": "share",
+   "at": "2026-11-17T06:23Z",
+   "source": "data/liquidations.json of the same build (snapshot 2026-11-17T06:23Z, data sha256 abe3e222, commit 5d65c89 of github.com/underkeel/site): auction_bonus_usd / bonus_usd; auction_bids_usd / auction_bonus_usd"
+  }
+ ]
+}
