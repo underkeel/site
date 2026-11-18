@@ -50,7 +50,7 @@
 <button class="theme" id="theme-btn" type="button" title="Colour theme" hidden><svg class="ic" aria-hidden="true"><use href="#i-theme"/></svg><span class="tl">auto</span></button></div>
 </div></header>
 <main id="main"><div class="wrap">
-<div class="marg"><span>Underkeel - <b>Method</b></span><span>Snapshot <b><time datetime="2026-11-18T12:23:00Z" data-ago>2026-11-18 12:23 UTC</time></b></span></div>
+<div class="marg"><span>Underkeel - <b>Method</b></span><span>Snapshot <b><time datetime="2026-11-18T18:23:00Z" data-ago>2026-11-18 18:23 UTC</time></b></span></div>
 <div class="frame prose">
 <div class="hero">
 <p class="kicker">Method</p>
@@ -86,7 +86,7 @@ its debt"): no single liquidation there can be that large.</dd>
 sale costs less than the break-even, through on-chain pools alone it costs as much or more, or has no route. Such a market
 stays liquidatable at that size only while the market makers keep quoting.</dd>
 </dl>
-<p class="note">Example, snapshot 2026-11-18 12:23 UTC: <a href="markets/usde-usdc-91-5.html">USDe/USDC 91.5%</a>, bonus 2.62%, break-even exit cost 2.55%. $25k: exit 0.0%, clearance +2.5 pp; $200k: exit 0.1%, clearance +2.5 pp; $1M: exit 37.6%, clearance -35.1 pp. Clearing size: $200k.</p>
+<p class="note">Example, snapshot 2026-11-18 18:23 UTC: <a href="markets/usde-usdc-91-5.html">USDe/USDC 91.5%</a>, bonus 2.62%, break-even exit cost 2.55%. $25k: exit 0.2%, clearance +2.3 pp; $200k: exit 0.3%, clearance +2.3 pp; $1M: exit >50%, clearance < -50 pp. Clearing size: $200k.</p>
 </section>
 
 <section>
@@ -152,11 +152,11 @@ exactly when liquidations are needed.</li>
 
 <section id="cite">
 <h2>How to cite</h2>
-<p class="read">In text: "Per Underkeel (Clearance v3, snapshot 2026-11-18 12:23 UTC), selling $1M of a token into USDC costs
+<p class="read">In text: "Per Underkeel (Clearance v3, snapshot 2026-11-18 18:23 UTC), selling $1M of a token into USDC costs
 X% against a Y% liquidation bonus on Morpho, Base." Short: "(Underkeel, Clearance v3, 2026-11-18)". Always give
 the size and the bonus with a clearance figure: "clearance at $1M" alone does not say what it is measured against. Link to
 the market page, not to the home page: each market page has its own "Cite as" line.</p>
-<p class="cap">Cite as: Underkeel, Clearance v3, Morpho Blue markets on Base, snapshot 2026-11-18T12:23Z, data sha256 854ea372. https://underkeel.xyz/method.html</p>
+<p class="cap">Cite as: Underkeel, Clearance v3, Morpho Blue markets on Base, snapshot 2026-11-18T18:23Z, data sha256 0aeb3db0. https://underkeel.xyz/method.html</p>
 <p class="read"><b>What the number is not.</b> Clearance describes one liquidation of one size in one transaction. It is not a
 rating of a market, a vault or a curator, and it does not say whether any position will be liquidated.</p>
 </section>
@@ -179,7 +179,7 @@ Raw data: <a href="data/exit-depth.json">data/exit-depth.json</a>, <a href="data
 </div></main>
 <footer class="foot"><div class="wrap">
 <p class="attr">Quotes: KyberSwap Aggregator public API. Markets and positions: Morpho API. Liquidations: Morpho Blue events on Base.</p>
-<p><b>Underkeel</b> - exit depth and liquidations of Morpho Blue markets on Base. Snapshot <time datetime="2026-11-18T12:23:00Z">2026-11-18 12:23 UTC</time>, rebuilt every 6 hours.</p>
+<p><b>Underkeel</b> - exit depth and liquidations of Morpho Blue markets on Base. Snapshot <time datetime="2026-11-18T18:23:00Z">2026-11-18 18:23 UTC</time>, rebuilt every 6 hours.</p>
 <p>Independent: not affiliated with Morpho, Base, KyberSwap or Chainlink. Informational only, not investment advice.
 <a href="about.html">About &amp; disclosure</a> - <a href="method.html">Method</a> - <a href="data.html">Data</a> - <a href="services.html">Services</a></p>
 <p>Contact: Telegram <a href="https://t.me/dimanoshe" rel="noopener noreferrer">@dimanoshe</a> · email <a href="mailto:hello@underkeel.xyz?subject=Underkeel">hello@underkeel.xyz</a></p>

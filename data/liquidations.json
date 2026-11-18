@@ -3,8 +3,8 @@
  "days": 30,
  "since": "2026-10-19",
  "until": "2026-11-18",
- "count": 13424,
- "bonus_usd": 7257980.319042246,
+ "count": 13425,
+ "bonus_usd": 7257980.34845411,
  "auction_bonus_usd": 6771131.973494853,
  "auction_bids_usd": 5452749.373933762,
  "pairs": [
@@ -169,6 +169,12 @@
    "count": 1,
    "bonus_usd": 3.657028901658961,
    "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "rETH/EURC",
+   "count": 1,
+   "bonus_usd": 0.029411864907480045,
+   "auction_bonus_usd": 0.0
   }
  ],
  "by_day": [
@@ -294,7 +300,7 @@
   },
   {
    "day": "2026-11-18",
-   "bonus_usd": 18.09178775761646
+   "bonus_usd": 18.12119962252394
   }
  ]
 }
