@@ -3,8 +3,8 @@
  "days": 30,
  "since": "2026-10-19",
  "until": "2026-11-18",
- "count": 13409,
- "bonus_usd": 7257962.2272544885,
+ "count": 13418,
+ "bonus_usd": 7257980.27218177,
  "auction_bonus_usd": 6771131.973494853,
  "auction_bids_usd": 5452749.373933762,
  "pairs": [
@@ -22,8 +22,8 @@
   },
   {
    "pair": "WETH/USDC",
-   "count": 1522,
-   "bonus_usd": 538636.911763664,
+   "count": 1524,
+   "bonus_usd": 538650.0749343418,
    "auction_bonus_usd": 500291.8251946602
   },
   {
@@ -111,15 +111,15 @@
    "auction_bonus_usd": 0.0
   },
   {
-   "pair": "uniBTC/USDC",
-   "count": 1,
-   "bonus_usd": 157.17284821557496,
+   "pair": "yoUSD/USDC",
+   "count": 29,
+   "bonus_usd": 161.56805113877067,
    "auction_bonus_usd": 0.0
   },
   {
-   "pair": "yoUSD/USDC",
-   "count": 22,
-   "bonus_usd": 156.6862945345833,
+   "pair": "uniBTC/USDC",
+   "count": 1,
+   "bonus_usd": 157.17284821557496,
    "auction_bonus_usd": 0.0
   },
   {
@@ -294,7 +294,7 @@
   },
   {
    "day": "2026-11-18",
-   "bonus_usd": 0.0
+   "bonus_usd": 18.044927282030795
   }
  ]
 }
