@@ -1,0 +1,617 @@
+{
+ "schema": 1,
+ "slug": "crash-reach-nov-2026",
+ "url": "https://underkeel.xyz/notes/crash-reach-nov-2026.html",
+ "title": "Borrowers made 60% of the debt in reach safe before the November low",
+ "kind": "event",
+ "event": "2026-11-12T00:00Z",
+ "snapshot": "2026-11-18T06:23Z",
+ "data_sha256": "72595bf9",
+ "commit": "a430dc6",
+ "method": "Clearance v3",
+ "published": "2026-11-19T12:23:11Z",
+ "numbers": [
+  {
+   "id": "window",
+   "what": "The window of the note: four days, from 00:00 UTC on 12 November to the end of 15 November",
+   "text": [
+    "12 November",
+    "15 November",
+    "00:00"
+   ],
+   "value": {
+    "from": "2026-11-12T00:00Z",
+    "to": "2026-11-16T00:00Z"
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Base block headers: block 56256122 is the first at 00:00:00 UTC on 12 November, block 57984122 the first on 16 November; Coinbase BTC-USD hourly candles: the lowest low in the hour from 01:00 UTC on 15 November"
+  },
+  {
+   "id": "btc_fall",
+   "what": "BTC on Coinbase: the open at 00:00 UTC on 12 November against the lowest hourly low before 16 November",
+   "text": [
+    "16.2%"
+   ],
+   "value": {
+    "open": 73927.63,
+    "low": 61946.17,
+    "fall": 0.16207
+   },
+   "unit": "%",
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Coinbase Exchange public API, BTC-USD hourly candles"
+  },
+  {
+   "id": "reach_total",
+   "what": "Debt in reach of the fall at the start, nine markets",
+   "text": [
+    "$241.9M"
+   ],
+   "value": 241.87,
+   "unit": "USD M",
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: every position with debt at block 56256122 (00:00 UTC, 12 November 2026), the market's oracle price at that block, and every Liquidate, Repay and SupplyCollateral event of the market to block 57984121 (23:59:59 UTC, 15 November). In reach: the oracle price fall that makes the position liquidatable, 1 - debt / (collateral x price x LLTV), is smaller than the market's oracle fall"
+  },
+  {
+   "id": "liquidated_reach_total",
+   "what": "Of the debt in reach: repaid by liquidations in the window, and its share",
+   "text": [
+    "$96.9M",
+    "40%"
+   ],
+   "value": {
+    "usd_m": 96.881,
+    "share": 0.40055
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: every position with debt at block 56256122 (00:00 UTC, 12 November 2026), the market's oracle price at that block, and every Liquidate, Repay and SupplyCollateral event of the market to block 57984121 (23:59:59 UTC, 15 November). In reach: the oracle price fall that makes the position liquidatable, 1 - debt / (collateral x price x LLTV), is smaller than the market's oracle fall"
+  },
+  {
+   "id": "acted_total",
+   "what": "Of the debt in reach: positions not liquidated (or the rest after a liquidation) whose owner had a Repay or SupplyCollateral in the window",
+   "text": [
+    "$145.0M",
+    "60%"
+   ],
+   "value": {
+    "usd_m": 144.988,
+    "share": 0.59944
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: every position with debt at block 56256122 (00:00 UTC, 12 November 2026), the market's oracle price at that block, and every Liquidate, Repay and SupplyCollateral event of the market to block 57984121 (23:59:59 UTC, 15 November). In reach: the oracle price fall that makes the position liquidatable, 1 - debt / (collateral x price x LLTV), is smaller than the market's oracle fall"
+  },
+  {
+   "id": "acted_at_low",
+   "what": "The debt left to owners who acted: the state of its positions at the end of the block where their market's oracle hit its low; the part of it in positions a liquidation of the window also took part of",
+   "text": [
+    "$145.0M",
+    "$0.73M"
+   ],
+   "value": {
+    "acted_usd_m": 144.98792,
+    "positions": 3537,
+    "healthy_usd_m": 143.46891,
+    "healthy_positions": 3137,
+    "repaid_in_full_usd_m": 1.51901,
+    "repaid_in_full_positions": 400,
+    "over_the_line_usd": 0.0,
+    "owner_first_acted_after_the_low_usd": 2.19043,
+    "also_partly_liquidated_positions": 446,
+    "also_partly_liquidated_usd_m": 0.72903,
+    "also_partly_liquidated_by_the_low_usd_m": 0.72903
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: the positions in reach at block 56256122 (00:00 UTC, 12 November 2026) read again at the end of the block where the market's oracle hit its low in the window (the block of the lowest price implied by a liquidation of $100 or more), with price() of the oracle at that block; Liquidate, Repay and SupplyCollateral events to block 57984121"
+  },
+  {
+   "id": "in_reach_example",
+   "what": "Example of the method: against the 16.2% fall of the cbBTC/USDC oracle",
+   "text": [
+    "10%",
+    "20%"
+   ],
+   "value": {
+    "in_reach": 0.1,
+    "beyond_reach": 0.2
+   },
+   "unit": "%",
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "the method of this note"
+  },
+  {
+   "id": "blocks_bunched",
+   "what": "Liquidate events on Morpho Base in the window, every market: the share of blocks with one, and the busiest block against the cbBTC/USDC low",
+   "text": [
+    "2,500",
+    "170"
+   ],
+   "value": {
+    "liquidate_events": 6822,
+    "blocks_with_liquidations": 688,
+    "blocks_in_window": 1728000,
+    "one_block_in": 2511.62791,
+    "busiest_block_events": 170,
+    "busiest_block_time": "2026-11-13T05:56:36Z",
+    "cbbtc_low_time": "2026-11-15T01:45:22Z"
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue Liquidate events on Base in blocks 56256122-57984121; time from the block number, 0.2 s a block from the header of block 56256122"
+  },
+  {
+   "id": "over_at_low",
+   "what": "Every position over the line at the end of its market's low block, nine markets: their debt, and what a Liquidate of the window took of them afterwards",
+   "text": [
+    "$44"
+   ],
+   "value": {
+    "positions": 50,
+    "debt_usd": 44.22749,
+    "liquidated_later_positions": 9,
+    "liquidated_later_debt_usd": 44.22628,
+    "largest_left_usd": 0.00057
+   },
+   "unit": "USD",
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: the positions in reach at block 56256122 (00:00 UTC, 12 November 2026) read again at the end of the block where the market's oracle hit its low in the window (the block of the lowest price implied by a liquidation of $100 or more), with price() of the oracle at that block; Liquidate, Repay and SupplyCollateral events to block 57984121"
+  },
+  {
+   "id": "position_counts",
+   "what": "Positions in reach: how many liquidations took, and how many of those in a single liquidation",
+   "text": [
+    "6,499",
+    "9,614",
+    "6,473"
+   ],
+   "value": {
+    "liquidated": 6499,
+    "in_reach": 9614,
+    "share": 0.67599,
+    "in_one_liquidation": 6473
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: the positions in reach at block 56256122 (00:00 UTC, 12 November 2026) read again at the end of the block where the market's oracle hit its low in the window (the block of the lowest price implied by a liquidation of $100 or more), with price() of the oracle at that block; Liquidate, Repay and SupplyCollateral events to block 57984121"
+  },
+  {
+   "id": "position_medians",
+   "what": "Positions in reach, debt at the start, median over positions: liquidated ones against those whose owner acted and that were not liquidated",
+   "text": [
+    "$164",
+    "$5,868"
+   ],
+   "value": {
+    "liquidated_median_usd": 163.67761,
+    "liquidated_positions": 6499,
+    "acted_median_usd": 5868.38908,
+    "acted_positions": 3091
+   },
+   "unit": "USD",
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: the positions in reach at block 56256122 (00:00 UTC, 12 November 2026) read again at the end of the block where the market's oracle hit its low in the window (the block of the lowest price implied by a liquidation of $100 or more), with price() of the oracle at that block; Liquidate, Repay and SupplyCollateral events to block 57984121"
+  },
+  {
+   "id": "nine_markets_share",
+   "what": "The nine markets read (lending USDC, $100k or more liquidated in the window): their share of all USDC debt liquidated on Morpho Base in the window",
+   "text": [
+    "99.7%"
+   ],
+   "value": {
+    "nine_usd_m": 97.577,
+    "all_usdc_usd_m": 97.835,
+    "share": 0.99736
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue Liquidate events on Base in blocks 56256122-57984121, markets lending USDC; the nine are those with $100k or more liquidated"
+  },
+  {
+   "id": "lltv",
+   "what": "LLTV of the markets",
+   "text": [
+    "86%",
+    "62.5%",
+    "77%",
+    "91.5%"
+   ],
+   "value": [
+    0.86,
+    0.625,
+    0.77,
+    0.915
+   ],
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue idToMarketParams of each market at block 56256122"
+  },
+  {
+   "id": "thresholds",
+   "what": "Thresholds of the method: the smallest liquidation that sets the lowest price; the smallest market in the LLTV groups",
+   "text": [
+    "$100",
+    "$100k"
+   ],
+   "value": {
+    "price_event_usd": 100,
+    "tier_borrow_usd": 100000
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "the method of this note"
+  },
+  {
+   "id": "cbbtc",
+   "what": "cbBTC/USDC 86%",
+   "text": [
+    "16.2%",
+    "$203.7M (12.6%)",
+    "$83.4M",
+    "$120.4M",
+    "41%",
+    "32.4%"
+   ],
+   "value": {
+    "oracle_fall": 0.16183,
+    "debt_in_reach_usd_m": 203.725,
+    "share_of_market_debt": 0.12561,
+    "liquidated_usd_m": 83.368,
+    "repaid_or_topped_up_usd_m": 120.357,
+    "liquidated_share_of_reach": 0.40922,
+    "median_distance": 0.32423,
+    "borrowed_start_usd_m": 1621.896
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: every position with debt at block 56256122 (00:00 UTC, 12 November 2026), the market's oracle price at that block, and every Liquidate, Repay and SupplyCollateral event of the market to block 57984121 (23:59:59 UTC, 15 November). In reach: the oracle price fall that makes the position liquidatable, 1 - debt / (collateral x price x LLTV), is smaller than the market's oracle fall; oracle fall: the lowest oracle price implied by a liquidation of $100 or more in the window (repaid x LIF / seized), against price() at block 56256122"
+  },
+  {
+   "id": "weth",
+   "what": "WETH/USDC 86%",
+   "text": [
+    "16.7%",
+    "$19.0M (20.9%)",
+    "$6.1M",
+    "$12.9M"
+   ],
+   "value": {
+    "oracle_fall": 0.16654,
+    "debt_in_reach_usd_m": 18.987,
+    "share_of_market_debt": 0.20936,
+    "liquidated_usd_m": 6.064,
+    "repaid_or_topped_up_usd_m": 12.923,
+    "liquidated_share_of_reach": 0.31938,
+    "median_distance": 0.31314,
+    "borrowed_start_usd_m": 90.688
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: every position with debt at block 56256122 (00:00 UTC, 12 November 2026), the market's oracle price at that block, and every Liquidate, Repay and SupplyCollateral event of the market to block 57984121 (23:59:59 UTC, 15 November). In reach: the oracle price fall that makes the position liquidatable, 1 - debt / (collateral x price x LLTV), is smaller than the market's oracle fall; oracle fall: the lowest oracle price implied by a liquidation of $100 or more in the window (repaid x LIF / seized), against price() at block 56256122"
+  },
+  {
+   "id": "cbxrp",
+   "what": "cbXRP/USDC 62.5%",
+   "text": [
+    "14.8%",
+    "$13.2M (24.4%)",
+    "$5.0M",
+    "$8.2M",
+    "24.9%"
+   ],
+   "value": {
+    "oracle_fall": 0.14849,
+    "debt_in_reach_usd_m": 13.243,
+    "share_of_market_debt": 0.24446,
+    "liquidated_usd_m": 5.017,
+    "repaid_or_topped_up_usd_m": 8.226,
+    "liquidated_share_of_reach": 0.37882,
+    "median_distance": 0.2485,
+    "borrowed_start_usd_m": 54.173
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: every position with debt at block 56256122 (00:00 UTC, 12 November 2026), the market's oracle price at that block, and every Liquidate, Repay and SupplyCollateral event of the market to block 57984121 (23:59:59 UTC, 15 November). In reach: the oracle price fall that makes the position liquidatable, 1 - debt / (collateral x price x LLTV), is smaller than the market's oracle fall; oracle fall: the lowest oracle price implied by a liquidation of $100 or more in the window (repaid x LIF / seized), against price() at block 56256122"
+  },
+  {
+   "id": "cbeth",
+   "what": "cbETH/USDC 77%",
+   "text": [
+    "16.6%",
+    "$2.0M (12.5%)",
+    "$1.0M"
+   ],
+   "value": {
+    "oracle_fall": 0.16556,
+    "debt_in_reach_usd_m": 1.974,
+    "share_of_market_debt": 0.12539,
+    "liquidated_usd_m": 0.98,
+    "repaid_or_topped_up_usd_m": 0.993,
+    "liquidated_share_of_reach": 0.49661,
+    "median_distance": 0.34509,
+    "borrowed_start_usd_m": 15.741
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: every position with debt at block 56256122 (00:00 UTC, 12 November 2026), the market's oracle price at that block, and every Liquidate, Repay and SupplyCollateral event of the market to block 57984121 (23:59:59 UTC, 15 November). In reach: the oracle price fall that makes the position liquidatable, 1 - debt / (collateral x price x LLTV), is smaller than the market's oracle fall; oracle fall: the lowest oracle price implied by a liquidation of $100 or more in the window (repaid x LIF / seized), against price() at block 56256122"
+  },
+  {
+   "id": "sol",
+   "what": "SOL/USDC 62.5%",
+   "text": [
+    "19.1%",
+    "$2.0M (29.1%)",
+    "$0.4M",
+    "$1.5M"
+   ],
+   "value": {
+    "oracle_fall": 0.1909,
+    "debt_in_reach_usd_m": 1.952,
+    "share_of_market_debt": 0.2913,
+    "liquidated_usd_m": 0.412,
+    "repaid_or_topped_up_usd_m": 1.541,
+    "liquidated_share_of_reach": 0.21081,
+    "median_distance": 0.29052,
+    "borrowed_start_usd_m": 6.702
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: every position with debt at block 56256122 (00:00 UTC, 12 November 2026), the market's oracle price at that block, and every Liquidate, Repay and SupplyCollateral event of the market to block 57984121 (23:59:59 UTC, 15 November). In reach: the oracle price fall that makes the position liquidatable, 1 - debt / (collateral x price x LLTV), is smaller than the market's oracle fall; oracle fall: the lowest oracle price implied by a liquidation of $100 or more in the window (repaid x LIF / seized), against price() at block 56256122"
+  },
+  {
+   "id": "four_more",
+   "what": "JitoSOL/USDC, cbDOGE/USDC, cbADA/USDC and cbLTC/USDC, all at LLTV 62.5%, together",
+   "text": [
+    "15.1-18.8%",
+    "$2.0M (20.4%)",
+    "$1.0M",
+    "$0.9M"
+   ],
+   "value": {
+    "oracle_fall": [
+     0.15109,
+     0.18834
+    ],
+    "debt_in_reach_usd_m": 1.989,
+    "share_of_market_debt": 0.2044,
+    "liquidated_usd_m": 1.04,
+    "repaid_or_topped_up_usd_m": 0.949,
+    "liquidated_share_of_reach": 0.523,
+    "markets": {
+     "JitoSOL": {
+      "oracle_fall": 0.18834,
+      "debt_in_reach_usd_m": 0.885,
+      "share_of_market_debt": 0.20273,
+      "liquidated_usd_m": 0.617,
+      "repaid_or_topped_up_usd_m": 0.268,
+      "liquidated_share_of_reach": 0.69722,
+      "median_distance": 0.33494,
+      "borrowed_start_usd_m": 4.365
+     },
+     "cbDOGE": {
+      "oracle_fall": 0.17597,
+      "debt_in_reach_usd_m": 0.465,
+      "share_of_market_debt": 0.20308,
+      "liquidated_usd_m": 0.189,
+      "repaid_or_topped_up_usd_m": 0.276,
+      "liquidated_share_of_reach": 0.40592,
+      "median_distance": 0.27881,
+      "borrowed_start_usd_m": 2.288
+     },
+     "cbADA": {
+      "oracle_fall": 0.17544,
+      "debt_in_reach_usd_m": 0.402,
+      "share_of_market_debt": 0.17565,
+      "liquidated_usd_m": 0.152,
+      "repaid_or_topped_up_usd_m": 0.25,
+      "liquidated_share_of_reach": 0.37923,
+      "median_distance": 0.30363,
+      "borrowed_start_usd_m": 2.288
+     },
+     "cbLTC": {
+      "oracle_fall": 0.15109,
+      "debt_in_reach_usd_m": 0.237,
+      "share_of_market_debt": 0.3009,
+      "liquidated_usd_m": 0.082,
+      "repaid_or_topped_up_usd_m": 0.155,
+      "liquidated_share_of_reach": 0.34613,
+      "median_distance": 0.31042,
+      "borrowed_start_usd_m": 0.789
+     }
+    }
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: every position with debt at block 56256122 (00:00 UTC, 12 November 2026), the market's oracle price at that block, and every Liquidate, Repay and SupplyCollateral event of the market to block 57984121 (23:59:59 UTC, 15 November). In reach: the oracle price fall that makes the position liquidatable, 1 - debt / (collateral x price x LLTV), is smaller than the market's oracle fall; oracle fall: the lowest oracle price implied by a liquidation of $100 or more in the window (repaid x LIF / seized), against price() at block 56256122"
+  },
+  {
+   "id": "all_nine_row",
+   "what": "Table 1, the last row",
+   "text": [
+    "$241.9M",
+    "$96.9M",
+    "$145.0M"
+   ],
+   "value": {
+    "debt_in_reach_usd_m": 241.87,
+    "liquidated_usd_m": 96.881,
+    "repaid_or_topped_up_usd_m": 144.988
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: every position with debt at block 56256122 (00:00 UTC, 12 November 2026), the market's oracle price at that block, and every Liquidate, Repay and SupplyCollateral event of the market to block 57984121 (23:59:59 UTC, 15 November). In reach: the oracle price fall that makes the position liquidatable, 1 - debt / (collateral x price x LLTV), is smaller than the market's oracle fall"
+  },
+  {
+   "id": "tiers",
+   "what": "Share of the debt borrowed at the start that liquidations repaid in the window, by LLTV: markets lending USDC with $100k or more borrowed at the start",
+   "text": [
+    "9.0%",
+    "5.2%",
+    "26",
+    "5.1%",
+    "$4,079",
+    "$411.5M"
+   ],
+   "value": {
+    "62.5%": {
+     "markets": 9,
+     "borrowed_usd_m": 74.86332,
+     "liquidated_usd_m": 6.70462,
+     "share": 0.08956
+    },
+    "86%": {
+     "markets": 6,
+     "borrowed_usd_m": 1716.96585,
+     "liquidated_usd_m": 90.09323,
+     "share": 0.05247
+    },
+    "77%": {
+     "markets": 5,
+     "share": 0.05143
+    },
+    "91.5%": {
+     "markets": 6,
+     "borrowed_usd_m": 411.49175,
+     "liquidated_usd": 4079.18462
+    },
+    "markets_in_all": 26,
+    "tiers": {
+     "0.625": 9,
+     "0.770": 5,
+     "0.860": 6,
+     "0.915": 6,
+     "0.980": 0
+    },
+    "cbxrp_share_of_62_5_debt": 0.72363,
+    "api_markets_on_base": 4424,
+    "unlisted_left_out": {
+     "0.625": 0,
+     "0.770": 5,
+     "0.860": 7,
+     "0.915": 2,
+     "0.980": 25
+    }
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho API: every Morpho Blue market on Base (4424), of them the markets Morpho lists; idToMarketParams and market() of each at block 56256122 (lending USDC, $100k or more borrowed); Liquidate events in blocks 56256122-57984121"
+  },
+  {
+   "id": "tiers_without_largest",
+   "what": "Share of the debt borrowed at the start that liquidations repaid in the window: the 62.5% tier without cbXRP/USDC, the 86% tier without cbBTC/USDC",
+   "text": [
+    "8.0%",
+    "6.5%"
+   ],
+   "value": {
+    "62.5% without cbXRP/USDC": {
+     "markets": 8,
+     "share": 0.08035
+    },
+    "86% without cbBTC/USDC": {
+     "markets": 5,
+     "share": 0.06544
+    }
+   },
+   "unit": "%",
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho API: every Morpho Blue market on Base (4424), of them the markets Morpho lists; idToMarketParams and market() of each at block 56256122 (lending USDC, $100k or more borrowed); Liquidate events in blocks 56256122-57984121"
+  },
+  {
+   "id": "tier_falls",
+   "what": "Oracle falls in the window of the 62.5% markets lending USDC other than cbXRP/USDC: SOL, JitoSOL, cbDOGE and cbADA; their share of the rest of the tier's debt at the start",
+   "text": [
+    "17.5-19.1%"
+   ],
+   "value": {
+    "falls": {
+     "JitoSOL": 0.18834,
+     "SOL": 0.1909,
+     "cbDOGE": 0.17597,
+     "cbADA": 0.17544
+    },
+    "cbBTC_oracle_fall": 0.16183,
+    "share_of_the_rest": 0.75608
+   },
+   "unit": "%",
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: every position with debt at block 56256122 (00:00 UTC, 12 November 2026), the market's oracle price at that block, and every Liquidate, Repay and SupplyCollateral event of the market to block 57984121 (23:59:59 UTC, 15 November). In reach: the oracle price fall that makes the position liquidatable, 1 - debt / (collateral x price x LLTV), is smaller than the market's oracle fall; oracle fall: the lowest oracle price implied by a liquidation of $100 or more in the window (repaid x LIF / seized), against price() at block 56256122"
+  },
+  {
+   "id": "liquidated_split",
+   "what": "Debt liquidated in the nine markets, by where the position stood at the start (in reach, beyond reach, no debt at midnight); and how much of the liquidated debt of positions in reach was above what they owed at the start",
+   "text": [
+    "$97.6M",
+    "$97.0M",
+    "$0.12M",
+    "$0.25M",
+    "$0.32M"
+   ],
+   "value": {
+    "all_usd_m": 97.577,
+    "in_reach_usd_m": 97.006,
+    "beyond_reach_usd_m": 0.322,
+    "in_reach_above_start_debt_usd_m": 0.12475,
+    "no_debt_at_start_usd_m": 0.249
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: every position with debt at block 56256122 (00:00 UTC, 12 November 2026), the market's oracle price at that block, and every Liquidate, Repay and SupplyCollateral event of the market to block 57984121 (23:59:59 UTC, 15 November). In reach: the oracle price fall that makes the position liquidatable, 1 - debt / (collateral x price x LLTV), is smaller than the market's oracle fall"
+  },
+  {
+   "id": "left_over",
+   "what": "Debt in reach that was neither liquidated nor under an owner's Repay or SupplyCollateral in the window: what partial liquidations left in positions whose owner did not act (the 24 positions with neither had less than a cent of debt between them)",
+   "text": [
+    "$1,560"
+   ],
+   "value": {
+    "left_by_a_liquidation_usd": 1559.99,
+    "untouched_positions": 24,
+    "untouched_usd": 0.00115
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: every position with debt at block 56256122 (00:00 UTC, 12 November 2026), the market's oracle price at that block, and every Liquidate, Repay and SupplyCollateral event of the market to block 57984121 (23:59:59 UTC, 15 November). In reach: the oracle price fall that makes the position liquidatable, 1 - debt / (collateral x price x LLTV), is smaller than the market's oracle fall"
+  },
+  {
+   "id": "bad_debt",
+   "what": "Bad debt realized in the window, every market lending USDC on Morpho Base: bad debt is realized only by a liquidation, and the 28 such markets that had one are all counted",
+   "text": [
+    "$6.52"
+   ],
+   "value": {
+    "markets": 28,
+    "usd": 6.52
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue Liquidate events on Base in blocks 56256122-57984121: badDebtAssets"
+  },
+  {
+   "id": "blocks",
+   "what": "The blocks of the window",
+   "text": [
+    "56256122",
+    "57984121"
+   ],
+   "value": [
+    56256122,
+    57984121
+   ],
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Base block headers (bisection on timestamps)"
+  },
+  {
+   "id": "coverage",
+   "what": "The positions read against each market's borrowed total at the start",
+   "text": [
+    "100.00%"
+   ],
+   "value": {
+    "cbBTC/USDC 0.86": 1.0,
+    "WETH/USDC 0.86": 1.0,
+    "cbXRP/USDC 0.625": 1.0,
+    "cbETH/USDC 0.77": 1.0,
+    "JitoSOL/USDC 0.625": 1.0,
+    "SOL/USDC 0.625": 1.0,
+    "cbDOGE/USDC 0.625": 1.0,
+    "cbADA/USDC 0.625": 1.0,
+    "cbLTC/USDC 0.625": 1.0
+   },
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue on Base, read from a public archive node: every position with debt at block 56256122 (00:00 UTC, 12 November 2026), the market's oracle price at that block, and every Liquidate, Repay and SupplyCollateral event of the market to block 57984121 (23:59:59 UTC, 15 November). In reach: the oracle price fall that makes the position liquidatable, 1 - debt / (collateral x price x LLTV), is smaller than the market's oracle fall"
+  },
+  {
+   "id": "formula",
+   "what": "Distance to liquidation",
+   "text": [
+    "1 - debt / (collateral x oracle price x LLTV)"
+   ],
+   "value": "1 - debt / (collateral x price / 1e36 x LLTV)",
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "Morpho Blue: a position is liquidatable when its debt exceeds collateral x price / 1e36 x LLTV"
+  }
+ ]
+}
