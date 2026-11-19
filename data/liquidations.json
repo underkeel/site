@@ -3,15 +3,15 @@
  "days": 30,
  "since": "2026-10-20",
  "until": "2026-11-19",
- "count": 13443,
- "bonus_usd": 7258134.694645707,
+ "count": 13457,
+ "bonus_usd": 7258136.336702768,
  "auction_bonus_usd": 6771285.994101859,
  "auction_bids_usd": 5452842.363434849,
  "pairs": [
   {
    "pair": "cbBTC/USDC",
-   "count": 6041,
-   "bonus_usd": 4720201.458746533,
+   "count": 6045,
+   "bonus_usd": 4720203.044019207,
    "auction_bonus_usd": 4489697.122407341
   },
   {
@@ -22,8 +22,8 @@
   },
   {
    "pair": "WETH/USDC",
-   "count": 1524,
-   "bonus_usd": 538650.0749343418,
+   "count": 1530,
+   "bonus_usd": 538652.8654587036,
    "auction_bonus_usd": 500291.8251946602
   },
   {
@@ -64,8 +64,8 @@
   },
   {
    "pair": "cbLTC/USDC",
-   "count": 140,
-   "bonus_usd": 25605.574171237935,
+   "count": 143,
+   "bonus_usd": 25607.055078357873,
    "auction_bonus_usd": 25532.92604594008
   },
   {
@@ -113,7 +113,7 @@
   {
    "pair": "yoUSD/USDC",
    "count": 43,
-   "bonus_usd": 161.96852897767783,
+   "bonus_usd": 157.7455348361501,
    "auction_bonus_usd": 0.0
   },
   {
@@ -175,12 +175,18 @@
    "count": 1,
    "bonus_usd": 0.029411864907480045,
    "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "AAPLc/USDC",
+   "count": 1,
+   "bonus_usd": 0.008347044831180012,
+   "auction_bonus_usd": 0.0
   }
  ],
  "by_day": [
   {
    "day": "2026-10-20",
-   "bonus_usd": 7.176984818595957
+   "bonus_usd": 0.11183240959254004
   },
   {
    "day": "2026-10-21",
@@ -300,7 +306,7 @@
   },
   {
    "day": "2026-11-19",
-   "bonus_usd": 0.05829434543256015
+   "bonus_usd": 8.765503813501741
   }
  ]
 }
