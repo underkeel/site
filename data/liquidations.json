@@ -3,33 +3,39 @@
  "days": 30,
  "since": "2026-10-21",
  "until": "2026-11-20",
- "count": 13635,
- "bonus_usd": 7340552.118869689,
- "auction_bonus_usd": 6853575.863833429,
- "auction_bids_usd": 5532210.099249906,
+ "count": 14929,
+ "bonus_usd": 8476419.109742435,
+ "auction_bonus_usd": 7957744.114502199,
+ "auction_bids_usd": 6523710.798206338,
  "pairs": [
   {
    "pair": "cbBTC/USDC",
-   "count": 6180,
-   "bonus_usd": 4800185.700821856,
-   "auction_bonus_usd": 4569654.147640319
+   "count": 6921,
+   "bonus_usd": 5791277.375561267,
+   "auction_bonus_usd": 5558642.8313237075
   },
   {
    "pair": "cbXRP/USDC",
-   "count": 2460,
-   "bonus_usd": 1467449.5583689308,
-   "auction_bonus_usd": 1378607.4310090414
+   "count": 2475,
+   "bonus_usd": 1467484.1140586953,
+   "auction_bonus_usd": 1378607.4057058224
   },
   {
    "pair": "WETH/USDC",
-   "count": 1530,
-   "bonus_usd": 538652.8654587036,
-   "auction_bonus_usd": 500291.8251946602
+   "count": 1784,
+   "bonus_usd": 636389.6434388779,
+   "auction_bonus_usd": 597975.4439831628
+  },
+  {
+   "pair": "cbETH/USDC",
+   "count": 1424,
+   "bonus_usd": 134677.23623221958,
+   "auction_bonus_usd": 969.9987950567665
   },
   {
    "pair": "SOL/USDC",
-   "count": 583,
-   "bonus_usd": 133351.72775787118,
+   "count": 584,
+   "bonus_usd": 133351.89427755517,
    "auction_bonus_usd": 132195.9693485468
   },
   {
@@ -39,40 +45,46 @@
    "auction_bonus_usd": 125962.09386536662
   },
   {
-   "pair": "cbETH/USDC",
-   "count": 1290,
-   "bonus_usd": 119168.57162427715,
-   "auction_bonus_usd": 969.9987950567665
-  },
-  {
    "pair": "cbDOGE/USDC",
-   "count": 317,
-   "bonus_usd": 52389.395310927815,
-   "auction_bonus_usd": 50742.09280533758
+   "count": 384,
+   "bonus_usd": 57247.58725082232,
+   "auction_bonus_usd": 55521.82168059922
   },
   {
    "pair": "cbADA/USDC",
-   "count": 152,
-   "bonus_usd": 31871.378587345982,
-   "auction_bonus_usd": 31158.312585743228
-  },
-  {
-   "pair": "cbLTC/USDC",
-   "count": 164,
-   "bonus_usd": 27793.215149551703,
-   "auction_bonus_usd": 27694.820937654506
+   "count": 169,
+   "bonus_usd": 35187.87574773108,
+   "auction_bonus_usd": 34473.31173387942
   },
   {
    "pair": "cbZEC/USDC",
-   "count": 122,
-   "bonus_usd": 26814.946641115002,
-   "auction_bonus_usd": 24848.282105143564
+   "count": 150,
+   "bonus_usd": 34595.36552795328,
+   "auction_bonus_usd": 32082.221175868606
+  },
+  {
+   "pair": "cbLTC/USDC",
+   "count": 188,
+   "bonus_usd": 29562.051530784287,
+   "auction_bonus_usd": 29440.249335463628
+  },
+  {
+   "pair": "cbBTC/EURC",
+   "count": 13,
+   "bonus_usd": 9025.298677520072,
+   "auction_bonus_usd": 818.4750651357027
   },
   {
    "pair": "cbHYPE/USDC",
-   "count": 58,
-   "bonus_usd": 7326.688919234902,
-   "auction_bonus_usd": 5545.622026484459
+   "count": 60,
+   "bonus_usd": 7360.535431059762,
+   "auction_bonus_usd": 5578.731044572899
+  },
+  {
+   "pair": "yoUSD/USDC",
+   "count": 49,
+   "bonus_usd": 5590.032585161389,
+   "auction_bonus_usd": 0.0
   },
   {
    "pair": "wstETH/USDC",
@@ -81,21 +93,15 @@
    "auction_bonus_usd": 3936.3060639262694
   },
   {
-   "pair": "cbBTC/EURC",
-   "count": 11,
-   "bonus_usd": 1656.0477559915219,
-   "auction_bonus_usd": 818.4750651357027
-  },
-  {
    "pair": "wstETH/EURC",
-   "count": 3,
-   "bonus_usd": 1224.7467274642447,
-   "auction_bonus_usd": 1137.267150236501
+   "count": 5,
+   "bonus_usd": 1633.8876827675072,
+   "auction_bonus_usd": 1526.03614030686
   },
   {
    "pair": "superOETHb/USDC",
-   "count": 2,
-   "bonus_usd": 735.579798520774,
+   "count": 4,
+   "bonus_usd": 755.5625385454541,
    "auction_bonus_usd": 0.0
   },
   {
@@ -105,21 +111,21 @@
    "auction_bonus_usd": 0.0
   },
   {
+   "pair": "VVV/USDC",
+   "count": 1,
+   "bonus_usd": 509.15169378209976,
+   "auction_bonus_usd": 0.0
+  },
+  {
    "pair": "WETH/EURC",
    "count": 4,
    "bonus_usd": 326.8727049941615,
    "auction_bonus_usd": 0.0
   },
   {
-   "pair": "yoUSD/USDC",
-   "count": 48,
-   "bonus_usd": 162.04199224789014,
-   "auction_bonus_usd": 0.0
-  },
-  {
    "pair": "uniBTC/USDC",
-   "count": 1,
-   "bonus_usd": 157.17284821557496,
+   "count": 2,
+   "bonus_usd": 157.18331475005496,
    "auction_bonus_usd": 0.0
   },
   {
@@ -177,9 +183,15 @@
    "auction_bonus_usd": 0.0
   },
   {
-   "pair": "rETH/EURC",
+   "pair": "METAc/USDC",
    "count": 1,
-   "bonus_usd": 0.029411864907480045,
+   "bonus_usd": 1.7825234117799997,
+   "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "rETH/EURC",
+   "count": 2,
+   "bonus_usd": 0.07997396023883996,
    "auction_bonus_usd": 0.0
   },
   {
@@ -192,7 +204,7 @@
  "by_day": [
   {
    "day": "2026-10-21",
-   "bonus_usd": 1.2189782101490096
+   "bonus_usd": 1.1936749913363696
   },
   {
    "day": "2026-10-22",
@@ -312,7 +324,7 @@
   },
   {
    "day": "2026-11-20",
-   "bonus_usd": 18281.651741672693
+   "bonus_usd": 1154148.6679176453
   }
  ]
 }
