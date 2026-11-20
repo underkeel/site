@@ -3,10 +3,10 @@
  "days": 30,
  "since": "2026-10-21",
  "until": "2026-11-20",
- "count": 13615,
- "bonus_usd": 7340362.0572741935,
- "auction_bonus_usd": 6853431.73846963,
- "auction_bids_usd": 5532095.206947536,
+ "count": 13635,
+ "bonus_usd": 7340552.118869689,
+ "auction_bonus_usd": 6853575.863833429,
+ "auction_bids_usd": 5532210.099249906,
  "pairs": [
   {
    "pair": "cbBTC/USDC",
@@ -16,9 +16,9 @@
   },
   {
    "pair": "cbXRP/USDC",
-   "count": 2453,
-   "bonus_usd": 1467436.6038686398,
-   "auction_bonus_usd": 1378607.4958947808
+   "count": 2460,
+   "bonus_usd": 1467449.5583689308,
+   "auction_bonus_usd": 1378607.4310090414
   },
   {
    "pair": "WETH/USDC",
@@ -40,8 +40,8 @@
   },
   {
    "pair": "cbETH/USDC",
-   "count": 1289,
-   "bonus_usd": 119168.48830294376,
+   "count": 1290,
+   "bonus_usd": 119168.57162427715,
    "auction_bonus_usd": 969.9987950567665
   },
   {
@@ -58,14 +58,14 @@
   },
   {
    "pair": "cbLTC/USDC",
-   "count": 157,
-   "bonus_usd": 27631.74554946096,
-   "auction_bonus_usd": 27550.630688115965
+   "count": 164,
+   "bonus_usd": 27793.215149551703,
+   "auction_bonus_usd": 27694.820937654506
   },
   {
    "pair": "cbZEC/USDC",
-   "count": 117,
-   "bonus_usd": 26792.747112484183,
+   "count": 122,
+   "bonus_usd": 26814.946641115002,
    "auction_bonus_usd": 24848.282105143564
   },
   {
@@ -112,8 +112,8 @@
   },
   {
    "pair": "yoUSD/USDC",
-   "count": 47,
-   "bonus_usd": 161.99144332573013,
+   "count": 48,
+   "bonus_usd": 162.04199224789014,
    "auction_bonus_usd": 0.0
   },
   {
@@ -123,15 +123,15 @@
    "auction_bonus_usd": 0.0
   },
   {
-   "pair": "mBASIS/USDC",
-   "count": 15,
-   "bonus_usd": 74.01704757071984,
-   "auction_bonus_usd": 0.0
-  },
-  {
    "pair": "SPCXc/USDC",
    "count": 1,
    "bonus_usd": 68.75235432066995,
+   "auction_bonus_usd": 0.0
+  },
+  {
+   "pair": "mBASIS/USDC",
+   "count": 14,
+   "bonus_usd": 67.32114379988731,
    "auction_bonus_usd": 0.0
   },
   {
@@ -192,7 +192,7 @@
  "by_day": [
   {
    "day": "2026-10-21",
-   "bonus_usd": 7.97976772045138
+   "bonus_usd": 1.2189782101490096
   },
   {
    "day": "2026-10-22",
@@ -312,7 +312,7 @@
   },
   {
    "day": "2026-11-20",
-   "bonus_usd": 18084.829356664854
+   "bonus_usd": 18281.651741672693
   }
  ]
 }
