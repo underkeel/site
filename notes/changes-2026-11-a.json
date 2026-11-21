@@ -1,0 +1,616 @@
+{
+ "schema": 1,
+ "slug": "changes-2026-11-a",
+ "url": "https://underkeel.xyz/notes/changes-2026-11-a.html",
+ "title": "USDe/USDC debt fell $94.7M in ten hours; its $1M exit held at 38%",
+ "kind": "changes",
+ "snapshot": "2026-11-20T06:22Z",
+ "data_sha256": "f703e5a1",
+ "commit": "a72e8e8",
+ "method": "Clearance v3",
+ "published": "2026-11-21T00:22:53Z",
+ "numbers": [
+  {
+   "id": "snapshot_first",
+   "what": "The site's first published snapshot",
+   "text": [
+    "From 14 to 20 November",
+    "14 Nov 21:23",
+    "Its column in the table is not a quiet baseline"
+   ],
+   "value": "2026-11-14T21:23:11Z",
+   "at": "2026-11-14T21:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-14T21:23Z (commit a772784 of github.com/underkeel/site): at_iso"
+  },
+  {
+   "id": "snapshot_latest",
+   "what": "The latest snapshot, which all figures are frozen at",
+   "text": [
+    "20 Nov 06:22"
+   ],
+   "value": "2026-11-20T06:22:53Z",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-20T06:22Z, data sha256 f703e5a1 (commit a72e8e8 of github.com/underkeel/site): at_iso"
+  },
+  {
+   "id": "snapshot_pair",
+   "what": "The snapshots around the repayments: 2026-11-19T12:23:11Z (c2e4607), the last before the first repayment; 2026-11-20T06:22:53Z (a72e8e8); the 2026-11-20T00:22:55Z snapshot also came after the last repayment and gave the same 38.37%",
+   "text": [
+    "the snapshots before the first repayment and after the last"
+   ],
+   "value": [
+    "2026-11-19T12:23:11Z",
+    "2026-11-20T06:22:53Z"
+   ],
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-19T12:23Z (commit c2e4607 of github.com/underkeel/site) and data/exit-depth.json of the snapshot 2026-11-20T06:22Z, data sha256 f703e5a1 (commit a72e8e8 of github.com/underkeel/site): at_iso"
+  },
+  {
+   "id": "snapshot_commits",
+   "what": "Commits of the first and the latest snapshot",
+   "text": [
+    "a772784 and a72e8e8"
+   ],
+   "value": [
+    "a772784",
+    "a72e8e8"
+   ],
+   "at": "2026-11-20T06:22Z",
+   "source": "git log of data/exit-depth.json, github.com/underkeel/site"
+  },
+  {
+   "id": "cadence",
+   "what": "The site re-measures exit costs every six hours (about 00:23, 06:23, 12:23, 18:23 UTC); in this window 22 snapshots, with an extra one at 16 Nov 14:46, 17 Nov 18:23 taken at 19:05, none at 00:23 and 06:23 on 19 Nov",
+   "text": [
+    "six hours apart"
+   ],
+   "value": 6,
+   "unit": "hours",
+   "at": "2026-11-20T06:22Z",
+   "source": "git log of data/exit-depth.json, github.com/underkeel/site"
+  },
+  {
+   "id": "usde_market",
+   "what": "USDe collateral, USDC loan, LLTV 91.5%",
+   "text": [
+    "USDe/USDC 91.5%"
+   ],
+   "value": 0.915,
+   "unit": "share",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-20T06:22Z, data sha256 f703e5a1 (commit a72e8e8 of github.com/underkeel/site): lltv of the USDe/USDC row"
+  },
+  {
+   "id": "tier_62_5",
+   "what": "LLTV of SOL/USDC and cbLTC/USDC",
+   "text": [
+    "SOL/USDC 62.5%",
+    "cbLTC/USDC 62.5%"
+   ],
+   "value": 0.625,
+   "unit": "share",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-20T06:22Z, data sha256 f703e5a1 (commit a72e8e8 of github.com/underkeel/site): lltv of the SOL/USDC and cbLTC/USDC rows"
+  },
+  {
+   "id": "sizes",
+   "what": "Sale sizes the site quotes and the article uses",
+   "text": [
+    "$1M sale",
+    "$200k sale",
+    "$1M exit"
+   ],
+   "value": [
+    200000,
+    1000000
+   ],
+   "unit": "USD",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-20T06:22Z, data sha256 f703e5a1 (commit a72e8e8 of github.com/underkeel/site): sizes"
+  },
+  {
+   "id": "usde_repaid",
+   "what": "USDC repaid in USDe/USDC between the snapshots around the event (42 Repay transactions); the snapshots' borrowed fell by $94.68M",
+   "text": [
+    "$94.7M"
+   ],
+   "value": 94742706.6,
+   "unit": "USD",
+   "at": "2026-11-20T06:22Z",
+   "source": "Morpho public API (blue-api.morpho.org), market USDe/USDC 91.5%: every market transaction between the snapshots of 2026-11-19T12:23:11Z and 2026-11-20T06:22:53Z, sum of Repay assets; cross-check: borrow_usd 329,029,020 -> 234,350,955 in the two snapshots"
+  },
+  {
+   "id": "usde_debt_before",
+   "what": "Borrowed in USDe/USDC at the snapshot before the first repayment",
+   "text": [
+    "$329.0M debt"
+   ],
+   "value": 329029020,
+   "unit": "USD",
+   "at": "2026-11-19T12:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-19T12:23Z (commit c2e4607 of github.com/underkeel/site): borrow_usd of the USDe/USDC row"
+  },
+  {
+   "id": "usde_debt_drift",
+   "what": "USDe/USDC borrowed fell from $339.89M (first snapshot) to $329.03M (19 Nov 12:23, before the first repayment): the part of the table's fall that came before the repayments",
+   "text": [
+    "the USDe debt had fallen by $10.9M before the repayments began"
+   ],
+   "value": 10859911,
+   "unit": "USD",
+   "at": "2026-11-19T12:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-14T21:23Z (commit a772784 of github.com/underkeel/site) and data/exit-depth.json of the snapshot 2026-11-19T12:23Z (commit c2e4607 of github.com/underkeel/site): borrow_usd of the USDe/USDC row"
+  },
+  {
+   "id": "repay_hours",
+   "what": "First and last repayment: 15:00:53 and 00:36:16 UTC, 9 h 35 min",
+   "text": [
+    "From 15:00 UTC on 19 November",
+    "in under ten hours",
+    "in ten hours"
+   ],
+   "value": [
+    "2026-11-19T15:00:53Z",
+    "2026-11-20T00:36:16Z"
+   ],
+   "at": "2026-11-20T06:22Z",
+   "source": "Morpho public API (blue-api.morpho.org), market USDe/USDC 91.5%: every market transaction between the snapshots of 2026-11-19T12:23:11Z and 2026-11-20T06:22:53Z, type Repay: first and last timestamp"
+  },
+  {
+   "id": "usde_exit_1m",
+   "what": "Cost of a $1M USDe sale before, during and after the repayments: 38.11% (19 Nov 12:23), 38.33% (19 Nov 18:23, inside the repayment hours), 38.37% (20 Nov 00:22 and 06:22)",
+   "text": [
+    "about 38%",
+    "held at 38%"
+   ],
+   "value": {
+    "2026-11-19T12:23Z": 0.38113,
+    "2026-11-19T18:23Z": 0.38332,
+    "2026-11-20T00:22Z": 0.38367,
+    "2026-11-20T06:22Z": 0.38372
+   },
+   "unit": "share",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshots 2026-11-19T12:23Z (c2e4607), 18:23Z (d4dc223, the only one inside the repayment hours), 2026-11-20T00:22Z (1cd6db2) and 06:22Z (a72e8e8, data sha256 f703e5a1), github.com/underkeel/site: exit 1000000 of the USDe/USDC row"
+  },
+  {
+   "id": "breakeven_usde",
+   "what": "Break-even exit cost at 91.5% LLTV: 1 - 1/(1 + bonus), bonus 2.617%",
+   "text": [
+    "a break-even of 2.55%",
+    "2.55%"
+   ],
+   "value": 0.0255,
+   "unit": "share",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-20T06:22Z, data sha256 f703e5a1 (commit a72e8e8 of github.com/underkeel/site): bonus of the USDe/USDC row; break-even = 1 - 1/(1 + bonus) (method.html, website.exposure.breakeven)"
+  },
+  {
+   "id": "lender_first",
+   "what": "The largest lender's first withdrawal of $1M or more, 2026-11-19T14:39:25Z: 21 min 28 s before the first repayment (15:00:53)",
+   "text": [
+    "21 minutes before the first repayment"
+   ],
+   "value": 21.47,
+   "unit": "minutes",
+   "at": "2026-11-20T06:22Z",
+   "source": "Morpho public API (blue-api.morpho.org), market USDe/USDC 91.5%: every market transaction between the snapshots of 2026-11-19T12:23:11Z and 2026-11-20T06:22:53Z, Withdraw of the largest withdrawing account and Repay"
+  },
+  {
+   "id": "lender_last",
+   "what": "The largest lender's last withdrawal of $1M or more, 2026-11-20T00:39:24Z: 3 min 8 s after the last repayment (00:36:16)",
+   "text": [
+    "three minutes after the final one"
+   ],
+   "value": 3.13,
+   "unit": "minutes",
+   "at": "2026-11-20T06:22Z",
+   "source": "Morpho public API (blue-api.morpho.org), market USDe/USDC 91.5%: every market transaction between the snapshots of 2026-11-19T12:23:11Z and 2026-11-20T06:22:53Z, Withdraw of the largest withdrawing account and Repay"
+  },
+  {
+   "id": "lender_between",
+   "what": "Everything the largest lender withdrew from its first to its last withdrawal of $1M or more (14:39:25 - 00:39:24); over the whole snapshot window it withdrew $138.49M and supplied back $6.92M (net $131.57M, 96.6% of all withdrawals)",
+   "text": [
+    "$137.0M"
+   ],
+   "value": 137041382.58,
+   "unit": "USD",
+   "at": "2026-11-20T06:22Z",
+   "source": "Morpho public API (blue-api.morpho.org), market USDe/USDC 91.5%: every market transaction between the snapshots of 2026-11-19T12:23:11Z and 2026-11-20T06:22:53Z, Withdraw of the largest withdrawing account"
+  },
+  {
+   "id": "lender_vault",
+   "what": "The largest lender is the market adapter of a Morpho vault V2 (parentVault() answers); the vault's hourly total assets $448.16M-$450.33M between the snapshots (spread 0.48%), idle assets $0",
+   "text": [
+    "a Morpho vault",
+    "within half a percent",
+    "most likely went to its other markets"
+   ],
+   "value": {
+    "spread": 0.00482,
+    "idle_max_usd": 0.0
+   },
+   "unit": "share",
+   "at": "2026-11-20T06:22Z",
+   "source": "mainnet.base.org eth_call parentVault() on the account; Morpho public API vaultV2ByAddress historicalState totalAssetsUsd, idleAssetsUsd (hourly)"
+  },
+  {
+   "id": "rate",
+   "what": "Borrow APY: 4.91% at 14:00, 17.05% at 17:00 UTC on 19 November (x3.5)",
+   "text": [
+    "more than tripled, to 17.1%"
+   ],
+   "value": {
+    "2026-11-19T14:00Z": 0.04906,
+    "2026-11-19T17:00Z": 0.17052
+   },
+   "unit": "share",
+   "at": "2026-11-19T17:00Z",
+   "source": "Morpho public API (blue-api.morpho.org), market USDe/USDC 91.5%: hourly historical state borrowApy"
+  },
+  {
+   "id": "rate_peaks",
+   "what": "Two hourly peaks of the borrow APY: 17.05% at 17:00 and 16.65% at 19:00 (10.30% at 18:00 between them); 6.03% at 06:00 on 20 November",
+   "text": [
+    "peaked twice before easing",
+    "either peak"
+   ],
+   "value": {
+    "2026-11-19T17:00Z": 0.17052,
+    "2026-11-19T19:00Z": 0.16651,
+    "2026-11-20T06:00Z": 0.06027
+   },
+   "unit": "share",
+   "at": "2026-11-19T19:00Z",
+   "source": "Morpho public API (blue-api.morpho.org), market USDe/USDC 91.5%: hourly historical state borrowApy"
+  },
+  {
+   "id": "rate_hourly",
+   "what": "Morpho's API gives the market's history by the hour",
+   "text": [
+    "once an hour"
+   ],
+   "value": 1,
+   "unit": "hours",
+   "at": "2026-11-19T17:00Z",
+   "source": "Morpho public API (blue-api.morpho.org), market USDe/USDC 91.5%: hourly historical state"
+  },
+  {
+   "id": "repay_count",
+   "what": "Repayments and borrowers who made them",
+   "text": [
+    "all 42 repayments",
+    "eight borrowers"
+   ],
+   "value": {
+    "repayments": 42,
+    "borrowers": 8
+   },
+   "unit": "count",
+   "at": "2026-11-20T06:22Z",
+   "source": "Morpho public API (blue-api.morpho.org), market USDe/USDC 91.5%: every market transaction between the snapshots of 2026-11-19T12:23:11Z and 2026-11-20T06:22:53Z, type Repay"
+  },
+  {
+   "id": "repay_with_collateral",
+   "what": "Repayments whose borrower withdrew USDe collateral in the same transaction",
+   "text": [
+    "in 36 the borrower also withdrew USDe collateral"
+   ],
+   "value": 36,
+   "unit": "count",
+   "at": "2026-11-20T06:22Z",
+   "source": "Morpho public API (blue-api.morpho.org), market USDe/USDC 91.5%: every market transaction between the snapshots of 2026-11-19T12:23:11Z and 2026-11-20T06:22:53Z, Repay and WithdrawCollateral with the same transaction hash and user"
+  },
+  {
+   "id": "usde_out",
+   "what": "USDe that left Morpho in the 42 repayment transactions (tokens)",
+   "text": [
+    "90.3M in all",
+    "took 90.3M USDe out with their repayments"
+   ],
+   "value": 90250801.48,
+   "unit": "USDe",
+   "at": "2026-11-20T06:22Z",
+   "source": "Morpho public API (blue-api.morpho.org), market USDe/USDC 91.5%: every market transaction between the snapshots of 2026-11-19T12:23:11Z and 2026-11-20T06:22:53Z, Repay transactions; their receipts from mainnet.base.org: Transfer logs of USDe and USDC, swap logs (Uniswap v2/v3/v4, PancakeSwap v3, Aerodrome v2, Balancer v2, Curve), Morpho FlashLoan logs"
+  },
+  {
+   "id": "flows_no_swap",
+   "what": "Repayment transactions with a swap log / a Morpho flash loan of USDC / USDe sent into a swap-log emitter / USDe burned / USDC from a swap-log emitter",
+   "text": [
+    "None of the transactions logged a DEX swap or a Morpho flash loan",
+    "sold none of it in those transactions"
+   ],
+   "value": {
+    "tx_with_any_swap_log": 0,
+    "tx_with_usdc_flash": 0,
+    "tx_with_usde_to_swappers": 0,
+    "tx_with_usde_burned": 0,
+    "tx_with_usdc_from_swappers": 0
+   },
+   "unit": "count",
+   "at": "2026-11-20T06:22Z",
+   "source": "Morpho public API (blue-api.morpho.org), market USDe/USDC 91.5%: every market transaction between the snapshots of 2026-11-19T12:23:11Z and 2026-11-20T06:22:53Z, Repay transactions; their receipts from mainnet.base.org: Transfer logs of USDe and USDC, swap logs (Uniswap v2/v3/v4, PancakeSwap v3, Aerodrome v2, Balancer v2, Curve), Morpho FlashLoan logs"
+  },
+  {
+   "id": "flows_kept",
+   "what": "USDe that ended the transaction with its sender or the borrower, out of the USDe that left Morpho; USDC into Morpho equals the repaid sum",
+   "text": [
+    "all that USDe ended with the borrower or the account that sent the transaction",
+    "They paid in USDC and kept their USDe",
+    "in these transactions none of it went into a pool a liquidator would sell into"
+   ],
+   "value": {
+    "usde_kept": 90250801.48,
+    "usde_out": 90250801.48,
+    "usdc_to_morpho": 94742706.6
+   },
+   "unit": "USDe",
+   "at": "2026-11-20T06:22Z",
+   "source": "Morpho public API (blue-api.morpho.org), market USDe/USDC 91.5%: every market transaction between the snapshots of 2026-11-19T12:23:11Z and 2026-11-20T06:22:53Z, Repay transactions; their receipts from mainnet.base.org: Transfer logs of USDe and USDC, swap logs (Uniswap v2/v3/v4, PancakeSwap v3, Aerodrome v2, Balancer v2, Curve), Morpho FlashLoan logs"
+  },
+  {
+   "id": "usde_liquidations",
+   "what": "Liquidations in USDe/USDC from the first snapshot to the latest",
+   "text": [
+    "No position in this market was liquidated in the whole review period"
+   ],
+   "value": 0,
+   "unit": "count",
+   "at": "2026-11-20T06:22Z",
+   "source": "Morpho public API (blue-api.morpho.org), market USDe/USDC 91.5%: Liquidation transactions between 2026-11-14T21:23:11Z and 2026-11-20T06:22:53Z"
+  },
+  {
+   "id": "sol_first",
+   "what": "SOL $1M sale at the first snapshot: best route 11.23% (RFQ makers 97.2% of it, pmm-19 45.6%) against a break-even of 11.25%; pools only 66.86%, 5.9 times the break-even",
+   "text": [
+    "came in under the break-even only because RFQ makers carried most of the route",
+    "six times the break-even"
+   ],
+   "value": {
+    "exit": 0.11231,
+    "exit_pools_only": 0.66864,
+    "rfq_share": 0.9718,
+    "pools_only_over_breakeven": 5.94
+   },
+   "unit": "share",
+   "at": "2026-11-14T21:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-14T21:23Z (commit a772784 of github.com/underkeel/site): exit, exit_no_rfq and venues 1000000 of the SOL/USDC 62.5% row"
+  },
+  {
+   "id": "sol_deepened",
+   "what": "SOL $1M sale on pools only by snapshot, 16 Nov 18:23 to 17 Nov 19:05: under the break-even from 17 Nov 12:23; the low was 15 Nov 01:00 UTC",
+   "text": [
+    "deepened on 17 November",
+    "two days after the low"
+   ],
+   "value": {
+    "2026-11-16T18:23:58Z": 0.4701,
+    "2026-11-17T00:23:30Z": 0.3993,
+    "2026-11-17T06:23:40Z": 0.1892,
+    "2026-11-17T12:23:40Z": 0.0809,
+    "2026-11-17T19:05:18Z": 0.0275
+   },
+   "unit": "share",
+   "at": "2026-11-17T12:23Z",
+   "source": "data/exit-depth.json of every snapshot 2026-11-14T21:23Z..2026-11-20T06:22Z (github.com/underkeel/site): exit_no_rfq 1000000 of the SOL/USDC 62.5% row; the low - Coinbase hourly candles"
+  },
+  {
+   "id": "sol_last",
+   "what": "SOL $1M sale at the latest snapshot: pools only 2.90% against 11.25%; best route 2.61%",
+   "text": [
+    "the sale is now under the break-even on pools only too",
+    "2.90%"
+   ],
+   "value": {
+    "exit": 0.02612,
+    "exit_pools_only": 0.029
+   },
+   "unit": "share",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-20T06:22Z, data sha256 f703e5a1 (commit a72e8e8 of github.com/underkeel/site): exit and exit_no_rfq 1000000 of the SOL/USDC 62.5% row"
+  },
+  {
+   "id": "sol_pools_first",
+   "what": "SOL $1M sale on pools only at the first snapshot",
+   "text": [
+    "66.86%"
+   ],
+   "value": 0.66864,
+   "unit": "share",
+   "at": "2026-11-14T21:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-14T21:23Z (commit a772784 of github.com/underkeel/site): exit_no_rfq 1000000 of the SOL/USDC 62.5% row"
+  },
+  {
+   "id": "sol_borrowed",
+   "what": "Borrowed in SOL/USDC 62.5% at the first and the latest snapshot",
+   "text": [
+    "$6.0M",
+    "$5.9M"
+   ],
+   "value": {
+    "2026-11-14T21:23Z": 6005659,
+    "2026-11-20T06:22Z": 5899491
+   },
+   "unit": "USD",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-14T21:23Z (commit a772784 of github.com/underkeel/site) and data/exit-depth.json of the snapshot 2026-11-20T06:22Z, data sha256 f703e5a1 (commit a72e8e8 of github.com/underkeel/site): borrow_usd of the SOL/USDC 62.5% row"
+  },
+  {
+   "id": "breakeven_62_5",
+   "what": "Break-even exit cost at 62.5% LLTV: 1 - 1/(1 + bonus), bonus 12.68%",
+   "text": [
+    "11.25%"
+   ],
+   "value": 0.1125,
+   "unit": "share",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-20T06:22Z, data sha256 f703e5a1 (commit a72e8e8 of github.com/underkeel/site): bonus of the SOL/USDC 62.5% row"
+  },
+  {
+   "id": "cbltc_borrowed",
+   "what": "Borrowed in cbLTC/USDC 62.5% at the first and the latest snapshot",
+   "text": [
+    "$0.73M",
+    "$0.65M",
+    "a small market"
+   ],
+   "value": {
+    "2026-11-14T21:23Z": 726779,
+    "2026-11-20T06:22Z": 653422
+   },
+   "unit": "USD",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-14T21:23Z (commit a772784 of github.com/underkeel/site) and data/exit-depth.json of the snapshot 2026-11-20T06:22Z, data sha256 f703e5a1 (commit a72e8e8 of github.com/underkeel/site): borrow_usd of the cbLTC/USDC 62.5% row"
+  },
+  {
+   "id": "cbltc_third",
+   "what": "A $200k sale against the market's latest debt: 30.6%",
+   "text": [
+    "about a third of its debt"
+   ],
+   "value": 0.3061,
+   "unit": "share",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-20T06:22Z, data sha256 f703e5a1 (commit a72e8e8 of github.com/underkeel/site): borrow_usd of the cbLTC/USDC 62.5% row"
+  },
+  {
+   "id": "cbltc_first",
+   "what": "cbLTC $200k sale in the first two snapshots (2026-11-14T21:23Z, 2026-11-15T00:23Z): pmm-19 carried the whole route; 10.81% and 10.94%; pools only 78.31%",
+   "text": [
+    "first two snapshots",
+    "pmm-19 quoted all of it",
+    "10.81%",
+    "78.31%"
+   ],
+   "value": {
+    "exit": 0.10807,
+    "exit_pools_only": 0.78314,
+    "pmm19_share_first": 1.0,
+    "pmm19_share_second": 1.0
+   },
+   "unit": "share",
+   "at": "2026-11-14T21:23Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-14T21:23Z (commit a772784 of github.com/underkeel/site) and the snapshot 2026-11-15T00:23Z (commit 918a797): exit, exit_no_rfq and venues 200000 of the cbLTC/USDC 62.5% row"
+  },
+  {
+   "id": "pmm19_drop",
+   "what": "pmm-19 in the cbLTC and SOL routes at 2026-11-15T00:23Z (present in both) and 06:23Z (absent from both, any size); the low of BTC, SOL and LTC on Coinbase was the hour from 01:00 UTC",
+   "text": [
+    "Early on 15 November, in the hours of the fall's low",
+    "dropped out of the cbLTC and SOL routes"
+   ],
+   "value": {
+    "cbltc_0023": {
+     "25000": 1.0,
+     "200000": 1.0,
+     "1000000": 0.5748
+    },
+    "cbltc_0623": {
+     "25000": 0,
+     "200000": 0,
+     "1000000": 0
+    },
+    "sol_0623": {
+     "25000": 0,
+     "200000": 0,
+     "1000000": 0
+    }
+   },
+   "unit": "share",
+   "at": "2026-11-15T06:23Z",
+   "source": "data/exit-depth.json of the snapshots 2026-11-15T00:23Z (918a797) and 06:23Z (d408135): venues of the cbLTC/USDC and SOL/USDC 62.5% rows"
+  },
+  {
+   "id": "pmm19_sol",
+   "what": "pmm-19 in the SOL/USDC route (any size) in every snapshot from 2026-11-15T18:23Z to the latest; absent at 06:23 and 12:23 on 15 November",
+   "text": [
+    "back in SOL by evening"
+   ],
+   "value": {
+    "snapshots": 18,
+    "with_pmm19": 18
+   },
+   "unit": "count",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of every snapshot 2026-11-14T21:23Z..2026-11-20T06:22Z (github.com/underkeel/site): venues of the SOL/USDC 62.5% row"
+  },
+  {
+   "id": "pmm19_gone",
+   "what": "pmm-19 in no cbLTC route at any size in the 20 snapshots from 2026-11-15T06:23Z to the latest (5 days)",
+   "text": [
+    "I have not seen it in a cbLTC route since",
+    "stayed out of cbLTC for five days"
+   ],
+   "value": {
+    "snapshots": 20,
+    "cbltc_with_pmm19": 0
+   },
+   "unit": "count",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of every snapshot 2026-11-14T21:23Z..2026-11-20T06:22Z (github.com/underkeel/site): venues of the cbLTC/USDC 62.5% row"
+  },
+  {
+   "id": "cbltc_last",
+   "what": "cbLTC $200k sale at the latest snapshot: 80.21% on the best route, which is pools only",
+   "text": [
+    "loses four-fifths of its value",
+    "80.21%"
+   ],
+   "value": {
+    "exit": 0.80212,
+    "exit_pools_only": 0.80212
+   },
+   "unit": "share",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-20T06:22Z, data sha256 f703e5a1 (commit a72e8e8 of github.com/underkeel/site): exit and exit_no_rfq 200000 of the cbLTC/USDC 62.5% row"
+  },
+  {
+   "id": "usde_borrowed",
+   "what": "Borrowed in USDe/USDC at the first and the latest snapshot; latest minus (19 Nov 12:23 borrowed - repaid) = $64,642: interest accrued between the snapshots, since the only Borrow in the window was $15 (borrow_usd is in USD at the snapshot price of USDC)",
+   "text": [
+    "$339.9M",
+    "$234.4M",
+    "Borrowers still owe $234.4M, interest included"
+   ],
+   "value": {
+    "2026-11-14T21:23Z": 339888931,
+    "2026-11-20T06:22Z": 234350956
+   },
+   "unit": "USD",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-14T21:23Z (commit a772784 of github.com/underkeel/site) and data/exit-depth.json of the snapshot 2026-11-20T06:22Z, data sha256 f703e5a1 (commit a72e8e8 of github.com/underkeel/site): borrow_usd of the USDe/USDC row"
+  },
+  {
+   "id": "usde_exit_table",
+   "what": "Cost of a $1M USDe sale at the first and the latest snapshot",
+   "text": [
+    "37.73%",
+    "38.37%",
+    "a $1M sale costs 38.37%"
+   ],
+   "value": {
+    "2026-11-14T21:23Z": 0.37732,
+    "2026-11-20T06:22Z": 0.38372
+   },
+   "unit": "share",
+   "at": "2026-11-20T06:22Z",
+   "source": "data/exit-depth.json of the snapshot 2026-11-14T21:23Z (commit a772784 of github.com/underkeel/site) and data/exit-depth.json of the snapshot 2026-11-20T06:22Z, data sha256 f703e5a1 (commit a72e8e8 of github.com/underkeel/site): exit 1000000 of the USDe/USDC row"
+  },
+  {
+   "id": "fall",
+   "what": "The fall: BTC, SOL and LTC on Coinbase all hit their low in the hour from 01:00 UTC on 15 November (BTC -16.2%, SOL -19.0%, LTC -15.0% from the open of 12 November); the first snapshot came 3.6 h before that hour",
+   "text": [
+    "the fall of 12-15 November",
+    "four hours before the low"
+   ],
+   "value": {
+    "low_hour": "2026-11-15T01:00:00Z",
+    "btc_fall_to_low": 0.1621,
+    "sol_fall_to_low": 0.1901,
+    "ltc_fall_to_low": 0.1502
+   },
+   "at": "2026-11-15T01:00Z",
+   "source": "Coinbase Exchange public API, hourly candles BTC-USD, SOL-USD, LTC-USD, 2026-11-12T00:00Z to 2026-11-16T00:00Z"
+  }
+ ]
+}
