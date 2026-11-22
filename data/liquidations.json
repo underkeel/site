@@ -3,8 +3,8 @@
  "days": 30,
  "since": "2026-10-23",
  "until": "2026-11-22",
- "count": 18301,
- "bonus_usd": 11464643.560574083,
+ "count": 18304,
+ "bonus_usd": 11464645.450415896,
  "auction_bonus_usd": 10674533.148960952,
  "auction_bids_usd": 8598252.14891317,
  "pairs": [
@@ -28,8 +28,8 @@
   },
   {
    "pair": "cbETH/USDC",
-   "count": 1543,
-   "bonus_usd": 147854.7187555086,
+   "count": 1545,
+   "bonus_usd": 147856.5979071949,
    "auction_bonus_usd": 2687.335644233368
   },
   {
@@ -88,8 +88,8 @@
   },
   {
    "pair": "yoUSD/USDC",
-   "count": 50,
-   "bonus_usd": 5590.039034635198,
+   "count": 51,
+   "bonus_usd": 5590.0497247630265,
    "auction_bonus_usd": 0.0
   },
   {
@@ -330,7 +330,7 @@
   },
   {
    "day": "2026-11-22",
-   "bonus_usd": 0.006449473808999989
+   "bonus_usd": 1.896291287935321
   }
  ]
 }
