@@ -3,8 +3,8 @@
  "days": 30,
  "since": "2026-10-23",
  "until": "2026-11-22",
- "count": 18300,
- "bonus_usd": 11464643.554124609,
+ "count": 18301,
+ "bonus_usd": 11464643.560574083,
  "auction_bonus_usd": 10674533.148960952,
  "auction_bids_usd": 8598252.14891317,
  "pairs": [
@@ -88,8 +88,8 @@
   },
   {
    "pair": "yoUSD/USDC",
-   "count": 49,
-   "bonus_usd": 5590.032585161389,
+   "count": 50,
+   "bonus_usd": 5590.039034635198,
    "auction_bonus_usd": 0.0
   },
   {
@@ -330,7 +330,7 @@
   },
   {
    "day": "2026-11-22",
-   "bonus_usd": 0.0
+   "bonus_usd": 0.006449473808999989
   }
  ]
 }
