@@ -1,11 +1,21 @@
 # Underkeel
 
-Exit depth and liquidations of Morpho Blue markets on Base, refreshed every 6 hours.
+Site: https://underkeel.xyz
+
+Exit depth and liquidations of Morpho Blue markets on Base, refreshed every 6 hours. Method: Clearance v3 of 16 Nov 2026
+(`method.html`).
+
+Clearance at a size = break-even exit cost - exit cost, in percentage points. The break-even exit cost is
+1 - 1/(1 + bonus): a liquidator repays 1, seizes 1 + bonus and breaks even when the sale loses bonus/(1 + bonus), a
+little less than the bonus (11.25% at a 12.68% bonus). Positive clearance - room for a flash-loan liquidator at that
+size; negative - a single liquidation of that size loses money. The clearing size is the largest measured size with
+positive clearance. Quote-dependent debt is the amount borrowed in markets that clear some size only with RFQ quotes.
+Before 16 Nov 2026 (v1, v2) the exit cost was set against the bonus itself; see the changelog in `method.html`.
 
 - `exit-depth.html`, `data/exit-depth.json` - for every Morpho-listed market on Base with at least $100k borrowed: the
-  liquidation bonus fixed by its LLTV and the share lost selling its collateral into the loan token at $25k, $200k and
-  $1M (best KyberSwap route, market makers included, both sides valued by KyberSwap), and the collateral of positions
-  with health factor below 1.1 and 1.25.
+  liquidation bonus fixed by its LLTV, `min(15%, 1/(0.3 x LLTV + 0.7) - 1)`, and the share lost selling its collateral
+  into the loan token at $25k, $200k and $1M (best KyberSwap route, market makers included, both sides valued by
+  KyberSwap), and the collateral of positions with health factor below 1.1 and 1.25.
 - `venues.html` - where each sale goes: in `data/exit-depth.json`, `venues` is the share of the collateral each
   KyberSwap source takes on the hops out of the collateral token (`kind`: `rfq` - off-chain RFQ quote or limit order,
   `maker_pool` - on-chain pool priced by a market maker, `vault` - vault redemption, `amm` - AMM pool), and
@@ -24,8 +34,9 @@ Exit depth and liquidations of Morpho Blue markets on Base, refreshed every 6 ho
   2026 (`pairs` has every pair; 1 - the 10 with the most bonus). `exit-depth.json` also has `at_iso` (the snapshot time
   in ISO 8601) and `min_borrow_usd` (the selection threshold, USD).
 
-`markets/<pair>-<lltv>.html` - one page per market: exit cost against the bonus by size, clearance (bonus minus exit
-cost, percentage points), venues, collateral near liquidation, the pair's other LLTVs.
+`markets/<pair>-<lltv>.html` - one page per market: exit cost by size against the break-even exit cost, clearance,
+venues, collateral near liquidation, the pair's other LLTVs.
+`notes/` - dated notes on events in these markets (Atom feed `notes/feed.xml`).
 `method.html` - how every number is measured and what is not measured; `data.html` - the fields of both JSON files;
 `about.html` - who runs the site and the disclosure.
 
