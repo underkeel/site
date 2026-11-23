@@ -1,12 +1,12 @@
 {
  "schema": 2,
  "days": 30,
- "since": "2026-10-23",
- "until": "2026-11-22",
- "count": 18305,
- "bonus_usd": 11464647.27360941,
- "auction_bonus_usd": 10674536.896336216,
- "auction_bids_usd": 8598255.544605892,
+ "since": "2026-10-24",
+ "until": "2026-11-23",
+ "count": 18299,
+ "bonus_usd": 11464582.550815871,
+ "auction_bonus_usd": 10674472.173542675,
+ "auction_bids_usd": 8598192.563004406,
  "pairs": [
   {
    "pair": "cbBTC/USDC",
@@ -64,15 +64,15 @@
   },
   {
    "pair": "cbADA/USDC",
-   "count": 179,
-   "bonus_usd": 33933.10852330059,
-   "auction_bonus_usd": 33201.28849152386
+   "count": 178,
+   "bonus_usd": 33913.054078316,
+   "auction_bonus_usd": 33181.234046539284
   },
   {
    "pair": "cbLTC/USDC",
-   "count": 207,
-   "bonus_usd": 33365.47258499811,
-   "auction_bonus_usd": 33222.86724489806
+   "count": 202,
+   "bonus_usd": 33320.80423644253,
+   "auction_bonus_usd": 33178.19889634248
   },
   {
    "pair": "cbHYPE/USDC",
@@ -209,10 +209,6 @@
  ],
  "by_day": [
   {
-   "day": "2026-10-23",
-   "bonus_usd": 64.72279354016001
-  },
-  {
    "day": "2026-10-24",
    "bonus_usd": 23611.86795186779
   },
@@ -331,6 +327,10 @@
   {
    "day": "2026-11-22",
    "bonus_usd": 5.653424755980116
+  },
+  {
+   "day": "2026-11-23",
+   "bonus_usd": 0.0
   }
  ]
 }
