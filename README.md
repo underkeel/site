@@ -24,10 +24,12 @@ Before 16 Nov 2026 (v1, v2) the exit cost was set against the bonus itself; see 
   `null` in `exit` - no route (a size above one with no route is not asked again and is `null` too). `gap`, when
   present, says why a market is not fully measured (`no_route`, `vault`, `no_price`, `api_failed`, `budget`);
   `exit_dex` - for a vault share of the loan token, KyberSwap's cost at the sizes left out of `exit` because its route
-  skips the vault's redemption; `price_source: "oracle"` - the sale was sized at the market's oracle price (the Morpho
-  API has no USD price for the token). A `near` band is `null` when its collateral has no USD value.
+  skips the vault's redemption; `exit_large`, `exit_large_no_rfq` - $5M and $20M for the largest markets (a pair
+  whose largest market has at least $10M borrowed and clears $1M), up to the market's debt; `price_source: "oracle"` -
+  the sale was sized at the market's oracle price (the Morpho API has no USD price for the token). A `near` band is `null` when its collateral has no USD value.
 - `liquidations.html`, `data/liquidations.json` - Morpho Blue liquidations on Base over 30 days: bonus paid, the share
-  that went through Chainlink SVR auctions, by day and by pair (every pair with a liquidation).
+  that went through Chainlink SVR auctions, debt repaid and bad debt written off, by day and by pair (every pair with a
+  liquidation).
 - Both JSON files carry `schema`, a format version that changes whenever the meaning of a field changes:
   `exit-depth.json` is 3 since 16 Nov 2026 (`near` may be `null`; vault shares as above), 2 from 13 Nov 2026 (files
   without `schema` are version 1, where `null` also stood for a failed quote); `liquidations.json` is 2 since 16 Nov
