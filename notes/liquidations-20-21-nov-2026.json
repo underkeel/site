@@ -1,0 +1,729 @@
+{
+ "schema": 1,
+ "slug": "liquidations-20-21-nov-2026",
+ "url": "https://underkeel.xyz/notes/liquidations-20-21-nov-2026.html",
+ "title": "$91.7M liquidated on Morpho on Base as BTC fell 10.8%",
+ "kind": "event",
+ "event": "2026-11-20T14:00Z",
+ "snapshot": "2026-11-22T12:23Z",
+ "data_sha256": "5fb118b9",
+ "commit": "41db71f",
+ "method": "Clearance v3",
+ "published": "2026-11-24T00:23:47Z",
+ "numbers": [
+  {
+   "id": "window",
+   "what": "The two UTC days of the note",
+   "text": [
+    "20 and 21 November",
+    "20-21 November"
+   ],
+   "value": {
+    "from": "2026-11-20T00:00Z",
+    "to": "2026-11-22T00:00Z",
+    "blocks": [
+     59712122,
+     60576121
+    ]
+   },
+   "at": "2026-11-20T00:00Z/2026-11-22T00:00Z",
+   "source": "Base block headers"
+  },
+  {
+   "id": "debt_two_days",
+   "what": "Debt repaid by Morpho liquidations on Base in the two days",
+   "text": [
+    "$91.7M"
+   ],
+   "value": {
+    "index_usd": 91668366,
+    "unpriced_priced_usd": 5189.34,
+    "total_usd": 91673555,
+    "liquidations": 4791,
+    "note": "16 liquidations in loan tokens the index does not price - at DefiLlama's price (XSGD, eUSD, jEUR, DAI); a token named USD of the four test markets has no price and is left out"
+   },
+   "unit": "USD",
+   "at": "2026-11-20T00:00Z/2026-11-22T00:00Z",
+   "source": "Morpho Blue Liquidate events on Base, 20-21 Nov 2026 UTC, my index; debt in USD at the time; checked against all 4,791 Liquidate events in blocks 59712122-60576121 on a public archive node; DefiLlama prices for 16 unpriced"
+  },
+  {
+   "id": "share_30d",
+   "what": "The two days against the 30 UTC days 23 Oct - 21 Nov",
+   "text": [
+    "two-fifths of all they repaid",
+    "month to 22 November"
+   ],
+   "value": {
+    "debt_30d": 229724361,
+    "share": 0.399,
+    "days": [
+     "2026-10-23",
+     "2026-11-21",
+     30
+    ]
+   },
+   "unit": "share",
+   "at": "2026-10-23T00:00Z/2026-11-22T00:00Z",
+   "source": "Morpho Blue Liquidate events on Base, the 30 UTC days 23 Oct - 21 Nov 2026, my index; debt in USD at the time"
+  },
+  {
+   "id": "bad_debt",
+   "what": "Bad debt outside the five unlisted test markets: two write-offs, both in cbBTC/USDC 86%, a market lending USDC",
+   "text": [
+    "less than a cent",
+    "In markets lending USDC, that happened twice",
+    "for a fraction of a cent each"
+   ],
+   "value": {
+    "USDC": 1.4e-05,
+    "write_offs": 2
+   },
+   "unit": "USDC",
+   "at": "2026-11-20T00:00Z/2026-11-22T00:00Z",
+   "source": "badDebtAssets of Liquidate events on a public archive node; Morpho API (listed)"
+  },
+  {
+   "id": "tests",
+   "what": "Five unlisted markets created on 21 Nov (one DAI/WETH, four USD/COL): times, supply, and the four's bad debt and debt repaid in units",
+   "text": [
+    "five unlisted markets",
+    "01:50 and 02:27 UTC on 21 November",
+    "977,218.55 units",
+    "about 478k units",
+    "about 1.24M"
+   ],
+   "value": {
+    "markets": 5,
+    "created_utc_minute": [
+     "2026-11-21T01:50Z",
+     "2026-11-21T01:55Z",
+     "2026-11-21T02:24Z",
+     "2026-11-21T02:25Z",
+     "2026-11-21T02:27Z"
+    ],
+    "listed": [
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "supply_units": [
+     590530.69,
+     977218.55,
+     977218.55,
+     977218.55
+    ],
+    "bad_debt_units": 478000.0,
+    "repaid_units": 1240000.0
+   },
+   "at": "2026-11-20T00:00Z/2026-11-22T00:00Z",
+   "source": "Morpho API (listed, creation, supply); token names and Liquidate events on a public archive node"
+  },
+  {
+   "id": "dai_test",
+   "what": "The DAI/WETH test loan and its liquidation, rounded",
+   "text": [
+    "One lends DAI against ETH",
+    "hundreds of thousands of dollars when the loan was taken",
+    "of a $2.32 loan there",
+    "$2.30 was written off"
+   ],
+   "value": {
+    "debt_dai": 2.32,
+    "debt_dai_at_liquidation": 2.32,
+    "collateral_usd": 0.01,
+    "oracle_dai_per_weth_at_borrow": [
+     270000.0,
+     470000.0
+    ],
+    "repaid_dai": 0.01,
+    "bad_debt_dai": 2.3,
+    "position_at_20_11_1400": "none (the market did not exist)"
+   },
+   "at": "2026-11-20T00:00Z/2026-11-22T00:00Z",
+   "source": "the position, the market's oracle and its events on a public archive node; Morpho API"
+  },
+  {
+   "id": "btc_fall",
+   "what": "BTC: open of 14:00 UTC on 20 Nov against the lowest one-minute low to 22 Nov 12:23",
+   "text": [
+    "fell 10.8%",
+    "10.8% for BTC"
+   ],
+   "value": {
+    "open": 61812.17,
+    "low": 55106,
+    "fall": 0.1085
+   },
+   "unit": "share",
+   "at": "2026-11-20T14:00Z/2026-11-21T06:17Z",
+   "source": "Coinbase Exchange public API, one-minute candles, BTC-USD"
+  },
+  {
+   "id": "btc_times",
+   "what": "Start of the fall as measured (the open of 14:00 UTC on Friday 20 Nov, as in the title and footnote 5), and the minute of BTC's low",
+   "text": [
+    "from 14:00 UTC on Friday",
+    "06:17 UTC on Saturday",
+    "on Friday and Saturday, 20 and 21 November"
+   ],
+   "value": {
+    "from": "2026-11-20T14:00Z",
+    "low_minute": "2026-11-21 06:17Z"
+   },
+   "at": "2026-11-20T14:00Z/2026-11-21T06:17Z",
+   "source": "Coinbase Exchange public API, one-minute candles, BTC-USD"
+  },
+  {
+   "id": "bursts",
+   "what": "Debt repaid in the three bursts: 20 Nov 15-17 and 18-20 UTC, 21 Nov 03-05 UTC",
+   "text": [
+    "three bursts",
+    "03:00 UTC on Saturday",
+    "$42.7M",
+    "nearly half of the two days' debt"
+   ],
+   "value": {
+    "20 15-16h": 25225016,
+    "20 18-19h": 21405693,
+    "21 03-04h": 42654087,
+    "share_21_03_04": 0.4653
+   },
+   "unit": "USD",
+   "at": "2026-11-20T15:00Z/2026-11-21T05:00Z",
+   "source": "Morpho Blue Liquidate events on Base, 20-21 Nov 2026 UTC, my index; debt in USD at the time; checked against all 4,791 Liquidate events in blocks 59712122-60576121 on a public archive node"
+  },
+  {
+   "id": "morning",
+   "what": "21 Nov: BTC's low in 03:00-05:00 UTC against its low at 06:17; liquidations in 05:00-06:00 and 06:00-07:00 UTC",
+   "text": [
+    "within 0.7% of it",
+    "For the next whole hour not one Morpho position",
+    "$1.4M"
+   ],
+   "value": {
+    "low_0300_0500": [
+     "2026-11-21 04:07",
+     55500
+    ],
+    "above_low": 0.0071,
+    "events_05h_index": 0,
+    "events_05h_chain": 0,
+    "debt_06h": 1373869
+   },
+   "at": "2026-11-21T03:00Z/2026-11-21T07:00Z",
+   "source": "Coinbase Exchange public API, one-minute candles, BTC-USD; Morpho Blue Liquidate events on Base, 20-21 Nov 2026 UTC, my index; debt in USD at the time; checked against all 4,791 Liquidate events in blocks 59712122-60576121 on a public archive node"
+  },
+  {
+   "id": "cbbtc_debt",
+   "what": "cbBTC/USDC 86%: debt repaid and its share of all",
+   "text": [
+    "cbBTC/USDC 86%, the site's largest market",
+    "$83.7M",
+    "nine-tenths of it"
+   ],
+   "value": {
+    "debt": 83709308,
+    "share_of_all": 0.9131,
+    "borrowed_20_11_1223": 1524691289
+   },
+   "unit": "USD",
+   "at": "2026-11-20T00:00Z/2026-11-22T00:00Z",
+   "source": "Morpho Blue Liquidate events on Base, 20-21 Nov 2026 UTC, my index; debt in USD at the time; the site's snapshot of 20 Nov 12:23 UTC"
+  },
+  {
+   "id": "auction_share",
+   "what": "Share of debt repaid in transactions to the Chainlink SVR auction contract: the two days; the 30 UTC days 23 Oct - 21 Nov",
+   "text": [
+    "92.7%",
+    "93.3% of the month's"
+   ],
+   "value": {
+    "two_days": 0.927,
+    "30d": 0.9332,
+    "auction_events_index": 1760,
+    "auction_events_chain": 1760,
+    "auction_txs_index": 166,
+    "auction_txs_chain": 166
+   },
+   "unit": "share",
+   "at": "2026-10-23T00:00Z/2026-11-22T00:00Z",
+   "source": "Morpho Blue Liquidate events on Base, the 30 UTC days 23 Oct - 21 Nov 2026, my index; debt in USD at the time; transaction recipients on a public archive node"
+  },
+  {
+   "id": "snapshots",
+   "what": "The site's snapshots: ten, six hours apart; 12:23 UTC on 20 Nov is the last before the fall and gives Table 1's list",
+   "text": [
+    "every six hours",
+    "ten snapshots from 06:22 UTC on Friday to 12:23 UTC on Sunday",
+    "12:23 UTC on 20 November"
+   ],
+   "value": {
+    "snapshots": [
+     "2026-11-20T06:22",
+     "2026-11-20T12:23",
+     "2026-11-20T18:23",
+     "2026-11-21T00:22",
+     "2026-11-21T06:23",
+     "2026-11-21T12:22",
+     "2026-11-21T18:23",
+     "2026-11-22T00:22",
+     "2026-11-22T06:22",
+     "2026-11-22T12:23"
+    ],
+    "commits": {
+     "2026-11-20T06:22": "a72e8e8",
+     "2026-11-20T12:23": "8219dd9",
+     "2026-11-20T18:23": "f9dc2f2",
+     "2026-11-21T00:22": "81df45d",
+     "2026-11-21T06:23": "83416d9",
+     "2026-11-21T12:22": "dd1e9e8",
+     "2026-11-21T18:23": "5bbf16f",
+     "2026-11-22T00:22": "2a93be0",
+     "2026-11-22T06:22": "425be6f",
+     "2026-11-22T12:23": "41db71f"
+    }
+   },
+   "at": "2026-11-20T06:22Z/2026-11-22T12:23Z",
+   "source": "underkeel.xyz public repository, Snapshot commits"
+  },
+  {
+   "id": "break_even",
+   "what": "Break-even cost at an 86% LLTV",
+   "text": [
+    "4.20%"
+   ],
+   "value": 0.042,
+   "unit": "share",
+   "at": "2026-11-22T12:23Z",
+   "source": "Morpho Blue liquidation incentive factor"
+  },
+  {
+   "id": "cbbtc_exit_max",
+   "what": "cbBTC/USDC 86%: cost of a $1M sale in the ten snapshots (highest 0.473%)",
+   "text": [
+    "did a $1M sale cost more than 0.5%"
+   ],
+   "value": {
+    "2026-11-20T06:22": 0.00297,
+    "2026-11-20T12:23": 0.00198,
+    "2026-11-20T18:23": 0.00421,
+    "2026-11-21T00:22": 0.00137,
+    "2026-11-21T06:23": 0.00473,
+    "2026-11-21T12:22": 0.00245,
+    "2026-11-21T18:23": 0.00073,
+    "2026-11-22T00:22": 0.00127,
+    "2026-11-22T06:22": 0.00076,
+    "2026-11-22T12:23": 0.00066
+   },
+   "unit": "share",
+   "at": "2026-11-20T06:22Z/2026-11-22T12:23Z",
+   "source": "the ten underkeel.xyz snapshots, 20-22 Nov 2026 (data/exit-depth.json, public repository): KyberSwap Aggregator, all sources"
+  },
+  {
+   "id": "onchain_window",
+   "what": "cbBTC to USDC on Base's pools at eight blocks, 21 Nov 03:00-04:59 UTC: loss on $1M against $1k, best single path, no split",
+   "text": [
+    "I read eight blocks across those two hours",
+    "A $1M sale lost at most 1.1% against a small"
+   ],
+   "value": {
+    "2026-11-21T03:00Z": 0.0038,
+    "2026-11-21T03:15Z": 0.00622,
+    "2026-11-21T03:30Z": 0.00629,
+    "2026-11-21T03:45Z": 0.01083,
+    "2026-11-21T04:00Z": 0.00853,
+    "2026-11-21T04:07Z": 0.00962,
+    "2026-11-21T04:30Z": 0.00708,
+    "2026-11-21T04:59Z": 0.00649
+   },
+   "unit": "share",
+   "at": "2026-11-21T03:00Z/2026-11-21T04:59Z",
+   "source": "DEX quoters read at each block on a public archive node"
+  },
+  {
+   "id": "onchain_calibration",
+   "what": "The same reading at the four snapshot blocks of 20-21 Nov, and the site's",
+   "text": [
+    "$1M against a $1k sale",
+    "0.26%, 0.74%, 0.16% and 0.46%",
+    "0.20%, 0.42%, 0.14% and 0.47%",
+    "close to the site's or above it"
+   ],
+   "value": {
+    "2026-11-20T12:23Z": {
+     "onchain": 0.00262,
+     "site": 0.00198
+    },
+    "2026-11-20T18:23Z": {
+     "onchain": 0.00743,
+     "site": 0.00421
+    },
+    "2026-11-21T00:22Z": {
+     "onchain": 0.00164,
+     "site": 0.00137
+    },
+    "2026-11-21T06:23Z": {
+     "onchain": 0.00455,
+     "site": 0.00473
+    }
+   },
+   "unit": "share",
+   "at": "2026-11-20T12:23Z/2026-11-21T06:23Z",
+   "source": "DEX quoters read at each block on a public archive node; the ten underkeel.xyz snapshots, 20-22 Nov 2026 (data/exit-depth.json, public repository)"
+  },
+  {
+   "id": "near",
+   "what": "cbBTC/USDC 86%: collateral of positions with health below 1.1 (9.1% from liquidation), highest of the ten and first after the low",
+   "text": [
+    "within about 9% of liquidation",
+    "The highest of the ten was $213.1M, about four hours into the fall",
+    "$188.3M"
+   ],
+   "value": {
+    "2026-11-20T06:22": 145503755,
+    "2026-11-20T12:23": 160753153,
+    "2026-11-20T18:23": 213136534,
+    "2026-11-21T00:22": 154205001,
+    "2026-11-21T06:23": 188328390,
+    "2026-11-21T12:22": 78975511,
+    "2026-11-21T18:23": 12012234,
+    "2026-11-22T00:22": 10484219,
+    "2026-11-22T06:22": 40342374,
+    "2026-11-22T12:23": 1615
+   },
+   "unit": "USD",
+   "at": "2026-11-20T06:22Z/2026-11-22T12:23Z",
+   "source": "the ten underkeel.xyz snapshots, 20-22 Nov 2026 (data/exit-depth.json, public repository): Morpho API positions"
+  },
+  {
+   "id": "large_single",
+   "what": "Single liquidations seizing over $1M of collateral, all in cbBTC/USDC 86%",
+   "text": [
+    "Fifteen single liquidations"
+   ],
+   "value": {
+    "count": 15,
+    "collateral": 22783774
+   },
+   "unit": "USD",
+   "at": "2026-11-20T00:00Z/2026-11-22T00:00Z",
+   "source": "Morpho Blue Liquidate events on Base, 20-21 Nov 2026 UTC, my index; debt in USD at the time"
+  },
+  {
+   "id": "prev_bad",
+   "what": "Bad debt in markets lending USDC, 12-15 Nov (note crash-reach-nov-2026)",
+   "text": [
+    "The previous week's fall wrote off $6.52 in markets lending USDC"
+   ],
+   "value": 6.52,
+   "unit": "USD",
+   "at": "2026-11-12T00:00Z/2026-11-16T00:00Z",
+   "source": "badDebtAssets of Liquidate events on a public archive node"
+  },
+  {
+   "id": "pieces",
+   "what": "cbXRP and cbZEC markets: collateral seized against the smallest sale that broke, the largest single liquidation and the busiest hour against it",
+   "text": [
+    "the two days' collateral passed the smallest sale that broke",
+    "no single liquidation took more than a quarter of it",
+    "seized less than half"
+   ],
+   "value": {
+    "cbXRP/USDC 0.625": {
+     "collateral": 1006745,
+     "smallest_break": 1000000,
+     "largest_single": 114077,
+     "largest_single_share": 0.114,
+     "busiest_hour": [
+      "21 03",
+      445178
+     ]
+    },
+    "cbZEC/USDC 0.625": {
+     "collateral": 217112,
+     "smallest_break": 200000,
+     "largest_single": 49235,
+     "largest_single_share": 0.246,
+     "busiest_hour": [
+      "21 03",
+      76284
+     ]
+    }
+   },
+   "unit": "USD",
+   "at": "2026-11-20T00:00Z/2026-11-22T00:00Z",
+   "source": "the ten underkeel.xyz snapshots, 20-22 Nov 2026 (data/exit-depth.json, public repository); Morpho Blue Liquidate events on Base, 20-21 Nov 2026 UTC, my index; debt in USD at the time"
+  },
+  {
+   "id": "usde",
+   "what": "USDe/USDC 91.5%: most of the second row's borrowing, nothing liquidated",
+   "text": [
+    "USDe/USDC 91.5%"
+   ],
+   "value": {
+    "borrowed": 229605633,
+    "share_of_row": 0.7164,
+    "liquidated": 0
+   },
+   "unit": "USD",
+   "at": "2026-11-20T12:23Z",
+   "source": "the ten underkeel.xyz snapshots, 20-22 Nov 2026 (data/exit-depth.json, public repository); Morpho Blue Liquidate events on Base, 20-21 Nov 2026 UTC, my index; debt in USD at the time"
+  },
+  {
+   "id": "table1",
+   "what": "Table 1: markets by what the ten snapshots showed (borrowing at 20 Nov 12:23 UTC)",
+   "text": [
+    "Every size cleared in all ten | 16 | $1,628.4M | $89.7M |",
+    "A sale broke at some size in at least one | 25 | $320.5M | $1.74M |",
+    "All on the list | 48 | $2,042.2M | $91.7M |"
+   ],
+   "value": {
+    "clears": {
+     "markets": 16,
+     "borrowed": 1628360148,
+     "debt_liquidated": 89713746
+    },
+    "breaks": {
+     "markets": 25,
+     "borrowed": 320505088,
+     "debt_liquidated": 1736596
+    },
+    "other": {
+     "markets": 7,
+     "borrowed": 93370892,
+     "debt_liquidated": 207599
+    },
+    "all": {
+     "markets": 48,
+     "borrowed": 2042236128,
+     "debt_liquidated": 91673555
+    }
+   },
+   "unit": "USD",
+   "at": "2026-11-20T06:22Z/2026-11-22T12:23Z",
+   "source": "the ten underkeel.xyz snapshots, 20-22 Nov 2026 (data/exit-depth.json, public repository); Morpho Blue Liquidate events on Base, 20-21 Nov 2026 UTC, my index; debt in USD at the time"
+  },
+  {
+   "id": "t1_source",
+   "what": "Table 1's source line: list, chain check, the debt outside both rows, XSGD",
+   "text": [
+    "the 48 markets",
+    "4,791 such events in blocks 59712122-60576121",
+    "the other $0.22M",
+    "cbBTC/XSGD 86%"
+   ],
+   "value": {
+    "no_route_or_not_measured": 7,
+    "chain_events": 4791,
+    "other_debt": 223213,
+    "xsgd_usd": 4793.52
+   },
+   "unit": "USD",
+   "at": "2026-11-20T06:22Z/2026-11-22T12:23Z",
+   "source": "the ten underkeel.xyz snapshots, 20-22 Nov 2026 (data/exit-depth.json, public repository); checked against all 4,791 Liquidate events in blocks 59712122-60576121 on a public archive node; DefiLlama XSGD price"
+  },
+  {
+   "id": "table2",
+   "what": "Table 2: smallest sale that broke in the ten; collateral seized, largest single, busiest UTC hour (index prices)",
+   "text": [
+    "more than $50k of collateral",
+    "cbXRP/USDC 62.5% | $1M | $1.01M | $114k | $445k |",
+    "cbETH/USDC 77% | $1M | $385k | $107k | $133k |",
+    "cbZEC/USDC 62.5% | $200k | $217k | $49k | $76k |",
+    "JitoSOL/USDC 62.5% | $1M | $84k | $35k | $77k |",
+    "cbDOGE/USDC 62.5% | $1M | $73k | $15k | $43k |",
+    "cbLTC/USDC 62.5% | $200k | $68k | $33k | $33k |",
+    "cbETH/USDC 86% | $1M | $51k | $41k | $41k |"
+   ],
+   "value": {
+    "cbXRP/USDC 62.5%": {
+     "smallest_break": 1000000,
+     "first_at": "2026-11-20T06:22",
+     "snapshots_breaking": 7,
+     "collateral_seized": 1006745,
+     "largest_single_collateral": 114077,
+     "largest_hour_collateral": [
+      "21 03",
+      445178
+     ],
+     "liquidations": 393
+    },
+    "cbETH/USDC 77%": {
+     "smallest_break": 1000000,
+     "first_at": "2026-11-21T00:22",
+     "snapshots_breaking": 1,
+     "collateral_seized": 384734,
+     "largest_single_collateral": 106905,
+     "largest_hour_collateral": [
+      "20 16",
+      133270
+     ],
+     "liquidations": 246
+    },
+    "cbZEC/USDC 62.5%": {
+     "smallest_break": 200000,
+     "first_at": "2026-11-20T06:22",
+     "snapshots_breaking": 10,
+     "collateral_seized": 217112,
+     "largest_single_collateral": 49235,
+     "largest_hour_collateral": [
+      "21 03",
+      76284
+     ],
+     "liquidations": 99
+    },
+    "JitoSOL/USDC 62.5%": {
+     "smallest_break": 1000000,
+     "first_at": "2026-11-20T06:22",
+     "snapshots_breaking": 10,
+     "collateral_seized": 84179,
+     "largest_single_collateral": 34777,
+     "largest_hour_collateral": [
+      "21 03",
+      77068
+     ],
+     "liquidations": 60
+    },
+    "cbDOGE/USDC 62.5%": {
+     "smallest_break": 1000000,
+     "first_at": "2026-11-20T06:22",
+     "snapshots_breaking": 10,
+     "collateral_seized": 73453,
+     "largest_single_collateral": 15273,
+     "largest_hour_collateral": [
+      "20 15",
+      42834
+     ],
+     "liquidations": 130
+    },
+    "cbLTC/USDC 62.5%": {
+     "smallest_break": 200000,
+     "first_at": "2026-11-20T06:22",
+     "snapshots_breaking": 10,
+     "collateral_seized": 68179,
+     "largest_single_collateral": 32646,
+     "largest_hour_collateral": [
+      "21 04",
+      32694
+     ],
+     "liquidations": 60
+    },
+    "cbETH/USDC 86%": {
+     "smallest_break": 1000000,
+     "first_at": "2026-11-21T00:22",
+     "snapshots_breaking": 1,
+     "collateral_seized": 50949,
+     "largest_single_collateral": 40889,
+     "largest_hour_collateral": [
+      "20 18",
+      40889
+     ],
+     "liquidations": 10
+    }
+   },
+   "unit": "USD",
+   "at": "2026-11-20T00:00Z/2026-11-22T00:00Z",
+   "source": "the ten underkeel.xyz snapshots, 20-22 Nov 2026 (data/exit-depth.json, public repository); Morpho Blue Liquidate events on Base, 20-21 Nov 2026 UTC, my index; debt in USD at the time"
+  },
+  {
+   "id": "cbxrp",
+   "what": "cbXRP/USDC 62.5%: status at 20 Nov 12:23 UTC, snapshots where $1M broke, its cost in those seven",
+   "text": [
+    "cbXRP/USDC 62.5% cleared at every size at 12:23 UTC on 20",
+    "broke at $1M in seven of the ten",
+    "a $1M sale cost 12.8% to 30%",
+    "an 11.25% break-even"
+   ],
+   "value": {
+    "status_12_23": null,
+    "snapshots_breaking": 7,
+    "cost_1m_when_broke": [
+     0.128453,
+     0.299888
+    ],
+    "status_and_cost_1m": {
+     "2026-11-20T06:22": [
+      "1000000",
+      0.134236
+     ],
+     "2026-11-20T12:23": [
+      null,
+      0.088471
+     ],
+     "2026-11-20T18:23": [
+      null,
+      0.110014
+     ],
+     "2026-11-21T00:22": [
+      "1000000",
+      0.137152
+     ],
+     "2026-11-21T06:23": [
+      "1000000",
+      0.150979
+     ],
+     "2026-11-21T12:22": [
+      "1000000",
+      0.299888
+     ],
+     "2026-11-21T18:23": [
+      null,
+      0.110317
+     ],
+     "2026-11-22T00:22": [
+      "1000000",
+      0.128453
+     ],
+     "2026-11-22T06:22": [
+      "1000000",
+      0.159427
+     ],
+     "2026-11-22T12:23": [
+      "1000000",
+      0.179799
+     ]
+    },
+    "break_even": 0.1125
+   },
+   "unit": "share",
+   "at": "2026-11-20T06:22Z/2026-11-22T12:23Z",
+   "source": "the ten underkeel.xyz snapshots, 20-22 Nov 2026 (data/exit-depth.json, public repository)"
+  },
+  {
+   "id": "alt_falls",
+   "what": "XRP and ZEC: open of 14:00 UTC on 20 Nov to the lowest hourly low before 21 Nov 12:00",
+   "text": [
+    "14:00 UTC on 20 November",
+    "12:00 UTC on 21 November",
+    "XRP lost 9.3%",
+    "ZEC 16.8%"
+   ],
+   "value": {
+    "XRP-USD": 0.0926,
+    "ZEC-USD": 0.1683
+   },
+   "unit": "share",
+   "at": "2026-11-20T14:00Z/2026-11-21T12:00Z",
+   "source": "Coinbase Exchange public API, hourly candles"
+  },
+  {
+   "id": "fn_lif",
+   "what": "Morpho's liquidation factor at an 86% LLTV, and the break-even",
+   "text": [
+    "$100",
+    "$104.38",
+    "1 / (0.3 x 0.86 + 0.7)",
+    "86% LLTV",
+    "1 - 100 / 104.38 = 4.20%"
+   ],
+   "value": {
+    "lif": 1.043841,
+    "break_even": 0.042
+   },
+   "at": "2026-11-22T12:23Z",
+   "source": "Morpho Blue: min(1.15, 1/(0.3 x LLTV + 0.7))"
+  }
+ ]
+}

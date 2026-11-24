@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src &#x27;none&#x27;; script-src &#x27;sha256-ETONqRJVbf9hIvd+02L5/loPS8TPePDMZqpSlx7dZmE=&#x27; &#x27;sha256-LVAu9lCqQWwlLYbGlnZMBgSuzo3gGssQpBV4mMJSLzc=&#x27; &#x27;sha256-X8LH7g1FcNRqrcw7P8kXeAtsnkh6+f3KCIN8P4Fp6Is=&#x27; &#x27;sha256-YAljnj3iomHSqV+AdcmGd7nIEBdqgoEFCCuQ7MQ6CtI=&#x27;; style-src &#x27;unsafe-inline&#x27;; style-src-elem &#x27;sha256-s6FfTiUp0zzBChFL9u7g4D0rs9RlIk4gHSR+jnYCNo4=&#x27;; style-src-attr &#x27;unsafe-inline&#x27;; img-src &#x27;self&#x27; data:; font-src &#x27;self&#x27;; connect-src https://stats.underkeel.xyz; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample exit-risk review: cbXRP/USDC 62.5% - Underkeel</title>
+<meta name="description" content="A sample of the private exit-risk review on a public market, cbXRP/USDC 62.5% on Morpho Blue, Base: clearance at borrower sizes, quote dependence, collateral near liquidation, 10% and 20% price falls.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Underkeel">
+<meta property="og:title" content="Sample exit-risk review: cbXRP/USDC 62.5% - Underkeel">
+<meta property="og:description" content="A sample of the private exit-risk review on a public market, cbXRP/USDC 62.5% on Morpho Blue, Base: clearance at borrower sizes, quote dependence, collateral near liquidation, 10% and 20% price falls.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://underkeel.xyz/og-v3.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Underkeel: exit depth and liquidation clearance for Morpho on Base. A curve of exit cost rising through the line of the liquidation bonus.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="Underkeel: exit depth and liquidation clearance for Morpho on Base. A curve of exit cost rising through the line of the liquidation bonus.">
+<link rel="canonical" href="https://underkeel.xyz/sample-review.html">
+<meta property="og:url" content="https://underkeel.xyz/sample-review.html">
+<link rel="alternate" type="application/atom+xml" title="Underkeel notes" href="notes/feed.xml">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20x%3D%221%22%20y%3D%221%22%20width%3D%2230%22%20height%3D%2230%22%20fill%3D%22%23fbf8f0%22%20stroke%3D%22%231b1a17%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M5.5%2011H26.5L24.6%2014H17.6V21.5H14.4V14H7.4Z%22%20fill%3D%22%231b1a17%22%2F%3E%3Cpath%20d%3D%22M5.5%2025H26.5%22%20stroke%3D%22%231a5884%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E" type="image/svg+xml">
+<script>(function(){var d=document.documentElement,t=null;try{t=new URLSearchParams(location.search).get('theme')}catch(e){}if(t!=='dark'&&t!=='light'){try{t=localStorage.getItem('theme')}catch(e){t=null}}if(t==='dark'||t==='light')d.setAttribute('data-theme',t)})();</script>
+<style>:root{--paper:#f3eee1;--sheet:#fbf8f0;--ink:#1b1a17;--ink2:#57524a;--hair:#cfc7b2;--blue2:#d2e6ee;--blue1:#a6cee3;--land:#e9d59b;--contour:#4585ad;--hydro:#1a5884;--mag:#9c1c74;color-scheme:light}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#0a0e13;--sheet:#0f151c;--ink:#dcd8cb;--ink2:#a09c90;--hair:#2b343f;--blue2:#143246;--blue1:#1d4d6e;--land:#4a401f;--contour:#5d9cc4;--hydro:#8cc4e6;--mag:#e58bc8;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0a0e13;--sheet:#0f151c;--ink:#dcd8cb;--ink2:#a09c90;--hair:#2b343f;--blue2:#143246;--blue1:#1d4d6e;--land:#4a401f;--contour:#5d9cc4;--hydro:#8cc4e6;--mag:#e58bc8;color-scheme:dark}
+@font-face{font-family:"Sofia Sans";src:url(fonts/sofia-sans.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Sofia Sans";src:url(fonts/sofia-sans-italic.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Sofia Sans Condensed";src:url(fonts/sofia-sans-condensed.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Sofia Sans Condensed";src:url(fonts/sofia-sans-condensed-italic.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+:root{--sans:"Sofia Sans",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--cond:"Sofia Sans Condensed","Sofia Sans","Arial Narrow",system-ui,sans-serif;
+--mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;background:var(--paper);color:var(--ink);font:16.5px/1.55 var(--sans);font-variant-numeric:lining-nums;-webkit-font-smoothing:antialiased}a{color:var(--hydro);text-underline-offset:.18em;text-decoration-thickness:1px}a:hover{text-decoration-thickness:2px}:focus-visible{outline:2px solid var(--mag);outline-offset:2px}.skip{position:absolute;left:-9999px;top:8px}.skip:focus{left:16px;z-index:9;background:var(--sheet);padding:6px 10px}.wrap{max-width:1180px;margin:0 auto;padding:0 20px}p{margin:0 0 14px}ul,ol{padding-left:22px;margin:0 0 16px}li{margin:0 0 6px}b{font-weight:650}.top .wrap{display:flex;align-items:center;flex-wrap:wrap;gap:0 22px;padding-top:12px}.brand{display:inline-flex;align-items:center;gap:9px;font:700 15px/1 var(--cond);letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:6px 0}.brand svg{width:26px;height:26px;flex:none}.lgh{fill:var(--ink)}.lgs{stroke:var(--hydro);stroke-width:2}nav.pages{display:flex;gap:18px;min-width:0;overflow-x:auto;scrollbar-width:none;font:500 15px/1 var(--cond);letter-spacing:.04em}nav.pages::-webkit-scrollbar{display:none}nav.pages a{color:var(--ink2);text-decoration:none;padding:9px 0 7px;white-space:nowrap;border-bottom:3px solid transparent}nav.pages a:hover{color:var(--ink)}nav.pages a[aria-current]{color:var(--ink);border-bottom-color:var(--ink)}nav.pages a:focus-visible{outline-offset:-2px}.acts{display:flex;align-items:center;gap:16px;margin-left:auto}.cur{font:600 15px var(--cond);letter-spacing:.04em;color:var(--hydro);text-decoration:none;padding:6px 0}.cur:hover,.cur[aria-current]{text-decoration:underline}.theme{display:inline-flex;align-items:center;gap:6px;font:500 13px/1 var(--cond);letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);background:none;border:1px solid var(--ink2);border-radius:0;padding:6px 9px;cursor:pointer}.theme:hover{color:var(--ink);border-color:var(--ink)}.theme svg{width:13px;height:13px}.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ink);background:none;color:var(--ink);padding:8px 15px;font:600 15px/1.3 var(--cond);letter-spacing:.04em;text-decoration:none;white-space:nowrap}.btn:hover{background:var(--blue2)}.btn.primary{background:var(--ink);color:var(--sheet)}.btn.primary:hover{opacity:.88}.marg{display:flex;justify-content:space-between;gap:16px;font:500 12.5px/1.3 var(--cond);letter-spacing:.09em;text-transform:uppercase;color:var(--ink2);padding:14px 2px 7px}.marg b{color:var(--ink);font-weight:700}.marg a{color:inherit}.marg.low{padding:9px 2px 0;min-height:0}.ago{white-space:nowrap}.ago.stale{color:var(--mag);font-weight:700;white-space:normal}.frame{background:var(--sheet);border:1px solid var(--ink);outline:2.5px solid var(--ink);outline-offset:4px;padding:34px 40px 42px}.kicker{font:italic 400 15px/1.3 var(--cond);letter-spacing:.14em;color:var(--hydro);margin:0 0 12px}h1{font:620 clamp(30px,4.2vw,46px)/1.07 var(--sans);letter-spacing:-.014em;margin:0 0 18px;max-width:22em;text-wrap:balance}h1 .lt{color:var(--ink2);font-weight:400}h2{font:620 clamp(21px,2.3vw,26px)/1.17 var(--sans);letter-spacing:-.008em;margin:0 0 12px;text-wrap:balance}h3{font:650 17px/1.3 var(--sans);margin:22px 0 6px}.dek{font-size:19px;line-height:1.5;max-width:38em;margin:0}.dek+.dek{margin-top:12px;font-size:16.5px;line-height:1.55}main{display:block}section{margin-top:48px;padding-top:12px;border-top:2px solid var(--ink)}section.first{margin-top:32px}.label{font:600 12.5px/1.3 var(--cond);letter-spacing:.16em;text-transform:uppercase;color:var(--ink2);margin:0 0 9px}.label b{color:var(--ink)}.read{max-width:40em}.cap{font-size:14.5px;line-height:1.5;color:var(--ink2);margin:10px 0 0;max-width:46em}.cap b{color:var(--ink)}.src{font:italic 400 13.5px/1.4 var(--cond);letter-spacing:.03em;color:var(--ink2);margin:7px 0 0}.note{border-left:3px solid var(--ink);padding:2px 0 2px 13px;font-size:15px;line-height:1.5;margin:16px 0;max-width:44em}.note.caution{border-left-color:var(--mag)}.nh{display:block;font:700 12.5px/1.3 var(--cond);letter-spacing:.16em;text-transform:uppercase;margin:0 0 2px}.caution .nh{color:var(--mag)}.row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 28px;border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);margin:26px 0 0}.kpis.three{grid-template-columns:repeat(3,minmax(0,1fr))}.kpi{padding:11px 0 13px;min-width:0}.kpi .l{font:600 12px/1.3 var(--cond);letter-spacing:.12em;text-transform:uppercase;color:var(--ink2)}.kpi .v{font:620 clamp(24px,2.8vw,31px)/1.15 var(--sans);font-variant-numeric:lining-nums tabular-nums;margin:5px 0 3px;white-space:nowrap}.kpi .s{font-size:14px;line-height:1.4;color:var(--ink2)}.kpi a{color:inherit}.tbl{overflow-x:auto;border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);margin-top:14px;-webkit-overflow-scrolling:touch}table{border-collapse:separate;border-spacing:0;width:100%;font-size:15px;line-height:1.3;font-variant-numeric:lining-nums tabular-nums}caption{text-align:left;padding:0;height:0;overflow:hidden;color:transparent}th,td{padding:7px 10px 6px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--hair);background:var(--sheet);vertical-align:middle}thead th{font:600 12px/1.25 var(--cond);text-transform:uppercase;letter-spacing:.11em;color:var(--ink2);border-bottom:1px solid var(--ink);vertical-align:bottom;padding-top:9px}th:first-child,td:first-child{text-align:left;padding-left:2px;position:sticky;left:0;z-index:1}tbody th{font-weight:600}tbody tr:last-child>*{border-bottom:0}.tbl:not(:has(th:nth-child(5),td.w)){max-width:680px}th.l,td.l{text-align:left}td.x{font-style:italic}tr[aria-current]>*{background:var(--blue2)}.tbl td[data-s="loss"]{background:var(--land)}.tbl td[data-s="loss"] .v{text-decoration:underline;text-underline-offset:.16em;font-weight:650}.tbl td[data-s="rfq"] .v{outline:1px dashed var(--mag);outline-offset:3px}.tbl td[data-s="norte"],.tbl td[data-s="nm"]{color:var(--ink2)}.sg{display:inline-block}.ic{width:15px;height:15px;flex:none}.st{display:inline-flex;align-items:center;gap:6px;font:500 15px/1.2 var(--cond);letter-spacing:.02em;white-space:nowrap;vertical-align:middle}.st-loss .ic,use.st-loss{color:var(--mag)}svg text{font-family:var(--cond);fill:var(--ink)}.foot .wrap{padding-top:12px;padding-bottom:34px;font-size:14px;line-height:1.55;color:var(--ink2)}.foot .attr{color:var(--ink)}.foot b{color:var(--ink)}.foot a{color:var(--ink2)}.foot p{margin:0 0 5px}@media (min-width:1600px){.wrap{max-width:1480px}}@media (max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.top .wrap{gap:0 12px}nav.pages{order:3;flex-basis:100%;flex-wrap:wrap;overflow:visible;gap:0 16px}}@media (max-width:620px){body{font-size:16px}.wrap{padding:0 10px}.top .wrap{padding-top:9px}.marg{font-size:11px;letter-spacing:.06em;padding:10px 2px 8px;min-height:3.9em}.frame{padding:20px 13px 26px;outline-width:2px;outline-offset:3px}.dek{font-size:17.5px}section{margin-top:36px;padding-top:20px}.kpis.three .kpi .v{font-size:21px}.kpis,.kpis.three{gap:0 14px}.theme .tl{display:none}th,td{padding:7px 8px 6px}.foot .wrap{padding:8px 14px 26px}}@media (prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.ponly{display:none}
+.nw{white-space:nowrap}
+.find{counter-reset:f;list-style:none;padding:0;margin:18px 0 0;max-width:46em}
+.find li{counter-increment:f;position:relative;padding:0 0 0 34px;margin:0 0 14px}
+.find li::before{content:counter(f);position:absolute;left:0;top:.05em;font:650 15px/1.5 var(--cond);border:1px solid var(--ink);width:22px;text-align:center}
+tr.cl>*{background:var(--blue2)}
+.fc{width:100%;max-width:760px;height:auto;display:block;margin-top:12px}
+.fc text{font:12px var(--cond);fill:var(--ink2)}
+.fc .ax{stroke:var(--ink2);stroke-width:1;fill:none}
+.fc .gr{stroke:var(--hair);stroke-width:1}
+.fc .cv{stroke:var(--hydro);stroke-width:2.2;fill:none}
+.fc .ar{fill:var(--blue2);stroke:none}
+.fc .cp{stroke:var(--mag);stroke-width:1.6;stroke-dasharray:5 4}
+.fc .cpl{fill:var(--mag)}
+.sf{display:none}
+th.wr{white-space:normal;min-width:7.5em;vertical-align:bottom}
+@media (max-width:620px){
+ .fc text{font-size:22px}
+ .fc .cpl,.fc .xl,.lf{display:none}
+ .sf{display:inline}
+ th.wr{white-space:nowrap;min-width:0}
+}
+@media screen and (min-width:1180px){
+ .side{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 48px;align-items:start;margin-top:16px}
+ .side.lead{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+ .side>*>:first-child{margin-top:0}
+ .side>*>:last-child{margin-bottom:0}
+ ul.meth{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px;max-width:none}
+}
+@media print{
+ @page{size:A4}
+ html,body{background:#fff}
+ body{font-size:10.6pt;line-height:1.38}
+ .top,.foot,.marg,.skip,.noprint,.row,.row+.cap{display:none!important}
+ .ponly{display:block}
+ .lf{display:inline!important}
+ .sf{display:none!important}
+ .wrap{max-width:none;padding:0 13mm}
+ .frame{border:0;outline:0;padding:0;background:#fff}
+ h1{font-size:23pt;margin-bottom:10px}
+ h2{font-size:14.5pt;margin-bottom:8px}
+ .dek{font-size:12pt}
+ section{margin-top:16px;padding-top:10px}
+ section.first{margin-top:14px}
+ .pgbr{break-before:page;margin-top:0;border-top:0;padding-top:0}
+ .tbl{overflow:visible;margin-top:8px}
+ table{font-size:9.2pt}
+ th,td{padding:3px 6px 2px;background:#fff}
+ thead th{letter-spacing:.06em}
+ tr.cl>*{background:var(--blue2)}
+ tr,li,.note,.fc,.kpis,.tbl{break-inside:avoid}
+ h2,h3,.label{break-after:avoid}
+ .cap,.src{font-size:8.8pt}
+ .note{font-size:9.6pt}
+ .find li{margin-bottom:8px}
+ .kpis{margin-top:12px}
+ .kpi .v{font-size:15pt}
+ a{color:var(--ink);text-decoration:none}
+ .fc{max-width:640px}
+}
+</style>
+<script type="speculationrules">{"prefetch":[{"where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":"/*.json"}}]},"eagerness":"moderate"}]}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-ok" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.3" fill="none" stroke="currentColor" stroke-width="1.3"/><circle cx="8" cy="8" r="1.7" fill="currentColor"/></symbol>
+<symbol id="i-loss" viewBox="0 0 16 16"><path d="M8 2.6v10.8M2.6 8h10.8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.9 3.9h.01M12.1 3.9h.01M3.9 12.1h.01M12.1 12.1h.01" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="i-theme" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 2a6 6 0 0 1 0 12z" fill="currentColor"/></symbol>
+</defs></svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="index.html"><svg viewBox="0 0 26 26" aria-hidden="true"><path class="lgh" d="M2.5 8H23.5L21.6 11H14.6V18.5H11.4V11H4.4Z"/><path class="lgs" d="M2.5 22H23.5"/></svg><span>Underkeel</span></a>
+<nav class="pages" aria-label="Pages"><a href="index.html">Overview</a><a href="notes/index.html">Notes</a><a href="exit-depth.html">Exit depth</a><a href="venues.html">Venues</a><a href="liquidations.html">Liquidations</a><a href="method.html">Method</a><a href="data.html">Data</a><a href="about.html">About</a></nav>
+<div class="acts"><a class="cur" href="services.html">For curators</a>
+<button class="theme" id="theme-btn" type="button" title="Colour theme" hidden><svg class="ic" aria-hidden="true"><use href="#i-theme"/></svg><span class="tl">auto</span></button></div>
+</div></header>
+<main id="main"><div class="wrap">
+<div class="marg"><span>Underkeel - <b>Services</b></span><span>Figures frozen at <time datetime="2026-11-23T16:48:00Z">2026-11-23 16:48 UTC</time></span></div>
+<div class="frame">
+<div class="hero">
+<p class="kicker">Exit-risk review for curators</p>
+<h1>Sample review: cbXRP/USDC <span class="lt">62.5%</span></h1>
+<p class="dek">What a curator receives from a review, done on one public market. The market and every figure are real,
+measured on <span class="nw">2026-11-23</span> and frozen; the client is not. In place of the largest borrowers in a client's markets stand
+three hypothetical ones: a borrower whose full liquidation sells $500k of
+cbXRP (about $444k of debt), and two whose full liquidations
+sell $2M and $5M (about $1.8M and $4.4M of debt).</p>
+<div class="row noprint"><a class="btn primary" href="sample/sample-review-cbxrp-usdc-62-5-2026-11-23.pdf" download>Report (PDF)</a><a class="btn" href="sample/sample-review-cbxrp-usdc-62-5-2026-11-23.csv" download>Numbers (CSV)</a></div>
+<p class="cap">The same review as a PDF and CSV. The <a href="markets/cbxrp-usdc-62-5.html">live page of this market</a> keeps changing every 6 hours; this
+review does not.</p>
+</div>
+<section class="first">
+<p class="label">Summary</p>
+<h2>What this means for a curator of cbXRP/USDC 62.5%</h2>
+<p class="dek">Position by position this market clears today. The risk is hundreds of small borrowers that cross the liquidation threshold together: from a 12% fall in cbXRP on, more collateral comes up for liquidation than one liquidation clears.</p><div class="side lead"><div><ol class="find"><li>One liquidation clears about $840k of cbXRP with all sources and about $560k on-chain only: the largest sale whose exit cost stays under the 11.25% break-even, the cost at which the liquidation bonus no longer pays for the sale. Both come from the first of 3 rounds of quotes, when a $1M sale cost 16.9%; in the third it cost 11.26%, so the limit moves with the quotes. The $500k sale clears (2.0%); the $2M and $5M sales cost more than half their value in one sale, so they pay only in parts, if the pools refill between them - not measured here.</li><li>The difference is RFQ market makers - firms that sign a price off chain for each sale - and here mostly one of them: it took 72-84% of the volume of every sale from $25k to $500k. Without RFQ makers one liquidation clears a third less, $560k. The quotes move: in the site's 35 snapshots since <span class="nw">2026-11-14</span>, a $1M sale was at a loss in 27 with all sources and in all 35 on-chain only.</li><li>Position size is not the issue in this market today. 1,900 positions are within 20% of liquidation - a 20% fall in cbXRP would make them liquidatable - and a full liquidation of any of them sells less than $250k, under what one liquidation clears on-chain only.</li><li>Between an 11% and a 13% fall in cbXRP the liquidatable positions jump from 71 to 401, and their sale from $486k to $2.4M. From a 12% fall on, the sale is more than one liquidation clears, with all sources or on-chain only. A 20% fall makes the same 1,900 positions liquidatable. Each clears on its own; together they are $11.1M to sell, 13 times what one liquidation clears with all sources; selling it in one sale at today's depth would cost more than half its value.</li></ol></div><div><div class="note caution"><span class="nh">What does not follow</span>
+<p>Not a forecast of bad debt. Morpho Blue liquidations can be partial and follow one another, and the pools refill as
+arbitrage brings cbXRP on Base back to its price elsewhere, at a pace not measured here. After both falls no position holds less collateral than its debt.</p>
+<p>Not a judgement of the market, its collateral or any vault, and not a recommendation. Makers may quote more in a
+fall, or stop quoting.</p>
+<p>The depth is today's, and a fall can thin it: on <span class="nw">2026-11-08</span>, in the two minutes when the cbXRP pools on Base traded
+5-11% below the market's oracle, a $25k sale through them cost 37-40% (<a href="notes/cbxrp-two-minutes-nov-2026.html">event note</a>).</p>
+</div></div></div>
+</section>
+<section class="pgbr">
+<p class="label"><b>1</b> - clearance at the sizes of your largest borrowers</p>
+<h2>Can one liquidation clear a borrower of this size?</h2>
+<p class="read">A full liquidation sells cbXRP worth the debt plus the 12.68% bonus. It pays while selling
+costs less than 11.25% of the value: the break-even exit cost. Each row is one sale; rows marked "hypothetical" are
+the sample's borrowers (a $500k sale is about $444k of debt), the others are the sizes on the public pages.</p>
+<div class="tbl" role="region" aria-labelledby="cap-s1" tabindex="0"><table><caption id="cap-s1">Exit cost and clearance by sale size</caption><thead><tr><th scope="col">Sale</th><th scope="col">All sources</th><th scope="col">Clearance</th><th scope="col">On-chain only</th><th scope="col">Clearance</th><th class="l" scope="col">Status</th></tr></thead><tbody><tr><th scope="row">$25k</th><td class="x" data-s="ok" data-v="0.0003"><span class="v">0.0%</span></td><td>+11.2 pp</td><td class="x" data-s="ok" data-v="0.0013"><span class="v">0.1%</span></td><td>+11.1 pp</td><td class="l"><span class="st st-ok"><svg class="ic" aria-hidden="true"><use href="#i-ok"/></svg><span>clears</span></span></td></tr><tr><th scope="row">$200k</th><td class="x" data-s="ok" data-v="0.0062"><span class="v">0.6%</span></td><td>+10.6 pp</td><td class="x" data-s="ok" data-v="0.0099"><span class="v">1.0%</span></td><td>+10.3 pp</td><td class="l"><span class="st st-ok"><svg class="ic" aria-hidden="true"><use href="#i-ok"/></svg><span>clears</span></span></td></tr><tr class=cl><th scope="row">$500k (hypothetical)</th><td class="x" data-s="ok" data-v="0.0203"><span class="v">2.0%</span></td><td>+9.2 pp</td><td class="x" data-s="ok" data-v="0.0339"><span class="v">3.4%</span></td><td>+7.9 pp</td><td class="l"><span class="st st-ok"><svg class="ic" aria-hidden="true"><use href="#i-ok"/></svg><span>clears</span></span></td></tr><tr><th scope="row">$1M</th><td class="x" data-s="loss" data-v="0.1686"><span class="v">16.9%</span></td><td>-5.6 pp</td><td class="x" data-s="loss" data-v="0.8875"><span class="v"><span class="sg">&gt;</span>50%</span></td><td>&lt; -39 pp</td><td class="l"><span class="st st-loss"><svg class="ic" aria-hidden="true"><use href="#i-loss"/></svg><span>at a loss</span></span></td></tr><tr class=cl><th scope="row">$2M (hypothetical)</th><td class="x" data-s="loss" data-v="0.5196"><span class="v"><span class="sg">&gt;</span>50%</span></td><td>&lt; -39 pp</td><td class="x" data-s="loss" data-v="0.7412"><span class="v"><span class="sg">&gt;</span>50%</span></td><td>&lt; -39 pp</td><td class="l"><span class="st st-loss"><svg class="ic" aria-hidden="true"><use href="#i-loss"/></svg><span>at a loss</span></span></td></tr><tr class=cl><th scope="row">$5M (hypothetical)</th><td class="x" data-s="loss" data-v="0.8387"><span class="v"><span class="sg">&gt;</span>50%</span></td><td>&lt; -39 pp</td><td class="x" data-s="loss" data-v="0.9167"><span class="v"><span class="sg">&gt;</span>50%</span></td><td>&lt; -39 pp</td><td class="l"><span class="st st-loss"><svg class="ic" aria-hidden="true"><use href="#i-loss"/></svg><span>at a loss</span></span></td></tr></tbody></table></div>
+<p class="src">Source: KyberSwap Aggregator API, best route into USDC on Base, first of 3 rounds · snapshot 2026-11-23 16:48 UTC</p>
+<p class="cap">Clearance: the break-even exit cost minus the exit cost, in percentage points. Above 50% the exit shows as
+"&gt;50%": at that point no depth and a wrong quote look the same.</p>
+<div class="kpis three">
+<div class="kpi"><div class="l">one liquidation clears, all sources</div><div class="v">$840k</div><div class="s">the largest sale under the 11.25% break-even; one measurement</div></div>
+<div class="kpi"><div class="l">one liquidation clears, on-chain only</div><div class="v">$560k</div><div class="s">the same without RFQ makers</div></div>
+<div class="kpi"><div class="l">break-even exit cost</div><div class="v">11.25%</div><div class="s">bonus 12.68% at a 62.5% LLTV</div></div>
+</div>
+<p class="cap">One measurement: found in the first of 3 rounds, when a $1M sale cost 16.9%, by halving
+the gap between the largest measured size that clears and the smallest that does not, 7 more quotes each; rounded down
+to two significant figures. In the third round a $1M sale cost 11.26%, just above the break-even: the
+limit moves with the quotes. The main finding of section 4 holds for any limit from $486k to $1.23M.</p>
+</section>
+<section>
+<p class="label"><b>2</b> - quote dependence</p>
+<h2>How much of the exit rests on RFQ market makers</h2>
+<div class="side"><div><p class="read">RFQ (request for quote) market makers sign a price off chain for each sale; on-chain sources are pools
+anyone can use. "On-chain only" is the same route search with RFQ makers left out: what a liquidator has if they stop
+quoting.</p></div><div><div class="tbl" role="region" aria-labelledby="cap-s2" tabindex="0"><table><caption id="cap-s2">Share of the sale to RFQ makers and exit cost by round</caption><thead><tr><th scope="col">Sale</th><th scope="col">Share to RFQ makers</th><th scope="col">All sources, 3 rounds</th><th scope="col">On-chain only</th></tr></thead><tbody><tr><th scope="row">$25k</th><td>76%</td><td class="x">0.0-0.3%</td><td class="x">0.1-0.3%</td></tr><tr><th scope="row">$200k</th><td>84%</td><td class="x">0.6-1.1%</td><td class="x">1.0-1.3%</td></tr><tr><th scope="row">$500k</th><td>72%</td><td class="x">2.0-3.6%</td><td class="x">3.4-4.0%</td></tr><tr><th scope="row">$1M</th><td>37%</td><td class="x">11.3-16.9%</td><td class="x">45.5% to &gt;50%</td></tr><tr><th scope="row">$2M</th><td>34%</td><td class="x">&gt;50%</td><td class="x">&gt;50%</td></tr><tr><th scope="row">$5M</th><td>10%</td><td class="x">&gt;50%</td><td class="x">&gt;50%</td></tr></tbody></table></div>
+<p class="src">Source: KyberSwap Aggregator API, 3 rounds 60 s apart · snapshot 2026-11-23 16:48 UTC</p>
+<p class="cap">Share to RFQ makers: the part of the sale's volume the first round's route sends to them. How the same
+sizes did in every snapshot the site published: section 5.</p></div></div>
+</section>
+<section class="pgbr">
+<p class="label"><b>3</b> - collateral near liquidation</p>
+<h2>Borrowers close to liquidation, by what one liquidation clears</h2>
+<p class="read">10,923 positions borrow in this market; the 4,539 with a health factor
+below 1.5 are counted here. Sale: the cbXRP their full liquidations would sell. The next columns set it against what one
+liquidation clears, position by position: on-chain only up to about $560k a position, all sources up to about $840k
+(the on-chain ones included); the rest is too large for one liquidation.</p>
+<div class="tbl" role="region" aria-labelledby="cap-s3" tabindex="0"><table><caption id="cap-s3">Positions by health factor and by what one liquidation clears</caption><thead><tr><th scope="col">Health factor</th><th scope="col">Positions</th><th scope="col">Collateral</th><th scope="col">Sale</th><th class="wr" scope="col"><span class="lf">Positions one liquidation clears alone, on-chain only</span><span class="sf">Clear alone, on-chain only</span></th><th class="wr" scope="col"><span class="lf">Positions one liquidation clears alone, all sources</span><span class="sf">Clear alone, all sources</span></th><th class="wr" scope="col"><span class="lf">Positions too large for one liquidation</span><span class="sf">Too large for one</span></th></tr></thead><tbody><tr><th scope="row">below 1</th><td>0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td><td>$0</td></tr><tr><th scope="row">1 to 1.1</th><td>28</td><td>$420k</td><td>$269k</td><td>$269k</td><td>$269k</td><td>$0</td></tr><tr><th scope="row">1.1 to 1.25</th><td>1,872</td><td>$18.5M</td><td>$10.8M</td><td>$10.8M</td><td>$10.8M</td><td>$0</td></tr><tr><th scope="row">1.25 to 1.5</th><td>2,639</td><td>$36.9M</td><td>$18.8M</td><td>$18.8M</td><td>$18.8M</td><td>$0</td></tr></tbody></table></div>
+<p class="src">Source: Morpho API, every position with a borrow; groups only · snapshot 2026-11-23 16:48 UTC</p>
+<div class="side"><div><h3>Within 20% of liquidation, by size</h3>
+<div class="tbl" role="region" aria-labelledby="cap-s3s" tabindex="0"><table><caption id="cap-s3s">Positions within 20% of liquidation by the sale of a full liquidation</caption><thead><tr><th scope="col">Sale of one position</th><th scope="col">Positions</th><th scope="col">Sale</th></tr></thead><tbody><tr><th scope="row">up to $100k</th><td>1,881</td><td>$8.2M</td></tr><tr><th scope="row">$100k to $500k</th><td>19</td><td>$2.9M</td></tr><tr><th scope="row">$500k to $1M</th><td>0</td><td>$0</td></tr><tr><th scope="row">$1M to $2M</th><td>0</td><td>$0</td></tr><tr><th scope="row">above $2M</th><td>0</td><td>$0</td></tr></tbody></table></div></div><div><p class="cap">Health factor: collateral at the market's oracle price times the LLTV, over the debt; below 1 a position
+can be liquidated. Within 20% of liquidation means a health factor below 1.25: a 20% fall in cbXRP takes 1.25 to 1.
+Sale of one position: the debt plus the bonus, or all the collateral if it is worth less. A group of fewer than
+3 positions is shown without amounts.</p></div></div>
+</section>
+<section>
+<p class="label"><b>4</b> - price falls of 10% and 20%</p>
+<h2>The same after a fall in the cbXRP price</h2>
+<p class="read">A fall lowers every health factor in proportion. Positions it pushes below 1 can be liquidated: the first
+table counts them and sets their sale against one liquidation as in section 3, the second prices selling all of it in
+one sale at today's depth.</p>
+<div class="side"><div><div class="tbl" role="region" aria-labelledby="cap-s4" tabindex="0"><table><caption id="cap-s4">Positions liquidatable after a fall in the collateral price</caption><thead><tr><th scope="col">After a fall of</th><th scope="col">10%</th><th scope="col">20%</th></tr></thead><tbody><tr><th scope="row">Positions</th><td>38</td><td>1,900</td></tr><tr><th scope="row">Collateral</th><td>$493k</td><td>$15.2M</td></tr><tr><th scope="row">Sale</th><td>$349k</td><td>$11.1M</td></tr><tr><th scope="row"><span class="lf">Positions one liquidation clears alone, on-chain only</span><span class="sf">Clear alone, on-chain only</span></th><td>$349k</td><td>$11.1M</td></tr><tr><th scope="row"><span class="lf">Positions one liquidation clears alone, all sources</span><span class="sf">Clear alone, all sources</span></th><td>$349k</td><td>$11.1M</td></tr><tr><th scope="row"><span class="lf">Positions too large for one liquidation</span><span class="sf">Too large for one</span></th><td>$0</td><td>$0</td></tr><tr><th scope="row">Each sale under</th><td>$100k</td><td>$250k</td></tr></tbody></table></div></div><div><p class="cap">Each position is set against one liquidation by itself: one at a time, all 1,900 clear. Together, before the pools refill, they are one $11.1M sale - the next table.</p>
+<div class="tbl" role="region" aria-labelledby="cap-s4o" tabindex="0"><table><caption id="cap-s4o">The cost of selling all of it in one sale</caption><thead><tr><th scope="col">All of it in one sale</th><th scope="col">10%</th><th scope="col">20%</th></tr></thead><tbody><tr><th scope="row">All sources</th><td class="x">1.6%</td><td class="x">>50%</td></tr><tr><th scope="row">On-chain only</th><td class="x">2.3%</td><td class="x">>50%</td></tr></tbody></table></div>
+<p class="src">Source: Morpho API positions, KyberSwap quotes at the summed sale · snapshot 2026-11-23 16:48 UTC</p></div></div>
+<div class="side lead"><div><svg class="fc" viewBox="0 0 640 250" role="img" aria-labelledby="fc-t"><title id="fc-t">Collateral to sell in liquidations after a fall in the price, 0 to 33%</title><line class="gr" x1="52" x2="624" y1="216.0" y2="216.0"/><text x="46" y="216.0" text-anchor="end" dominant-baseline="central">$0</text><line class="gr" x1="52" x2="624" y1="182.3" y2="182.3"/><text x="46" y="182.3" text-anchor="end" dominant-baseline="central">$5M</text><line class="gr" x1="52" x2="624" y1="148.7" y2="148.7"/><text x="46" y="148.7" text-anchor="end" dominant-baseline="central">$10M</text><line class="gr" x1="52" x2="624" y1="115.0" y2="115.0"/><text x="46" y="115.0" text-anchor="end" dominant-baseline="central">$15M</text><line class="gr" x1="52" x2="624" y1="81.3" y2="81.3"/><text x="46" y="81.3" text-anchor="end" dominant-baseline="central">$20M</text><line class="gr" x1="52" x2="624" y1="47.7" y2="47.7"/><text x="46" y="47.7" text-anchor="end" dominant-baseline="central">$25M</text><line class="gr" x1="52" x2="624" y1="14.0" y2="14.0"/><text x="46" y="14.0" text-anchor="end" dominant-baseline="central">$30M</text><polygon class="ar" points="52.0,216.0 52.0,216.0 69.3,216.0 69.3,216.0 86.7,216.0 86.7,216.0 104.0,216.0 104.0,216.0 121.3,216.0 121.3,216.0 138.7,216.0 138.7,216.0 156.0,216.0 156.0,216.0 173.3,216.0 173.3,216.0 190.7,216.0 190.7,214.9 208.0,214.9 208.0,214.2 225.3,214.2 225.3,213.6 242.7,213.6 242.7,212.7 260.0,212.7 260.0,207.7 277.3,207.7 277.3,199.9 294.7,199.9 294.7,193.5 312.0,193.5 312.0,186.5 329.3,186.5 329.3,179.0 346.7,179.0 346.7,172.1 364.0,172.1 364.0,163.0 381.3,163.0 381.3,150.9 398.7,150.9 398.7,141.3 416.0,141.3 416.0,133.6 433.3,133.6 433.3,125.5 450.7,125.5 450.7,116.1 468.0,116.1 468.0,102.5 485.3,102.5 485.3,92.8 502.7,92.8 502.7,76.2 520.0,76.2 520.0,69.1 537.3,69.1 537.3,59.9 554.7,59.9 554.7,49.8 572.0,49.8 572.0,38.3 589.3,38.3 589.3,31.5 606.7,31.5 606.7,24.2 624.0,24.2 624.0,18.3 624.0,216.0"/><polyline class="cv" points="52.0,216.0 69.3,216.0 69.3,216.0 86.7,216.0 86.7,216.0 104.0,216.0 104.0,216.0 121.3,216.0 121.3,216.0 138.7,216.0 138.7,216.0 156.0,216.0 156.0,216.0 173.3,216.0 173.3,216.0 190.7,216.0 190.7,214.9 208.0,214.9 208.0,214.2 225.3,214.2 225.3,213.6 242.7,213.6 242.7,212.7 260.0,212.7 260.0,207.7 277.3,207.7 277.3,199.9 294.7,199.9 294.7,193.5 312.0,193.5 312.0,186.5 329.3,186.5 329.3,179.0 346.7,179.0 346.7,172.1 364.0,172.1 364.0,163.0 381.3,163.0 381.3,150.9 398.7,150.9 398.7,141.3 416.0,141.3 416.0,133.6 433.3,133.6 433.3,125.5 450.7,125.5 450.7,116.1 468.0,116.1 468.0,102.5 485.3,102.5 485.3,92.8 502.7,92.8 502.7,76.2 520.0,76.2 520.0,69.1 537.3,69.1 537.3,59.9 554.7,59.9 554.7,49.8 572.0,49.8 572.0,38.3 589.3,38.3 589.3,31.5 606.7,31.5 606.7,24.2 624.0,24.2 624.0,18.3"/><line class="cp" x1="225.3" x2="225.3" y1="14" y2="216.0"/><line class="cp" x1="398.7" x2="398.7" y1="14" y2="216.0"/><line class="cp" x1="52" x2="624" y1="210.3" y2="210.3"/><text class="cpl" x="618" y="204.3" text-anchor="end">one liquidation clears about $840k</text><line class="ax" x1="52" x2="624" y1="216.0" y2="216.0"/><text x="138.7" y="222.0" text-anchor="middle" dominant-baseline="hanging">5%</text><text x="225.3" y="222.0" text-anchor="middle" dominant-baseline="hanging">10%</text><text x="312.0" y="222.0" text-anchor="middle" dominant-baseline="hanging">15%</text><text x="398.7" y="222.0" text-anchor="middle" dominant-baseline="hanging">20%</text><text x="485.3" y="222.0" text-anchor="middle" dominant-baseline="hanging">25%</text><text x="572.0" y="222.0" text-anchor="middle" dominant-baseline="hanging">30%</text><text class="xl" x="624" y="249" text-anchor="end">fall in the collateral price</text></svg></div><div><p class="cap">Collateral to sell in liquidations after each whole-percent fall (positions below a health factor of 1.5 are
+counted, so the line ends at 33%). The horizontal dashed line is what one liquidation clears with
+all sources, about $840k; the sale passes it at a 12% fall, as it passes the on-chain only $560k and any limit from $486k to $1.23M. Vertical dashed lines: the 10% and 20% falls.</p></div></div>
+<div class="tbl" role="region" aria-labelledby="cap-s4c" tabindex="0"><table><caption id="cap-s4c">Liquidatable positions and sale by fall</caption><thead><tr><th scope="col">Fall</th><th scope="col">5%</th><th scope="col">8%</th><th scope="col">10%</th><th scope="col">11%</th><th scope="col">12%</th><th scope="col">13%</th><th scope="col">15%</th><th scope="col">20%</th><th scope="col">25%</th><th scope="col">30%</th></tr></thead><tbody><tr><th scope="row">Positions</th><td>0</td><td>18</td><td>38</td><td>71</td><td>239</td><td>401</td><td>733</td><td>1,900</td><td>2,885</td><td>3,861</td></tr><tr><th scope="row">Sale</th><td>$0</td><td>$166k</td><td>$349k</td><td>$486k</td><td>$1.2M</td><td>$2.4M</td><td>$4.4M</td><td>$11.1M</td><td>$18.3M</td><td>$26.4M</td></tr></tbody></table></div>
+<p class="note caution"><span class="nh">An estimate</span>The positions are measured; the exit after a fall is not. These
+costs are today's pools and quotes, and a fall can thin both. The liquidations would not all come at once either:
+partial liquidations spread over blocks while arbitrage refills the pools, at a pace this review does not measure.</p>
+</section>
+<section>
+<p class="label"><b>5</b> - record</p>
+<h2>Since the first published snapshot</h2>
+<div class="side"><div><p class="read">Every snapshot the site published for this market, <span class="nw">2026-11-14 21:23 UTC</span> to <span class="nw">2026-11-23 12:23 UTC</span>: the exit cost at two sizes over all
+of them, then one row a day. The record ends with the snapshot of 12:23 UTC; this review was measured at
+16:48 UTC, so its own figures for that day differ: a $1M sale at 16.9% in section 1, $19.0M of
+collateral within 20% of liquidation in section 3.</p></div><div><div class="tbl" role="region" aria-labelledby="cap-s5r" tabindex="0"><table><caption id="cap-s5r">Exit cost in the published snapshots</caption><thead><tr><th scope="col">Sale</th><th scope="col">Median</th><th scope="col">Range</th><th scope="col">At a loss</th></tr></thead><tbody><tr><th scope="row">$200k, all sources</th><td class="x">1.3%</td><td class="x">0.5-3.0%</td><td>0 of 35</td></tr><tr><th scope="row">$200k, on-chain only</th><td class="x">1.4%</td><td class="x">0.6-7.5%</td><td>0 of 35</td></tr><tr><th scope="row">$1M, all sources</th><td class="x">13.4%</td><td class="x">8.4% to &gt;50%</td><td>27 of 35</td></tr><tr><th scope="row">$1M, on-chain only</th><td class="x">>50%</td><td class="x">43.1% to &gt;50%</td><td>35 of 35</td></tr></tbody></table></div>
+<p class="cap">"At a loss": the exit cost at or above the 11.25% break-even.</p></div></div>
+<div class="tbl" role="region" aria-labelledby="cap-s5" tabindex="0"><table><caption id="cap-s5">This market in the published snapshots, by day</caption><thead><tr><th scope="col">Day</th><th scope="col">Snapshots</th><th scope="col">$1M, all sources</th><th scope="col">$1M, on-chain only</th><th scope="col">Collateral within 20%</th><th scope="col">Borrowed, last</th></tr></thead><tbody><tr><th scope="row">2026-11-14</th><td>1</td><td class="x">17.0%</td><td class="x">&gt;50%</td><td>$44.3M</td><td>$49.2M</td></tr><tr><th scope="row">2026-11-15</th><td>4</td><td class="x">12.6% to &gt;50%</td><td class="x">&gt;50%</td><td>$26.6M - $34.8M</td><td>$48.0M</td></tr><tr><th scope="row">2026-11-16</th><td>5</td><td class="x">13.2-28.0%</td><td class="x">48.6% to &gt;50%</td><td>$25.9M - $32.1M</td><td>$47.9M</td></tr><tr><th scope="row">2026-11-17</th><td>4</td><td class="x">12.0-13.4%</td><td class="x">&gt;50%</td><td>$26.3M - $29.7M</td><td>$48.1M</td></tr><tr><th scope="row">2026-11-18</th><td>4</td><td class="x">8.4-13.3%</td><td class="x">43.1-49.8%</td><td>$23.0M - $25.2M</td><td>$48.7M</td></tr><tr><th scope="row">2026-11-19</th><td>2</td><td class="x">10.4-47.6%</td><td class="x">&gt;50%</td><td>$22.5M - $26.4M</td><td>$48.9M</td></tr><tr><th scope="row">2026-11-20</th><td>4</td><td class="x">8.7-13.4%</td><td class="x">43.1% to &gt;50%</td><td>$26.7M - $37.8M</td><td>$48.9M</td></tr><tr><th scope="row">2026-11-21</th><td>4</td><td class="x">11.0-30.0%</td><td class="x">46.7% to &gt;50%</td><td>$25.0M - $37.8M</td><td>$47.5M</td></tr><tr><th scope="row">2026-11-22</th><td>4</td><td class="x">12.8-18.1%</td><td class="x">&gt;50%</td><td>$25.0M - $28.6M</td><td>$47.5M</td></tr><tr><th scope="row">2026-11-23</th><td>3</td><td class="x">21.1-28.8%</td><td class="x">&gt;50%</td><td>$22.5M - $26.4M</td><td>$47.5M</td></tr></tbody></table></div>
+<p class="src">Source: data/exit-depth.json of the site's public history, 35 snapshots · snapshot 2026-11-23 12:23 UTC</p>
+</section>
+<section>
+<p class="label"><b>6</b> - method</p>
+<h2>How each number was measured</h2>
+<ul class="read meth"><li>Market: Morpho Blue on Base, cbXRP/USDC 62.5%, id 0xd4a903dc; $47.7M borrowed of $57.8M supplied; 10,923 borrowing positions.</li><li>Bonus: min(15%, 1/(0.3 x LLTV + 0.7)) - 1 = 12.68%. Break-even exit cost: 1 - 1/(1 + bonus) = 11.25%.</li><li>Exit cost: KyberSwap Aggregator's public API, the best route selling the collateral into USDC on Base at each size; cost = 1 - value out / value in, both as KyberSwap prices them. On-chain only: the same request with RFQ sources excluded. 3 rounds 60 s apart; the tables show the first, section 2 all of them.</li><li>One liquidation clears: the largest sale under the break-even, searched in the first round by halving, in log steps, the gap between the largest measured size that clears and the smallest that does not (7 quotes per route); the lower end of the last bracket, rounded down to two significant figures.</li><li>Positions: Morpho API, every position with a borrow and a health factor below 1.5: health factor, collateral and debt in USD. Nothing else of a position is read; they leave the review only as counts and sums, and a group of fewer than 3 positions without its sums.</li><li>Sale of a full liquidation: min(debt x (1 + bonus), collateral after the fall). A fall: health factor x (1 - fall), with the USDC debt held at $1.</li><li>Record: the market's row in data/exit-depth.json of every snapshot in the site's public history (35 snapshots).</li><li>Not measured: the pace at which the pools refill after a sale, how makers quote in a fall, the oracle's path, gas.</li><li>Measured <span class="nw">2026-11-23 16:48:42 UTC</span> to 16:52 UTC: 54 KyberSwap quotes. Method: Clearance v3, as on the <a href="method.html">method page</a>.</li></ul>
+<p class="cap">Every number is in the CSV with its unit, so a team can load it and check every figure.</p>
+</section>
+<section class="noprint" id="review">
+<p class="label">For curators</p>
+<h2>A review of your markets</h2>
+<div class="side"><div><p class="read">Send a vault name or market ids. Within 5 business days you get the same: a report as a PDF and the
+numbers as a CSV, at the sizes of the largest borrowers in your markets. The first review is free. By message only;
+what you send is not used by my bots and is not published. I also run liquidation bots on Base:
+<a href="about.html">About &amp; disclosure</a>.</p></div><div><div class="row"><a class="btn primary" href="https://t.me/dimanoshe?text=Hi%2C%20I%20would%20like%20the%20free%20exit-risk%20review%20from%20Underkeel.%0AMy%20role%20%28curator%2C%20risk%20team%2C%20protocol%2C%20other%29%3A%20%0AMy%20vault%20or%20market%20ids%3A%20" rel="noopener noreferrer">Ask for a review of your markets</a><a class="btn" href="mailto:hello@underkeel.xyz?subject=Exit-risk%20review&amp;body=Hi%2C%20I%20would%20like%20the%20free%20exit-risk%20review%20from%20Underkeel.%0D%0AMy%20role%20%28curator%2C%20risk%20team%2C%20protocol%2C%20other%29%3A%20%0D%0AMy%20vault%20or%20market%20ids%3A%20">By email</a></div>
+<p class="cap">Opens Telegram with a message ready to send. Nothing is sent until you press send.</p></div></div>
+</section>
+<section class="ponly">
+<p class="read">The numbers of this review as a CSV: <span class="nw">underkeel.xyz/sample/sample-review-cbxrp-usdc-62-5-2026-11-23.csv</span>.</p>
+<p class="read">Ask for a review of your markets: underkeel.xyz/services.html. The first review is free.
+Conflict of interest: I also run liquidation bots on Base; see underkeel.xyz/about.html.</p>
+</section>
+</div>
+<div class="marg low"><span>Clearance v3 - 16 Nov 2026</span><span>Live data: <a href="exit-depth.html">Exit depth</a></span></div>
+</div></main>
+<footer class="foot"><div class="wrap">
+<p class="attr">Quotes: KyberSwap Aggregator public API. Markets and positions: Morpho API. Liquidations: Morpho Blue events on Base.</p>
+<p><b>Underkeel</b> - exit depth and liquidations of Morpho Blue markets on Base. Figures frozen at <time datetime="2026-11-23T16:48:00Z">2026-11-23 16:48 UTC</time>. Live data: <a href="exit-depth.html">Exit depth</a>. Every snapshot is kept: <a href="https://github.com/underkeel/site/commits/main/data/exit-depth.json" rel="noopener noreferrer">history of the data</a>.</p>
+<p>Independent: not affiliated with Morpho, Base, KyberSwap or Chainlink. Informational only, not investment advice.
+<a href="about.html">About &amp; disclosure</a> - <a href="method.html">Method</a> - <a href="data.html">Data</a> - <a href="services.html">Services</a> - <a href="notes/feed.xml">Atom feed</a></p>
+<p>Contact: Telegram <a href="https://t.me/dimanoshe" rel="noopener noreferrer">@dimanoshe</a> · email <a href="mailto:hello@underkeel.xyz?subject=Underkeel">hello@underkeel.xyz</a></p>
+</div></footer>
+<script>(function(){var d=document.documentElement,b=document.getElementById('theme-btn'),modes=['auto','light','dark'];
+function cur(){return d.getAttribute('data-theme')||'auto'}
+function show(){b.querySelector('.tl').textContent=cur();b.setAttribute('aria-label','Colour theme: '+cur()+'. Change')}
+if(b){b.hidden=false;show();b.addEventListener('click',function(){var m=modes[(modes.indexOf(cur())+1)%3];
+if(m==='auto')d.removeAttribute('data-theme');else d.setAttribute('data-theme',m);
+try{if(m==='auto')localStorage.removeItem('theme');else localStorage.setItem('theme',m)}catch(e){}show()})}
+var cur_link=document.querySelector('nav.pages a[aria-current]');if(cur_link)cur_link.parentNode.scrollLeft=cur_link.offsetLeft-16;
+var now=Date.now();document.querySelectorAll('time[data-ago]').forEach(function(t){
+var m=Math.floor((now-Date.parse(t.getAttribute('datetime')))/6e4);if(!(m>=0))return;
+var s=m<1?'just now':m<120?m+' min ago':m<2880?Math.floor(m/60)+' h ago':Math.floor(m/1440)+' days ago';
+var e=document.createElement('span');e.className='ago'+(m>=480?' stale':'');
+e.textContent=' (updated '+s+(m>=480?'; the update every 6 hours may be late':'')+')';t.after(e)})})();</script><script>(function(){var n=navigator,d=document,L=location,w=window,A='addEventListener',N=Date.now,o=0,a=0,t=0,m=0,r={},q,id=crypto.randomUUID().slice(19).replace('-','');if(n.webdriver)return;try{var S=localStorage;if(L.hash=='#own')S.ukown=1;if(L.hash=='#notown')delete S.ukown;o=S.ukown?1:0}catch(e){}function s(e){e.l=id;e.p=L.pathname;e.o=o;n.sendBeacon('https://stats.underkeel.xyz/v',JSON.stringify(e))}function y(){m=Math.max(m,Math.min(100,(scrollY+innerHeight)*100/d.documentElement.scrollHeight|0))}function h(){if(t){a+=N()-t;t=0;s({t:'l',s:a/1e3|0,d:m})}}try{r=new URL(d.referrer)}catch(e){}if(q=/[?&]ref=([a-z0-9-]{1,24})(&|$)/i.exec(L.search))r={host:q[1]+'.ref'};s({t:'v',h:r.host,r:r.pathname});if(!d.hidden)t=N();y();w[A]('scroll',y);d[A]('visibilitychange',function(){if(d.hidden)h();else t=t||N()});w[A]('pagehide',h);d[A]('click',function(e){var x=e.target.closest('a[href]');if(x&&(x.host!=L.host||/\.json$/.test(x.pathname)))s({t:'c',g:x.href})})})();</script>
+</body>
+</html>

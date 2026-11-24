@@ -2,7 +2,7 @@
  "schema": 1,
  "slug": "cbxrp-two-minutes-nov-2026",
  "url": "https://underkeel.xyz/notes/cbxrp-two-minutes-nov-2026.html",
- "title": "Two minutes when a 12.7% bonus was not enough",
+ "title": "Two minutes when a 12.7% bonus was not enough in cbXRP/USDC on Base",
  "kind": "event",
  "event": "2026-11-08T21:56Z",
  "snapshot": "2026-11-17T06:23Z",
@@ -10,52 +10,72 @@
  "commit": "5d65c89",
  "method": "Clearance v3",
  "published": "2026-11-17T19:05:18Z",
+ "updated": "2026-11-23T19:52:03Z",
  "numbers": [
   {
    "id": "event_time",
-   "what": "The two minutes of the event",
+   "what": "The day of the event",
    "text": [
-    "8 November",
-    "21:56"
+    "8 November"
    ],
    "value": "2026-11-08T21:56Z",
-   "source": "Block timestamps on Base: the oracle step at 21:56:03 UTC and the liquidations that waited more than 20 blocks, 21:56:07 to 21:57:39 UTC"
+   "source": "Base block timestamps, UTC"
+  },
+  {
+   "id": "gap_before",
+   "what": "cbXRP on Base against XRP on Coinbase, minute 21:53 UTC",
+   "text": [
+    "21:53",
+    "0.2%"
+   ],
+   "value": -0.23,
+   "unit": "%",
+   "at": "2026-11-08T21:53Z",
+   "source": "Swaps in the six cbXRP pools on Base, volume-weighted, against the Coinbase XRP-USD minute candle, (high + low + close) / 3"
   },
   {
    "id": "pools_below_coinbase",
-   "what": "cbXRP on Base exchanges below XRP on Coinbase, in the minutes 21:56 and 21:57 UTC",
+   "what": "The same, minute 21:56 UTC",
    "text": [
-    "9.1%",
-    "8.0%",
-    "8-9%"
+    "9.1%"
    ],
-   "value": [
-    -9.09,
-    -8.03
-   ],
+   "value": -9.11,
    "unit": "%",
    "at": "2026-11-08T21:56Z",
-   "source": "Swaps in the cbXRP pools on Base, volume-weighted within the minute ($224,001 and $59,227 of swaps), against the Coinbase XRP-USD minute candle, (high + low + close) / 3; the minutes 21:56 and 21:57 UTC"
+   "source": "As for 21:53; $239,095 of swaps in the minute",
+   "corrected": "2026-11-23",
+   "was": "9.1% and 8.0% (21:56 and 21:57 UTC, five pools)"
   },
   {
    "id": "standing_positions",
-   "what": "Positions that stayed liquidatable before somebody took them, and for how long",
+   "what": "Liquidations that came more than 20 blocks after the oracle step made the position liquidatable",
    "text": [
+    "two minutes from 21:56 to 21:58 UTC",
     "140",
-    "4.6",
+    "20 blocks, or 4 seconds",
     "80"
    ],
    "value": {
-    "positions": 140,
+    "liquidations": 140,
+    "positions": 115,
+    "became_at": "2026-11-08T21:56:03Z",
+    "rule_blocks": 20,
+    "rule_s": 4.0,
     "shortest_s": 4.6,
     "longest_s": 80.2,
     "blocks": [
      23,
      401
-    ]
+    ],
+    "window": {
+     "from": "2026-11-08T21:56Z",
+     "to": "2026-11-08T21:58Z"
+    }
    },
    "at": "2026-11-08T21:56Z",
-   "source": "Morpho Blue liquidation events on Base outside auctions in the cbXRP/USDC 62.5% market; the position at the end of the block before its liquidation and the market's oracle price block by block, read from an archive node; the wait is counted from the first block from whose end the position was liquidatable; more than 20 blocks"
+   "source": "Morpho Blue Liquidate events of the market outside auctions; positions and the oracle price read block by block from an archive node; all 140 liquidatable from the oracle step at 21:56:03 UTC, the last taken at 21:57:24 UTC",
+   "corrected": "2026-11-23",
+   "was": "140 positions"
   },
   {
    "id": "lltv",
@@ -68,16 +88,15 @@
   },
   {
    "id": "block_time",
-   "what": "Block time on Base that day, and the longest wait in blocks",
+   "what": "Block time that day",
    "text": [
-    "0.2",
-    "401"
+    "0.2"
    ],
    "value": {
     "block_s": 0.2,
     "blocks": 401
    },
-   "source": "Base block headers on 8 November 2026: blocks 54744122 to 54745122, 200 s for 1,000 blocks; the longest wait, 401 blocks (80.2 s)"
+   "source": "Base block headers: 1,000 blocks in 200 s"
   },
   {
    "id": "bonus",
@@ -94,87 +113,67 @@
   },
   {
    "id": "top_tier",
-   "what": "The highest bonus among the markets of the snapshot",
+   "what": "The highest bonus in the snapshot",
    "text": [
     "top bonus tier"
    ],
    "value": 0.12676,
    "at": "2026-11-17T06:23Z",
-   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89): the largest bonus of its 47 markets, 0.12676, in all 10 markets with LLTV 62.5% and in no other"
+   "source": "data/exit-depth.json of the snapshot: 0.12676, in all 10 markets with LLTV 62.5% and no other of 47"
   },
   {
    "id": "october_30",
-   "what": "The previous time cbXRP traded below Coinbase on Base",
+   "what": "30 October: the gap and the liquidations outside auctions",
    "text": [
     "30 October",
-    "3.5-4%",
-    "259"
+    "3.5-4%"
    ],
    "value": {
     "gap_pct": [
      -3.54,
-     -3.58,
-     -3.99
+     -3.55,
+     -3.89
     ],
     "liquidations": 259,
     "same_block": 227,
     "next_block": 32
    },
    "at": "2026-10-30",
-   "source": "Morpho Blue liquidation events on Base outside auctions in the cbXRP/USDC 62.5% market, 24 hours from 20:00 UTC on 29 October: all 259 taken in the block from which they were liquidatable (227) or in the next (32); pool swaps against the Coinbase candle in the minutes with a discount of 2% or more: -3.54%, -3.58%, -3.99% (00:22, 00:27, 00:30 UTC on 30 October)"
+   "source": "Pool swaps against the Coinbase minute candle, worst minutes -3.54%, -3.55%, -3.89%; Liquidate events outside auctions, all in the 62.5% market: 227 in the block they became liquidatable, 32 in the next",
+   "corrected": "2026-11-23",
+   "was": "-3.54%, -3.58%, -3.99% (five pools)"
   },
   {
    "id": "block_time_october",
-   "what": "Block time on Base on 30 October",
+   "what": "Block time on 30 October",
    "text": [
     "2 seconds",
     "4 seconds"
    ],
    "value": 2.0,
    "unit": "s",
-   "source": "Base block headers on 30 October 2026: blocks 53286127 to 53287127, 2,000 s for 1,000 blocks"
+   "source": "Base block headers: 1,000 blocks in 2,000 s"
   },
   {
    "id": "auction_share",
-   "what": "Share of the bonus that went through auctions attached to oracle updates",
+   "what": "Bonus that went through auctions attached to oracle updates",
    "text": [
     "93%",
-    "30 days to 17 November"
+    "month to 17 November"
    ],
    "value": 0.9332,
    "at": "2026-11-17",
-   "source": "data/liquidations.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89): 6,799,061 of 7,285,887 USD of bonus went through auctions, 18 October to 17 November"
+   "source": "data/liquidations.json of the snapshot: $6.80M of $7.29M, 18 October to 17 November"
   },
   {
    "id": "breakeven",
    "what": "Break-even exit cost at this bonus",
    "text": [
     "11.25%",
-    "1 - 100 / 112.68 = 11.25%",
-    "1 - 1/(1 + bonus)"
+    "the bonus divided by one plus the bonus"
    ],
    "value": 0.1125,
-   "source": "Arithmetic: 1 - 1/(1 + bonus) = 1 - 100 / 112.676 = 0.1125 (website/exposure.py breakeven, Method page)"
-  },
-  {
-   "id": "clearance_gap",
-   "what": "How much the site's clearance before Clearance v3 (bonus minus exit cost) overstated the room at this bonus",
-   "text": [
-    "1.4 points",
-    "16 November"
-   ],
-   "value": 1.43,
-   "unit": "pp",
-   "source": "Arithmetic: 12.68 - 11.25 = 1.43; Clearance v3 of 16 Nov 2026 (Method changelog; Corrections on the About page: 0.01 to 1.43 points, the most at LLTV 62.5%)"
-  },
-  {
-   "id": "small_bonus",
-   "what": "A small bonus, for comparison",
-   "text": [
-    "2.6%"
-   ],
-   "value": 0.02617,
-   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89): bonus 0.02617 in the 14 markets with LLTV 91.5%"
+   "source": "Arithmetic: 1 - 100 / 112.676"
   },
   {
    "id": "redemption",
@@ -182,11 +181,11 @@
    "text": [
     "one cbXRP redeems for one XRP"
    ],
-   "source": "CoinDesk's cbXRP page, https://www.coindesk.com/price/coinbase-wrapped-xrp (read 17 Nov 2026): cbXRP represents XRP held 1:1 in Coinbase custody, and holders redeem the XRP by depositing cbXRP back into their Coinbase accounts"
+   "source": "CoinDesk, coindesk.com/price/coinbase-wrapped-xrp, read 17 November 2026"
   },
   {
    "id": "table_sizes",
-   "what": "Table 1, the sale sizes",
+   "what": "Table 1, sale sizes",
    "text": [
     "$1k",
     "$5k",
@@ -198,13 +197,12 @@
     25000
    ],
    "unit": "USD",
-   "source": "The state of Base at the end of the block, read from a public archive node (eth_call at that block): quotes from the cbXRP pools on Base at that state against the market's oracle price"
+   "source": "Quotes from the cbXRP pools on Base at the end of the block, against the market's oracle price, read from an archive node"
   },
   {
    "id": "table_blocks",
-   "what": "Table 1, the blocks whose end state was read",
+   "what": "Table 1, blocks",
    "text": [
-    "five blocks",
     "54922942",
     "54923075",
     "54923229",
@@ -218,11 +216,11 @@
     54923522,
     54925622
    ],
-   "source": "Block numbers on Base, read at a public archive node"
+   "source": "Base block numbers"
   },
   {
    "id": "table_215604",
-   "what": "Table 1, the block ending at 21:56:04 UTC",
+   "what": "Table 1, 21:56:04 UTC",
    "text": [
     "21:56:04",
     "-7.3%",
@@ -242,11 +240,11 @@
     "liquidatable_bonus_usd": 129329
    },
    "at": "2026-11-08T21:56:04Z",
-   "source": "The state of Base at the end of the block, read from a public archive node (eth_call at that block): quotes from the cbXRP pools on Base at that state against the market's oracle price; block 54922942"
+   "source": "As for Table 1; block 54922942"
   },
   {
    "id": "table_215630",
-   "what": "Table 1, the block ending at 21:56:30 UTC",
+   "what": "Table 1, 21:56:30 UTC",
    "text": [
     "21:56:30",
     "-10.0%",
@@ -266,11 +264,11 @@
     "liquidatable_bonus_usd": 83380
    },
    "at": "2026-11-08T21:56:30Z",
-   "source": "The state of Base at the end of the block, read from a public archive node (eth_call at that block): quotes from the cbXRP pools on Base at that state against the market's oracle price; block 54923075"
+   "source": "As for Table 1; block 54923075"
   },
   {
    "id": "table_215701",
-   "what": "Table 1, the block ending at 21:57:01 UTC",
+   "what": "Table 1, 21:57:01 UTC",
    "text": [
     "21:57:01",
     "-11.1%",
@@ -290,11 +288,11 @@
     "liquidatable_bonus_usd": 4877
    },
    "at": "2026-11-08T21:57:01Z",
-   "source": "The state of Base at the end of the block, read from a public archive node (eth_call at that block): quotes from the cbXRP pools on Base at that state against the market's oracle price; block 54923229"
+   "source": "As for Table 1; block 54923229"
   },
   {
    "id": "table_215800",
-   "what": "Table 1, the block ending at 21:58:00 UTC",
+   "what": "Table 1, 21:58:00 UTC",
    "text": [
     "21:58:00",
     "-5.3%",
@@ -313,11 +311,11 @@
     "liquidatable_bonus_usd": 0
    },
    "at": "2026-11-08T21:58:00Z",
-   "source": "The state of Base at the end of the block, read from a public archive node (eth_call at that block): quotes from the cbXRP pools on Base at that state against the market's oracle price; block 54923522"
+   "source": "As for Table 1; block 54923522"
   },
   {
    "id": "table_220500",
-   "what": "Table 1, the block ending at 22:05:00 UTC",
+   "what": "Table 1, 22:05:00 UTC",
    "text": [
     "22:05:00",
     "-2.3%",
@@ -336,11 +334,41 @@
     "liquidatable_bonus_usd": 0
    },
    "at": "2026-11-08T22:05:00Z",
-   "source": "The state of Base at the end of the block, read from a public archive node (eth_call at that block): quotes from the cbXRP pools on Base at that state against the market's oracle price; block 54925622"
+   "source": "As for Table 1; block 54925622"
+  },
+  {
+   "id": "no_fork",
+   "what": "Table 1 without the pools of a Slipstream fork",
+   "text": [
+    "8.7%",
+    "5.1%",
+    "33.8%",
+    "22:05"
+   ],
+   "value": {
+    "21:58 $5k": [
+     7.36,
+     8.68
+    ],
+    "22:05 $5k": [
+     3.21,
+     5.13
+    ],
+    "22:05 $25k": [
+     4.8,
+     33.83
+    ],
+    "21:55 $1k": [
+     0.88,
+     1.43
+    ]
+   },
+   "unit": "%",
+   "source": "The same quotes with those pools left out; no other cell changes"
   },
   {
    "id": "bonus_kept",
-   "what": "Share of the bonus a $1k sale kept, block by block",
+   "what": "Bonus a $1k sale kept",
    "text": [
     "a quarter",
     "about a twentieth",
@@ -352,113 +380,197 @@
     0.055,
     -0.06
    ],
-   "source": "From Table 1: the share of a full liquidation's bonus left after the $1k sale, 1 - loss / 0.1125; the blocks end at 21:56:04.0, 21:56:30.6 and 21:57:01.4 UTC (26.6 s, then 30.8 s)"
+   "source": "Table 1: 1 - loss / 0.1125; the blocks are 26.6 s and 30.8 s apart"
   },
   {
    "id": "from_5k",
-   "what": "Sales from $5k up, the first three blocks",
+   "what": "A $5k sale in the three blocks of Table 1 from 21:56:04 to 21:57:01",
    "text": [
-    "Anything from $5k up lost money in all three blocks"
+    "in all three blocks I read over the next minute"
    ],
    "value": {
-    "5000": [
-     -0.199,
-     -0.57,
-     -0.668
+    "loss_5k_pct": [
+     13.49,
+     17.67,
+     18.76
     ],
-    "25000": [
-     -2.476,
-     -2.529,
-     -2.592
+    "blocks": [
+     54922942,
+     54923075,
+     54923229
     ],
-    "50000": [
-     -4.233,
-     -4.28,
-     -4.338
-    ]
+    "breakeven_pct": 11.25
    },
-   "source": "From Table 1: the share of the bonus left after a $5k, $25k and $50k sale in the first three blocks"
-  },
-  {
-   "id": "calm_day_25k",
-   "what": "A $25k cbXRP sale through on-chain pools in the snapshot of 17 November",
-   "text": [
-    "17 November",
-    "0.22%"
-   ],
-   "value": 0.002213,
-   "at": "2026-11-17T06:23Z",
-   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89): exit_no_rfq at 25000 = 0.002213"
-  },
-  {
-   "id": "senders",
-   "what": "Different senders that took those positions",
-   "text": [
-    "68"
-   ],
-   "value": 68,
-   "source": "Morpho Blue liquidation events on Base outside auctions in the cbXRP/USDC 62.5% market; the position at the end of the block before its liquidation and the market's oracle price block by block, read from an archive node; the wait is counted from the first block from whose end the position was liquidatable; different senders of the transactions that took the positions that waited more than 20 blocks"
+   "source": "Table 1: 13.5%, 17.7%, 18.8%, against 11.25%"
   },
   {
    "id": "standing_size",
-   "what": "Median debt of the standing positions, its bonus, and their bonus together",
+   "what": "The liquidations that waited: median repaid, its bonus, their bonus together",
    "text": [
     "$192",
     "$24",
     "$9,196"
    ],
-   "value": [
-    192,
-    24.3,
-    9196
-   ],
+   "value": {
+    "median_repaid_usd": 191.66,
+    "median_bonus_usd": 24.3,
+    "bonus_usd": 9196,
+    "median_position_debt_usd_21_56_04": 1217.01
+   },
    "unit": "USD",
-   "source": "Morpho Blue liquidation events on Base outside auctions in the cbXRP/USDC 62.5% market; the position at the end of the block before its liquidation and the market's oracle price block by block, read from an archive node; the wait is counted from the first block from whose end the position was liquidatable; the positions that waited more than 20 blocks: the median debt repaid (bonus / 0.12676) and the bonus at the oracle price, summed; 192 x 0.12676 = 24.3"
+   "source": "As for the 140: the debt each repaid, and its bonus at the oracle price",
+   "corrected": "2026-11-23",
+   "was": "Their median debt was $192 (read as the median position)"
   },
   {
    "id": "liquidatable",
-   "what": "Liquidatable collateral at the end of the first and the third block, and the bonus available at the first",
+   "what": "Liquidatable collateral, Table 1's first and third rows",
    "text": [
     "$1.15M",
-    "$43k",
-    "$129k"
+    "$43k"
    ],
    "value": [
     1149594,
-    43349,
-    129329
+    43349
    ],
    "unit": "USD",
-   "source": "The state of Base at the end of the block, read from a public archive node: the market's positions liquidatable then (Morpho's own check at the oracle price), of every borrower liquidated in the market 21:55-22:26 UTC; the seized collateral at the oracle price and the bonus of a full liquidation"
+   "source": "Every borrower liquidated 21:55-22:26 UTC, checked as Morpho does at the oracle price; the collateral a full liquidation would seize"
   },
   {
-   "id": "bonus_outside_auctions",
-   "what": "Bonus of the liquidations outside auctions that day",
+   "id": "healed",
+   "what": "The 140 against Table 1's first row; what liquidations repaid from its first row to its third",
    "text": [
-    "$38,994"
-   ],
-   "value": 38994,
-   "unit": "USD",
-   "source": "Morpho Blue liquidation events on Base outside auctions in the cbXRP/USDC 62.5% market, 24 hours from 20:00 UTC on 8 November: 285 liquidations"
-  },
-  {
-   "id": "one_position",
-   "what": "One position followed by hand: the oracle step that made it liquidatable, and its wait",
-   "text": [
-    "1.8%",
-    "309",
-    "62"
+    "115",
+    "$77k"
    ],
    "value": {
-    "oracle_step_pct": -1.79,
-    "blocks": 309,
-    "seconds": 61.8
+    "positions_first_row": 131,
+    "standing_positions": 115,
+    "liquidations_between": 142,
+    "repaid_between_usd": 76567.16,
+    "debt_first_row_usd": 1020264,
+    "still_liquidatable_21_57_01": 19,
+    "table_1_liquidatable_21_57_01": 18,
+    "own_repays": 1,
+    "own_collateral_supplies": 0,
+    "oracle_usd_21_56_04_and_21_57_01": 1.0981778,
+    "closed_21_57_01": 17,
+    "debt_first_row_usd_21_57_01": 943572
    },
-   "source": "The market's oracle price at the end of two consecutive blocks (21:56:03 UTC: $1.11825 to $1.09818) and the block of the liquidation event, 309 blocks later"
+   "at": "2026-11-08T21:57:01Z",
+   "source": "Morpho Blue events and the 131 positions read at both blocks from an archive node; owners made one repayment and no collateral deposit; 19 of the 131 were still liquidatable at 21:57:01, and Table 1 counts 18 of them: it counts only positions liquidated later in the window"
+  },
+  {
+   "id": "waves",
+   "what": "The two waves before the gap: debt each repaid, a $1k sale a minute after the second, cbXRP sold in their transactions",
+   "text": [
+    "21:48",
+    "21:54:04",
+    "over $300k",
+    "under 1.5%",
+    "$125"
+   ],
+   "value": {
+    "21:48": {
+     "liquidations": 34,
+     "repaid_usd": 350174,
+     "gap_to_coinbase_pct": -0.22,
+     "sold_in_tx_usd": 125
+    },
+    "21:54:04": {
+     "liquidations": 42,
+     "repaid_usd": 323272,
+     "loss_1k_pct_at_21_55_00": 0.884,
+     "sold_in_tx_usd": 92,
+     "loss_1k_pct_at_21_55_00_no_fork": 1.434
+    }
+   },
+   "at": "2026-11-08T21:48Z",
+   "source": "Liquidate events and pool swaps in the same transactions; a $1k sale at 21:55:00: 0.9% with a Slipstream fork's pools, 1.4% without"
+  },
+  {
+   "id": "liq_selling",
+   "what": "Table 2",
+   "text": [
+    "21:54:00-21:57:00",
+    "$413k",
+    "$188k",
+    "45%",
+    "21:55:30-21:55:40",
+    "$96k",
+    "$65k",
+    "68%",
+    "21:56:00-21:56:10",
+    "$89k",
+    "$79k",
+    "89%"
+   ],
+   "value": {
+    "21:45:00-21:54:04": [
+     129622,
+     125,
+     0.001
+    ],
+    "21:54:00-21:57:00": [
+     413489,
+     187688,
+     0.454
+    ],
+    "21:55:30-21:55:40": [
+     95923,
+     65353,
+     0.681
+    ],
+    "21:56:00-21:56:10": [
+     89104,
+     79219,
+     0.889
+    ]
+   },
+   "at": "2026-11-08T21:54Z",
+   "source": "Swaps selling cbXRP in the six pools, at the Coinbase minute candle, split by a Liquidate event of the market in the transaction; from 21:56:00 the pools fell 8.1% in ten seconds, more than in any other ten seconds from 21:53 to 21:58"
+  },
+  {
+   "id": "jump",
+   "what": "A $1k sale, 21:55:40 to 21:56:04",
+   "text": [
+    "quadrupled"
+   ],
+   "value": {
+    "21:55:40": 2.053,
+    "21:56:04": 8.396,
+    "times": 4.09
+   },
+   "unit": "%",
+   "source": "Quotes at the end of the two blocks: 2.1% and 8.4%"
+  },
+  {
+   "id": "bad_debt",
+   "what": "Liquidations in this market on 8 November, debt repaid",
+   "text": [
+    "404",
+    "$1.58M"
+   ],
+   "value": {
+    "liquidations": 404,
+    "repaid_usd": 1582039,
+    "bad_debt_usd": 0
+   },
+   "at": "2026-11-08",
+   "source": "Liquidate events of the market: repaidAssets and badDebtAssets summed"
+  },
+  {
+   "id": "cushion",
+   "what": "Collateral to debt at the liquidation limit",
+   "text": [
+    "1.6 times"
+   ],
+   "value": 1.6,
+   "source": "1 / 0.625"
   },
   {
    "id": "pools_vs_oracle",
-   "what": "Pools below the oracle at the first and the third block",
+   "what": "Pools against the oracle, first and third rows of Table 1",
    "text": [
     "7.3%",
     "11.1%"
@@ -468,11 +580,11 @@
     -11.11
    ],
    "unit": "%",
-   "source": "The state of Base at the end of the block, read from a public archive node (eth_call at that block): quotes from the cbXRP pools on Base at that state against the market's oracle price; a $100 sale, blocks 54922942 and 54923229"
+   "source": "A $100 sale quoted from the pools"
   },
   {
    "id": "today_1m",
-   "what": "A $1M cbXRP sale in the snapshot, with RFQ makers and without",
+   "what": "A $1M cbXRP sale in the snapshot, with makers and without",
    "text": [
     "17 November",
     "$1M",
@@ -484,22 +596,20 @@
     0.61647
    ],
    "at": "2026-11-17T06:23Z",
-   "source": "data/exit-depth.json of the snapshot 2026-11-17T06:23Z (data sha256 8c30bf86, commit 5d65c89): exit at 1000000 = 0.12027, exit_no_rfq = 0.61647"
+   "source": "data/exit-depth.json of the snapshot: exit 0.12027, exit_no_rfq 0.61647"
   },
   {
    "id": "recovery",
-   "what": "The pools after the two minutes",
+   "what": "No position left liquidatable",
    "text": [
-    "21:58",
-    "5.3%",
-    "Seven minutes"
+    "21:58"
    ],
    "value": {
-    "pools_vs_oracle_pct": -5.26,
-    "loss_25k_pct_22_05": 4.8,
-    "minutes": 7
+    "block": 54923522,
+    "liquidatable_positions": 0,
+    "pools_vs_oracle_pct": -5.26
    },
-   "source": "The state of Base at the end of the block, read from a public archive node (eth_call at that block): quotes from the cbXRP pools on Base at that state against the market's oracle price; blocks 54923522 (21:58:00) and 54925622 (22:05:00)"
+   "source": "Table 1, block 54923522"
   }
  ]
 }
