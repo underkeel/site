@@ -51,7 +51,7 @@
 <button class="theme" id="theme-btn" type="button" title="Colour theme" hidden><svg class="ic" aria-hidden="true"><use href="#i-theme"/></svg><span class="tl">auto</span></button></div>
 </div></header>
 <main id="main"><div class="wrap">
-<div class="marg"><span>Underkeel - <b>Market</b></span><span>Snapshot <b><time datetime="2026-11-25T13:04:00Z" data-ago>2026-11-25 13:04 UTC</time></b></span></div>
+<div class="marg"><span>Underkeel - <b>Market</b></span><span>Snapshot <b><time datetime="2026-11-25T18:23:00Z" data-ago>2026-11-25 18:23 UTC</time></b></span></div>
 <div class="frame">
 <div class="hero">
 <div class="two lead"><div>
@@ -62,7 +62,7 @@
 <p class="cap twin">Market id <code>0xe0cda5</code> (the start of its 32-byte id): one of 2 markets with this pair and LLTV; they differ in the oracle or the rate model. The other: <a href="../markets/mglo-usdc-91-5-29ae7a.html">0x29ae7a, $5.2M borrowed</a>.</p><p class="dek">KyberSwap finds no route on Base for this collateral at any size, so a flash-loan liquidator cannot sell it in one transaction; liquidation here depends on the issuer&#x27;s redemption or an OTC buyer.</p>
 <p class="cap">Supply or curate this market? <a href="#review">Get a free review.</a></p>
 </div>
-<dl class="part" id="facts"><div><dt>Borrowed</dt><dd>$81.3M</dd></div><div><dt><abbr title="liquidation loan-to-value">LLTV</abbr>, liquidation loan-to-value</dt><dd>91.5%</dd></div><div><dt>Liquidation bonus</dt><dd>2.6%</dd></div><div><dt>Break-even exit cost, the keel</dt><dd>2.55%</dd></div><div><dt>Clearing size (no route at any size)</dt><dd class=m>no route</dd></div><div><dt>Clearance at $1M</dt><dd class=m>no route</dd></div><div><dt>Collateral, health factor below 1.1</dt><dd>$94.5M</dd></div><div><dt>Collateral, health factor below 1.25</dt><dd>$94.5M</dd></div></dl>
+<dl class="part" id="facts"><div><dt>Borrowed</dt><dd>$81.3M</dd></div><div><dt><abbr title="liquidation loan-to-value">LLTV</abbr>, liquidation loan-to-value</dt><dd>91.5%</dd></div><div><dt>Liquidation bonus</dt><dd>2.6%</dd></div><div><dt>Break-even exit cost, the keel</dt><dd>2.55%</dd></div><div><dt>Clearing size (no route at any size)</dt><dd class=m>no route</dd></div><div><dt>Clearance at $1M</dt><dd class=m>no route</dd></div><div><dt>Collateral, health factor below 1.1</dt><dd>$94.1M</dd></div><div><dt>Collateral, health factor below 1.25</dt><dd>$95.1M</dd></div></dl>
 </div>
 </div>
 <section class="first">
@@ -86,9 +86,9 @@ negative - a single liquidation of that size loses money and has to be split acr
 <h2>Positions close to liquidation</h2>
 <p class="note"><b>Priced at NAV.</b> mGLO is a fund token: the market's oracle prices it from its issuer's net asset value (<abbr title="net asset value">NAV</abbr>), not from a trading price, so the health factor follows the NAV. At a 91.5% LLTV positions sit close to liquidation as a matter of course; they move only if the NAV falls. The sums below show how close borrowers run to the LLTV, not how the issuer is doing.</p>
 <div class="kpis three">
-<div class="kpi"><div class="l">health factor below 1.1</div><div class="v">$94.5M</div><div class="s">within 10% of liquidation - normal for NAV-priced collateral</div></div>
-<div class="kpi"><div class="l">between 1.1 and 1.25</div><div class="v">$0</div><div class="s">within 10-20% of liquidation</div></div>
-<div class="kpi"><div class="l">health factor below 1.25</div><div class="v">$94.5M</div><div class="s">within 20%, includes the 10% band</div></div>
+<div class="kpi"><div class="l">health factor below 1.1</div><div class="v">$94.1M</div><div class="s">within 10% of liquidation - normal for NAV-priced collateral</div></div>
+<div class="kpi"><div class="l">between 1.1 and 1.25</div><div class="v">$986k</div><div class="s">within 10-20% of liquidation</div></div>
+<div class="kpi"><div class="l">health factor below 1.25</div><div class="v">$95.1M</div><div class="s">within 20%, includes the 10% band</div></div>
 </div>
 <p class="cap">Collateral of the market's positions by health factor (Morpho API). It is spread over positions of different
 sizes; a large position is liquidated in parts across blocks, which this site does not measure.</p>
@@ -118,8 +118,8 @@ price and shows the venue split. The first one is free and private to you.</p>
 <section>
 <p class="label">Cite</p>
 <h2>Cite or quote this market</h2>
-<div class="two"><p class="cite">Cite as: Underkeel, Clearance v3, mGLO/USDC 91.5% (0xe0cda5) on Morpho Blue, Base, snapshot 2026-11-25T13:04Z, data sha256 90e918d2. https://underkeel.xyz/markets/mglo-usdc-91-5-e0cda5.html (this snapshot: https://github.com/underkeel/site/tree/snapshot-2026-11-25T1304Z)</p>
-<p class="cite">Quote this: Underkeel (Clearance v3, snapshot 2026-11-25 13:04 UTC): no DEX aggregator route from mGLO into USDC at $25k, $200k and $1M for mGLO/USDC 91.5% (0xe0cda5) on Morpho, Base; redemption with the issuer is not measured. https://underkeel.xyz/markets/mglo-usdc-91-5-e0cda5.html</p></div>
+<div class="two"><p class="cite">Cite as: Underkeel, Clearance v3, mGLO/USDC 91.5% (0xe0cda5) on Morpho Blue, Base, snapshot 2026-11-25T18:23Z, data sha256 a6388b1b. https://underkeel.xyz/markets/mglo-usdc-91-5-e0cda5.html (this snapshot: https://github.com/underkeel/site/tree/snapshot-2026-11-25T1823Z)</p>
+<p class="cite">Quote this: Underkeel (Clearance v3, snapshot 2026-11-25 18:23 UTC): no DEX aggregator route from mGLO into USDC at $25k, $200k and $1M for mGLO/USDC 91.5% (0xe0cda5) on Morpho, Base; redemption with the issuer is not measured. https://underkeel.xyz/markets/mglo-usdc-91-5-e0cda5.html</p></div>
 <p class="cap">Raw data: <a href="../data/exit-depth.json">data/exit-depth.json</a>; how it is measured:
 <a href="../method.html">Method</a>; how to cite: <a href="../method.html#cite">Method</a>.</p>
 </section>
@@ -128,7 +128,7 @@ price and shows the venue split. The first one is free and private to you.</p>
 </div></main>
 <footer class="foot"><div class="wrap">
 <p class="attr">Quotes: KyberSwap Aggregator public API. Markets and positions: Morpho API. Liquidations: Morpho Blue events on Base.</p>
-<p><b>Underkeel</b> - exit depth and liquidations of Morpho Blue markets on Base. Snapshot <time datetime="2026-11-25T13:04:00Z">2026-11-25 13:04 UTC</time>, rebuilt every 6 hours. Every snapshot is kept: <a href="https://github.com/underkeel/site/commits/main/data/exit-depth.json" rel="noopener noreferrer">history of the data</a>.</p>
+<p><b>Underkeel</b> - exit depth and liquidations of Morpho Blue markets on Base. Snapshot <time datetime="2026-11-25T18:23:00Z">2026-11-25 18:23 UTC</time>, rebuilt every 6 hours. Every snapshot is kept: <a href="https://github.com/underkeel/site/commits/main/data/exit-depth.json" rel="noopener noreferrer">history of the data</a>.</p>
 <p>Independent: not affiliated with Morpho, Base, KyberSwap or Chainlink. Informational only, not investment advice.
 <a href="../about.html">About &amp; disclosure</a> - <a href="../method.html">Method</a> - <a href="../data.html">Data</a> - <a href="../services.html">Services</a> - <a href="../notes/feed.xml">Atom feed</a></p>
 <p>Contact: Telegram <a href="https://t.me/dimanoshe" rel="noopener noreferrer">@dimanoshe</a> · email <a href="mailto:hello@underkeel.xyz?subject=Underkeel">hello@underkeel.xyz</a></p>
