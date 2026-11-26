@@ -1,7 +1,7 @@
 {
  "schema": 3,
- "at": "2026-11-26 12:23 UTC",
- "at_iso": "2026-11-26T12:23:45Z",
+ "at": "2026-11-26 18:23 UTC",
+ "at_iso": "2026-11-26T18:23:05Z",
  "min_borrow_usd": 100000.0,
  "sizes": [
   "25000",
@@ -15,116 +15,141 @@
    "loan": "USDC",
    "lltv": 0.86,
    "bonus": 0.04384133611691032,
-   "borrow_usd": 1406799389.0003664,
+   "borrow_usd": 1407547265.9081059,
    "exit": {
-    "25000": 0.0,
-    "200000": 0.0005827508776570234,
-    "1000000": 0.0004603468616815043
+    "25000": 2.5671004029059752e-05,
+    "200000": 0.00014044038621296995,
+    "1000000": 0.0006036462556809896
    },
    "exit_no_rfq": {
-    "200000": 0.0005827508776570234,
-    "25000": 0.0004996963174133118,
-    "1000000": 0.0010587471055280018
+    "25000": 0.0,
+    "200000": 0.0,
+    "1000000": 0.0005483151264916719
    },
    "venues": {
     "25000": [
      {
-      "venue": "metric-propamm/hanji",
-      "kind": "maker_pool",
-      "share": 0.7362
+      "venue": "aero-cl",
+      "kind": "amm",
+      "share": 0.5434
      },
      {
-      "venue": "hanji",
-      "kind": "amm",
-      "share": 0.2638
+      "venue": "kipseli-prop",
+      "kind": "maker_pool",
+      "share": 0.2731
+     },
+     {
+      "venue": "woofi-v3/kipseli-prop",
+      "kind": "maker_pool",
+      "share": 0.099
+     },
+     {
+      "venue": "pmm-13/hanji",
+      "kind": "rfq",
+      "share": 0.0845
      }
     ],
     "200000": [
      {
       "venue": "hanji",
       "kind": "amm",
-      "share": 0.56
-     },
-     {
-      "venue": "metric-propamm/aero-cl",
-      "kind": "maker_pool",
-      "share": 0.28
-     },
-     {
-      "venue": "kipseli-prop",
-      "kind": "maker_pool",
-      "share": 0.16
-     }
-    ],
-    "1000000": [
-     {
-      "venue": "pmm-19/aero-cl",
-      "kind": "rfq",
-      "share": 0.4
-     },
-     {
-      "venue": "hanji",
-      "kind": "amm",
-      "share": 0.1274
+      "share": 0.2743
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.1026
-     },
-     {
-      "venue": "native-v2/aero-cl",
-      "kind": "rfq",
-      "share": 0.0953
-     },
-     {
-      "venue": "metric-propamm/aero-cl",
-      "kind": "maker_pool",
-      "share": 0.0841
+      "share": 0.2516
      },
      {
       "venue": "kipseli-prop",
       "kind": "maker_pool",
-      "share": 0.057
+      "share": 0.1511
      },
      {
-      "venue": "uniswapv3",
-      "kind": "amm",
-      "share": 0.0546
-     },
-     {
-      "venue": "elfomofi",
-      "kind": "amm",
-      "share": 0.0311
-     },
-     {
-      "venue": "metric-propamm/uniswapv3",
-      "kind": "maker_pool",
-      "share": 0.03
-     },
-     {
-      "venue": "pmm-13/pancake-v3",
+      "venue": "pmm-13/aero-cl",
       "kind": "rfq",
-      "share": 0.013
+      "share": 0.1393
+     },
+     {
+      "venue": "metric-propamm/aero-cl",
+      "kind": "maker_pool",
+      "share": 0.1051
+     },
+     {
+      "venue": "woofi-v3/aero-cl",
+      "kind": "maker_pool",
+      "share": 0.0786
+     }
+    ],
+    "1000000": [
+     {
+      "venue": "aero-cl",
+      "kind": "amm",
+      "share": 0.38
+     },
+     {
+      "venue": "pmm-19/aero-cl",
+      "kind": "rfq",
+      "share": 0.16
+     },
+     {
+      "venue": "native-v2/aero-cl",
+      "kind": "rfq",
+      "share": 0.1103
+     },
+     {
+      "venue": "hanji",
+      "kind": "amm",
+      "share": 0.08
+     },
+     {
+      "venue": "woofi-v3/aero-cl",
+      "kind": "maker_pool",
+      "share": 0.074
+     },
+     {
+      "venue": "metric-propamm/aero-cl",
+      "kind": "maker_pool",
+      "share": 0.0693
+     },
+     {
+      "venue": "pmm-13/aero-cl",
+      "kind": "rfq",
+      "share": 0.0541
+     },
+     {
+      "venue": "kipseli-prop",
+      "kind": "maker_pool",
+      "share": 0.0302
+     },
+     {
+      "venue": "metric-propamm/pancake-v3",
+      "kind": "maker_pool",
+      "share": 0.0244
+     },
+     {
+      "venue": "pmm-1/hanji",
+      "kind": "rfq",
+      "share": 0.01
      },
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.0049
+      "share": 0.0078
      }
     ]
    },
    "near": {
-    "1.1": 4193118.49087913,
-    "1.25": 422077306.4699913
+    "1.1": 5237010.007507025,
+    "1.25": 433782535.50964904
    },
    "exit_large": {
-    "5000000": 0.0034180726566040986,
-    "20000000": 0.02302284481950323
+    "5000000": 0.006220236367402987,
+    "20000000": 0.03696710966762573
    },
    "exit_large_no_rfq": {
-    "5000000": 0.00366034951487626,
-    "20000000": 0.02437023297552421
+    "5000000": 0.007841944894831476,
+    "20000000": 0.038778790427498655
    }
   },
   {
@@ -133,28 +158,38 @@
    "loan": "USDC",
    "lltv": 0.86,
    "bonus": 0.04384133611691032,
-   "borrow_usd": 82293796.90113646,
+   "borrow_usd": 82311676.53994867,
    "exit": {
-    "25000": 0.0,
-    "200000": 0.001206811839681965,
-    "1000000": 0.0011376642891246513
+    "25000": 8.53961389126745e-05,
+    "200000": 0.0011564923722412468,
+    "1000000": 0.001269619232416197
    },
    "exit_no_rfq": {
-    "25000": 0.0,
-    "200000": 0.001206811839681965,
-    "1000000": 0.0016907200823672586
+    "25000": 8.53961389126745e-05,
+    "200000": 0.0011584596441083228,
+    "1000000": 0.0014551150760955256
    },
    "venues": {
     "25000": [
      {
-      "venue": "manta-prop",
-      "kind": "maker_pool",
-      "share": 0.5445
-     },
-     {
       "venue": "kipseli-prop",
       "kind": "maker_pool",
-      "share": 0.4155
+      "share": 0.5355
+     },
+     {
+      "venue": "flux-prop",
+      "kind": "maker_pool",
+      "share": 0.1984
+     },
+     {
+      "venue": "hanji",
+      "kind": "amm",
+      "share": 0.12
+     },
+     {
+      "venue": "lunarbase",
+      "kind": "amm",
+      "share": 0.106
      },
      {
       "venue": "spire-prop",
@@ -164,105 +199,120 @@
     ],
     "200000": [
      {
-      "venue": "manta-prop",
-      "kind": "maker_pool",
-      "share": 0.2725
+      "venue": "hanji",
+      "kind": "amm",
+      "share": 0.5141
      },
      {
       "venue": "kipseli-prop",
       "kind": "maker_pool",
-      "share": 0.2725
+      "share": 0.2706
      },
      {
-      "venue": "hanji",
-      "kind": "amm",
-      "share": 0.2666
-     },
-     {
-      "venue": "aero-cl",
-      "kind": "amm",
-      "share": 0.0954
-     },
-     {
-      "venue": "spire-prop",
+      "venue": "manta-prop",
       "kind": "maker_pool",
-      "share": 0.057
+      "share": 0.0668
      },
      {
-      "venue": "metric-propamm/spire-prop",
+      "venue": "lunarbase",
+      "kind": "amm",
+      "share": 0.0446
+     },
+     {
+      "venue": "metric-propamm/manta-prop",
       "kind": "maker_pool",
-      "share": 0.036
+      "share": 0.0323
+     },
+     {
+      "venue": "flux-prop",
+      "kind": "maker_pool",
+      "share": 0.031
+     },
+     {
+      "venue": "metric-propamm/aero-cl",
+      "kind": "maker_pool",
+      "share": 0.03
+     },
+     {
+      "venue": "pmm-13/spire-prop",
+      "kind": "rfq",
+      "share": 0.0106
      }
     ],
     "1000000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.2553
+      "share": 0.2275
      },
      {
       "venue": "pmm-19/aero-cl",
       "kind": "rfq",
-      "share": 0.1699
+      "share": 0.16
      },
      {
-      "venue": "hanji",
-      "kind": "amm",
-      "share": 0.1235
+      "venue": "woofi-v3/aero-cl",
+      "kind": "maker_pool",
+      "share": 0.12
      },
      {
       "venue": "native-v2/aero-cl",
       "kind": "rfq",
-      "share": 0.1106
+      "share": 0.0999
      },
      {
       "venue": "metric-propamm/aero-cl",
       "kind": "maker_pool",
-      "share": 0.088
+      "share": 0.0976
      },
      {
-      "venue": "bebop/aero-cl",
-      "kind": "rfq",
-      "share": 0.0694
+      "venue": "hanji",
+      "kind": "amm",
+      "share": 0.0936
      },
      {
       "venue": "manta-prop",
       "kind": "maker_pool",
-      "share": 0.0545
+      "share": 0.0541
      },
      {
       "venue": "kipseli-prop",
       "kind": "maker_pool",
-      "share": 0.0545
+      "share": 0.0541
      },
      {
-      "venue": "pmm-1/aero-cl",
+      "venue": "bebop/aero-cl",
       "kind": "rfq",
       "share": 0.04
      },
      {
       "venue": "spire-prop",
       "kind": "maker_pool",
-      "share": 0.0325
+      "share": 0.0229
      },
      {
-      "venue": "pmm-20/flux-prop",
-      "kind": "rfq",
-      "share": 0.0018
+      "venue": "elfomofi",
+      "kind": "amm",
+      "share": 0.0157
+     },
+     {
+      "venue": "lunarbase",
+      "kind": "amm",
+      "share": 0.0145
      }
     ]
    },
    "near": {
-    "1.1": 226719.86283714615,
-    "1.25": 22593517.47153675
+    "1.1": 223461.50519272854,
+    "1.25": 24586456.585620932
    },
    "exit_large": {
-    "5000000": 0.0027102398484072365,
-    "20000000": 0.013061661390087465
+    "5000000": 0.002670056500756135,
+    "20000000": 0.02006893964586276
    },
    "exit_large_no_rfq": {
-    "5000000": 0.0025611037292081473,
-    "20000000": 0.013799700513215218
+    "5000000": 0.0032138924267144375,
+    "20000000": 0.021305346260941493
    }
   },
   {
@@ -271,7 +321,7 @@
    "loan": "USDC",
    "lltv": 0.915,
    "bonus": 0.026167265264238182,
-   "borrow_usd": 81329910.55583332,
+   "borrow_usd": 82237614.1015117,
    "exit": {
     "25000": null,
     "200000": null,
@@ -288,8 +338,8 @@
     "1000000": []
    },
    "near": {
-    "1.1": 94071458.86015487,
-    "1.25": 95057500.60704483
+    "1.1": 95291796.8497524,
+    "1.25": 96277838.59664236
    },
    "gap": "no_route"
   },
@@ -299,16 +349,16 @@
    "loan": "USDC",
    "lltv": 0.915,
    "bonus": 0.026167265264238182,
-   "borrow_usd": 50766372.18109761,
+   "borrow_usd": 50765889.645914294,
    "exit": {
-    "25000": 0.00038799370521425125,
-    "200000": 0.0008088943987530905,
-    "1000000": 0.40391389792474286
+    "25000": 0.0005464096313497757,
+    "200000": 0.0009665453260521151,
+    "1000000": 0.40006101704911123
    },
    "exit_no_rfq": {
-    "25000": 0.00038799370521425125,
-    "200000": 0.0008088943987530905,
-    "1000000": 0.40408973124769765
+    "25000": 0.0005464096313497757,
+    "200000": 0.0009665453260521151,
+    "1000000": 0.40006597019959644
    },
    "venues": {
     "25000": [
@@ -329,43 +379,43 @@
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.5976
+      "share": 0.6017
      },
      {
-      "venue": "kyberswap-limit-order-v2/aero-cl",
+      "venue": "kyberswap-limit-order-v2/aerodrome",
       "kind": "rfq",
-      "share": 0.1281
+      "share": 0.1283
      },
      {
       "venue": "kyberswap-limit-order-v2/uniswap-v4",
       "kind": "rfq",
-      "share": 0.0897
+      "share": 0.0853
      },
      {
       "venue": "kyberswap-limit-order-v2",
       "kind": "rfq",
-      "share": 0.0843
+      "share": 0.0845
      },
      {
       "venue": "kyberswap-limit-order-v2/uniswap",
       "kind": "rfq",
-      "share": 0.064
+      "share": 0.0642
      },
      {
       "venue": "uniswap-v4",
       "kind": "amm",
-      "share": 0.0361
+      "share": 0.036
      },
      {
-      "venue": "aerodrome",
+      "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.0001
+      "share": 0.0
      }
     ]
    },
    "near": {
-    "1.1": 56915481.03115606,
-    "1.25": 56932703.89620188
+    "1.1": 56911498.877145104,
+    "1.25": 56928720.537174284
    }
   },
   {
@@ -374,98 +424,76 @@
    "loan": "USDC",
    "lltv": 0.625,
    "bonus": 0.12676056338028174,
-   "borrow_usd": 48338220.9643893,
+   "borrow_usd": 48289498.97029232,
    "exit": {
-    "25000": 0.0013111334843625144,
-    "200000": 0.009023792207094483,
-    "1000000": 0.3348402456691617
+    "25000": 0.0,
+    "200000": 0.010814536463303104,
+    "1000000": 0.08209472390197481
    },
    "exit_no_rfq": {
-    "25000": 0.0010699769476585352,
-    "200000": 0.010281788467831343,
-    "1000000": 0.28369230953561464
+    "25000": 0.0024313727453472156,
+    "200000": 0.012894209627171138,
+    "1000000": 0.2893409839367024
    },
    "venues": {
     "25000": [
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.7053
+      "share": 0.96
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.2466
-     },
-     {
-      "venue": "pancake-v3",
-      "kind": "amm",
-      "share": 0.0481
+      "share": 0.04
      }
     ],
     "200000": [
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.9381
+      "share": 0.9613
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.0619
+      "share": 0.0387
      }
     ],
     "1000000": [
      {
+      "venue": "pmm-19",
+      "kind": "rfq",
+      "share": 0.4225
+     },
+     {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.44
+      "share": 0.4175
      },
      {
       "venue": "pancake-v3",
       "kind": "amm",
-      "share": 0.2
+      "share": 0.12
      },
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.12
-     },
-     {
-      "venue": "aerodrome-cl-3",
-      "kind": "amm",
-      "share": 0.08
-     },
-     {
-      "venue": "aerodrome-cl",
-      "kind": "amm",
       "share": 0.04
-     },
-     {
-      "venue": "aerodrome",
-      "kind": "amm",
-      "share": 0.04
-     },
-     {
-      "venue": "uniswap-v4",
-      "kind": "amm",
-      "share": 0.04
-     },
-     {
-      "venue": "kyberswap-limit-order-v2/uniswap-v4",
-      "kind": "rfq",
-      "share": 0.02
-     },
-     {
-      "venue": "uniswap",
-      "kind": "amm",
-      "share": 0.02
      }
     ]
    },
    "near": {
-    "1.1": 298935.0703182337,
-    "1.25": 21642425.795173988
+    "1.1": 341992.8114061221,
+    "1.25": 21989211.901358645
+   },
+   "exit_large": {
+    "5000000": 0.8148204476024649,
+    "20000000": 0.9809577089685739
+   },
+   "exit_large_no_rfq": {
+    "5000000": 0.8898524560520072,
+    "20000000": 0.9846034578726208
    }
   },
   {
@@ -474,67 +502,72 @@
    "loan": "USDC",
    "lltv": 0.77,
    "bonus": 0.07411385606874332,
-   "borrow_usd": 15715192.45216312,
+   "borrow_usd": 15716628.006512193,
    "exit": {
-    "25000": 0.0008393956177052964,
-    "200000": 9.57334186231229e-05,
-    "1000000": 0.002300576063043125
+    "25000": 0.001321487230537488,
+    "200000": 0.00047753795943639155,
+    "1000000": 0.0021864268825203537
    },
    "exit_no_rfq": {
-    "200000": 9.57334186231229e-05,
-    "25000": 0.0012899693278652924,
-    "1000000": 0.0029330633527613337
+    "25000": 0.001321487230537488,
+    "200000": 0.00047753795943639155,
+    "1000000": 0.001883724955492938
    },
    "venues": {
     "25000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.959
+      "share": 0.7746
      },
      {
       "venue": "maverick-v2",
       "kind": "amm",
-      "share": 0.041
+      "share": 0.2254
      }
     ],
     "200000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 1.0
+      "share": 0.96
+     },
+     {
+      "venue": "maverick-v2",
+      "kind": "amm",
+      "share": 0.04
      }
     ],
     "1000000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.6848
-     },
-     {
-      "venue": "aerodrome-cl",
-      "kind": "amm",
-      "share": 0.14
+      "share": 0.7694
      },
      {
       "venue": "curve",
       "kind": "amm",
-      "share": 0.08
+      "share": 0.0706
      },
      {
-      "venue": "quickswap-v4",
+      "venue": "aerodrome-cl",
       "kind": "amm",
-      "share": 0.0352
-     },
-     {
-      "venue": "aerodrome-cl-2",
-      "kind": "amm",
-      "share": 0.03
+      "share": 0.06
      },
      {
       "venue": "hydrex-v4",
       "kind": "amm",
-      "share": 0.02
+      "share": 0.04
+     },
+     {
+      "venue": "aerodrome-cl-2",
+      "kind": "amm",
+      "share": 0.04
+     },
+     {
+      "venue": "maverick-v2",
+      "kind": "amm",
+      "share": 0.01
      },
      {
       "venue": "uniswapv3",
@@ -544,14 +577,14 @@
     ]
    },
    "near": {
-    "1.1": 3102.1184436463664,
-    "1.25": 1883756.377116901
+    "1.1": 4064.5097096274635,
+    "1.25": 2006471.5024301552
    },
    "exit_large": {
-    "5000000": 0.6495127322760024
+    "5000000": 0.6396160071457131
    },
    "exit_large_no_rfq": {
-    "5000000": 0.6495127322760024
+    "5000000": 0.6369624524825843
    }
   },
   {
@@ -560,50 +593,45 @@
    "loan": "USDC",
    "lltv": 0.625,
    "bonus": 0.12676056338028174,
-   "borrow_usd": 5975618.156050177,
+   "borrow_usd": 5955068.192547952,
    "exit": {
-    "25000": 0.000887036195705404,
-    "200000": 0.0033035487012247344,
-    "1000000": 0.06840462848664897
+    "25000": 0.0,
+    "200000": 0.00026496647935403406,
+    "1000000": 0.019784059797831266
    },
    "exit_no_rfq": {
-    "25000": 0.0009301023092070926,
-    "200000": 0.0036418726469406026,
-    "1000000": 0.16297927612199792
+    "25000": 0.0,
+    "200000": 0.004019859239165369,
+    "1000000": 0.024460400786244785
    },
    "venues": {
     "25000": [
      {
+      "venue": "pmm-19",
+      "kind": "rfq",
+      "share": 0.48
+     },
+     {
+      "venue": "pmm-8",
+      "kind": "rfq",
+      "share": 0.28
+     },
+     {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.4951
-     },
-     {
-      "venue": "pancake-v3",
-      "kind": "amm",
-      "share": 0.1979
-     },
-     {
-      "venue": "pmm-19/aero-cl",
-      "kind": "rfq",
       "share": 0.16
      },
      {
-      "venue": "bebop/aero-cl",
+      "venue": "bebop",
       "kind": "rfq",
-      "share": 0.107
-     },
-     {
-      "venue": "pmm-19/pancake",
-      "kind": "rfq",
-      "share": 0.04
+      "share": 0.08
      }
     ],
     "200000": [
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.5301
+      "share": 0.6504
      },
      {
       "venue": "bebop",
@@ -613,45 +641,40 @@
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.1399
+      "share": 0.0702
      },
      {
-      "venue": "pancake-v3",
-      "kind": "amm",
-      "share": 0.08
-     },
-     {
-      "venue": "pmm-21",
+      "venue": "pmm-8",
       "kind": "rfq",
-      "share": 0.01
+      "share": 0.0394
      }
     ],
     "1000000": [
      {
       "venue": "bebop",
       "kind": "rfq",
-      "share": 0.5913
+      "share": 0.5739
      },
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.2219
+      "share": 0.2612
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.1299
+      "share": 0.125
      },
      {
       "venue": "pancake-v3",
       "kind": "amm",
-      "share": 0.0568
+      "share": 0.04
      }
     ]
    },
    "near": {
-    "1.1": 35047.77696741548,
-    "1.25": 1828804.0970564932
+    "1.1": 32753.340544845596,
+    "1.25": 1831324.6225646252
    }
   },
   {
@@ -660,7 +683,7 @@
    "loan": "USDC",
    "lltv": 0.915,
    "bonus": 0.026167265264238182,
-   "borrow_usd": 5209514.89833129,
+   "borrow_usd": 5209499.426274913,
    "exit": {
     "25000": null,
     "200000": null,
@@ -688,68 +711,73 @@
    "loan": "WETH",
    "lltv": 0.945,
    "bonus": 0.016776817488561413,
-   "borrow_usd": 5177602.109924066,
+   "borrow_usd": 5176226.396248824,
    "exit": {
-    "25000": 2.09456229438576e-05,
-    "200000": 3.1485347944504305e-05,
-    "1000000": 0.0017252028045228185
+    "25000": 4.171099345895435e-05,
+    "200000": 5.117595216574955e-05,
+    "1000000": 0.0011481090332976507
    },
    "exit_no_rfq": {
-    "25000": 2.09456229438576e-05,
-    "200000": 3.1485347944504305e-05,
-    "1000000": 0.0017252028045228185
+    "25000": 4.171099345895435e-05,
+    "200000": 5.117595216574955e-05,
+    "1000000": 0.0011481090332976507
    },
    "venues": {
     "25000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 1.0
+      "share": 0.8504
+     },
+     {
+      "venue": "maverick-v2",
+      "kind": "amm",
+      "share": 0.1496
      }
     ],
     "200000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.98
+      "share": 0.9676
      },
      {
       "venue": "maverick-v2",
       "kind": "amm",
-      "share": 0.02
+      "share": 0.0324
      }
     ],
     "1000000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.6893
+      "share": 0.7583
      },
      {
       "venue": "aerodrome-cl",
       "kind": "amm",
-      "share": 0.1885
+      "share": 0.124
      },
      {
       "venue": "curve",
       "kind": "amm",
-      "share": 0.069
+      "share": 0.064
      },
      {
-      "venue": "quickswap-v4",
+      "venue": "hydrex-v4",
       "kind": "amm",
-      "share": 0.0271
+      "share": 0.0435
      },
      {
-      "venue": "aerodrome-cl-2",
+      "venue": "maverick-v2",
       "kind": "amm",
-      "share": 0.0261
+      "share": 0.0102
      }
     ]
    },
    "near": {
-    "1.1": 2078714.652435368,
-    "1.25": 5938025.589440536
+    "1.1": 2106454.261440188,
+    "1.25": 5947239.332792287
    }
   },
   {
@@ -758,58 +786,58 @@
    "loan": "USDC",
    "lltv": 0.625,
    "bonus": 0.12676056338028174,
-   "borrow_usd": 3943878.8082016683,
+   "borrow_usd": 3949019.0384925567,
    "exit": {
-    "25000": 0.002138040682243325,
-    "200000": 0.02271701546641325,
-    "1000000": 0.487799364993712
+    "25000": 0.0027117408893695405,
+    "200000": 0.02464755400859142,
+    "1000000": 0.45408088848362227
    },
    "exit_no_rfq": {
-    "25000": 0.0026719675316321245,
-    "200000": 0.024183337821600537,
-    "1000000": 0.4865861594371662
+    "1000000": 0.45408088848362227,
+    "25000": 0.002053372423348576,
+    "200000": 0.027604387813586984
    },
    "venues": {
     "25000": [
      {
       "venue": "pancake-v3",
       "kind": "amm",
-      "share": 0.96
+      "share": 0.9694
      },
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.04
+      "share": 0.0306
      }
     ],
     "200000": [
      {
       "venue": "pancake-v3",
       "kind": "amm",
-      "share": 0.728
+      "share": 0.7167
      },
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.272
+      "share": 0.2833
      }
     ],
     "1000000": [
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.8544
+      "share": 0.8567
      },
      {
       "venue": "pancake-v3",
       "kind": "amm",
-      "share": 0.1456
+      "share": 0.1433
      }
     ]
    },
    "near": {
-    "1.1": 5453.753239224677,
-    "1.25": 597897.132367275
+    "1.1": 6164.913397112066,
+    "1.25": 609177.4790381975
    }
   },
   {
@@ -818,133 +846,123 @@
    "loan": "EURC",
    "lltv": 0.86,
    "bonus": 0.04384133611691032,
-   "borrow_usd": 3870255.942484089,
+   "borrow_usd": 3869454.157693,
    "exit": {
-    "25000": 5.9595692547209644e-05,
-    "200000": 0.0011211725483081247,
-    "1000000": 0.0317154438889109
+    "25000": 0.00043976257982714095,
+    "200000": 0.0012012267419453382,
+    "1000000": 0.025531405895191983
    },
    "exit_no_rfq": {
-    "25000": 0.00019057331679028788,
-    "200000": 0.002595444974277883,
-    "1000000": 0.038106100770702644
+    "25000": 0.0,
+    "200000": 0.0,
+    "1000000": 0.01671452391005268
    },
    "venues": {
     "25000": [
      {
-      "venue": "kipseli-prop",
-      "kind": "maker_pool",
-      "share": 0.64
-     },
-     {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.2067
+      "share": 0.36
      },
      {
-      "venue": "pmm-13/uniswapv3",
-      "kind": "rfq",
-      "share": 0.1258
-     },
-     {
-      "venue": "metric-propamm/kipseli-prop",
+      "venue": "kipseli-prop",
       "kind": "maker_pool",
-      "share": 0.0275
-     }
-    ],
-    "200000": [
+      "share": 0.28
+     },
      {
       "venue": "hanji",
       "kind": "amm",
       "share": 0.28
      },
      {
-      "venue": "pmm-13/uniswapv3",
+      "venue": "pmm-13/aero-cl",
       "kind": "rfq",
-      "share": 0.24
-     },
+      "share": 0.08
+     }
+    ],
+    "200000": [
      {
-      "venue": "metric-propamm/aero-cl",
-      "kind": "maker_pool",
-      "share": 0.2091
-     },
-     {
-      "venue": "kipseli-prop",
-      "kind": "maker_pool",
-      "share": 0.1688
+      "venue": "hanji",
+      "kind": "amm",
+      "share": 0.44
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.0793
+      "share": 0.28
      },
      {
-      "venue": "uniswapv3",
-      "kind": "amm",
-      "share": 0.0227
+      "venue": "kipseli-prop",
+      "kind": "maker_pool",
+      "share": 0.12
+     },
+     {
+      "venue": "metric-propamm/hanji",
+      "kind": "maker_pool",
+      "share": 0.12
+     },
+     {
+      "venue": "woofi-v3/aero-cl",
+      "kind": "maker_pool",
+      "share": 0.04
      }
     ],
     "1000000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.2472
+      "share": 0.43
      },
      {
-      "venue": "pmm-19",
+      "venue": "pmm-19/aero-cl",
       "kind": "rfq",
-      "share": 0.1871
-     },
-     {
-      "venue": "metric-propamm",
-      "kind": "maker_pool",
-      "share": 0.12
+      "share": 0.2265
      },
      {
       "venue": "hanji",
       "kind": "amm",
-      "share": 0.1129
+      "share": 0.0947
      },
      {
-      "venue": "woofi-v3",
+      "venue": "metric-propamm/aero-cl",
       "kind": "maker_pool",
-      "share": 0.08
+      "share": 0.0693
      },
      {
-      "venue": "kipseli-prop",
-      "kind": "maker_pool",
-      "share": 0.0599
-     },
-     {
-      "venue": "uniswapv3",
-      "kind": "amm",
-      "share": 0.0577
-     },
-     {
-      "venue": "native-v2",
+      "venue": "native-v2/aero-cl",
       "kind": "rfq",
-      "share": 0.056
+      "share": 0.0512
      },
      {
-      "venue": "pmm-13",
+      "venue": "woofi-v3/aero-cl",
+      "kind": "maker_pool",
+      "share": 0.04
+     },
+     {
+      "venue": "pmm-13/aero-cl",
       "kind": "rfq",
       "share": 0.04
      },
      {
-      "venue": "elfomofi",
-      "kind": "amm",
-      "share": 0.0293
+      "venue": "kipseli-prop",
+      "kind": "maker_pool",
+      "share": 0.0302
      },
      {
-      "venue": "pmm-8",
-      "kind": "rfq",
+      "venue": "elfomofi",
+      "kind": "amm",
       "share": 0.01
+     },
+     {
+      "venue": "metric-propamm/pancake-v3",
+      "kind": "maker_pool",
+      "share": 0.0082
      }
     ]
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 2382932.653538271
+    "1.25": 2372018.2450829754
    }
   },
   {
@@ -953,45 +971,45 @@
    "loan": "WETH",
    "lltv": 0.945,
    "bonus": 0.016776817488561413,
-   "borrow_usd": 3384346.387496793,
+   "borrow_usd": 3361466.357782965,
    "exit": {
-    "25000": 0.00018339817490375943,
-    "200000": 0.0006215239514363313,
-    "1000000": 0.0009985853158992475
+    "25000": 0.00029357855804401645,
+    "200000": 0.00041759096962223907,
+    "1000000": 0.0007340497737001739
    },
    "exit_no_rfq": {
-    "25000": 0.00018339817490375943,
-    "200000": 0.0006215239514363313,
-    "1000000": 0.0009985853158992475
+    "25000": 0.00029357855804401645,
+    "200000": 0.00041759096962223907,
+    "1000000": 0.0007340497737001739
    },
    "venues": {
     "25000": [
      {
-      "venue": "aero-cl",
+      "venue": "fluid-dex-t1",
       "kind": "amm",
-      "share": 0.5107
+      "share": 0.6569
      },
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.4893
+      "share": 0.2122
+     },
+     {
+      "venue": "aero-cl",
+      "kind": "amm",
+      "share": 0.1309
      }
     ],
     "200000": [
      {
       "venue": "fluid-dex-t1",
       "kind": "amm",
-      "share": 0.8626
+      "share": 0.9716
      },
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.0725
-     },
-     {
-      "venue": "aero-cl",
-      "kind": "amm",
-      "share": 0.0649
+      "share": 0.0284
      }
     ],
     "1000000": [
@@ -1003,8 +1021,8 @@
     ]
    },
    "near": {
-    "1.1": 3605072.507736982,
-    "1.25": 3715425.118628878
+    "1.1": 3576455.6252717557,
+    "1.25": 3685920.405671128
    }
   },
   {
@@ -1013,7 +1031,7 @@
    "loan": "USDC",
    "lltv": 0.915,
    "bonus": 0.026167265264238182,
-   "borrow_usd": 3188397.2788960882,
+   "borrow_usd": 3188405.0050221323,
    "exit": {
     "25000": null,
     "200000": null,
@@ -1041,23 +1059,23 @@
    "loan": "USDC",
    "lltv": 0.77,
    "bonus": 0.07411385606874332,
-   "borrow_usd": 3162227.232153446,
+   "borrow_usd": 3166652.0497954166,
    "exit": {
-    "25000": 0.0010037491787134867,
-    "200000": 0.0031854367576396037,
-    "1000000": 0.006181875498368905
+    "25000": 0.0007145325301098904,
+    "200000": 0.0018343434570323724,
+    "1000000": 0.026787088917029855
    },
    "exit_no_rfq": {
-    "25000": 0.0018757061223757532,
-    "200000": 0.003623436497934729,
-    "1000000": 0.005431981119308316
+    "25000": 0.0016557596463286917,
+    "200000": 0.00627472206206392,
+    "1000000": 0.029866755830568747
    },
    "venues": {
     "25000": [
      {
       "venue": "pmm-19/aero-cl",
       "kind": "rfq",
-      "share": 0.48
+      "share": 0.6
      },
      {
       "venue": "pmm-19/uniswapv3",
@@ -1065,35 +1083,25 @@
       "share": 0.32
      },
      {
-      "venue": "bebop/aero-cl",
+      "venue": "pmm-19/uniswap-v4",
       "kind": "rfq",
-      "share": 0.16
-     },
-     {
-      "venue": "metric-propamm/aero-cl",
-      "kind": "maker_pool",
-      "share": 0.04
+      "share": 0.08
      }
     ],
     "200000": [
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.8262
-     },
-     {
-      "venue": "bebop",
-      "kind": "rfq",
-      "share": 0.08
-     },
-     {
-      "venue": "metric-propamm",
-      "kind": "maker_pool",
-      "share": 0.0538
+      "share": 0.64
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
+      "share": 0.32
+     },
+     {
+      "venue": "metric-propamm",
+      "kind": "maker_pool",
       "share": 0.04
      }
     ],
@@ -1101,33 +1109,48 @@
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.5099
-     },
-     {
-      "venue": "aero-cl",
-      "kind": "amm",
-      "share": 0.35
+      "share": 0.5732
      },
      {
       "venue": "bebop",
       "kind": "rfq",
-      "share": 0.08
+      "share": 0.12
+     },
+     {
+      "venue": "aero-cl",
+      "kind": "amm",
+      "share": 0.11
      },
      {
       "venue": "pmm-1",
       "kind": "rfq",
-      "share": 0.044
+      "share": 0.08
+     },
+     {
+      "venue": "aero-v2-volatile",
+      "kind": "amm",
+      "share": 0.04
+     },
+     {
+      "venue": "uniswapv3",
+      "kind": "amm",
+      "share": 0.0311
+     },
+     {
+      "venue": "aerodrome",
+      "kind": "amm",
+      "share": 0.0268
      },
      {
       "venue": "metric-propamm",
       "kind": "maker_pool",
-      "share": 0.0161
+      "share": 0.0189
      }
     ]
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 0.0
+    "1.25": 4665985.877515229
    }
   },
   {
@@ -1136,7 +1159,7 @@
    "loan": "USDC",
    "lltv": 0.915,
    "bonus": 0.026167265264238182,
-   "borrow_usd": 3084182.061697493,
+   "borrow_usd": 3073214.3175456724,
    "exit": {
     "25000": null,
     "200000": null,
@@ -1154,7 +1177,7 @@
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 1738836.8580325057
+    "1.25": 1739046.9900896125
    },
    "gap": "no_route"
   },
@@ -1164,16 +1187,16 @@
    "loan": "USDC",
    "lltv": 0.625,
    "bonus": 0.12676056338028174,
-   "borrow_usd": 2917003.4502635757,
+   "borrow_usd": 3052797.9289237326,
    "exit": {
-    "25000": 0.0012417738560136504,
-    "200000": 0.003553695507310217,
-    "1000000": 0.6389812165652275
+    "25000": 0.002680316475091593,
+    "200000": 0.006706127015250529,
+    "1000000": 0.4806586784094158
    },
    "exit_no_rfq": {
-    "25000": 0.0012417738560136504,
-    "200000": 0.003553695507310217,
-    "1000000": 0.6389812165652275
+    "25000": 0.002680316475091593,
+    "200000": 0.006706127015250529,
+    "1000000": 0.4806586784094158
    },
    "venues": {
     "25000": [
@@ -1194,23 +1217,23 @@
      {
       "venue": "uniswap-v4",
       "kind": "amm",
-      "share": 0.6481
+      "share": 0.4855
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.2607
+      "share": 0.4559
      },
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.0912
+      "share": 0.0586
      }
     ]
    },
    "near": {
-    "1.1": 69329.09494163969,
-    "1.25": 469055.28931610106
+    "1.1": 15218.458689849867,
+    "1.25": 585203.8266353966
    }
   },
   {
@@ -1219,45 +1242,45 @@
    "loan": "USDC",
    "lltv": 0.86,
    "bonus": 0.04384133611691032,
-   "borrow_usd": 2182736.1931213727,
+   "borrow_usd": 2182752.773914651,
    "exit": {
-    "25000": 0.0006144838782564666,
-    "200000": 0.0011107461403360164,
-    "1000000": 0.0019779169848985756
+    "25000": 0.00021234590477225979,
+    "200000": 0.0009875522089565214,
+    "1000000": 0.0016250012249040546
    },
    "exit_no_rfq": {
-    "25000": 0.0006144838782564666,
-    "200000": 0.0011107461403360164,
-    "1000000": 0.0017929087346802985
+    "25000": 0.00021234590477225979,
+    "200000": 0.0009875522089565214,
+    "1000000": 0.0010721981223115185
    },
    "venues": {
     "25000": [
      {
+      "venue": "fluid-dex-t1",
+      "kind": "amm",
+      "share": 0.6576
+     },
+     {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.5419
+      "share": 0.2128
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.4581
+      "share": 0.1296
      }
     ],
     "200000": [
      {
       "venue": "fluid-dex-t1",
       "kind": "amm",
-      "share": 0.88
+      "share": 0.9714
      },
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.08
-     },
-     {
-      "venue": "aero-cl",
-      "kind": "amm",
-      "share": 0.04
+      "share": 0.0286
      }
     ],
     "1000000": [
@@ -1269,8 +1292,8 @@
     ]
    },
    "near": {
-    "1.1": 0.27864480618687065,
-    "1.25": 95745.36431280886
+    "1.1": 0.27643060594874796,
+    "1.25": 94984.54120125805
    }
   },
   {
@@ -1279,47 +1302,47 @@
    "loan": "USDC",
    "lltv": 0.625,
    "bonus": 0.12676056338028174,
-   "borrow_usd": 1947086.839477075,
+   "borrow_usd": 1947191.91023089,
    "exit": {
-    "25000": 0.06544335435158366,
-    "200000": 0.07060656635722362,
-    "1000000": 0.4379957233735684
+    "25000": 0.06121038420255309,
+    "200000": 0.06969810654267938,
+    "1000000": 0.44568586931073984
    },
    "exit_no_rfq": {
-    "25000": 0.08250541890490626,
-    "200000": 0.8817871191455074,
-    "1000000": 0.976360443779942
+    "25000": 0.09435926852171728,
+    "200000": 0.8826249593814737,
+    "1000000": 0.9765243094410577
    },
    "venues": {
     "25000": [
      {
       "venue": "bebop",
       "kind": "rfq",
-      "share": 0.785
+      "share": 0.9207
      },
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.215
+      "share": 0.0793
      }
     ],
     "200000": [
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.7344
+      "share": 0.9251
      },
      {
       "venue": "bebop",
       "kind": "rfq",
-      "share": 0.2656
+      "share": 0.0749
      }
     ],
     "1000000": [
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.5166
+      "share": 0.5269
      },
      {
       "venue": "aero-cl",
@@ -1327,19 +1350,19 @@
       "share": 0.08
      },
      {
-      "venue": "pancake-v3",
+      "venue": "hydrex-v4",
       "kind": "amm",
       "share": 0.08
      },
      {
-      "venue": "bebop",
-      "kind": "rfq",
-      "share": 0.0778
+      "venue": "pancake-v3",
+      "kind": "amm",
+      "share": 0.0654
      },
      {
-      "venue": "uniswap-v4-o1",
-      "kind": "amm",
-      "share": 0.07
+      "venue": "bebop",
+      "kind": "rfq",
+      "share": 0.0578
      },
      {
       "venue": "uniswap-v4",
@@ -1352,25 +1375,25 @@
       "share": 0.04
      },
      {
-      "venue": "hydrex-v4",
+      "venue": "uniswapv3",
       "kind": "amm",
       "share": 0.04
      },
      {
-      "venue": "uniswapv3",
+      "venue": "uniswap-v4-fee",
       "kind": "amm",
       "share": 0.04
      },
      {
       "venue": "kyberswap-limit-order-v2",
       "kind": "rfq",
-      "share": 0.0156
+      "share": 0.0298
      }
     ]
    },
    "near": {
-    "1.1": 0.0,
-    "1.25": 934005.4800007144
+    "1.1": 95.19413326374901,
+    "1.25": 1070497.8842246144
    }
   },
   {
@@ -1379,16 +1402,16 @@
    "loan": "USDC",
    "lltv": 0.625,
    "bonus": 0.12676056338028174,
-   "borrow_usd": 1938854.659928635,
+   "borrow_usd": 1943248.576794128,
    "exit": {
-    "25000": 0.0668671844111538,
-    "200000": 0.07907442941607234,
-    "1000000": 0.35472106712850104
+    "25000": 0.06276590689962835,
+    "200000": 0.07507489949021662,
+    "1000000": 0.37161380254298915
    },
    "exit_no_rfq": {
-    "25000": 0.08033158377741034,
-    "200000": 0.8775695040442476,
-    "1000000": 0.9792485814478143
+    "25000": 0.15552866995120251,
+    "200000": 0.8869975716415933,
+    "1000000": 0.9773515214152926
    },
    "venues": {
     "25000": [
@@ -1419,7 +1442,7 @@
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.546
+      "share": 0.5208
      },
      {
       "venue": "bebop",
@@ -1432,20 +1455,20 @@
       "share": 0.12
      },
      {
-      "venue": "aerodrome-cl",
-      "kind": "amm",
-      "share": 0.0688
-     },
-     {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.0652
+      "share": 0.08
+     },
+     {
+      "venue": "aerodrome-cl",
+      "kind": "amm",
+      "share": 0.0792
      }
     ]
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 715490.7315523197
+    "1.25": 712538.3540121182
    }
   },
   {
@@ -1454,98 +1477,68 @@
    "loan": "USDC",
    "lltv": 0.77,
    "bonus": 0.07411385606874332,
-   "borrow_usd": 1666010.5451993672,
+   "borrow_usd": 1666012.8047628393,
    "exit": {
-    "25000": 0.0013111334843625144,
-    "200000": 0.009023792207094483,
-    "1000000": 0.3348402456691617
+    "25000": 0.0,
+    "200000": 0.010814536463303104,
+    "1000000": 0.08209472390197481
    },
    "exit_no_rfq": {
-    "25000": 0.0010699769476585352,
-    "200000": 0.010281788467831343,
-    "1000000": 0.28369230953561464
+    "25000": 0.0024313727453472156,
+    "200000": 0.012894209627171138,
+    "1000000": 0.2893409839367024
    },
    "venues": {
     "25000": [
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.7053
+      "share": 0.96
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.2466
-     },
-     {
-      "venue": "pancake-v3",
-      "kind": "amm",
-      "share": 0.0481
+      "share": 0.04
      }
     ],
     "200000": [
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.9381
+      "share": 0.9613
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.0619
+      "share": 0.0387
      }
     ],
     "1000000": [
      {
+      "venue": "pmm-19",
+      "kind": "rfq",
+      "share": 0.4225
+     },
+     {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.44
+      "share": 0.4175
      },
      {
       "venue": "pancake-v3",
       "kind": "amm",
-      "share": 0.2
+      "share": 0.12
      },
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.12
-     },
-     {
-      "venue": "aerodrome-cl-3",
-      "kind": "amm",
-      "share": 0.08
-     },
-     {
-      "venue": "aerodrome-cl",
-      "kind": "amm",
       "share": 0.04
-     },
-     {
-      "venue": "aerodrome",
-      "kind": "amm",
-      "share": 0.04
-     },
-     {
-      "venue": "uniswap-v4",
-      "kind": "amm",
-      "share": 0.04
-     },
-     {
-      "venue": "kyberswap-limit-order-v2/uniswap-v4",
-      "kind": "rfq",
-      "share": 0.02
-     },
-     {
-      "venue": "uniswap",
-      "kind": "amm",
-      "share": 0.02
      }
     ]
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 30767.670161112208
+    "1.25": 30658.883219958567
    }
   },
   {
@@ -1554,87 +1547,77 @@
    "loan": "USDC",
    "lltv": 0.625,
    "bonus": 0.12676056338028174,
-   "borrow_usd": 978069.9140910575,
+   "borrow_usd": 1078057.0670624143,
    "exit": {
-    "25000": 0.002166227312725977,
-    "200000": 0.0022375171546620276,
-    "1000000": 0.00637281382122401
+    "25000": 0.001347964074900787,
+    "200000": 0.0028928058441510807,
+    "1000000": 0.006172129729426268
    },
    "exit_no_rfq": {
-    "25000": 0.0021866495177526035,
-    "200000": 0.003153989262326351,
-    "1000000": 0.0068761560004201305
+    "25000": 0.0012549888879773707,
+    "200000": 0.0015022424047919092,
+    "1000000": 0.005496831016567949
    },
    "venues": {
     "25000": [
      {
-      "venue": "pmm-19/aero-v2-volatile",
+      "venue": "pmm-19/aero-cl",
       "kind": "rfq",
-      "share": 0.32
+      "share": 0.48
      },
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.3165
-     },
-     {
-      "venue": "pmm-19/aero-cl",
-      "kind": "rfq",
-      "share": 0.16
+      "share": 0.2
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.1393
+      "share": 0.16
      },
      {
       "venue": "bebop/aero-cl",
       "kind": "rfq",
-      "share": 0.0641
+      "share": 0.16
      }
     ],
     "200000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.3499
+      "share": 0.3006
      },
      {
       "venue": "pmm-19/aero-cl",
       "kind": "rfq",
-      "share": 0.2499
+      "share": 0.2977
      },
      {
       "venue": "pmm-19/aero-v2-volatile",
       "kind": "rfq",
-      "share": 0.16
+      "share": 0.1919
      },
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.13
+      "share": 0.1298
      },
      {
-      "venue": "bebop/aero-v2-volatile",
+      "venue": "bebop/aero-cl",
       "kind": "rfq",
       "share": 0.08
-     },
-     {
-      "venue": "aero-v2-volatile",
-      "kind": "amm",
-      "share": 0.0302
      }
     ],
     "1000000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.6152
+      "share": 0.6554
      },
      {
       "venue": "pmm-19/aero-cl",
       "kind": "rfq",
-      "share": 0.2248
+      "share": 0.2246
      },
      {
       "venue": "pmm-19",
@@ -1642,7 +1625,7 @@
       "share": 0.04
      },
      {
-      "venue": "bebop/aero-cl",
+      "venue": "bebop/aero-v2-volatile",
       "kind": "rfq",
       "share": 0.04
      },
@@ -1650,17 +1633,12 @@
       "venue": "pmm-19/aero-v2-volatile",
       "kind": "rfq",
       "share": 0.04
-     },
-     {
-      "venue": "aero-v2-volatile",
-      "kind": "amm",
-      "share": 0.04
      }
     ]
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 6243.806049661197
+    "1.25": 202713.9865623959
    }
   },
   {
@@ -1669,133 +1647,63 @@
    "loan": "EURC",
    "lltv": 0.86,
    "bonus": 0.04384133611691032,
-   "borrow_usd": 957578.0261255536,
+   "borrow_usd": 958947.6662885192,
    "exit": {
-    "25000": 0.00045529803175115013,
-    "200000": 0.002785924492754832,
-    "1000000": 0.03044339888479697
+    "25000": 0.000967732154279366,
+    "200000": 0.0017981533702192687,
+    "1000000": 0.027202462697660135
    },
    "exit_no_rfq": {
-    "25000": 0.00045529803175115013,
-    "200000": 0.00238742938386316,
-    "1000000": 0.030848532313760946
+    "25000": 0.000967732154279366,
+    "200000": 0.001036829680725826,
+    "1000000": 0.026371181992400294
    },
    "venues": {
     "25000": [
      {
+      "venue": "fluid-dex-t1",
+      "kind": "amm",
+      "share": 0.68
+     },
+     {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.52
+      "share": 0.2
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.48
+      "share": 0.12
      }
     ],
     "200000": [
      {
       "venue": "fluid-dex-t1",
       "kind": "amm",
-      "share": 0.8658
+      "share": 0.96
      },
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.0858
-     },
-     {
-      "venue": "aero-cl",
-      "kind": "amm",
-      "share": 0.0484
+      "share": 0.04
      }
     ],
     "1000000": [
      {
       "venue": "fluid-dex-t1",
       "kind": "amm",
-      "share": 0.97
+      "share": 0.9799
      },
      {
       "venue": "maverick-v2",
       "kind": "amm",
-      "share": 0.03
+      "share": 0.0201
      }
     ]
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 7207.386407920694
-   }
-  },
-  {
-   "market": "0x76629002c9fdb20fb2092053a4f22c5c65e04a81887218b9546f2a2d82b4c0a8",
-   "collateral": "cbHYPE",
-   "loan": "USDC",
-   "lltv": 0.625,
-   "bonus": 0.12676056338028174,
-   "borrow_usd": 832070.1104133382,
-   "exit": {
-    "25000": 0.0005983422730846399,
-    "200000": 0.10286583129970672,
-    "1000000": 0.8145177761874471
-   },
-   "exit_no_rfq": {
-    "25000": 0.0005983422730846399,
-    "200000": 0.10286583129970672,
-    "1000000": 0.8145177761874471
-   },
-   "venues": {
-    "25000": [
-     {
-      "venue": "aero-cl",
-      "kind": "amm",
-      "share": 1.0
-     }
-    ],
-    "200000": [
-     {
-      "venue": "aero-cl",
-      "kind": "amm",
-      "share": 0.8335
-     },
-     {
-      "venue": "uniswap-v4",
-      "kind": "amm",
-      "share": 0.1542
-     },
-     {
-      "venue": "uniswap-v4-fee",
-      "kind": "amm",
-      "share": 0.0123
-     }
-    ],
-    "1000000": [
-     {
-      "venue": "uniswap-v4",
-      "kind": "amm",
-      "share": 0.828
-     },
-     {
-      "venue": "aero-cl",
-      "kind": "amm",
-      "share": 0.1676
-     },
-     {
-      "venue": "uniswapv3",
-      "kind": "amm",
-      "share": 0.003
-     },
-     {
-      "venue": "hydrex-v4",
-      "kind": "amm",
-      "share": 0.0015
-     }
-    ]
-   },
-   "near": {
-    "1.1": 16681.44788662538,
-    "1.25": 317496.09916094627
+    "1.25": 7150.114223597409
    }
   },
   {
@@ -1804,16 +1712,16 @@
    "loan": "USDC",
    "lltv": 0.77,
    "bonus": 0.07411385606874332,
-   "borrow_usd": 825752.8953786227,
+   "borrow_usd": 825784.4518554531,
    "exit": {
-    "25000": 0.0668671844111538,
-    "200000": 0.07907442941607234,
-    "1000000": 0.35472106712850104
+    "25000": 0.06276590689962835,
+    "200000": 0.07507489949021662,
+    "1000000": 0.37161380254298915
    },
    "exit_no_rfq": {
-    "25000": 0.08033158377741034,
-    "200000": 0.8775695040442476,
-    "1000000": 0.9792485814478143
+    "25000": 0.15552866995120251,
+    "200000": 0.8869975716415933,
+    "1000000": 0.9773515214152926
    },
    "venues": {
     "25000": [
@@ -1844,7 +1752,7 @@
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.546
+      "share": 0.5208
      },
      {
       "venue": "bebop",
@@ -1857,80 +1765,85 @@
       "share": 0.12
      },
      {
-      "venue": "aerodrome-cl",
-      "kind": "amm",
-      "share": 0.0688
-     },
-     {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.0652
+      "share": 0.08
+     },
+     {
+      "venue": "aerodrome-cl",
+      "kind": "amm",
+      "share": 0.0792
      }
     ]
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 12229.0318897883
+    "1.25": 12295.002612879172
    }
   },
   {
-   "market": "0xfd0895ba253889c243bf59bc4b96fd1e06d68631241383947b04d1c293a0cfea",
-   "collateral": "weETH",
-   "loan": "WETH",
-   "lltv": 0.945,
-   "bonus": 0.016776817488561413,
-   "borrow_usd": 803944.9093749598,
+   "market": "0x76629002c9fdb20fb2092053a4f22c5c65e04a81887218b9546f2a2d82b4c0a8",
+   "collateral": "cbHYPE",
+   "loan": "USDC",
+   "lltv": 0.625,
+   "bonus": 0.12676056338028174,
+   "borrow_usd": 811415.1634169103,
    "exit": {
-    "25000": 9.497363081689691e-05,
-    "200000": 0.0,
-    "1000000": 0.000638574753748955
+    "25000": 0.004397777535442127,
+    "200000": 0.04982466342682601,
+    "1000000": 0.7747895197407053
    },
    "exit_no_rfq": {
-    "25000": 9.497363081689691e-05,
-    "200000": 0.0,
-    "1000000": 0.000638574753748955
+    "25000": 0.004397777535442127,
+    "200000": 0.04982466342682601,
+    "1000000": 0.7747895197407053
    },
    "venues": {
     "25000": [
      {
-      "venue": "fluid-dex-t1",
-      "kind": "amm",
-      "share": 0.8969
-     },
-     {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.1031
+      "share": 1.0
      }
     ],
     "200000": [
      {
-      "venue": "fluid-dex-t1",
-      "kind": "amm",
-      "share": 0.9805
-     },
-     {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.0195
+      "share": 0.92
+     },
+     {
+      "venue": "uniswap-v4",
+      "kind": "amm",
+      "share": 0.0691
+     },
+     {
+      "venue": "uniswap-v4-fee",
+      "kind": "amm",
+      "share": 0.0109
      }
     ],
     "1000000": [
      {
-      "venue": "fluid-dex-t1",
+      "venue": "uniswap-v4",
       "kind": "amm",
-      "share": 0.9378
+      "share": 0.7901
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.0622
+      "share": 0.2071
+     },
+     {
+      "venue": "uniswapv3",
+      "kind": "amm",
+      "share": 0.0029
      }
     ]
    },
    "near": {
-    "1.1": 676093.4326219218,
-    "1.25": 714502.4283836946
+    "1.1": 16543.11374401066,
+    "1.25": 315179.09682238026
    }
   },
   {
@@ -1939,67 +1852,72 @@
    "loan": "USDC",
    "lltv": 0.86,
    "bonus": 0.04384133611691032,
-   "borrow_usd": 793987.2794911823,
+   "borrow_usd": 793983.3988160924,
    "exit": {
-    "25000": 0.0008393956177052964,
-    "200000": 9.57334186231229e-05,
-    "1000000": 0.002300576063043125
+    "25000": 0.001321487230537488,
+    "200000": 0.00047753795943639155,
+    "1000000": 0.0021864268825203537
    },
    "exit_no_rfq": {
-    "200000": 9.57334186231229e-05,
-    "25000": 0.0012899693278652924,
-    "1000000": 0.0029330633527613337
+    "25000": 0.001321487230537488,
+    "200000": 0.00047753795943639155,
+    "1000000": 0.001883724955492938
    },
    "venues": {
     "25000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.959
+      "share": 0.7746
      },
      {
       "venue": "maverick-v2",
       "kind": "amm",
-      "share": 0.041
+      "share": 0.2254
      }
     ],
     "200000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 1.0
+      "share": 0.96
+     },
+     {
+      "venue": "maverick-v2",
+      "kind": "amm",
+      "share": 0.04
      }
     ],
     "1000000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.6848
-     },
-     {
-      "venue": "aerodrome-cl",
-      "kind": "amm",
-      "share": 0.14
+      "share": 0.7694
      },
      {
       "venue": "curve",
       "kind": "amm",
-      "share": 0.08
+      "share": 0.0706
      },
      {
-      "venue": "quickswap-v4",
+      "venue": "aerodrome-cl",
       "kind": "amm",
-      "share": 0.0352
-     },
-     {
-      "venue": "aerodrome-cl-2",
-      "kind": "amm",
-      "share": 0.03
+      "share": 0.06
      },
      {
       "venue": "hydrex-v4",
       "kind": "amm",
-      "share": 0.02
+      "share": 0.04
+     },
+     {
+      "venue": "aerodrome-cl-2",
+      "kind": "amm",
+      "share": 0.04
+     },
+     {
+      "venue": "maverick-v2",
+      "kind": "amm",
+      "share": 0.01
      },
      {
       "venue": "uniswapv3",
@@ -2010,7 +1928,72 @@
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 388822.13422559586
+    "1.25": 386969.3580834074
+   }
+  },
+  {
+   "market": "0xfd0895ba253889c243bf59bc4b96fd1e06d68631241383947b04d1c293a0cfea",
+   "collateral": "weETH",
+   "loan": "WETH",
+   "lltv": 0.945,
+   "bonus": 0.016776817488561413,
+   "borrow_usd": 776006.1468751571,
+   "exit": {
+    "25000": 9.555434255337225e-05,
+    "200000": 0.00019844761246201603,
+    "1000000": 0.0006437729289976435
+   },
+   "exit_no_rfq": {
+    "25000": 9.555434255337225e-05,
+    "200000": 0.00019844761246201603,
+    "1000000": 0.0006437729289976435
+   },
+   "venues": {
+    "25000": [
+     {
+      "venue": "fluid-dex-t1",
+      "kind": "amm",
+      "share": 0.92
+     },
+     {
+      "venue": "aero-cl",
+      "kind": "amm",
+      "share": 0.08
+     }
+    ],
+    "200000": [
+     {
+      "venue": "fluid-dex-t1",
+      "kind": "amm",
+      "share": 0.9766
+     },
+     {
+      "venue": "aero-cl",
+      "kind": "amm",
+      "share": 0.0234
+     }
+    ],
+    "1000000": [
+     {
+      "venue": "fluid-dex-t1",
+      "kind": "amm",
+      "share": 0.9367
+     },
+     {
+      "venue": "aero-cl",
+      "kind": "amm",
+      "share": 0.0625
+     },
+     {
+      "venue": "quickswap-v4",
+      "kind": "amm",
+      "share": 0.0007
+     }
+    ]
+   },
+   "near": {
+    "1.1": 604301.9815338815,
+    "1.25": 642438.0791066741
    }
   },
   {
@@ -2019,67 +2002,72 @@
    "loan": "USDC",
    "lltv": 0.86,
    "bonus": 0.04384133611691032,
-   "borrow_usd": 684364.5788666061,
+   "borrow_usd": 721155.7497891568,
    "exit": {
-    "25000": 0.0008393956177052964,
-    "200000": 9.57334186231229e-05,
-    "1000000": 0.002300576063043125
+    "25000": 0.001321487230537488,
+    "200000": 0.00047753795943639155,
+    "1000000": 0.0021864268825203537
    },
    "exit_no_rfq": {
-    "200000": 9.57334186231229e-05,
-    "25000": 0.0012899693278652924,
-    "1000000": 0.0029330633527613337
+    "25000": 0.001321487230537488,
+    "200000": 0.00047753795943639155,
+    "1000000": 0.001883724955492938
    },
    "venues": {
     "25000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.959
+      "share": 0.7746
      },
      {
       "venue": "maverick-v2",
       "kind": "amm",
-      "share": 0.041
+      "share": 0.2254
      }
     ],
     "200000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 1.0
+      "share": 0.96
+     },
+     {
+      "venue": "maverick-v2",
+      "kind": "amm",
+      "share": 0.04
      }
     ],
     "1000000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.6848
-     },
-     {
-      "venue": "aerodrome-cl",
-      "kind": "amm",
-      "share": 0.14
+      "share": 0.7694
      },
      {
       "venue": "curve",
       "kind": "amm",
-      "share": 0.08
+      "share": 0.0706
      },
      {
-      "venue": "quickswap-v4",
+      "venue": "aerodrome-cl",
       "kind": "amm",
-      "share": 0.0352
-     },
-     {
-      "venue": "aerodrome-cl-2",
-      "kind": "amm",
-      "share": 0.03
+      "share": 0.06
      },
      {
       "venue": "hydrex-v4",
       "kind": "amm",
-      "share": 0.02
+      "share": 0.04
+     },
+     {
+      "venue": "aerodrome-cl-2",
+      "kind": "amm",
+      "share": 0.04
+     },
+     {
+      "venue": "maverick-v2",
+      "kind": "amm",
+      "share": 0.01
      },
      {
       "venue": "uniswapv3",
@@ -2090,7 +2078,7 @@
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 8585.569672680365
+    "1.25": 55943.107656214495
    }
   },
   {
@@ -2099,7 +2087,7 @@
    "loan": "USDC",
    "lltv": 0.625,
    "bonus": 0.12676056338028174,
-   "borrow_usd": 650114.7900687178,
+   "borrow_usd": 650115.6740227143,
    "exit": {
     "25000": null,
     "200000": null,
@@ -2127,58 +2115,58 @@
    "loan": "SOL",
    "lltv": 0.915,
    "bonus": 0.026167265264238182,
-   "borrow_usd": 640906.5211140208,
+   "borrow_usd": 640591.82496328,
    "exit": {
-    "25000": 0.0031158905590953356,
-    "200000": 0.020530952590241403,
-    "1000000": 0.4738004186397362
+    "25000": 0.0018096216812001353,
+    "200000": 0.02050610502877004,
+    "1000000": 0.46078947022130246
    },
    "exit_no_rfq": {
-    "25000": 0.0031158905590953356,
-    "200000": 0.02104839161647809,
-    "1000000": 0.45578599635967965
+    "25000": 0.005822562363462014,
+    "200000": 0.027095809821815697,
+    "1000000": 0.46438918031351295
    },
    "venues": {
     "25000": [
      {
       "venue": "pancake-v3",
       "kind": "amm",
-      "share": 0.9741
+      "share": 0.8563
      },
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.0259
+      "share": 0.1437
      }
     ],
     "200000": [
      {
       "venue": "pancake-v3",
       "kind": "amm",
-      "share": 0.728
+      "share": 0.7167
      },
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.272
+      "share": 0.2833
      }
     ],
     "1000000": [
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.88
+      "share": 0.8567
      },
      {
       "venue": "pancake-v3",
       "kind": "amm",
-      "share": 0.12
+      "share": 0.1433
      }
     ]
    },
    "near": {
-    "1.1": 736268.4045962368,
-    "1.25": 737848.708413221
+    "1.1": 736074.5537588254,
+    "1.25": 737659.4456812222
    }
   },
   {
@@ -2187,98 +2175,68 @@
    "loan": "USDC",
    "lltv": 0.86,
    "bonus": 0.04384133611691032,
-   "borrow_usd": 596251.2930391543,
+   "borrow_usd": 596248.3796788773,
    "exit": {
-    "25000": 0.0013111334843625144,
-    "200000": 0.009023792207094483,
-    "1000000": 0.3348402456691617
+    "25000": 0.0,
+    "200000": 0.010814536463303104,
+    "1000000": 0.08209472390197481
    },
    "exit_no_rfq": {
-    "25000": 0.0010699769476585352,
-    "200000": 0.010281788467831343,
-    "1000000": 0.28369230953561464
+    "25000": 0.0024313727453472156,
+    "200000": 0.012894209627171138,
+    "1000000": 0.2893409839367024
    },
    "venues": {
     "25000": [
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.7053
+      "share": 0.96
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.2466
-     },
-     {
-      "venue": "pancake-v3",
-      "kind": "amm",
-      "share": 0.0481
+      "share": 0.04
      }
     ],
     "200000": [
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.9381
+      "share": 0.9613
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.0619
+      "share": 0.0387
      }
     ],
     "1000000": [
      {
+      "venue": "pmm-19",
+      "kind": "rfq",
+      "share": 0.4225
+     },
+     {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.44
+      "share": 0.4175
      },
      {
       "venue": "pancake-v3",
       "kind": "amm",
-      "share": 0.2
+      "share": 0.12
      },
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.12
-     },
-     {
-      "venue": "aerodrome-cl-3",
-      "kind": "amm",
-      "share": 0.08
-     },
-     {
-      "venue": "aerodrome-cl",
-      "kind": "amm",
       "share": 0.04
-     },
-     {
-      "venue": "aerodrome",
-      "kind": "amm",
-      "share": 0.04
-     },
-     {
-      "venue": "uniswap-v4",
-      "kind": "amm",
-      "share": 0.04
-     },
-     {
-      "venue": "kyberswap-limit-order-v2/uniswap-v4",
-      "kind": "rfq",
-      "share": 0.02
-     },
-     {
-      "venue": "uniswap",
-      "kind": "amm",
-      "share": 0.02
      }
     ]
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 114228.17094933141
+    "1.25": 113824.28813187781
    }
   },
   {
@@ -2287,72 +2245,82 @@
    "loan": "USDC",
    "lltv": 0.625,
    "bonus": 0.12676056338028174,
-   "borrow_usd": 587344.7415086421,
+   "borrow_usd": 588242.219205132,
    "exit": {
-    "25000": 0.02142965202400049,
-    "200000": 0.6995924783657843,
-    "1000000": 0.9398995983120239
+    "25000": 0.020168309781151028,
+    "200000": 0.6956092100773806,
+    "1000000": 0.939107776901482
    },
    "exit_no_rfq": {
-    "25000": 0.02142965202400049,
-    "200000": 0.6995924783657843,
-    "1000000": 0.9398995983120239
+    "25000": 0.020168309781151028,
+    "200000": 0.6948117111332242,
+    "1000000": 0.9389549864665772
    },
    "venues": {
     "25000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.7928
+      "share": 0.8019
      },
      {
       "venue": "aerodrome-cl",
       "kind": "amm",
-      "share": 0.2072
+      "share": 0.1981
      }
     ],
     "200000": [
      {
-      "venue": "uniswap-v4",
-      "kind": "amm",
-      "share": 0.32
-     },
-     {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.32
+      "share": 0.3646
+     },
+     {
+      "venue": "uniswap-v4",
+      "kind": "amm",
+      "share": 0.28
      },
      {
       "venue": "uniswap",
       "kind": "amm",
-      "share": 0.12
-     },
-     {
-      "venue": "uniswapv3",
-      "kind": "amm",
-      "share": 0.12
+      "share": 0.17
      },
      {
       "venue": "aerodrome-cl",
       "kind": "amm",
-      "share": 0.08
+      "share": 0.1
      },
      {
       "venue": "hydrex-v4",
       "kind": "amm",
       "share": 0.04
+     },
+     {
+      "venue": "kyberswap-limit-order-v2",
+      "kind": "rfq",
+      "share": 0.0354
+     },
+     {
+      "venue": "uniswapv3",
+      "kind": "amm",
+      "share": 0.01
      }
     ],
     "1000000": [
      {
       "venue": "uniswap-v4",
       "kind": "amm",
-      "share": 0.57
+      "share": 0.6289
      },
      {
-      "venue": "uniswapv3",
+      "venue": "uniswap",
       "kind": "amm",
-      "share": 0.1846
+      "share": 0.1136
+     },
+     {
+      "venue": "hydrex-v4",
+      "kind": "amm",
+      "share": 0.0875
      },
      {
       "venue": "aero-cl",
@@ -2365,20 +2333,20 @@
       "share": 0.08
      },
      {
-      "venue": "hydrex-v4",
+      "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.0757
+      "share": 0.01
      },
      {
-      "venue": "uniswap",
-      "kind": "amm",
-      "share": 0.0097
+      "venue": "kyberswap-limit-order-v2",
+      "kind": "rfq",
+      "share": 0.0
      }
     ]
    },
    "near": {
-    "1.1": 15584.442754109612,
-    "1.25": 130468.18511222547
+    "1.1": 15515.655965090513,
+    "1.25": 136456.65221973084
    }
   },
   {
@@ -2387,16 +2355,16 @@
    "loan": "USDC",
    "lltv": 0.77,
    "bonus": 0.07411385606874332,
-   "borrow_usd": 503278.56186761305,
+   "borrow_usd": 503277.11093110905,
    "exit": {
-    "25000": 0.00037751517377060395,
-    "200000": 0.0006528584516772851,
-    "1000000": 0.001998674192305927
+    "25000": 0.00025669794785376787,
+    "200000": 0.0003878625808654279,
+    "1000000": 0.0016877180278727089
    },
    "exit_no_rfq": {
-    "200000": 0.0006528584516772851,
-    "25000": 0.0007751552211541224,
-    "1000000": 0.0022691979056456146
+    "25000": 0.00025669794785376787,
+    "200000": 2.513135178849879e-07,
+    "1000000": 0.0
    },
    "venues": {
     "25000": [
@@ -2423,7 +2391,7 @@
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 357089.321217901
+    "1.25": 369445.10418196797
    }
   },
   {
@@ -2432,28 +2400,33 @@
    "loan": "cbBTC",
    "lltv": 0.915,
    "bonus": 0.026167265264238182,
-   "borrow_usd": 437626.4680394348,
+   "borrow_usd": 435592.0853947924,
    "exit": {
-    "25000": 0.0011913134678089854,
-    "200000": 0.001986120692249682,
-    "1000000": 0.0017398382214880437
+    "25000": 0.0013345612428288245,
+    "200000": 0.0014820882698599602,
+    "1000000": 0.940173833587178
    },
    "exit_no_rfq": {
-    "25000": 0.0011913134678089854,
-    "200000": 0.001986120692249682,
-    "1000000": 0.0017398382214880437
+    "25000": 0.0013345612428288245,
+    "200000": 0.0014820882698599602,
+    "1000000": 0.940173833587178
    },
    "venues": {
     "25000": [
      {
       "venue": "aerodrome-cl",
       "kind": "amm",
-      "share": 0.9494
+      "share": 0.95
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.0506
+      "share": 0.0353
+     },
+     {
+      "venue": "uniswap-v4",
+      "kind": "amm",
+      "share": 0.0147
      }
     ],
     "200000": [
@@ -2472,8 +2445,8 @@
     ]
    },
    "near": {
-    "1.1": 203188.18604521177,
-    "1.25": 463169.6548384062
+    "1.1": 202574.9286578253,
+    "1.25": 461771.7280299074
    }
   },
   {
@@ -2482,133 +2455,123 @@
    "loan": "EURC",
    "lltv": 0.86,
    "bonus": 0.04384133611691032,
-   "borrow_usd": 349702.2934349262,
+   "borrow_usd": 349600.79241032107,
    "exit": {
-    "25000": 3.153452714099725e-05,
-    "200000": 0.0011218276796431947,
-    "1000000": 0.02896992344119187
+    "25000": 0.0004127490102728837,
+    "200000": 0.0008739381868503315,
+    "1000000": 0.02642575396942881
    },
    "exit_no_rfq": {
-    "25000": 3.153452714099725e-05,
-    "200000": 0.001749238402086406,
-    "1000000": 0.02935412316339714
+    "25000": 0.0004127490102728837,
+    "200000": 0.0004231864163179999,
+    "1000000": 0.02484040028256096
    },
    "venues": {
     "25000": [
      {
-      "venue": "manta-prop",
-      "kind": "maker_pool",
-      "share": 0.4804
-     },
-     {
-      "venue": "aero-cl",
-      "kind": "amm",
-      "share": 0.28
-     },
-     {
-      "venue": "flux-prop",
-      "kind": "maker_pool",
-      "share": 0.08
-     },
-     {
-      "venue": "metric-propamm/kipseli-prop",
-      "kind": "maker_pool",
-      "share": 0.0796
-     },
-     {
-      "venue": "spire-prop",
-      "kind": "maker_pool",
-      "share": 0.04
-     },
-     {
       "venue": "kipseli-prop",
       "kind": "maker_pool",
-      "share": 0.04
-     }
-    ],
-    "200000": [
-     {
-      "venue": "manta-prop",
-      "kind": "maker_pool",
-      "share": 0.2409
-     },
-     {
-      "venue": "kipseli-prop",
-      "kind": "maker_pool",
-      "share": 0.24
+      "share": 0.52
      },
      {
       "venue": "hanji",
       "kind": "amm",
-      "share": 0.1677
+      "share": 0.36
      },
      {
-      "venue": "spire-prop",
+      "venue": "flux-prop",
       "kind": "maker_pool",
-      "share": 0.16
+      "share": 0.12
+     }
+    ],
+    "200000": [
+     {
+      "venue": "hanji",
+      "kind": "amm",
+      "share": 0.4045
+     },
+     {
+      "venue": "kipseli-prop",
+      "kind": "maker_pool",
+      "share": 0.2706
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.1371
+      "share": 0.1648
+     },
+     {
+      "venue": "manta-prop",
+      "kind": "maker_pool",
+      "share": 0.08
+     },
+     {
+      "venue": "lunarbase",
+      "kind": "amm",
+      "share": 0.04
      },
      {
       "venue": "metric-propamm/aero-cl",
       "kind": "maker_pool",
       "share": 0.04
-     },
-     {
-      "venue": "pmm-21/aero-cl",
-      "kind": "rfq",
-      "share": 0.0143
      }
     ],
     "1000000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.4156
+      "share": 0.4275
      },
      {
-      "venue": "pmm-19",
+      "venue": "pmm-19/aero-cl",
       "kind": "rfq",
       "share": 0.16
      },
      {
       "venue": "hanji",
       "kind": "amm",
-      "share": 0.1128
+      "share": 0.0949
      },
      {
-      "venue": "metric-propamm",
+      "venue": "metric-propamm/aero-cl",
       "kind": "maker_pool",
-      "share": 0.09
+      "share": 0.08
      },
      {
-      "venue": "native-v2",
-      "kind": "rfq",
-      "share": 0.08
+      "venue": "woofi-v3/aero-cl",
+      "kind": "maker_pool",
+      "share": 0.0656
      },
      {
       "venue": "manta-prop",
       "kind": "maker_pool",
-      "share": 0.0545
+      "share": 0.0541
      },
      {
       "venue": "kipseli-prop",
       "kind": "maker_pool",
-      "share": 0.0545
+      "share": 0.0541
      },
      {
-      "venue": "spire-prop",
-      "kind": "maker_pool",
-      "share": 0.0325
+      "venue": "native-v2/aero-cl",
+      "kind": "rfq",
+      "share": 0.0282
+     },
+     {
+      "venue": "elfomofi",
+      "kind": "amm",
+      "share": 0.0225
+     },
+     {
+      "venue": "lunarbase",
+      "kind": "amm",
+      "share": 0.0131
      }
     ]
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 117760.5998095672
+    "1.25": 116961.63571615327
    }
   },
   {
@@ -2617,58 +2580,63 @@
    "loan": "WETH",
    "lltv": 0.915,
    "bonus": 0.026167265264238182,
-   "borrow_usd": 322832.33154873917,
+   "borrow_usd": 320648.1397552246,
    "exit": {
-    "25000": 9.497363081689691e-05,
-    "200000": 0.0,
-    "1000000": 0.000638574753748955
+    "25000": 9.555434255337225e-05,
+    "200000": 0.00019844761246201603,
+    "1000000": 0.0006437729289976435
    },
    "exit_no_rfq": {
-    "25000": 9.497363081689691e-05,
-    "200000": 0.0,
-    "1000000": 0.000638574753748955
+    "25000": 9.555434255337225e-05,
+    "200000": 0.00019844761246201603,
+    "1000000": 0.0006437729289976435
    },
    "venues": {
     "25000": [
      {
       "venue": "fluid-dex-t1",
       "kind": "amm",
-      "share": 0.8969
+      "share": 0.92
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.1031
+      "share": 0.08
      }
     ],
     "200000": [
      {
       "venue": "fluid-dex-t1",
       "kind": "amm",
-      "share": 0.9805
+      "share": 0.9766
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.0195
+      "share": 0.0234
      }
     ],
     "1000000": [
      {
       "venue": "fluid-dex-t1",
       "kind": "amm",
-      "share": 0.9378
+      "share": 0.9367
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.0622
+      "share": 0.0625
+     },
+     {
+      "venue": "quickswap-v4",
+      "kind": "amm",
+      "share": 0.0007
      }
     ]
    },
    "near": {
-    "1.1": 347932.3483319307,
-    "1.25": 360096.3325251042
+    "1.1": 345460.2683968987,
+    "1.25": 357537.82676218316
    }
   },
   {
@@ -2677,28 +2645,28 @@
    "loan": "USDC",
    "lltv": 0.77,
    "bonus": 0.07411385606874332,
-   "borrow_usd": 270325.3724734216,
+   "borrow_usd": 271622.7003440571,
    "exit": {
-    "25000": 0.0031474882957924777,
-    "200000": 0.023944270535308454,
-    "1000000": 0.6786771543526358
+    "25000": 0.003061982093490956,
+    "200000": 0.023768023095764867,
+    "1000000": 0.6782085400994469
    },
    "exit_no_rfq": {
-    "25000": 0.0031474882957924777,
-    "200000": 0.023944270535308454,
-    "1000000": 0.6786771543526358
+    "25000": 0.003061982093490956,
+    "200000": 0.023768023095764867,
+    "1000000": 0.6782085400994469
    },
    "venues": {
     "25000": [
      {
-      "venue": "aero-cl",
-      "kind": "amm",
-      "share": 0.5025
-     },
-     {
       "venue": "pancake-v3",
       "kind": "amm",
-      "share": 0.4876
+      "share": 0.5349
+     },
+     {
+      "venue": "aero-cl",
+      "kind": "amm",
+      "share": 0.4552
      },
      {
       "venue": "uniswap-v4-fee",
@@ -2710,40 +2678,40 @@
      {
       "venue": "pancake-v3",
       "kind": "amm",
-      "share": 0.5308
+      "share": 0.5327
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.4692
+      "share": 0.4673
      }
     ],
     "1000000": [
      {
       "venue": "uniswap-v4",
       "kind": "amm",
-      "share": 0.4406
+      "share": 0.4565
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.2452
+      "share": 0.2288
      },
      {
       "venue": "pancake-v3",
       "kind": "amm",
-      "share": 0.2109
+      "share": 0.2117
      },
      {
       "venue": "uniswap-v4-doppler",
       "kind": "amm",
-      "share": 0.1033
+      "share": 0.103
      }
     ]
    },
    "near": {
-    "1.1": 1004.3515964882198,
-    "1.25": 48279.40453275273
+    "1.1": 1003.4612496176484,
+    "1.25": 49054.89916039776
    }
   },
   {
@@ -2752,88 +2720,203 @@
    "loan": "XSGD",
    "lltv": 0.86,
    "bonus": 0.04384133611691032,
-   "borrow_usd": 242157.06428095332,
+   "borrow_usd": 243254.76451696706,
    "exit": {
-    "25000": 0.0011475787285196715,
-    "200000": 0.01002669314614102,
-    "1000000": 0.6666359727817333
+    "25000": 0.004480370293407532,
+    "200000": 0.002941960241716224,
+    "1000000": 0.6602390226464427
    },
    "exit_no_rfq": {
-    "25000": 0.0011475787285196715,
-    "200000": 0.008938945338089588,
-    "1000000": 0.6659876668249871
+    "25000": 0.0,
+    "200000": 0.009628490105127119,
+    "1000000": 0.6588593654640884
    },
    "venues": {
     "25000": [
      {
-      "venue": "metric-propamm/kipseli-prop",
-      "kind": "maker_pool",
-      "share": 0.9648
+      "venue": "aero-cl",
+      "kind": "amm",
+      "share": 0.4184
      },
      {
       "venue": "kipseli-prop",
       "kind": "maker_pool",
-      "share": 0.0352
-     }
-    ],
-    "200000": [
-     {
-      "venue": "metric-propamm/aero-cl",
-      "kind": "maker_pool",
-      "share": 0.4164
+      "share": 0.32
      },
      {
       "venue": "hanji",
       "kind": "amm",
-      "share": 0.4
+      "share": 0.1816
      },
      {
-      "venue": "kipseli-prop",
-      "kind": "maker_pool",
-      "share": 0.1518
+      "venue": "pmm-13/hanji",
+      "kind": "rfq",
+      "share": 0.08
+     }
+    ],
+    "200000": [
+     {
+      "venue": "hanji",
+      "kind": "amm",
+      "share": 0.36
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.023
+      "share": 0.2806
      },
      {
-      "venue": "pmm-19/uniswap-v4",
+      "venue": "metric-propamm/aero-cl",
+      "kind": "maker_pool",
+      "share": 0.16
+     },
+     {
+      "venue": "kipseli-prop",
+      "kind": "maker_pool",
+      "share": 0.151
+     },
+     {
+      "venue": "woofi-v3/aero-cl",
+      "kind": "maker_pool",
+      "share": 0.04
+     },
+     {
+      "venue": "pmm-13/aero-cl",
       "kind": "rfq",
-      "share": 0.0088
+      "share": 0.0084
      }
     ],
     "1000000": [
      {
       "venue": "pmm-19/aero-cl",
       "kind": "rfq",
-      "share": 0.6148
+      "share": 0.6397
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.16
+      "share": 0.1203
      },
      {
       "venue": "hanji",
       "kind": "amm",
-      "share": 0.1067
+      "share": 0.1117
      },
      {
       "venue": "metric-propamm/aero-cl",
       "kind": "maker_pool",
-      "share": 0.0841
+      "share": 0.04
      },
      {
-      "venue": "pmm-13/uniswapv3",
+      "venue": "pmm-13/aero-cl",
       "kind": "rfq",
-      "share": 0.0345
+      "share": 0.04
+     },
+     {
+      "venue": "woofi-v3/kipseli-prop",
+      "kind": "maker_pool",
+      "share": 0.0271
+     },
+     {
+      "venue": "aero-v2-volatile",
+      "kind": "amm",
+      "share": 0.0211
      }
     ]
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 1262.790253074277
+    "1.25": 1257.0063679968061
+   }
+  },
+  {
+   "market": "0x2e2548390b8894d2ffaaababebc2b5f2501920e03a4c611b63b46e19bfc6b75d",
+   "collateral": "uniBTC",
+   "loan": "USDC",
+   "lltv": 0.77,
+   "bonus": 0.07411385606874332,
+   "borrow_usd": 237678.14081259922,
+   "exit": {
+    "25000": 0.8648884299541635,
+    "200000": 0.9851055820209874,
+    "1000000": 0.9998361975555622
+   },
+   "exit_no_rfq": {
+    "25000": 0.8648884299541635,
+    "1000000": 0.9998361975555622,
+    "200000": 0.9847983399323323
+   },
+   "venues": {
+    "25000": [
+     {
+      "venue": "uniswap-v4-fee",
+      "kind": "amm",
+      "share": 0.6281
+     },
+     {
+      "venue": "uniswap-v4",
+      "kind": "amm",
+      "share": 0.163
+     },
+     {
+      "venue": "aerodrome-cl-3",
+      "kind": "amm",
+      "share": 0.129
+     },
+     {
+      "venue": "aerodrome",
+      "kind": "amm",
+      "share": 0.08
+     }
+    ],
+    "200000": [
+     {
+      "venue": "uniswap-v4",
+      "kind": "amm",
+      "share": 0.587
+     },
+     {
+      "venue": "uniswap-v4-fee",
+      "kind": "amm",
+      "share": 0.32
+     },
+     {
+      "venue": "aerodrome",
+      "kind": "amm",
+      "share": 0.06
+     },
+     {
+      "venue": "kyberswap-limit-order-v2",
+      "kind": "rfq",
+      "share": 0.0169
+     },
+     {
+      "venue": "aerodrome-cl-3",
+      "kind": "amm",
+      "share": 0.0161
+     }
+    ],
+    "1000000": [
+     {
+      "venue": "uniswap-v4",
+      "kind": "amm",
+      "share": 0.8564
+     },
+     {
+      "venue": "aerodrome",
+      "kind": "amm",
+      "share": 0.08
+     },
+     {
+      "venue": "uniswap-v4-fee",
+      "kind": "amm",
+      "share": 0.0636
+     }
+    ]
+   },
+   "near": {
+    "1.1": 0.0,
+    "1.25": 1.6823966587058132
    }
   },
   {
@@ -2842,45 +2925,45 @@
    "loan": "WETH",
    "lltv": 0.965,
    "bonus": 0.010611419909045017,
-   "borrow_usd": 239278.94725583994,
+   "borrow_usd": 237659.2979877209,
    "exit": {
-    "25000": 0.00018339817490375943,
-    "200000": 0.0006215239514363313,
-    "1000000": 0.0009985853158992475
+    "25000": 0.00029357855804401645,
+    "200000": 0.00041759096962223907,
+    "1000000": 0.0007340497737001739
    },
    "exit_no_rfq": {
-    "25000": 0.00018339817490375943,
-    "200000": 0.0006215239514363313,
-    "1000000": 0.0009985853158992475
+    "25000": 0.00029357855804401645,
+    "200000": 0.00041759096962223907,
+    "1000000": 0.0007340497737001739
    },
    "venues": {
     "25000": [
      {
-      "venue": "aero-cl",
+      "venue": "fluid-dex-t1",
       "kind": "amm",
-      "share": 0.5107
+      "share": 0.6569
      },
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.4893
+      "share": 0.2122
+     },
+     {
+      "venue": "aero-cl",
+      "kind": "amm",
+      "share": 0.1309
      }
     ],
     "200000": [
      {
       "venue": "fluid-dex-t1",
       "kind": "amm",
-      "share": 0.8626
+      "share": 0.9716
      },
      {
       "venue": "uniswapv3",
       "kind": "amm",
-      "share": 0.0725
-     },
-     {
-      "venue": "aero-cl",
-      "kind": "amm",
-      "share": 0.0649
+      "share": 0.0284
      }
     ],
     "1000000": [
@@ -2892,93 +2975,8 @@
     ]
    },
    "near": {
-    "1.1": 253595.86581783037,
-    "1.25": 253598.34370452847
-   }
-  },
-  {
-   "market": "0x2e2548390b8894d2ffaaababebc2b5f2501920e03a4c611b63b46e19bfc6b75d",
-   "collateral": "uniBTC",
-   "loan": "USDC",
-   "lltv": 0.77,
-   "bonus": 0.07411385606874332,
-   "borrow_usd": 237670.48961015092,
-   "exit": {
-    "25000": 0.8640410018043668,
-    "200000": 0.9848016356335222,
-    "1000000": 0.9998353310280911
-   },
-   "exit_no_rfq": {
-    "25000": 0.8640410018043668,
-    "200000": 0.9848016356335222,
-    "1000000": 0.9998353310280911
-   },
-   "venues": {
-    "25000": [
-     {
-      "venue": "uniswap-v4-fee",
-      "kind": "amm",
-      "share": 0.6316
-     },
-     {
-      "venue": "uniswap-v4",
-      "kind": "amm",
-      "share": 0.1587
-     },
-     {
-      "venue": "aerodrome-cl-3",
-      "kind": "amm",
-      "share": 0.1297
-     },
-     {
-      "venue": "aerodrome",
-      "kind": "amm",
-      "share": 0.08
-     }
-    ],
-    "200000": [
-     {
-      "venue": "uniswap-v4",
-      "kind": "amm",
-      "share": 0.6205
-     },
-     {
-      "venue": "uniswap-v4-fee",
-      "kind": "amm",
-      "share": 0.32
-     },
-     {
-      "venue": "aerodrome",
-      "kind": "amm",
-      "share": 0.0433
-     },
-     {
-      "venue": "aerodrome-cl-3",
-      "kind": "amm",
-      "share": 0.0162
-     }
-    ],
-    "1000000": [
-     {
-      "venue": "uniswap-v4",
-      "kind": "amm",
-      "share": 0.856
-     },
-     {
-      "venue": "aerodrome",
-      "kind": "amm",
-      "share": 0.08
-     },
-     {
-      "venue": "uniswap-v4-fee",
-      "kind": "amm",
-      "share": 0.064
-     }
-    ]
-   },
-   "near": {
-    "1.1": 0.0,
-    "1.25": 1.6921481758937496
+    "1.1": 251580.7089632373,
+    "1.25": 251583.1671598597
    }
   },
   {
@@ -2987,52 +2985,52 @@
    "loan": "WETH",
    "lltv": 0.625,
    "bonus": 0.12676056338028174,
-   "borrow_usd": 237566.10134119948,
+   "borrow_usd": 235959.8614688838,
    "exit": {
-    "25000": 0.0018317211457915539,
-    "200000": 0.0034933727618732258,
-    "1000000": 0.004703310043892128
+    "25000": 0.0024237545622876056,
+    "200000": 0.005404707487513649,
+    "1000000": 0.026896353152665364
    },
    "exit_no_rfq": {
-    "25000": 0.0017515337080487026,
-    "200000": 0.00206092662252233,
-    "1000000": 0.004634607249719536
+    "25000": 0.0007425770803323184,
+    "200000": 0.004435875482496021,
+    "1000000": 0.029663814256329024
    },
    "venues": {
     "25000": [
      {
-      "venue": "pmm-19/aero-cl",
-      "kind": "rfq",
-      "share": 0.4
-     },
-     {
-      "venue": "metric-propamm/aero-cl",
-      "kind": "maker_pool",
-      "share": 0.24
-     },
-     {
       "venue": "pmm-19/uniswapv3",
       "kind": "rfq",
-      "share": 0.16
-     },
-     {
-      "venue": "pmm-19/uniswap-v4",
-      "kind": "rfq",
-      "share": 0.08
-     },
-     {
-      "venue": "bebop/aero-cl",
-      "kind": "rfq",
-      "share": 0.04
-     },
-     {
-      "venue": "pmm-8/aerodrome-cl",
-      "kind": "rfq",
-      "share": 0.04
+      "share": 0.48
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
+      "share": 0.24
+     },
+     {
+      "venue": "aero-v2-volatile",
+      "kind": "amm",
+      "share": 0.08
+     },
+     {
+      "venue": "aerodrome",
+      "kind": "amm",
+      "share": 0.08
+     },
+     {
+      "venue": "uniswapv3",
+      "kind": "amm",
+      "share": 0.04
+     },
+     {
+      "venue": "aerodrome-cl",
+      "kind": "amm",
+      "share": 0.04
+     },
+     {
+      "venue": "pmm-19/uniswap-v4",
+      "kind": "rfq",
       "share": 0.04
      }
     ],
@@ -3040,55 +3038,65 @@
      {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.84
-     },
-     {
-      "venue": "metric-propamm",
-      "kind": "maker_pool",
-      "share": 0.08
-     },
-     {
-      "venue": "bebop",
-      "kind": "rfq",
-      "share": 0.04
+      "share": 0.8996
      },
      {
       "venue": "aero-cl",
       "kind": "amm",
       "share": 0.04
+     },
+     {
+      "venue": "metric-propamm",
+      "kind": "maker_pool",
+      "share": 0.04
+     },
+     {
+      "venue": "aero-v2-volatile",
+      "kind": "amm",
+      "share": 0.0204
      }
     ],
     "1000000": [
      {
-      "venue": "aero-cl",
-      "kind": "amm",
-      "share": 0.4826
-     },
-     {
       "venue": "pmm-19",
       "kind": "rfq",
-      "share": 0.4187
+      "share": 0.6451
+     },
+     {
+      "venue": "aero-cl",
+      "kind": "amm",
+      "share": 0.11
      },
      {
       "venue": "pmm-1",
       "kind": "rfq",
-      "share": 0.0427
+      "share": 0.08
      },
      {
-      "venue": "bebop",
-      "kind": "rfq",
+      "venue": "uniswapv3",
+      "kind": "amm",
+      "share": 0.07
+     },
+     {
+      "venue": "aero-v2-volatile",
+      "kind": "amm",
       "share": 0.04
+     },
+     {
+      "venue": "aerodrome",
+      "kind": "amm",
+      "share": 0.0343
      },
      {
       "venue": "metric-propamm",
       "kind": "maker_pool",
-      "share": 0.016
+      "share": 0.0206
      }
     ]
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 3109.6201866114134
+    "1.25": 3020.5012333222094
    }
   },
   {
@@ -3097,16 +3105,16 @@
    "loan": "MXNB",
    "lltv": 0.915,
    "bonus": 0.026167265264238182,
-   "borrow_usd": 215285.582999597,
+   "borrow_usd": 214584.64629803353,
    "exit": {
-    "25000": 0.037594982861298365,
-    "200000": 0.5517459046834484,
-    "1000000": 0.9102790162831714
+    "25000": 0.03851164876810664,
+    "200000": 0.551652123397274,
+    "1000000": 0.910330401853096
    },
    "exit_no_rfq": {
-    "25000": 0.037594982861298365,
-    "200000": 0.5517459046834484,
-    "1000000": 0.9102790162831714
+    "25000": 0.03851164876810664,
+    "200000": 0.551652123397274,
+    "1000000": 0.910330401853096
    },
    "venues": {
     "25000": [
@@ -3140,14 +3148,14 @@
     ],
     "1000000": [
      {
-      "venue": "uniswap-v4",
-      "kind": "amm",
-      "share": 0.3797
-     },
-     {
       "venue": "uniswap",
       "kind": "amm",
-      "share": 0.3235
+      "share": 0.3861
+     },
+     {
+      "venue": "uniswap-v4",
+      "kind": "amm",
+      "share": 0.3171
      },
      {
       "venue": "aero-cl",
@@ -3163,7 +3171,7 @@
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 42.8698213662379
+    "1.25": 42.86810649814386
    }
   },
   {
@@ -3172,16 +3180,16 @@
    "loan": "WETH",
    "lltv": 0.915,
    "bonus": 0.026167265264238182,
-   "borrow_usd": 166945.19445249267,
+   "borrow_usd": 165815.69121990673,
    "exit": {
-    "25000": 0.0002772570021728482,
-    "200000": 0.0,
-    "1000000": 0.001329017208978489
+    "25000": 0.0002791540810170856,
+    "200000": 0.0003908105225447489,
+    "1000000": 0.0013424773865527984
    },
    "exit_no_rfq": {
-    "25000": 0.0002772570021728482,
-    "200000": 0.0,
-    "1000000": 0.001329017208978489
+    "25000": 0.0002791540810170856,
+    "200000": 0.0003908105225447489,
+    "1000000": 0.0013424773865527984
    },
    "venues": {
     "25000": [
@@ -3207,8 +3215,8 @@
     ]
    },
    "near": {
-    "1.1": 187988.09501675647,
-    "1.25": 187989.0316623775
+    "1.1": 186937.67368679037,
+    "1.25": 186938.60509871543
    }
   },
   {
@@ -3217,30 +3225,35 @@
    "loan": "VCHF",
    "lltv": 0.77,
    "bonus": 0.07411385606874332,
-   "borrow_usd": 157053.1546205892,
+   "borrow_usd": 156994.34988207338,
    "exit": {
-    "25000": 0.010497711273413812,
-    "200000": 0.21175768793967342,
-    "1000000": 0.9933842353025184
+    "25000": 0.011276177148215827,
+    "200000": 0.21216685136323143,
+    "1000000": 0.953588323827221
    },
    "exit_no_rfq": {
-    "25000": 0.010497711273413812,
-    "1000000": 0.9933842353025184,
-    "200000": 0.21512723145597146
+    "25000": 0.011276177148215827,
+    "1000000": 0.953588323827221,
+    "200000": 0.21532103735839214
    },
    "venues": {
     "25000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 1.0
+      "share": 0.7795
+     },
+     {
+      "venue": "maverick-v2",
+      "kind": "amm",
+      "share": 0.2205
      }
     ],
     "200000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.84
+      "share": 0.8
      },
      {
       "venue": "uniswapv3",
@@ -3248,19 +3261,24 @@
       "share": 0.08
      },
      {
+      "venue": "maverick-v2",
+      "kind": "amm",
+      "share": 0.04
+     },
+     {
       "venue": "kyberswap-limit-order-v2/aerodrome",
       "kind": "rfq",
       "share": 0.04
      },
      {
-      "venue": "uniswap-v4",
+      "venue": "sharkswap-v2",
       "kind": "amm",
       "share": 0.04
      }
     ],
     "1000000": [
      {
-      "venue": "uniswapv3",
+      "venue": "hydrex-v4",
       "kind": "amm",
       "share": 1.0
      }
@@ -3277,62 +3295,67 @@
    "loan": "EURC",
    "lltv": 0.86,
    "bonus": 0.04384133611691032,
-   "borrow_usd": 142377.54003587016,
+   "borrow_usd": 142336.65749459478,
    "exit": {
-    "25000": 0.0005832803369111295,
-    "200000": 0.0022818168046944143,
-    "1000000": 0.08030641594990184
+    "25000": 0.000273657834993446,
+    "200000": 0.0012262141825466477,
+    "1000000": 0.03375663339481161
    },
    "exit_no_rfq": {
-    "25000": 0.00047498775417953443,
-    "200000": 0.0015835600956054519,
-    "1000000": 0.06757313596466663
+    "25000": 0.000273657834993446,
+    "200000": 0.0005584131173381746,
+    "1000000": 0.03319645673270366
    },
    "venues": {
     "25000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.96
+      "share": 0.8195
      },
      {
       "venue": "maverick-v2",
       "kind": "amm",
-      "share": 0.04
+      "share": 0.1805
      }
     ],
     "200000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.9756
+      "share": 0.9493
      },
      {
       "venue": "maverick-v2",
       "kind": "amm",
-      "share": 0.0244
+      "share": 0.0507
      }
     ],
     "1000000": [
      {
       "venue": "aero-cl",
       "kind": "amm",
-      "share": 0.72
+      "share": 0.7698
      },
      {
       "venue": "curve",
       "kind": "amm",
-      "share": 0.21
-     },
-     {
-      "venue": "aerodrome-cl-2",
-      "kind": "amm",
-      "share": 0.04
+      "share": 0.13
      },
      {
       "venue": "hydrex-v4",
       "kind": "amm",
-      "share": 0.02
+      "share": 0.04
+     },
+     {
+      "venue": "aerodrome-cl",
+      "kind": "amm",
+      "share": 0.04
+     },
+     {
+      "venue": "maverick-v2",
+      "kind": "amm",
+      "share": 0.0102
      },
      {
       "venue": "uniswapv3",
@@ -3343,117 +3366,7 @@
    },
    "near": {
     "1.1": 0.0,
-    "1.25": 40667.27552952508
-   }
-  },
-  {
-   "market": "0x5dffffc7d75dc5abfa8dbe6fad9cbdadf6680cbe1428bafe661497520c84a94c",
-   "collateral": "cbBTC",
-   "loan": "WETH",
-   "lltv": 0.915,
-   "bonus": 0.026167265264238182,
-   "borrow_usd": 131482.10575293182,
-   "exit": {
-    "25000": 0.0,
-    "200000": 0.0006990073890207338,
-    "1000000": 0.0005341346558939142
-   },
-   "exit_no_rfq": {
-    "25000": 0.0,
-    "200000": 0.00031399341567561745,
-    "1000000": 0.000602337178824297
-   },
-   "venues": {
-    "25000": [
-     {
-      "venue": "metric-propamm/kipseli-prop",
-      "kind": "maker_pool",
-      "share": 1.0
-     }
-    ],
-    "200000": [
-     {
-      "venue": "metric-propamm/hanji",
-      "kind": "maker_pool",
-      "share": 0.2
-     },
-     {
-      "venue": "hanji",
-      "kind": "amm",
-      "share": 0.2
-     },
-     {
-      "venue": "pmm-13/uniswapv3",
-      "kind": "rfq",
-      "share": 0.2
-     },
-     {
-      "venue": "aero-cl",
-      "kind": "amm",
-      "share": 0.2
-     },
-     {
-      "venue": "metric-propamm/aero-cl",
-      "kind": "maker_pool",
-      "share": 0.12
-     },
-     {
-      "venue": "kipseli-prop",
-      "kind": "maker_pool",
-      "share": 0.08
-     }
-    ],
-    "1000000": [
-     {
-      "venue": "aero-cl",
-      "kind": "amm",
-      "share": 0.59
-     },
-     {
-      "venue": "uniswapv3",
-      "kind": "amm",
-      "share": 0.1344
-     },
-     {
-      "venue": "bebop/aero-cl",
-      "kind": "rfq",
-      "share": 0.07
-     },
-     {
-      "venue": "metric-propamm/aero-cl",
-      "kind": "maker_pool",
-      "share": 0.04
-     },
-     {
-      "venue": "pmm-13/uniswapv3",
-      "kind": "rfq",
-      "share": 0.04
-     },
-     {
-      "venue": "hanji",
-      "kind": "amm",
-      "share": 0.034
-     },
-     {
-      "venue": "pancake-v3",
-      "kind": "amm",
-      "share": 0.0312
-     },
-     {
-      "venue": "kipseli-prop",
-      "kind": "maker_pool",
-      "share": 0.0304
-     },
-     {
-      "venue": "metric-propamm/uniswapv3",
-      "kind": "maker_pool",
-      "share": 0.03
-     }
-    ]
-   },
-   "near": {
-    "1.1": 0.0,
-    "1.25": 25955.650067860384
+    "1.25": 86447.08534894258
    }
   },
   {
@@ -3462,16 +3375,16 @@
    "loan": "XSGD",
    "lltv": 0.915,
    "bonus": 0.026167265264238182,
-   "borrow_usd": 131092.2564748605,
+   "borrow_usd": 131076.72492048025,
    "exit": {
-    "25000": 0.001392783579634238,
-    "200000": 0.008182409306066507,
-    "1000000": 0.6626158761415665
+    "25000": 0.0045716112025686595,
+    "200000": 0.011573953380222601,
+    "1000000": 0.6560685789632261
    },
    "exit_no_rfq": {
-    "25000": 0.001392783579634238,
-    "200000": 0.008182409306066507,
-    "1000000": 0.6620583341672666
+    "25000": 0.0045716112025686595,
+    "200000": 0.007472006776668594,
+    "1000000": 0.654705211252721
    },
    "venues": {
     "25000": [
@@ -3492,25 +3405,130 @@
      {
       "venue": "erc4626",
       "kind": "vault",
-      "share": 0.55
+      "share": 0.6
      },
      {
       "venue": "uniswap-v4",
       "kind": "amm",
-      "share": 0.44
-     },
-     {
-      "venue": "uniswapv3",
-      "kind": "amm",
-      "share": 0.01
+      "share": 0.4
      }
     ]
    },
    "near": {
-    "1.1": 1271.8083348493158,
-    "1.25": 161247.70056892684
+    "1.1": 1269.9449304823947,
+    "1.25": 161011.44667660454
    },
    "price_source": "oracle"
+  },
+  {
+   "market": "0x5dffffc7d75dc5abfa8dbe6fad9cbdadf6680cbe1428bafe661497520c84a94c",
+   "collateral": "cbBTC",
+   "loan": "WETH",
+   "lltv": 0.915,
+   "bonus": 0.026167265264238182,
+   "borrow_usd": 130591.43064329764,
+   "exit": {
+    "25000": 0.0,
+    "200000": 0.0,
+    "1000000": 0.000384686278085522
+   },
+   "exit_no_rfq": {
+    "25000": 0.002614477652189584,
+    "200000": 0.00015083338510801791,
+    "1000000": 0.0003209237107009155
+   },
+   "venues": {
+    "25000": [
+     {
+      "venue": "hanji",
+      "kind": "amm",
+      "share": 0.84
+     },
+     {
+      "venue": "kipseli-prop",
+      "kind": "maker_pool",
+      "share": 0.16
+     }
+    ],
+    "200000": [
+     {
+      "venue": "hanji",
+      "kind": "amm",
+      "share": 0.32
+     },
+     {
+      "venue": "pmm-13/aero-cl",
+      "kind": "rfq",
+      "share": 0.32
+     },
+     {
+      "venue": "aero-cl",
+      "kind": "amm",
+      "share": 0.32
+     },
+     {
+      "venue": "kipseli-prop",
+      "kind": "maker_pool",
+      "share": 0.04
+     }
+    ],
+    "1000000": [
+     {
+      "venue": "aero-cl",
+      "kind": "amm",
+      "share": 0.65
+     },
+     {
+      "venue": "hanji",
+      "kind": "amm",
+      "share": 0.0925
+     },
+     {
+      "venue": "pmm-13/aero-cl",
+      "kind": "rfq",
+      "share": 0.0737
+     },
+     {
+      "venue": "bebop/aero-cl",
+      "kind": "rfq",
+      "share": 0.0675
+     },
+     {
+      "venue": "metric-propamm/aero-cl",
+      "kind": "maker_pool",
+      "share": 0.04
+     },
+     {
+      "venue": "kipseli-prop",
+      "kind": "maker_pool",
+      "share": 0.0302
+     },
+     {
+      "venue": "pmm-21/pancake-v3",
+      "kind": "rfq",
+      "share": 0.0198
+     },
+     {
+      "venue": "elfomofi",
+      "kind": "amm",
+      "share": 0.01
+     },
+     {
+      "venue": "pmm-1/pancake-v3",
+      "kind": "rfq",
+      "share": 0.01
+     },
+     {
+      "venue": "pancake-v3",
+      "kind": "amm",
+      "share": 0.0063
+     }
+    ]
+   },
+   "near": {
+    "1.1": 0.0,
+    "1.25": 25836.76690675103
+   }
   },
   {
    "market": "0x94f344f8db8c950faa45206c269dd0c2787a86ae3a7b988423e1e6e8173ae269",
@@ -3518,19 +3536,19 @@
    "loan": "WETH",
    "lltv": 0.915,
    "bonus": 0.026167265264238182,
-   "borrow_usd": 102620.56622870277,
+   "borrow_usd": 101925.64257471327,
    "exit": {},
    "exit_no_rfq": {},
    "venues": {},
    "near": {
-    "1.1": 67508.03431891826,
-    "1.25": 101769.92217869585
+    "1.1": 67190.81573570902,
+    "1.25": 101291.70783202516
    },
    "gap": "vault",
    "exit_dex": {
-    "25000": 0.6498144666819676,
-    "200000": 0.9119777179704999,
-    "1000000": 0.9819530953526315
+    "25000": 0.6488398790927488,
+    "200000": 0.9117632549427694,
+    "1000000": 0.9796602073184164
    }
   }
  ]

@@ -3,11 +3,11 @@
  "days": 30,
  "since": "2026-10-27",
  "until": "2026-11-26",
- "count": 18119,
- "bonus_usd": 11447872.58903708,
- "auction_bonus_usd": 10661168.555676695,
- "auction_bids_usd": 8585112.742085833,
- "repaid_usd": 229315451.192655,
+ "count": 18120,
+ "bonus_usd": 11452964.15356507,
+ "auction_bonus_usd": 10666257.886851843,
+ "auction_bids_usd": 8589767.282357665,
+ "repaid_usd": 229355617.83242428,
  "bad_debt_usd": 1.3998115379999998e-05,
  "pairs": [
   {
@@ -24,20 +24,20 @@
   },
   {
    "pair": "WETH/USDC",
-   "count": 2063,
-   "bonus_usd": 724649.1158657966,
-   "auction_bonus_usd": 686161.3609530058
+   "count": 2062,
+   "bonus_usd": 724649.1114852196,
+   "auction_bonus_usd": 686161.3565724291
   },
   {
    "pair": "cbETH/USDC",
-   "count": 1492,
-   "bonus_usd": 144411.99755758682,
+   "count": 1490,
+   "bonus_usd": 144411.98297732347,
    "auction_bonus_usd": 2687.335644233368
   },
   {
    "pair": "SOL/USDC",
-   "count": 607,
-   "bonus_usd": 143513.36099519333,
+   "count": 606,
+   "bonus_usd": 143513.34832530937,
    "auction_bonus_usd": 142340.94606169284
   },
   {
@@ -53,22 +53,22 @@
    "auction_bonus_usd": 58892.15291712999
   },
   {
+   "pair": "cbZEC/USDC",
+   "count": 219,
+   "bonus_usd": 59174.11445216242,
+   "auction_bonus_usd": 54237.21749673139
+  },
+  {
    "pair": "cbBTC/EURC",
    "count": 24,
    "bonus_usd": 57951.407666901,
    "auction_bonus_usd": 818.4750651357027
   },
   {
-   "pair": "cbZEC/USDC",
-   "count": 212,
-   "bonus_usd": 54082.49295368369,
-   "auction_bonus_usd": 49147.856601238396
-  },
-  {
    "pair": "cbLTC/USDC",
-   "count": 200,
-   "bonus_usd": 33316.93305648361,
-   "auction_bonus_usd": 33174.32771638356
+   "count": 199,
+   "bonus_usd": 33316.92038659962,
+   "auction_bonus_usd": 33174.31504649957
   },
   {
    "pair": "cbADA/USDC",
@@ -78,9 +78,9 @@
   },
   {
    "pair": "cbHYPE/USDC",
-   "count": 71,
-   "bonus_usd": 8616.61927836439,
-   "auction_bonus_usd": 6816.906171792769
+   "count": 70,
+   "bonus_usd": 8616.606608480397,
+   "auction_bonus_usd": 6816.893501908777
   },
   {
    "pair": "wstETH/USDC",
@@ -218,8 +218,8 @@
  "by_day": [
   {
    "day": "2026-10-27",
-   "bonus_usd": 0.08230826088539997,
-   "repaid_usd": 0.7966032110968799,
+   "bonus_usd": 0.0,
+   "repaid_usd": 0.0,
    "bad_debt_usd": 0.0
   },
   {
@@ -398,8 +398,8 @@
   },
   {
    "day": "2026-11-26",
-   "bonus_usd": 0.0,
-   "repaid_usd": 0.0,
+   "bonus_usd": 5091.646836247364,
+   "repaid_usd": 40167.4363724834,
    "bad_debt_usd": 0.0
   }
  ]
