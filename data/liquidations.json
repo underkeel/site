@@ -3,11 +3,11 @@
  "days": 30,
  "since": "2026-10-27",
  "until": "2026-11-26",
- "count": 18123,
- "bonus_usd": 11447872.617194932,
- "auction_bonus_usd": 10661168.568818424,
- "auction_bids_usd": 8585112.755156994,
- "repaid_usd": 229315451.69520974,
+ "count": 18119,
+ "bonus_usd": 11447872.58903708,
+ "auction_bonus_usd": 10661168.555676695,
+ "auction_bids_usd": 8585112.742085833,
+ "repaid_usd": 229315451.192655,
  "bad_debt_usd": 1.3998115379999998e-05,
  "pairs": [
   {
@@ -24,14 +24,14 @@
   },
   {
    "pair": "WETH/USDC",
-   "count": 2066,
-   "bonus_usd": 724649.1290075271,
-   "auction_bonus_usd": 686161.3740947366
+   "count": 2063,
+   "bonus_usd": 724649.1158657966,
+   "auction_bonus_usd": 686161.3609530058
   },
   {
    "pair": "cbETH/USDC",
-   "count": 1493,
-   "bonus_usd": 144412.0125737086,
+   "count": 1492,
+   "bonus_usd": 144411.99755758682,
    "auction_bonus_usd": 2687.335644233368
   },
   {
@@ -218,8 +218,8 @@
  "by_day": [
   {
    "day": "2026-10-27",
-   "bonus_usd": 0.11046611337047994,
-   "repaid_usd": 1.2991579483991997,
+   "bonus_usd": 0.08230826088539997,
+   "repaid_usd": 0.7966032110968799,
    "bad_debt_usd": 0.0
   },
   {
