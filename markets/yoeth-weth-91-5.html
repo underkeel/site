@@ -6,12 +6,12 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>yoETH/WETH 91.5% on Morpho Base: exit cost vs liquidation bonus - Underkeel</title>
-<meta name="description" content="yoETH/WETH 91.5%: exit cost not measured. Bonus 2.6%; $105k borrowed. Morpho Blue on Base, updated every 6 hours.">
+<meta name="description" content="yoETH/WETH 91.5%: exit cost not measured. Bonus 2.6%; $104k borrowed. Morpho Blue on Base, updated every 6 hours.">
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Underkeel">
 <meta property="og:title" content="yoETH/WETH 91.5% on Morpho Base: exit cost vs liquidation bonus - Underkeel">
-<meta property="og:description" content="yoETH/WETH 91.5%: exit cost not measured. Bonus 2.6%; $105k borrowed. Morpho Blue on Base, updated every 6 hours.">
+<meta property="og:description" content="yoETH/WETH 91.5%: exit cost not measured. Bonus 2.6%; $104k borrowed. Morpho Blue on Base, updated every 6 hours.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://underkeel.xyz/og-v3.png">
 <meta property="og:image:type" content="image/png">
@@ -51,7 +51,7 @@
 <button class="theme" id="theme-btn" type="button" title="Colour theme" hidden><svg class="ic" aria-hidden="true"><use href="#i-theme"/></svg><span class="tl">auto</span></button></div>
 </div></header>
 <main id="main"><div class="wrap">
-<div class="marg"><span>Underkeel - <b>Market</b></span><span>Snapshot <b><time datetime="2026-11-27T06:23:00Z" data-ago>2026-11-27 06:23 UTC</time></b></span></div>
+<div class="marg"><span>Underkeel - <b>Market</b></span><span>Snapshot <b><time datetime="2026-11-27T12:23:00Z" data-ago>2026-11-27 12:23 UTC</time></b></span></div>
 <div class="frame">
 <div class="hero">
 <div class="two lead"><div>
@@ -62,7 +62,7 @@
 <p class="dek">This collateral is a vault share that redeems into the loan token, and KyberSwap&#x27;s route skips that redemption, so the sizes where its quote shows a loss or no route are left not measured: redeeming through the vault may cost far less, and this site does not measure it yet. KyberSwap's own route, which skips the redemption, quotes $25k: >50%, $200k: >50%, $1M: >50% - not an exit cost.</p>
 <p class="cap">Supply or curate this market? <a href="#review">Get a free review.</a></p>
 </div>
-<dl class="part" id="facts"><div><dt>Borrowed</dt><dd>$105k</dd></div><div><dt><abbr title="liquidation loan-to-value">LLTV</abbr>, liquidation loan-to-value</dt><dd>91.5%</dd></div><div><dt>Liquidation bonus</dt><dd>2.6%</dd></div><div><dt>Break-even exit cost, the keel</dt><dd>2.55%</dd></div><div><dt>Clearing size (not measured)</dt><dd class=m>-</dd></div><div><dt>Clearance at $1M</dt><dd class=m>-</dd></div><div><dt>Collateral, health factor below 1.1</dt><dd>$68k</dd></div><div><dt>Collateral, health factor below 1.25</dt><dd>$102k</dd></div></dl>
+<dl class="part" id="facts"><div><dt>Borrowed</dt><dd>$104k</dd></div><div><dt><abbr title="liquidation loan-to-value">LLTV</abbr>, liquidation loan-to-value</dt><dd>91.5%</dd></div><div><dt>Liquidation bonus</dt><dd>2.6%</dd></div><div><dt>Break-even exit cost, the keel</dt><dd>2.55%</dd></div><div><dt>Clearing size (not measured)</dt><dd class=m>-</dd></div><div><dt>Clearance at $1M</dt><dd class=m>-</dd></div><div><dt>Collateral, health factor below 1.1</dt><dd>$69k</dd></div><div><dt>Collateral, health factor below 1.25</dt><dd>$104k</dd></div></dl>
 </div>
 </div>
 <section class="first">
@@ -86,9 +86,9 @@ negative - a single liquidation of that size loses money and has to be split acr
 <h2>Positions close to liquidation</h2>
 <p class="note"><b>Pegged pair.</b> yoETH and WETH track each other, so the health factor follows the peg, not the market price. At a 91.5% LLTV positions sit close to liquidation as a matter of course; they move only if the peg or the exchange rate slips.</p>
 <div class="kpis three">
-<div class="kpi"><div class="l">health factor below 1.1</div><div class="v">$68k</div><div class="s">within 10% of liquidation - normal for a pegged pair</div></div>
-<div class="kpi"><div class="l">between 1.1 and 1.25</div><div class="v">$34k</div><div class="s">within 10-20% of liquidation</div></div>
-<div class="kpi"><div class="l">health factor below 1.25</div><div class="v">$102k</div><div class="s">within 20%, includes the 10% band</div></div>
+<div class="kpi"><div class="l">health factor below 1.1</div><div class="v">$69k</div><div class="s">within 10% of liquidation - normal for a pegged pair</div></div>
+<div class="kpi"><div class="l">between 1.1 and 1.25</div><div class="v">$35k</div><div class="s">within 10-20% of liquidation</div></div>
+<div class="kpi"><div class="l">health factor below 1.25</div><div class="v">$104k</div><div class="s">within 20%, includes the 10% band</div></div>
 </div>
 <p class="cap">Collateral of the market's positions by health factor (Morpho API). It is spread over positions of different
 sizes; a large position is liquidated in parts across blocks, which this site does not measure.</p>
@@ -113,7 +113,7 @@ price and shows the venue split. The first one is free and private to you.</p>
 <section>
 <p class="label">Cite</p>
 <h2>Cite or quote this market</h2>
-<div class="two"><p class="cite">Cite as: Underkeel, Clearance v3, yoETH/WETH 91.5% on Morpho Blue, Base, snapshot 2026-11-27T06:23Z, data sha256 14f0c89c. https://underkeel.xyz/markets/yoeth-weth-91-5.html (this snapshot: https://github.com/underkeel/site/tree/snapshot-2026-11-27T0623Z)</p>
+<div class="two"><p class="cite">Cite as: Underkeel, Clearance v3, yoETH/WETH 91.5% on Morpho Blue, Base, snapshot 2026-11-27T12:23Z, data sha256 a855b27c. https://underkeel.xyz/markets/yoeth-weth-91-5.html (this snapshot: https://github.com/underkeel/site/tree/snapshot-2026-11-27T1223Z)</p>
 </div>
 <p class="cap">Raw data: <a href="../data/exit-depth.json">data/exit-depth.json</a>; how it is measured:
 <a href="../method.html">Method</a>; how to cite: <a href="../method.html#cite">Method</a>.</p>
@@ -123,7 +123,7 @@ price and shows the venue split. The first one is free and private to you.</p>
 </div></main>
 <footer class="foot"><div class="wrap">
 <p class="attr">Quotes: KyberSwap Aggregator public API. Markets and positions: Morpho API. Liquidations: Morpho Blue events on Base.</p>
-<p><b>Underkeel</b> - exit depth and liquidations of Morpho Blue markets on Base. Snapshot <time datetime="2026-11-27T06:23:00Z">2026-11-27 06:23 UTC</time>, rebuilt every 6 hours. Every snapshot is kept: <a href="https://github.com/underkeel/site/commits/main/data/exit-depth.json" rel="noopener noreferrer">history of the data</a>.</p>
+<p><b>Underkeel</b> - exit depth and liquidations of Morpho Blue markets on Base. Snapshot <time datetime="2026-11-27T12:23:00Z">2026-11-27 12:23 UTC</time>, rebuilt every 6 hours. Every snapshot is kept: <a href="https://github.com/underkeel/site/commits/main/data/exit-depth.json" rel="noopener noreferrer">history of the data</a>.</p>
 <p>Independent: not affiliated with Morpho, Base, KyberSwap or Chainlink. Informational only, not investment advice.
 <a href="../about.html">About &amp; disclosure</a> - <a href="../method.html">Method</a> - <a href="../data.html">Data</a> - <a href="../services.html">Services</a> - <a href="../notes/feed.xml">Atom feed</a></p>
 <p>Contact: Telegram <a href="https://t.me/dimanoshe" rel="noopener noreferrer">@dimanoshe</a> · email <a href="mailto:hello@underkeel.xyz?subject=Underkeel">hello@underkeel.xyz</a></p>
