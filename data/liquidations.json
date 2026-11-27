@@ -3,11 +3,11 @@
  "days": 30,
  "since": "2026-10-28",
  "until": "2026-11-27",
- "count": 18120,
- "bonus_usd": 11452964.15356507,
+ "count": 18121,
+ "bonus_usd": 11452966.105645038,
  "auction_bonus_usd": 10666257.886851843,
  "auction_bids_usd": 8589767.282357665,
- "repaid_usd": 229355617.83242428,
+ "repaid_usd": 229355662.35849905,
  "bad_debt_usd": 1.3998115379999998e-05,
  "pairs": [
   {
@@ -24,8 +24,8 @@
   },
   {
    "pair": "WETH/USDC",
-   "count": 2062,
-   "bonus_usd": 724649.1114852196,
+   "count": 2063,
+   "bonus_usd": 724651.0635651884,
    "auction_bonus_usd": 686161.3565724291
   },
   {
@@ -398,8 +398,8 @@
   },
   {
    "day": "2026-11-27",
-   "bonus_usd": 0.0,
-   "repaid_usd": 0.0,
+   "bonus_usd": 1.9520799689052808,
+   "repaid_usd": 44.52607476005312,
    "bad_debt_usd": 0.0
   }
  ]

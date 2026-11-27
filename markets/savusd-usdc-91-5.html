@@ -6,12 +6,12 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>savUSD/USDC 91.5% on Morpho Base: exit cost vs liquidation bonus - Underkeel</title>
-<meta name="description" content="No DEX aggregator route from savUSD into USDC at $25k, $200k and $1M. Bonus 2.6%; $3.1M borrowed. Morpho Blue on Base, updated every 6 hours.">
+<meta name="description" content="No DEX aggregator route from savUSD into USDC at $25k, $200k and $1M. Bonus 2.6%; $3.4M borrowed. Morpho Blue on Base, updated every 6 hours.">
 <meta name="color-scheme" content="light dark">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Underkeel">
 <meta property="og:title" content="savUSD/USDC 91.5% on Morpho Base: exit cost vs liquidation bonus - Underkeel">
-<meta property="og:description" content="No DEX aggregator route from savUSD into USDC at $25k, $200k and $1M. Bonus 2.6%; $3.1M borrowed. Morpho Blue on Base, updated every 6 hours.">
+<meta property="og:description" content="No DEX aggregator route from savUSD into USDC at $25k, $200k and $1M. Bonus 2.6%; $3.4M borrowed. Morpho Blue on Base, updated every 6 hours.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://underkeel.xyz/og-v3.png">
 <meta property="og:image:type" content="image/png">
@@ -51,7 +51,7 @@
 <button class="theme" id="theme-btn" type="button" title="Colour theme" hidden><svg class="ic" aria-hidden="true"><use href="#i-theme"/></svg><span class="tl">auto</span></button></div>
 </div></header>
 <main id="main"><div class="wrap">
-<div class="marg"><span>Underkeel - <b>Market</b></span><span>Snapshot <b><time datetime="2026-11-27T00:22:00Z" data-ago>2026-11-27 00:22 UTC</time></b></span></div>
+<div class="marg"><span>Underkeel - <b>Market</b></span><span>Snapshot <b><time datetime="2026-11-27T06:23:00Z" data-ago>2026-11-27 06:23 UTC</time></b></span></div>
 <div class="frame">
 <div class="hero">
 <div class="two lead"><div>
@@ -62,7 +62,7 @@
 <p class="dek">KyberSwap finds no route on Base for this collateral at any size, so a flash-loan liquidator cannot sell it in one transaction; liquidation here depends on the issuer&#x27;s redemption or an OTC buyer.</p>
 <p class="cap">Supply or curate this market? <a href="#review">Get a free review.</a></p>
 </div>
-<dl class="part" id="facts"><div><dt>Borrowed</dt><dd>$3.1M</dd></div><div><dt><abbr title="liquidation loan-to-value">LLTV</abbr>, liquidation loan-to-value</dt><dd>91.5%</dd></div><div><dt>Liquidation bonus</dt><dd>2.6%</dd></div><div><dt>Break-even exit cost, the keel</dt><dd>2.55%</dd></div><div><dt>Clearing size (no route at any size)</dt><dd class=m>no route</dd></div><div><dt>Clearance at $1M</dt><dd class=m>no route</dd></div><div><dt>Collateral, health factor below 1.1</dt><dd>$0</dd></div><div><dt>Collateral, health factor below 1.25</dt><dd>$1.7M</dd></div></dl>
+<dl class="part" id="facts"><div><dt>Borrowed</dt><dd>$3.4M</dd></div><div><dt><abbr title="liquidation loan-to-value">LLTV</abbr>, liquidation loan-to-value</dt><dd>91.5%</dd></div><div><dt>Liquidation bonus</dt><dd>2.6%</dd></div><div><dt>Break-even exit cost, the keel</dt><dd>2.55%</dd></div><div><dt>Clearing size (no route at any size)</dt><dd class=m>no route</dd></div><div><dt>Clearance at $1M</dt><dd class=m>no route</dd></div><div><dt>Collateral, health factor below 1.1</dt><dd>$0</dd></div><div><dt>Collateral, health factor below 1.25</dt><dd>$4.2M</dd></div></dl>
 </div>
 </div>
 <section class="first">
@@ -87,8 +87,8 @@ negative - a single liquidation of that size loses money and has to be split acr
 <p class="note"><b>Pegged pair.</b> savUSD and USDC track each other, so the health factor follows the peg, not the market price. At a 91.5% LLTV positions sit close to liquidation as a matter of course; they move only if the peg or the exchange rate slips.</p>
 <div class="kpis three">
 <div class="kpi"><div class="l">health factor below 1.1</div><div class="v">$0</div><div class="s">within 10% of liquidation - normal for a pegged pair</div></div>
-<div class="kpi"><div class="l">between 1.1 and 1.25</div><div class="v">$1.7M</div><div class="s">within 10-20% of liquidation</div></div>
-<div class="kpi"><div class="l">health factor below 1.25</div><div class="v">$1.7M</div><div class="s">within 20%, includes the 10% band</div></div>
+<div class="kpi"><div class="l">between 1.1 and 1.25</div><div class="v">$4.2M</div><div class="s">within 10-20% of liquidation</div></div>
+<div class="kpi"><div class="l">health factor below 1.25</div><div class="v">$4.2M</div><div class="s">within 20%, includes the 10% band</div></div>
 </div>
 <p class="cap">Collateral of the market's positions by health factor (Morpho API). It is spread over positions of different
 sizes; a large position is liquidated in parts across blocks, which this site does not measure.</p>
@@ -113,8 +113,8 @@ price and shows the venue split. The first one is free and private to you.</p>
 <section>
 <p class="label">Cite</p>
 <h2>Cite or quote this market</h2>
-<div class="two"><p class="cite">Cite as: Underkeel, Clearance v3, savUSD/USDC 91.5% on Morpho Blue, Base, snapshot 2026-11-27T00:22Z, data sha256 51d8a9de. https://underkeel.xyz/markets/savusd-usdc-91-5.html (this snapshot: https://github.com/underkeel/site/tree/snapshot-2026-11-27T0022Z)</p>
-<p class="cite">Quote this: Underkeel (Clearance v3, snapshot 2026-11-27 00:22 UTC): no DEX aggregator route from savUSD into USDC at $25k, $200k and $1M for savUSD/USDC 91.5% on Morpho, Base; redemption with the issuer is not measured. https://underkeel.xyz/markets/savusd-usdc-91-5.html</p></div>
+<div class="two"><p class="cite">Cite as: Underkeel, Clearance v3, savUSD/USDC 91.5% on Morpho Blue, Base, snapshot 2026-11-27T06:23Z, data sha256 14f0c89c. https://underkeel.xyz/markets/savusd-usdc-91-5.html (this snapshot: https://github.com/underkeel/site/tree/snapshot-2026-11-27T0623Z)</p>
+<p class="cite">Quote this: Underkeel (Clearance v3, snapshot 2026-11-27 06:23 UTC): no DEX aggregator route from savUSD into USDC at $25k, $200k and $1M for savUSD/USDC 91.5% on Morpho, Base; redemption with the issuer is not measured. https://underkeel.xyz/markets/savusd-usdc-91-5.html</p></div>
 <p class="cap">Raw data: <a href="../data/exit-depth.json">data/exit-depth.json</a>; how it is measured:
 <a href="../method.html">Method</a>; how to cite: <a href="../method.html#cite">Method</a>.</p>
 </section>
@@ -123,7 +123,7 @@ price and shows the venue split. The first one is free and private to you.</p>
 </div></main>
 <footer class="foot"><div class="wrap">
 <p class="attr">Quotes: KyberSwap Aggregator public API. Markets and positions: Morpho API. Liquidations: Morpho Blue events on Base.</p>
-<p><b>Underkeel</b> - exit depth and liquidations of Morpho Blue markets on Base. Snapshot <time datetime="2026-11-27T00:22:00Z">2026-11-27 00:22 UTC</time>, rebuilt every 6 hours. Every snapshot is kept: <a href="https://github.com/underkeel/site/commits/main/data/exit-depth.json" rel="noopener noreferrer">history of the data</a>.</p>
+<p><b>Underkeel</b> - exit depth and liquidations of Morpho Blue markets on Base. Snapshot <time datetime="2026-11-27T06:23:00Z">2026-11-27 06:23 UTC</time>, rebuilt every 6 hours. Every snapshot is kept: <a href="https://github.com/underkeel/site/commits/main/data/exit-depth.json" rel="noopener noreferrer">history of the data</a>.</p>
 <p>Independent: not affiliated with Morpho, Base, KyberSwap or Chainlink. Informational only, not investment advice.
 <a href="../about.html">About &amp; disclosure</a> - <a href="../method.html">Method</a> - <a href="../data.html">Data</a> - <a href="../services.html">Services</a> - <a href="../notes/feed.xml">Atom feed</a></p>
 <p>Contact: Telegram <a href="https://t.me/dimanoshe" rel="noopener noreferrer">@dimanoshe</a> · email <a href="mailto:hello@underkeel.xyz?subject=Underkeel">hello@underkeel.xyz</a></p>
